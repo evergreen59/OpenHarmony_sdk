@@ -1,0 +1,69 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos_var.gni")
+import("//drivers/hdf_core/adapter/uhdf2/uhdf.gni")
+import("//drivers/peripheral/input/input.gni")
+import("//test/xts/tools/build/suite.gni")
+
+module_output_path = "hats/input"
+ohos_moduletest_suite("HatsHdfInputTest") {
+  module_out_path = module_output_path
+  include_dirs = [
+    "//third_party/FreeBSD/sys/dev/evdev",
+    "//drivers/peripheral/input/interfaces/include",
+  ]
+  cflags_cc = [
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-error",
+    "-DGST_DISABLE_DEPRECATED",
+    "-DHAVE_CONFIG_H",
+    "-DCOLORSPACE=\"videoconvert\"",
+    "-fno-strict-aliasing",
+    "-Wno-sign-compare",
+    "-Wno-builtin-requires-header",
+    "-WnO-unused-variable",
+    "-Wno-unused-label",
+    "-Wno-implicit-function-declaration",
+    "-Wno-format",
+    "-Wno-int32_t-conversion",
+    "-Wno-unused-function",
+    "-Wno-thread-sagety-attributes",
+    "-Wno-inconsistent-missing-override",
+    "-fno-rtti",
+    "-fno-exceptions",
+    "-ffunction-sections",
+    "-fdata-sections",
+  ]
+  if (drivers_peripheral_input_feature_model) {
+    deps = [ "//drivers/peripheral/input/hal:hdi_input" ]
+    sources = [ "./common/hdi_input_test.cpp" ]
+    include_dirs += [ "//drivers/peripheral/input/hal/include" ]
+  }
+  if (drivers_peripheral_input_feature_udriver) {
+    deps = [ "//drivers/peripheral/input/udriver:hdi_input_udriver" ]
+    sources = [ "./hdi_input/hdi_input_test.cpp" ]
+    include_dirs += [ "//drivers/peripheral/input/udriver/include" ]
+  }
+  if (is_standard_system) {
+    external_deps = [
+      "c_utils:utils",
+      "hdf_core:libhdf_utils",
+      "hiviewdfx_hilog_native:libhilog",
+    ]
+  } else {
+    external_deps = [ "hilog:libhilog" ]
+  }
+}

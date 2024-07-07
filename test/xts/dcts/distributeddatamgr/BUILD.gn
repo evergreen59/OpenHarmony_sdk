@@ -1,0 +1,70 @@
+# Copyright (C) 2022-2023 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+import("//build/ohos.gni")
+
+#import("//foundation/distributeddatamgr/data_share/datashare.gni")
+group("distributeddatatest") {
+  testonly = true
+  if (is_standard_system) {
+    deps = [
+      "jstest/distributed_kv_store/client/hap:distributekvdisjs_test",
+      "jstest/distributed_kv_store/server/hap:distributekvdisjs_server",
+      "jstest/distributed_rdb_store/client/hap:distributerdbdisjs_test",
+      "jstest/distributed_rdb_store/server/hap:distributerdbdisjs_server",
+    ]
+  }
+}
+
+ohos_shared_library("disDataProcess") {
+  #module_out_path = module_output_path
+  #
+  sources = [ "./cpptest/process_common/process_msg.cpp" ]
+
+  visibility = [ ":*" ]
+
+  include_dirs = [
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/adapter/include/permission",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/adapter/include/account",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/adapter/include",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/adapter/include/broadcaster",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/adapter/include/utils",
+    "//foundation/distributeddatamgr/kv_store/frameworks/innerkitsimpl/distributeddatafwk/include",
+    "//foundation/distributeddatamgr/kv_store/frameworks/innerkitsimpl/distributeddatafwk/src",
+    "//foundation/distributeddatamgr/kv_store/interfaces/innerkits/app_distributeddata/include",
+    "//commonlibrary/c_utils/base/include",
+    "//utils/system/safwk/native/ include",
+    "../include",
+    "../../../../interfaces/innerkits/distributeddata",
+    "//third_party/json/single_include",
+    "//base/powermgr/power_manager/interfaces/innerkits/native/include",
+    "../../common",
+    "../common",
+
+    #   "${datashare_innerapi_path}/common/include",
+    #   "${datashare_innerapi_path}/provider/include",
+    "//foundation/distributeddatamgr/distributedfile/interfaces/kits/js/src/mod_securitylabel",
+    "//foundation/distributedhardware/device_manager/interfaces/inner_kits/native_cpp/include",
+    "//base/security/access_token/interfaces/innerkits/accesstoke/include",
+    "//base/security/access_token/interfaces/innerkits/nativetoken/include",
+  ]
+
+  deps = [
+    "//base/security/access_token/interfaces/innerkits/nativetoken:libnativetoken",
+    "//base/security/access_token/interfaces/innerkits/token_setproc:libtoken_setproc",
+    "//commonlibrary/c_utils/base:utils",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/adapter:distributeddata_adapter",
+    "//foundation/distributeddatamgr/kv_store/frameworks/libs/distributeddb:distributeddb",
+    "//foundation/distributeddatamgr/kv_store/interfaces/innerkits/distributeddata:distributeddata_inner",
+    "//foundation/distributedhardware/device_manager/interfaces/inner_kits/native_cpp:devicemanagersdk",
+  ]
+}

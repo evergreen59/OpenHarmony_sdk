@@ -1,0 +1,9 @@
+# Copyright (C) 2020 Hisilicon (Shanghai) Technologies Co., Ltd. All rights reserved.
+
+group("hispark_aries") {
+  deps = [
+    "hals/utils/sys_param:vendor.para",
+    "init_configs",
+    "init_configs:init_configs_mksh",
+  ]
+}

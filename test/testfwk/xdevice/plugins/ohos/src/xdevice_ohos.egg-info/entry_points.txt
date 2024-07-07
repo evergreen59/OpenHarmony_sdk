@@ -1,0 +1,24 @@
+[device]
+device = ohos.environment.device
+device_lite = ohos.environment.device_lite
+
+[driver]
+drivers = ohos.drivers.drivers
+drivers_lite = ohos.drivers.drivers_lite
+openharmony = ohos.drivers.openharmony
+
+[listener]
+listener = ohos.executor.listener
+
+[manager]
+manager = ohos.managers.manager_device
+manager_lite = ohos.managers.manager_lite
+
+[parser]
+parser = ohos.parser.parser
+parser_lite = ohos.parser.parser_lite
+
+[testkit]
+kit = ohos.testkit.kit
+kit_lite = ohos.testkit.kit_lite
+

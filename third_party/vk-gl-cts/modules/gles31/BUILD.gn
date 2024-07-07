@@ -1,0 +1,77 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# modules deqp-gles31 build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-gles31_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-gles31_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/gles31/tes31Context.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/tes31InfoTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/tes31TestCase.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/tes31TestPackage.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/tgl45TestPackage.cpp",
+
+  ]
+  include_dirs = [
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/modules/gles31",
+    "//third_party/vk-gl-cts/modules/gles31/functional",
+    "//third_party/vk-gl-cts/modules/gles31/stress",
+  ]
+  include_dirs += deqp_common_include_dirs
+  deps = [
+    "//third_party/vk-gl-cts/modules/gles31/functional:libdeqp-gles31-functional",
+    "//third_party/vk-gl-cts/modules/gles31/stress:libdeqp-gles31-stress",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/opengl/wrapper:libdeqp_glwrapper",
+    "//third_party/zlib:libz",
+    "//third_party/libpng:libpng",
+  ]
+
+  configs = [ ":deqp-gles31_config" ]
+#   lib_dirs = [
+#     "//third_party/vk-gl-cts/outlibs"
+#   ]
+#   libs = [
+#     "png",
+#     "z",
+#     # "glslang",
+#     # "SPIRV",
+#     # "SPVRemapper",
+#     # "spirv-tools",
+#     # "spirv-tools-link",
+#     # "spirv-tools-lint",
+#     # "spirv-tools-opt",
+#     # "spirv-tools-reduce",
+#     # "MachineIndependent",
+#     # "OGLCompiler",
+#     # "OSDependent",
+#     # "GenericCodeGen",
+#   ]
+
+}
+
+ohos_static_library("libdeqp-gles31") {
+  deps = [ ":deqp-gles31_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

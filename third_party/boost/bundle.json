@@ -1,0 +1,31 @@
+{
+    "name": "@ohos/boost",
+    "description": "Boost provides free portable peer-reviewed C++ libraries. The emphasis is on portable libraries which work well with the C++ Standard Library. See http://www.boost.org",
+    "version": "3.1",
+    "license": "Boost Software License V1.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "third_party/boost"
+    },
+    "dirs": {},
+    "scripts": {},
+    "licensePath": "LICENSE_1_0.txt",
+    "component": {
+        "name": "thirdparty_boost",
+        "subsystem": "",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

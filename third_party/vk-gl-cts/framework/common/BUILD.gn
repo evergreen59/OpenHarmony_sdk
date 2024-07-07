@@ -1,0 +1,107 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# framework tcutil build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("tcutil_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("tcutil_source") {
+  sources = [
+    "//third_party/vk-gl-cts/framework/common/tcuApp.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuArray.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuAstcUtil.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuBilinearImageCompare.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuCPUWarmup.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuCommandLine.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuCompressedTexture.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuDefs.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuEither.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuFactoryRegistry.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuFloat.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuFloatFormat.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuFunctionLibrary.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuFuzzyImageCompare.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuImageCompare.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuImageIO.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuInterval.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuMatrix.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuMaybe.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuPlatform.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuRGBA.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuRandomValueIterator.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuRasterizationVerifier.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuRenderTarget.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuResource.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuResultCollector.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuSeedBuilder.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuStringTemplate.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuSurface.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuSurfaceAccess.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTestCase.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTestContext.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTestHierarchyIterator.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTestHierarchyUtil.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTestLog.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTestPackage.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTestSessionExecutor.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTexCompareVerifier.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTexLookupVerifier.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTexVerifierUtil.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTexture.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuTextureUtil.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuThreadUtil.cpp",
+    "//third_party/vk-gl-cts/framework/common/tcuWaiverUtil.cpp",
+  ]
+  include_dirs = [
+    "//third_party/vk-gl-cts/framework/delibs/debase",
+    "//third_party/vk-gl-cts/framework/delibs/decpp",
+    "//third_party/vk-gl-cts/framework/delibs/depool",
+    "//third_party/vk-gl-cts/framework/delibs/dethread",
+    "//third_party/vk-gl-cts/framework/delibs/deutil",
+    "//third_party/vk-gl-cts/framework/delibs/destream",
+    "//third_party/vk-gl-cts/framework/common",
+    "//third_party/vk-gl-cts/framework/qphelper",
+    "//third_party/vk-gl-cts/framework/xexml",
+    "//third_party/libpng",
+    "//third_party/vk-gl-cts/framework/referencerenderer"
+  ]
+
+  deps = [
+    "//third_party/vk-gl-cts/framework/delibs/decpp:libdeqp_decpp",
+    "//third_party/vk-gl-cts/framework/delibs/debase:libdeqp_debase",
+    "//third_party/vk-gl-cts/framework/delibs/deutil:libdeqp_deutil",
+    "//third_party/vk-gl-cts/framework/qphelper:libdeqp_qphelper",
+    "//third_party/vk-gl-cts/framework/delibs/dethread:libdeqp_dethread",
+    "//third_party/vk-gl-cts/framework/xexml:libdeqp_xexml",
+    "//third_party/libpng:libpng",
+  ]
+
+#   lib_dirs = ["//third_party/vk-gl-cts/outlibs"]
+
+#   libs=["png"]
+
+  configs = [ ":tcutil_config" ]
+
+}
+
+ohos_static_library("libdeqp_tcutil") {
+    deps = [ ":tcutil_source" ]
+    part_name = "graphic_standard"
+    subsystem_name = "graphic"
+}

@@ -1,0 +1,172 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp-egl build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-egl_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-egl_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/egl/teglAndroidUtil.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglAndroidUtil.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglApiCase.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglApiCase.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglBufferAgeTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglBufferAgeTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglChooseConfigReference.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglChooseConfigReference.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglChooseConfigTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglChooseConfigTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglQueryConfigTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglQueryConfigTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglColorClearCase.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglColorClearCase.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglColorClearTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglColorClearTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglConfigList.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglConfigList.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglCreateContextTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglCreateContextTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGetFrameTimestampsTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGetFrameTimestampsTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglQueryContextTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglQueryContextTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglCreateSurfaceTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglCreateSurfaceTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglQuerySurfaceTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglQuerySurfaceTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGetProcAddressTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGetProcAddressTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES1RenderUtil.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES1RenderUtil.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES2RenderUtil.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES2RenderUtil.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglImageUtil.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglImageUtil.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglImageTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglImageTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglInfoTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglInfoTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMutableRenderBufferTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMutableRenderBufferTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglNegativeApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglNegativeApiTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglPartialUpdateTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglPartialUpdateTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglNegativePartialUpdateTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglNegativePartialUpdateTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglRenderCase.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglRenderCase.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglRenderTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglRenderTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSimpleConfigCase.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSimpleConfigCase.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglTestCase.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglTestCase.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglTestPackage.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglTestPackage.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglVGRenderUtil.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglVGRenderUtil.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglImageFormatTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglImageFormatTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES2SharingTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES2SharingTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES2SharingThreadedTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES2SharingThreadedTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSyncTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSyncTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMultiThreadTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMultiThreadTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMemoryStressTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMemoryStressTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMakeCurrentPerfTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMakeCurrentPerfTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES2SharedRenderingPerfTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglGLES2SharedRenderingPerfTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglPreservingSwapTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglPreservingSwapTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglClientExtensionTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglClientExtensionTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglCreateContextExtTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglCreateContextExtTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSurfacelessContextTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSurfacelessContextTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSwapBuffersTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSwapBuffersTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglNativeColorMappingTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglNativeColorMappingTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglNativeCoordMappingTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglNativeCoordMappingTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglResizeTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglResizeTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSwapBuffersWithDamageTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglSwapBuffersWithDamageTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMultiContextTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglMultiContextTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglThreadCleanUpTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglThreadCleanUpTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglRobustnessTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglRobustnessTests.cpp",
+    "//third_party/vk-gl-cts/modules/egl/teglWideColorTests.hpp",
+    "//third_party/vk-gl-cts/modules/egl/teglWideColorTests.cpp",
+
+  ]
+  include_dirs = [
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/modules/egl",
+  ]
+  include_dirs += deqp_common_include_dirs
+
+  deps = [
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/egl:libdeqp_eglutil",
+    "//third_party/vk-gl-cts/framework/referencerenderer:libdeqp_referencerenderer",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference:libdeqp_glutil-sglr",
+    "//third_party/vk-gl-cts/framework/opengl/wrapper:libdeqp_glwrapper",
+    "//third_party/zlib:libz",
+    "//third_party/libpng:libpng",
+  ]
+  configs = [ ":deqp-egl_config" ]
+#   lib_dirs = [
+#     "//third_party/vk-gl-cts/outlibs"
+#   ]
+#   libs = [
+#     "png",
+#     "z",
+#     # "glslang",
+#     # "SPIRV",
+#     # "SPVRemapper",
+#     # "spirv-tools",
+#     # "spirv-tools-link",
+#     # "spirv-tools-lint",
+#     # "spirv-tools-opt",
+#     # "spirv-tools-reduce",
+#     # "MachineIndependent",
+#     # "OGLCompiler",
+#     # "OSDependent",
+#     # "GenericCodeGen",
+#   ]
+}
+
+ohos_static_library("libdeqp-egl") {
+  deps = [ ":deqp-egl_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

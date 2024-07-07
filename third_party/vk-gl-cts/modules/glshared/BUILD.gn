@@ -1,0 +1,103 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# modules deqp-gl-shared build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-gl-shared_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-gl-shared_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/glshared/glsAttributeLocationTests.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsBufferTestUtil.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsBuiltinPrecisionTests.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsCalibration.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsDrawTest.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsFboCompletenessTests.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsFboUtil.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsFragOpInteractionCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsFragmentOpUtil.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsInteractionTestUtil.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsLifetimeTests.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsLongStressCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsLongStressTestUtil.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsMemoryStressCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsRandomShaderCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsRandomShaderProgram.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsRandomUniformBlockCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsSamplerObjectTest.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsScissorTests.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsShaderConstExprTests.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsShaderExecUtil.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsShaderLibrary.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsShaderLibraryCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsShaderPerformanceCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsShaderPerformanceMeasurer.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsShaderRenderCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsStateChangePerfTestCases.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsStateQueryUtil.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsTextureBufferCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsTextureStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsTextureTestUtil.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsUniformBlockCase.cpp",
+    "//third_party/vk-gl-cts/modules/glshared/glsVertexArrayTests.cpp",
+
+  ]
+  include_dirs = [
+    "//third_party/vk-gl-cts/modules/glshared",
+
+  ]
+  include_dirs += deqp_common_include_dirs
+  deps = [
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/opengl/wrapper:libdeqp_glwrapper",
+    "//third_party/vk-gl-cts/framework/randomshaders:libdeqp_randomshaders",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference:libdeqp_glutil-sglr",
+    "//third_party/zlib:libz",
+    "//third_party/libpng:libpng",
+  ]
+
+  configs = [ ":deqp-gl-shared_config" ]
+
+#   lib_dirs = [
+#     "//third_party/vk-gl-cts/outlibs"
+#   ]
+#   libs = [
+#     "png",
+#     "z",
+#     # "glslang",
+#     # "SPIRV",
+#     # "SPVRemapper",
+#     # "spirv-tools",
+#     # "spirv-tools-link",
+#     # "spirv-tools-lint",
+#     # "spirv-tools-opt",
+#     # "spirv-tools-reduce",
+#     # "MachineIndependent",
+#     # "OGLCompiler",
+#     # "OSDependent",
+#     # "GenericCodeGen",
+#   ]
+}
+
+ohos_static_library("libdeqp-gl-shared") {
+  deps = [ ":deqp-gl-shared_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

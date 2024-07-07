@@ -1,0 +1,51 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# modules deqp-gles31-stress build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-gles31-stress_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-gles31-stress_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/gles31/stress/es31sDrawTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/stress/es31sStressTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/stress/es31sVertexAttributeBindingTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/stress/es31sTessellationGeometryInteractionTests.cpp",
+
+  ]
+  include_dirs = [
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/modules/gles31/stress",
+    "//third_party/vk-gl-cts/modules/gles31",
+  ]
+  include_dirs += deqp_common_include_dirs
+  deps = [
+    "//third_party/vk-gl-cts/modules/glshared:libdeqp-gl-shared",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+  ]
+
+  configs = [ ":deqp-gles31-stress_config" ]
+}
+
+ohos_static_library("libdeqp-gles31-stress") {
+  deps = [ ":deqp-gles31-stress_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

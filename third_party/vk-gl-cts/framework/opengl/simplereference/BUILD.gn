@@ -1,0 +1,73 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp framwork opengl simplereference build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp_opengl_simplereference_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp_opengl_simplereference_source") {
+  sources = [
+    "//third_party/vk-gl-cts/framework/opengl/simplereference/sglrContext.cpp",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference/sglrContextUtil.cpp",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference/sglrContextWrapper.cpp",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference/sglrReferenceContext.cpp",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference/sglrReferenceUtils.cpp",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference/sglrShaderProgram.cpp",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference/sglrGLContext.cpp" 
+  ]
+
+  include_dirs = deqp_common_include_dirs
+  deps = [
+    "//third_party/vk-gl-cts/framework/delibs/debase:libdeqp_debase",
+    "//third_party/vk-gl-cts/framework/delibs/decpp:libdeqp_decpp",
+    "//third_party/vk-gl-cts/framework/delibs/deutil:libdeqp_deutil",  
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/zlib:libz",
+    "//third_party/libpng:libpng",
+  ]
+
+  configs = [ ":deqp_opengl_simplereference_config" ]
+#   lib_dirs = [
+#     "//third_party/vk-gl-cts/outlibs"
+#   ]
+#   libs = [
+#     "png",
+#     "z",
+#     # "glslang",
+#     # "SPIRV",
+#     # "SPVRemapper",
+#     # "spirv-tools",
+#     # "spirv-tools-link",
+#     # "spirv-tools-lint",
+#     # "spirv-tools-opt",
+#     # "spirv-tools-reduce",
+#     # "MachineIndependent",
+#     # "OGLCompiler",
+#     # "OSDependent",
+#     # "GenericCodeGen",
+#   ]
+}
+
+ohos_static_library("libdeqp_glutil-sglr") {
+  deps = [ ":deqp_opengl_simplereference_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}
+

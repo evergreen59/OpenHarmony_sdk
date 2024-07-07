@@ -1,0 +1,59 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp framwork delib dethread build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp_delib_dethread_config") {
+  cflags = deqp_common_cflags
+
+  defines = deqp_common_defines
+  defines += [
+    "_XOPEN_SOURCE=600"
+  ]
+}
+
+ohos_source_set("deqp_delib_dethread_source") {
+  sources = [
+    "//third_party/vk-gl-cts/framework/delibs/dethread/deAtomic.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/deSingleton.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/deThreadTest.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/win32/deMutexWin32.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/win32/deSemaphoreWin32.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/win32/deThreadWin32.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/win32/deThreadLocalWin32.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/unix/deMutexUnix.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/unix/deNamedSemaphoreUnix.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/unix/deSemaphoreUnix.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/unix/deThreadUnix.c",
+    "//third_party/vk-gl-cts/framework/delibs/dethread/unix/deThreadLocalUnix.c", 
+    
+  ]
+
+  include_dirs = deqp_common_include_dirs
+  deps = [  
+    "//third_party/vk-gl-cts/framework/delibs/debase:libdeqp_debase",
+    "//third_party/vk-gl-cts/framework/delibs/depool:libdeqp_depool",
+  ]
+
+  configs = [ ":deqp_delib_dethread_config" ]
+}
+
+ohos_static_library("libdeqp_dethread") {
+  deps = [ ":deqp_delib_dethread_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}
+

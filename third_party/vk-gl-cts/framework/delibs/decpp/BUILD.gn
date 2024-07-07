@@ -1,0 +1,77 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp framwork delib decpp build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp_delib_decpp_config") {
+  cflags_cc = deqp_common_cflags_cc
+  
+  defines = deqp_common_defines
+  defines += [
+    "_XOPEN_SOURCE=600"
+  ]
+}
+
+ohos_source_set("deqp_delib_decpp_source") {
+  sources = [
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deCommandLine.cpp", 
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deSemaphore.cpp",             
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deThreadLocal.cpp",
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deDefs.cpp",                               
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deSha1.cpp",                  
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deThreadSafeRingBuffer.cpp",
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deDirectoryIterator.cpp",                     
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deSharedPtr.cpp",             
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deUniquePtr.cpp",
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deDynamicLibrary.cpp",        
+    "//third_party/vk-gl-cts/framework/delibs/decpp/dePoolArray.cpp",             
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deSocket.cpp",                
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deAppendList.cpp",            
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deFilePath.cpp",              
+    "//third_party/vk-gl-cts/framework/delibs/decpp/dePoolString.cpp",            
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deSpinBarrier.cpp",           
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deArrayBuffer.cpp",           
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deMemPool.cpp",               
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deProcess.cpp",               
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deSTLUtil.cpp",               
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deArrayUtil.cpp",             
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deMeta.cpp",                  
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deRandom.cpp",                
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deStringUtil.cpp",
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deBlockBuffer.cpp",           
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deMutex.cpp",                 
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deRingBuffer.cpp",            
+    "//third_party/vk-gl-cts/framework/delibs/decpp/deThread.cpp",
+  ]
+
+  include_dirs = deqp_common_include_dirs
+
+  deps = [  
+    "//third_party/vk-gl-cts/framework/delibs/debase:libdeqp_debase",
+    "//third_party/vk-gl-cts/framework/delibs/dethread:libdeqp_dethread",
+    "//third_party/vk-gl-cts/framework/delibs/deutil:libdeqp_deutil",
+    "//third_party/vk-gl-cts/framework/delibs/depool:libdeqp_depool",
+  ]
+
+  configs = [ ":deqp_delib_decpp_config" ]
+}
+
+ohos_static_library("libdeqp_decpp") {
+  deps = [ ":deqp_delib_decpp_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}
+

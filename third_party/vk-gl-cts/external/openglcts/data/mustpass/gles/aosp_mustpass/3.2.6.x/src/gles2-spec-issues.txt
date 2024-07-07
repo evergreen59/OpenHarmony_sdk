@@ -1,0 +1,8 @@
+#vk-gl-cts 294
+dEQP-GLES2.functional.shaders.preprocessor.basic.identifier_with_double_underscore_vertex
+dEQP-GLES2.functional.shaders.preprocessor.basic.identifier_with_double_underscore_fragment
+
+#vk-gl-cts 2116
+dEQP-GLES2.functional.shaders.functions.invalid.attribute_argument_vertex
+dEQP-GLES2.functional.shaders.functions.invalid.varying_argument_fragment
+dEQP-GLES2.functional.shaders.functions.invalid.varying_argument_vertex

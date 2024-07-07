@@ -1,0 +1,211 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp external vkutil build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp_vkutil_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+  defines += [ "_XOPEN_SOURCE=600" ]
+}
+
+ohos_source_set("deqp_vkutilnoshader_source") {
+  sources = [
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkAllocationCallbackUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkApiVersion.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkBarrierUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkBinaryRegistry.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkBufferWithMemory.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkBuilderUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkCmdUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkDebugReportUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkDefs.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkDeviceFeatures.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkDeviceProperties.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkDeviceUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkImageUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkImageWithMemory.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkMemUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkNullDriver.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkObjUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkPlatform.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkQueryUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkRayTracingUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkRef.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkRefUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkRenderDocUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkShaderProgram.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkStrUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkTypeUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkWsiPlatform.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkWsiUtil.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkYCbCrImageWithMemory.cpp",
+  ]
+
+  include_dirs = deqp_common_include_dirs
+  include_dirs += [
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan",
+    "//third_party/vk-gl-cts/build/external/vulkancts/framework/vulkan",
+    "//third_party/glslang",
+    "//third_party/spirv-tools/include",
+  ]
+
+  deps = [
+    "//third_party/glslang/OGLCompilersDLL:libdeqp_OGLCompiler",
+    "//third_party/glslang/SPIRV:libdeqp_spirv",
+    "//third_party/glslang/SPIRV:libdeqp_spvremapper",
+    "//third_party/glslang/glslang:libdeqp_GenericCodeGen",
+    "//third_party/glslang/glslang:libdeqp_MachineIndependent",
+    "//third_party/glslang/glslang:libdeqp_OSDependent",
+
+    #":gen_framework_c",
+    "//third_party/glslang/glslang:libdeqp_glslang",
+    "//third_party/glslang/hlsl:libdeqp_hlsl",
+    "//third_party/spirv-tools:libdeqp_spirvtools",
+    "//third_party/spirv-tools/source/link:libdeqp_spirvtools-link",
+    "//third_party/spirv-tools/source/lint:libdeqp_spirvtools-lint",
+    "//third_party/spirv-tools/source/opt:libdeqp_spirvtools-opt",
+    "//third_party/spirv-tools/source/reduce:libdeqp_spirvtools-reduce",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/delibs/depool:libdeqp_depool",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/xexml:libdeqp_xexml",
+    "//third_party/zlib:libz",
+  ]
+
+  #   lib_dirs = [
+  #     "//third_party/vk-gl-cts/outlibs"
+  #   ]
+  #   libs=[
+  #     "glslang",
+  #     "GenericCodeGen",
+  #     "MachineIndependent",
+  #     "SPIRV",
+  #     "SPVRemapper",
+  #     "HLSL",
+  #     "OGLCompiler",
+  #     "OSDependent",
+  #     "spirv-tools-link",
+  #     "spirv-tools",
+  #     "spirv-tools-lint",
+  #     "spirv-tools-reduce",
+  #     "spirv-tools-opt",
+  #     "z"
+  #   ]
+
+  configs = [ ":deqp_vkutil_config" ]
+}
+
+ohos_static_library("libdeqp_vkutilnoshader") {
+  deps = [ ":deqp_vkutilnoshader_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}
+
+action("gen_ext_deps") {
+  script =
+      "//third_party/vk-gl-cts/external/vulkancts/scripts/ohos_gen_ext_deps.py"
+  outputs = [ "$target_out_dir/gen_ext_deps.log" ]
+
+  out_path = rebase_path(
+          "//third_party/vk-gl-cts/build/external/vulkancts/framework/vulkan")
+  args = [ "$out_path" ]
+}
+
+action("gen_framework") {
+  script =
+      "//third_party/vk-gl-cts/external/vulkancts/scripts/ohos_gen_framework.py"
+  outputs = [ "$target_out_dir/gen_framework.log" ]
+
+  out_path = rebase_path(
+          "//third_party/vk-gl-cts/build/external/vulkancts/framework/vulkan")
+  args = [ "$out_path" ]
+  deps = [ ":gen_ext_deps" ]
+}
+
+action("gen_framework_c") {
+  script = "//third_party/vk-gl-cts/external/vulkancts/scripts/ohos_gen_framework_c.py"
+  outputs = [ "$target_out_dir/gen_framework_c.log" ]
+
+  out_path = rebase_path(
+          "//third_party/vk-gl-cts/build/external/vulkancts/framework/vulkan")
+  args = [ "$out_path" ]
+  deps = [ ":gen_framework" ]
+}
+
+ohos_source_set("deqp_vkutil_source") {
+  sources = [
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkPrograms.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkShaderToSpirV.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkSpirVAsm.cpp",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan/vkSpirVProgram.cpp",
+  ]
+
+  include_dirs = deqp_common_include_dirs
+  include_dirs += [
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan",
+    "//third_party/vk-gl-cts/build/external/vulkancts/framework/vulkan",
+    "//third_party/glslang",
+    "//third_party/spirv-tools/include",
+  ]
+
+  deps = [
+    ":libdeqp_vkutilnoshader",
+    "//third_party/glslang/OGLCompilersDLL:libdeqp_OGLCompiler",
+    "//third_party/glslang/SPIRV:libdeqp_spirv",
+    "//third_party/glslang/SPIRV:libdeqp_spvremapper",
+    "//third_party/glslang/glslang:libdeqp_GenericCodeGen",
+    "//third_party/glslang/glslang:libdeqp_MachineIndependent",
+    "//third_party/glslang/glslang:libdeqp_OSDependent",
+    "//third_party/glslang/glslang:libdeqp_glslang",
+    "//third_party/glslang/hlsl:libdeqp_hlsl",
+    "//third_party/spirv-tools:libdeqp_spirvtools",
+    "//third_party/spirv-tools/source/link:libdeqp_spirvtools-link",
+    "//third_party/spirv-tools/source/lint:libdeqp_spirvtools-lint",
+    "//third_party/spirv-tools/source/opt:libdeqp_spirvtools-opt",
+    "//third_party/spirv-tools/source/reduce:libdeqp_spirvtools-reduce",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/zlib:libz",
+  ]
+
+  #   lib_dirs = [
+  #     "//third_party/vk-gl-cts/outlibs"
+  #   ]
+  #   libs=[
+  #     "glslang",
+  #     "GenericCodeGen",
+  #     "MachineIndependent",
+  #     "SPIRV",
+  #     "SPVRemapper",
+  #     "HLSL",
+  #     "OGLCompiler",
+  #     "OSDependent",
+  #     "spirv-tools-link",
+  #     "spirv-tools",
+  #     "spirv-tools-lint",
+  #     "spirv-tools-reduce",
+  #     "spirv-tools-opt",
+  #     "z"
+  #   ]
+
+  configs = [ ":deqp_vkutil_config" ]
+}
+ohos_static_library("libdeqp_vkutil") {
+  deps = [ ":deqp_vkutil_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

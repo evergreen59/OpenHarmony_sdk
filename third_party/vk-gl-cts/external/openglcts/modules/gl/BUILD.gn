@@ -1,0 +1,138 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# external modules glcts-gl build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("glcts-gl_config") {
+  cflags_cc = [
+    "-Wno-conversion",
+    "-Wno-unused-function",
+  ]
+
+  cflags_cc += deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("glcts-gl_source") {
+  sources = [
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cClipDistance.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cCommonBugsTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cTestPackages.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cCullDistanceTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cGPUShader5Tests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cGLSLnoperspectiveTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cTextureSizePromotion.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cTextureSwizzleTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cTransformFeedbackTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl3cTransformFeedbackOverflowQueryTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cTestPackages.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cBufferStorageTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cCopyImageTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cDirectStateAccessBuffersTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cDirectStateAccessFramebuffersAndRenderbuffersTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cDirectStateAccessQueriesTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cDirectStateAccessProgramPipelinesTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cDirectStateAccessSamplersTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cDirectStateAccessVertexArraysTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cDirectStateAccessXFBTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cDirectStateAccessTexturesTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cDirectStateAccessTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cEnhancedLayoutsTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cGetTextureSubImageTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cES31CompatibilitySampleVariablesTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cES31CompatibilityShaderImageLoadStoreTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cES31CompatibilityShaderStorageBufferObjectTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cES31CompatibilityTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cMapBufferAlignmentTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cMultiBindTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderAtomicCountersTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderDrawParametersTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cTextureGatherTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cProgramInterfaceQueryTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cComputeShaderTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cConditionalRenderInvertedTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cGPUShaderFP64Tests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cIncompleteTextureAccessTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderAtomicCounterOpsTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderBallotTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderStorageBufferObjectTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderSubroutineTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderImageLoadStoreTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderViewportLayerArrayTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShadingLanguage420PackTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cStencilTexturingTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cVertexAttrib64BitTest.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cVertexAttribBindingTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderImageSizeTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cSyncTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cTextureFilterMinmaxTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cTextureViewTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cTextureBarrierTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cClipControlTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cShaderTextureImageSamplesTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cPipelineStatisticsQueryTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cSparseBufferTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cSparseTextureTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cSparseTexture2Tests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cSparseTextureClampTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cSpirvExtensionsTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cPostDepthCoverageTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cIndirectParametersTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cLimitsTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl/gl4cGlSpirvTests.cpp",
+  ]
+  include_dirs = [
+    "//third_party/zlib/src",
+    "//third_party/spirv-headers/include",
+    #"//third_party/vk-gl-cts/external/amber",
+    #"//third_party/vk-gl-cts/external/renderdoc/src",
+    "//third_party/libpng",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan",
+    "//third_party/vk-gl-cts/external/openglcts/include",
+    "//third_party/vk-gl-cts/external/openglcts/framework/egl/wrapper",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gles2",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gles3",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gles31",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gles32",
+    "//third_party/vk-gl-cts/external/openglcts/modules/glesext",
+    "//third_party/vk-gl-cts/external/openglcts/modules",
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/build/external/vulkancts/framework/vulkan",
+    "//third_party/glslang/glslang",
+    "//third_party/vk-gl-cts/build/include",
+    "//third_party/glslang/SPIRV",
+    "//third_party/spirv-tools/include",
+  ]
+  include_dirs += deqp_common_include_dirs
+
+  deps = [
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/opengl/wrapper:libdeqp_glwrapper",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common:libdeqp_glcts-common",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan:libdeqp_vkutilnoshader",
+  ]
+
+  configs = [ ":glcts-gl_config" ]
+}
+
+ohos_static_library("libdeqp_glcts-gl") {
+  deps = [ ":glcts-gl_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

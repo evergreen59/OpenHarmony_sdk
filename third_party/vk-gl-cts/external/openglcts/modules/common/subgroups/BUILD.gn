@@ -1,0 +1,107 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# external modules common deqp-gl-subgroups build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-gl-subgroups_config") {
+  cflags_cc = [
+    "-Wno-conversion",
+    "-Wno-unused-function",
+  ]
+
+  cflags_cc += deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-gl-subgroups_source") {
+  sources = [
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsArithmeticTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsBallotBroadcastTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsBallotOtherTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsBallotTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsBasicTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsBuiltinMaskVarTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsBuiltinVarTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsClusteredTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsPartitionedTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsQuadTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsShapeTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsShuffleTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsTests.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsTestsUtils.cpp",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common/subgroups/glcSubgroupsVoteTests.cpp",
+  ]
+  include_dirs = [
+    "//third_party/zlib/src",
+    "//third_party/spirv-headers/include",
+    #"//third_party/vk-gl-cts/external/amber",
+    #"//third_party/vk-gl-cts/external/renderdoc/src",
+    "//third_party/libpng",
+    "//third_party/vk-gl-cts/external/vulkancts/framework/vulkan",
+    "//third_party/vk-gl-cts/external/openglcts/include",
+    "//third_party/vk-gl-cts/external/openglcts/framework/egl/wrapper",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gl",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gles2",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gles3",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gles31",
+    "//third_party/vk-gl-cts/external/openglcts/modules/gles32",
+    "//third_party/vk-gl-cts/external/openglcts/modules/glesext",
+    "//third_party/vk-gl-cts/external/openglcts/modules",
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/external/openglcts/modules/common",
+    "//third_party/glslang",
+    "//third_party/vk-gl-cts/build/include",
+    "//third_party/glslang",
+    "//third_party/spirv-tools/include",
+  ]
+  include_dirs += deqp_common_include_dirs
+
+  deps = [
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/zlib:libz",
+    "//third_party/libpng:libpng",
+  ]
+
+  configs = [ ":deqp-gl-subgroups_config" ]
+
+#   lib_dirs = [
+#     "//third_party/vk-gl-cts/outlibs"
+#   ]
+#   libs = [
+#     "z",
+#     "png",
+#     # "glslang",
+#     # "SPIRV",
+#     # "SPVRemapper",
+#     # "spirv-tools",
+#     # "spirv-tools-link",
+#     # "spirv-tools-lint",
+#     # "spirv-tools-opt",
+#     # "spirv-tools-reduce",
+#     # "MachineIndependent",
+#     # "OGLCompiler",
+#     # "OSDependent",
+#     # "GenericCodeGen",
+#   ]
+}
+
+ohos_static_library("libdeqp-gl-subgroups") {
+  deps = [ ":deqp-gl-subgroups_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

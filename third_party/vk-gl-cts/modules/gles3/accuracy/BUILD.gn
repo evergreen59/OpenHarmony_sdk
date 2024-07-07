@@ -1,0 +1,53 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp-gles3-accuracy build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-gles3-accuracy_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-gles3-accuracy_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/gles3/accuracy/es3aAccuracyTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/accuracy/es3aTextureFilteringTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/accuracy/es3aTextureMipmapTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/accuracy/es3aVaryingInterpolationTests.cpp",
+
+  ]
+  
+  include_dirs = [
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/modules/gles3/accuracy",
+    "//third_party/vk-gl-cts/modules/gles3",
+  ]
+  include_dirs += deqp_common_include_dirs
+  deps = [
+    "//third_party/vk-gl-cts/modules/glshared:libdeqp-gl-shared",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+  ]
+
+  configs = [ ":deqp-gles3-accuracy_config" ]
+
+}
+
+ohos_static_library("libdeqp-gles3-accuracy") {
+  deps = [ ":deqp-gles3-accuracy_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

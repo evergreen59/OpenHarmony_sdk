@@ -1,0 +1,62 @@
+# Copyright 2022 Huawei Technologies Co., Ltd
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# ============================================================================
+import("//build/ohos.gni")
+
+# ohos_group("mindir_test") {
+#   deps = [
+#     "tests:mindir_test",
+#   ]
+# }
+ohos_shared_library("mindir") {
+  include_dirs = [
+    "../",
+    "../../core",
+    "include",
+    "inner_headers",
+    "//third_party/flatbuffers/include",
+  ]
+  sources = [
+    "../src/common/log.cc",
+    "src/mindir.cc",
+    "src/mindir_memory_manager.cc",
+    "src/mindir_nnrt_lite_graph.cc",
+    "src/mindir_nnrt_lite_graph_to_model.cc",
+    "src/mindir_tensor.cc",
+    "src/utils.cc",
+  ]
+  external_deps = [
+    "c_utils:utils",
+    "drivers_interface_nnrt:libnnrt_proxy_1.0",
+    "hdf_core:libhdi",
+    "hilog_native:libhilog",
+    "ipc:ipc_core",
+  ]
+  disable_android = true
+  if (disable_android) {
+    cflags = [
+      "-UANDROID",
+      "-U__ANDROID__",
+      "-U__ANDROID_API__",
+    ]
+    cflags_cc = [
+      "-UANDROID",
+      "-U__ANDROID__",
+      "-U__ANDROID_API__",
+    ]
+  }
+  defines = [ "MS_COMPILE_OHOS" ]
+  deps = [ "//drivers/interface/nnrt/v1_0:nnrt_idl_headers" ]
+  part_name = "mindspore"
+}

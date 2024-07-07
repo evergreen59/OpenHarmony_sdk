@@ -1,0 +1,3422 @@
+THIRD PARTY OPEN SOURCE SOFTWARE NOTICE
+Please note we provide an open source software notice for the third party open source software along with this software and/or this software component contributed by Huawei (in the following just “this SOFTWARE”). The open source software licenses are granted by the respective right holders.
+
+Warranty Disclaimer
+THE OPEN SOURCE SOFTWARE IN THIS SOFTWARE IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT WITHOUT ANY WARRANTY, WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. SEE THE APPLICABLE LICENSES FOR MORE DETAILS.
+
+Copyright Notice and License Texts
+
+Software: Boost v1.72.0
+Copyright notice:
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2011.
+Copyright (c) 2003-2019 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+Copyright (c) 2009-2016 Vladimir Batov.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2014.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2013.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2009 - 2010.
+Copyright Abel Sinkovics (abel@sinkovics.hu) 2011.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2010 - 2011.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2009 - 2011.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2015.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2009 - 2012.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2017.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2012.
+Copyright Abel Sinkovics (abel@sinkovics.hu) 2011 - 2012.
+Copyright Abel Sinkovics (abel@sinkovics.hu) 2015.
+Copyright Abel Sinkovics (abel@sinkovics.hu) 2014.
+Copyright Abel Sinkovics (abel@sinkovics.hu)   2011.
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2018.
+Copyright Abel Sinkovics (abel@sinkovics.hu) 2013.
+Copyright 2010 Vicente J. Botet Escriba
+Copyright 2013 Krzysztof Czainski
+Copyright 2013 Vicente J. Botet Escriba
+Copyright Louis Dionne 2013-2017
+Copyright John Maddock 2013.
+Copyright Jens Maurer 2000
+Copyright 1997, 1998, 1999, 2000 University of Notre Dame.
+Copyright Jeremy Siek 2004
+Copyright Thomas Claveirole 2010
+Copyright Ignacy Gawedzki 2010
+Copyright Jeremiah Willcock 2004
+Copyright Jeremy Siek    2004.
+Copyright David Abrahams 2003.
+Copyright David Abrahams and Jeremy Siek 2003.
+Copyright Jeremy Siek 2006
+Copyright 2004 The Trustees of Indiana University.
+Copyright (c) 2006-2009 Emil Dotchevski and Reverge Studios, Inc.
+Copyright (c) 2012 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2012 Bruno Lalande, Paris, France.
+Copyright (c) 2012 Mateusz Loskot, London, UK.
+Copyright (c) 2007-2012 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2008-2012 Bruno Lalande, Paris, France.
+Copyright (c) 2009-2012 Mateusz Loskot, London, UK.
+Copyright (c) 1995-2010 Geodan, Amsterdam, the Netherlands.
+Copyright (c) 2014 Samuel Debionne, Grenoble, France.
+Copyright (c) 2015, Oracle andor its affiliates.
+Copyright (c) 2014, Oracle andor its affiliates.
+Copyright (c) 2014-2015 Oracle andor its affiliates.
+Copyright Vicente J. Botet Escriba 2013-2017. 
+Copyright (c) 2016 Oracle andor its affiliates.
+Copyright (c) 2007-2014 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright John Maddock 2006-7.
+Copyright (c) 2007-2011 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2008-2011 Bruno Lalande, Paris, France.
+Copyright (c) 2009-2011 Mateusz Loskot, London, UK.
+Copyright (c) 2009-2012 Mateusz Loskot (mateusz@loskot.net), London, UK
+Copyright (c) 2017 Adam Wulkiewicz, Lodz, Poland
+Copyright (c) 2018, Oracle and/or its affiliates.
+Copyright (c) 2009-2011 Mateusz Loskot, London, UK
+Copyright (c) 2008-2014 Bruno Lalande, Paris, France.
+Copyright (c) 2009-2014 Mateusz Loskot, London, UK.
+Copyright (c) 2014-2017 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2017, 2019 Oracle andor its affiliates.
+Copyright (c) 2007-2015 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2008-2015 Bruno Lalande, Paris, France.
+Copyright (c) 2009-2015 Mateusz Loskot, London, UK.
+Copyright (c) 2014-2015 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2014-2019 Oracle andor its affiliates.
+Copyright (c) 2013-2014 Adam Wulkiewicz, Lodz, Poland
+Copyright (c) 2013-2018, Oracle andor its affiliates.
+Copyright (c) 2013 Mateusz Loskot
+Copyright (c) 2001-2011 Joel de Guzman
+Copyright (c) 2005-2006 Dan Marsden
+Copyright 2010 Eric Niebler. Distributed under the Boost
+Copyright 2012 Eric Niebler. Distributed under the Boost
+Copyright 2012 Vicente J. Botet Escriba
+Copyright 2011 Vicente J. Botet Escriba
+Copyright 2008 Howard Hinnant
+Copyright 2008 Beman Dawes
+Copyright 2009 Vicente J. Botet Escriba
+Copyright 2010 Vicente J. Botet Escriba
+Copyright (c) 2007-2009 Ben Hanson (http:www.benhanson.net)
+Copyright 2012 Eric Niebler
+Copyright John Maddock 2001 - 2003.
+Copyright David Abrahams 2002 - 2003.
+Copyright Aleksey Gurtovoy 2002.
+Copyright Douglas Gregor 2010
+Copyright John Maddock 2001.
+Copyright Douglas Gregor 2001.
+Copyright Peter Dimov 2001.
+Copyright Aleksey Gurtovoy 2003.
+Copyright Beman Dawes 2003.
+Copyright Jens Maurer 2003.
+Copyright John Maddock 2001 - 2002.
+Copyright Jens Maurer 2001.
+Copyright David Abrahams 2002.
+Copyright Markus Schoepflin 2005.
+Copyright 2011 John Maddock
+Copyright 2013, 2017-2018 Cray, Inc.
+Copyright Brian Kuhl 2016.
+Copyright (C) Christof Meerwald 2003
+Copyright (C) Dan Watkins 2003
+Copyright Darin Adler 2001 - 2002.
+Copyright Jens Maurer 2001 - 2002.
+Copyright Beman Dawes 2001 - 2003.
+Copyright Douglas Gregor 2002.
+Copyright Synge Todo 2003.
+Copyright John Maddock 2006.
+Copyright Jens Maurer 2001 - 2003.
+Copyright Toon Knapen 2003.
+Copyright Boris Gubenko 2006 - 2007.
+Copyright John Maddock 2001-8.
+Copyright Aleksey Gurtovoy 2002 - 2003.
+Copyright Guillaume Melquiond 2002 - 2003.
+Copyright Martin Wille 2003.
+Copyright Darin Adler 2001.
+Copyright David Abrahams 2001 - 2002.
+Copyright Stefan Slapeta 2004.
+Copyright Eric Jourdanneau, Joel Falcou 2010
+Copyright Bryce Lelbach 2011
+Copyright Noel Belcourt 2007.
+Copyright 2017, NVIDIA CORPORATION.
+Copyright Peter Dimov 2002.
+Copyright Toon Knapen 2001 - 2003.
+Copyright Lie-Quan Lee 2001.
+Copyright Markus Schoepflin 2002 - 2003.
+Copyright Beman Dawes 2002 - 2003.
+Copyright (c) 2017 Dynatrace
+Copyright 2011, John Resig
+Copyright 2011, The Dojo Foundation
+Copyright (c) 2001-2010 Hartmut Kaiser
+Copyright (c) 2009 Francois Barel
+Copyright Paul Mensonides 2005.
+Copyright Paul Mensonides 2002.
+Copyright Vladimir Prus 2003.
+Copyright 2003 Vladimir Prus
+Copyright 2011-2012 Mario Mulansky
+Copyright 2011 Karsten Ahnert
+Copyright 2011-2013 Mario Mulansky
+Copyright 2011-2012 Karsten Ahnert
+Copyright 2012 Karsten Ahnert
+Copyright 2012 Mario Mulansky
+Copyright 2008 CodeRage, LLC (turkanis at coderage dot com)
+Copyright 2003-2007 Jonathan Turkanis
+Copyright Sergey Shandar 2005, Alexander Nasonov, 2007.
+Copyright Antony Polukhin, 2012-2019.
+Copyright Antony Polukhin, 2011-2019.
+Copyright Antony Polukhin, 2013-2019.
+Copyright Terje Sletteb and Kevlin Henney, 2005.
+Copyright Antony Polukhin, 2015-2019.
+Copyright Antony Polukhin, 2012-2014.
+Copyright Antony Polukhin, 2014-2019.
+Copyright (c) 2009-2011 Artyom Beilis (Tonkikh)
+Copyright Louis Dionne 2013-2017
+Copyright Gonzalo Brito Gadeschi 2015
+Copyright Darin Adler 2000
+Copyright Beman Dawes 2006, 2009, 2014
+Copyright Peter Dimov 2019
+Copyright Beman Dawes 2010, 2011, 2014
+Copyright Beman Dawes 2015
+Copyright (c) 2008-2009: Joachim Faulhaber
+Copyright (c) 2017 Paul Fultz II
+Copyright Paul Fultz II 2016-2018
+Copyright (c) 2018 Yaghyavardhan Singh Khangarot, Hyderabad, India.
+Copyright (c) 2018 Oracle andor its affiliates.
+Copyright (c) 2018, Oracle andor its affiliates.
+Copyright (c) 2005-2010 Joel de Guzman
+Copyright (c) 2010 Thomas Heller
+Copyright (c) 2001-2010 Joel de Guzman
+Copyright (c) 2016 Kohei Takahashi
+Copyright 2008 Rene Rivera
+Copyright Rene Rivera 2016
+Copyright (c) Marshall Clow 2017.
+Copyright (C) 2013 Christian Henning
+Copyright (c) 2001-2002 Joel de Guzman
+Copyright (c) 2001-2003 Joel de Guzman
+Copyright (c) 2001-2003 Hartmut Kaiser
+Copyright (c) 2002-2003 Martin Wille
+Copyright (c) 2003 Vaclav Vesely
+Copyright (c) 2002 Joel de Guzman
+Copyright (c) 2002-2003 Hartmut Kaiser
+Copyright (C) 2018-2019 Niall Douglas <http:www.nedproductions.biz/>
+Copyright (c) Copyright Juergen Hunold 2011
+Copyright (c) Copyright Juergen Hunold 2008
+Copyright (c) Copyright Juergen Hunold 2009
+Copyright (c) Copyright Juergen Hunold 2008-2011
+Copyright (c) Copyright Juergen Hunold 2012
+Copyright (c) 2016-2019 Vinnie Falco (vinnie dot falco at gmail dot com)
+Copyright 2008 Eric Niebler. Distributed under the Boost
+Copyright (c) 2006 Dan Marsden
+Copyright (c) 2011-2012 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2010 Eric Niebler
+Copyright (c) 2004 Daniel Wallin
+Copyright (c) 2001-2007 Joel de Guzman
+Copyright (c) 2011 Thomas Heller
+Copyright (c) 2010-2015 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2015-2016, Oracle andor its affiliates.
+Copyright (c) 2015-2017, Oracle andor its affiliates.
+Copyright (c) 2014-2015, Oracle andor its affiliates.
+Copyright (c) 2019, Oracle andor its affiliates.
+Copyright (c) 2013-2015 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2017 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2016-2019, Oracle andor its affiliates.
+Copyright (c) 2014-2017, Oracle andor its affiliates.
+Copyright (c) 2006-2007 Tobias Schwinger
+Copyright David Abrahams, Matthias Troyer, Michael Gauckler
+Copyright (c) 2001-2011 Hartmut Kaiser
+Copyright (C) 2011 Vicente J. Botet Escriba
+Copyright (c) 2007 Dan Marsden
+Copyright (c) 2009-2011 Christopher Schmidt
+Copyright (c) 2010-2011 Christopher Schmidt
+Copyright (c) 2013-2014 Damien Buhl
+Copyright (c) 2009-2010 Hartmut Kaiser
+Copyright (c) 2012 Nathan Ridge
+Copyright (c) 2001 Daniel C. Nuffer.
+Copyright (c) 2001-2012 Hartmut Kaiser.
+Copyright (c) 2001 Daniel C. Nuffer
+Copyright (C) 2003-2008 Matthias Christian Schabel
+Copyright (C) 2008 Steven Watanabe
+Copyright (C) 2014 Erik Erlandson
+Copyright Daniel Wallin 2005. Use, modification and distribution is
+Copyright Andrey Semashev 2007 - 2015.
+Copyright 2002, 2005 Daryle Walker.  Use, modification, and distribution
+Copyright (c) 2012-2015 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2015 Oracle andor its affiliates.
+Copyright (c) 2006-2007 Matias Capeletto
+Copyright Aleksey Gurtovoy 2000-2004
+Copyright Peter Dimov 2001-2002
+Copyright Aleksey Gurtovoy 2001-2004
+Copyright Peter Dimov 2001
+Copyright Jaap Suter 2003
+Copyright David Abrahams 2001-2002
+Copyright Peter Dimov 2001-2003
+Copyright Aleksey Gurtovoy 2002-2004
+Copyright (c) 2002, 2003 Peter Dimov
+Copyright Andrey Semashev 2015.
+Copyright (c) 2016-2017 Vinnie Falco (vinnie dot falco at gmail dot com)
+Copyright (C) 2017-2019 Niall Douglas <http:www.nedproductions.biz/>
+Copyright (c) 2014 Paul Fultz II
+Copyright (c) 2015 Paul Fultz II
+Copyright (c) 2012 Paul Fultz II
+Copyright (c) 2016 Paul Fultz II
+Copyright (C) 1995-2003 Mark Adler
+Copyright (C) 2003 Chris Anderson <christop@charm.net>
+Copyright (C) 2007-2008 Steven Watanabe
+Copyright Gennadiy Rozental 2001.
+Copyright (c) 2011-2012 Akira Takahashi
+Copyright (c) 2018 Adeel Ahmad, Islamabad, Pakistan.
+Copyright Aleksey Gurtovoy 2004-2009
+Copyright John Maddock 2003
+Copyright John Maddock 2003.
+Copyright 2017 Peter Dimov.
+Copyright 2001 John Maddock.
+Copyright John Maddock 2008
+Copyright David Abrahams 2002.
+Copyright Samuli-Petrus Korhonen 2017.
+Copyright Jim Bosch 2010-2012.
+Copyright Stefan Seefeld 2016.
+Copyright (c) 2001-2003 Daniel Nuffer
+Copyright (c) 2006 Tobias Schwinger
+Copyright (c) 1998-2003 Joel de Guzman
+Copyright (c) 2002-2003 Joel de Guzman
+Copyright (c) 2002-2003 Juan Carlos Arevalo-Baeza
+Copyright (c) 2003 Hartmut Kaiser
+Copyright (c) 2003 Joel de Guzman
+Copyright (c) 2002 Raghavendra Satish
+Copyright (c) 2002 Jeff Westfahl
+Copyright (c) 2003 Martin Wille
+Copyright (C) 2006 Douglas Gregor <doug.gregor -at- gmail.com>
+Copyright Alain Miniussi 2014.
+Copyright (C) 2005-2006 Douglas Gregor <doug.gregor -at- gmail.com>.
+Copyright (C) 2005, 2006 Douglas Gregor <doug.gregor -at- gmail.com>.
+Copyright (C) 2016 K. Noel Belcourt <kbelco -at- sandia.gov>.
+Copyright 2005 Matthias Troyer.
+Copyright 2006 Douglas Gregor <doug.gregor -at- gmail.com>.
+Copyright (C) 2006 Douglas Gregor <doug.gregor -at- gmail.com>.
+Copyright (C) 2018 Alain Miniussi <alain.miniussi -at- oca.eu>.
+Copyright (C) 2007 Trustees of Indiana University
+Copyright (C) 2005-2006 Alain Miniussi <alain.miniussi -at- oca.eu>.
+Copyright (C) 2007 The Trustees of Indiana University.
+Copyright (C) 2004 The Trustees of Indiana University.
+Copyright (C) 2005-2006 Douglas Gregor <doug.gregor -at- gmail.com>
+Copyright 2005 Matthias Troyer
+Copyright 2006 Douglas Gregor <doug.gregor -at- gmail.com>
+Copyright 2006 Douglas Gregor <doug.gregor -at gmail.com>
+Copyright 2019 Sam Day
+Modifications copyright (c) 2014, Oracle andor its affiliates.
+Modifications copyright (c) 2017-2018 Oracle andor its affiliates.
+Modifications copyright (c) 2014-2015 Oracle andor its affiliates.
+Copyright (c) 2014 Adam Wulkiewicz, Lodz, Poland.
+Modifications copyright (c) 2017, Oracle andor its affiliates.
+Modifications copyright (c) 2017 Oracle andor its affiliates.
+Copyright (c) 2017 Barend Gehrels, Amsterdam, the Netherlands.
+Modifications copyright (c) 2013-2017 Oracle andor its affiliates.
+Modifications copyright (c) 2014-2017 Oracle andor its affiliates.
+Copyright (c) 2017-2018, Oracle andor its affiliates.
+Modifications copyright (c) 2017, 2019, Oracle andor its affiliates.
+Copyright (c) 2013-2014 Adam Wulkiewicz, Lodz, Poland.
+Modifications copyright (c) 2013-2014, Oracle andor its affiliates.
+Modifications copyright (c) 2015, Oracle andor its affiliates.
+Copyright (c) 2014-2015 Samuel Debionne, Grenoble, France.
+Modifications copyright (c) 2013-2017, Oracle andor its affiliates.
+Copyright (c) 2015 Barend Gehrels, Amsterdam, the Netherlands.
+Modifications copyright (c) 2014-2015, Oracle andor its affiliates.
+Copyright (c) 2018, 2019 Oracle andor its affiliates.
+Copyright (c) 2007-2013 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2008-2013 Bruno Lalande, Paris, France.
+Copyright (c) 2009-2013 Mateusz Loskot, London, UK.
+Copyright (c) 2013-2017 Adam Wulkiewicz, Lodz, Poland.
+Modifications copyright (c) 2015-2019 Oracle andor its affiliates.
+Copyright (c) 2013-2015 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2002 Juan Carlos Arevalo-Baeza
+Copyright (c) 2011 Aaron Graham
+Copyright (c) 2009 Chris Hoeppler
+Copyright (c) 2011 Thomas Bernard
+Copyright (c) 2001-2009 Hartmut Kaiser
+Copyright (c) 2011 Jamboree
+Modifications copyright (c) 2013-2019 Oracle andor its affiliates.
+Modifications copyright (c) 2013-2018 Oracle andor its affiliates.
+Copyright (c) 2017, 2019 Oracle andor its affiliates.
+Modifications copyright (c) 2013-2019, Oracle andor its affiliates.
+Modifications copyright (c) 2013, Oracle andor its affiliates.
+Copyright (c) 2007-2009: Joachim Faulhaber
+Copyright (c) 1999-2006: Cortex Software GmbH, Kantstrasse 57, Berlin
+Copyright Louis Dionne 2013-2016
+(C) Copyright Tobias Schwinger
+(C) Copyright 2007-2009 Andrew Sutton
+(C) Copyright Andrew Sutton 2007
+Copyright (c) 2001-2008 Joel de Guzman
+Copyright (c) 2001-2008 Hartmut Kaiser
+Copyright (c) 1998-2008 Joel de Guzman
+Copyright (c)      2010 Bryce Lelbach
+Copyright (c) 2001-2012 Joel de Guzman
+Copyright (c)      2011 Thomas Heller
+Copyright (c) 2001-2013 Hartmut Kaiser
+Copyright (c) 2001-2012 Hartmut Kaiser
+Copyright (c) 2001-2009, Hartmut Kaiser
+Copyright Vladimir Prus 2004.
+Copyright 2004 Vladimir Prus
+Copyright 2017 Rene Rivera
+Copyright Steven J. Ross 2001 - 2014
+Copyright Steven J. Ross 2001 - 2014.
+Copyright (C) Vladimir Prus 2002. 
+Copyright 2005-2010 Vladimir Prus.
+Copyright (C) Christopher Currie 2003.
+Copyright 2006 Rene Rivera
+Copyright 2001 David Abrahams.
+Copyright 2002-2006 Rene Rivera.
+Copyright 2002-2003 Vladimir Prus.
+Copyright (c) 2005 Reece H. Dunn.
+Copyright 2006 Ilya Sokolov.
+Copyright 2007 Roland Schwarz
+Copyright 2007 Boris Gubenko.
+Copyright 2008 Steven Watanabe
+Copyright 2003 Dave Abrahams
+Copyright 2003 Douglas Gregor
+Copyright 2002, 2003, 2004, 2005, 2006 Vladimir Prus
+Copyright (c) 2005 Alexey Pakhunov.
+Copyright (c) 2011 Juraj Ivancic
+Copyright 2008, 2010 Vladimir Prus
+Copyright (c) 2003 David Abrahams.
+Copyright (c) 2005 Vladimir Prus.
+Copyright (c) 2006 Bojan Resnik.
+Copyright (c) 2006 Ilya Sokolov.
+Copyright (c) 2007 Rene Rivera
+Copyright (c) 2008 Jurko Gospodnetic
+Copyright (c) 2005-2010 Vladimir Prus.
+Copyright (c) 2005, 2010 Vladimir Prus.
+Copyright 2006 Rene Rivera.
+Copyright 2006 Ilya Sokolov
+Copyright (c) 2008 Steven Watanabe
+Copyright (C) Andre Hentz 2003. Permission to copy, use, modify, sell and
+Copyright (c) 2006 Rene Rivera.
+Copyright 2005, 2006 Rene Rivera
+Copyright 2002, 2003, 2004, 2005, 2006, 2010 Vladimir Prus
+Copyright 2002, 2003 Rene Rivera
+Copyright 2002, 2003, 2004, 2005 Vladimir Prus
+Copyright 2005 Dave Abrahams
+Copyright 2002, 2003, 2004, 2005, 2010 Vladimir Prus
+Copyright (c) 2004 Vladimir Prus.
+Copyright (c) 2011-2013 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2011-2014 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2017 Daniel James
+Copyright (c) 2013 Daniel James
+Copyright (c) 2015 Daniel James
+Copyright (c) 2011 Daniel James
+Copyright (c) 2012 Daniel James
+Copyright (c) 2004 Joao Abecasis
+Copyright (c)      2003 Martin Wille
+Copyright (c) 2010-2011 Daniel James
+Copyright (c) 2015 Kyle Lutz <kyle.r.lutz@gmail.com>
+Copyright (c) 2013-2014 Kyle Lutz <kyle.r.lutz@gmail.com>
+Copyright (c) 2013 Kyle Lutz <kyle.r.lutz@gmail.com>
+Copyright 2016 Klemens Morgenstern
+Copyright 2016 Antony Polukhin.
+Copyright 2016 Klemens D. Morgenstern.
+Copyright John Maddock 2014.
+Copyright Paul A. Bristow 2014.
+Copyright John Maddock 2006.
+Copyright Paul A. Bristow 2007.
+Copyright Paul A. Bristow 2006.
+Copyright John Maddock 2006, 2007.
+Copyright Paul A. Bristow 2008, 2010.
+Copyright Paul A. Bristow 2006.
+Copyright Nick Thompson 2019.
+Copyright John Maddock 2007.
+Copyright Paul A. Bristow 2007, 2010, 2012, 2014.
+Copyright John Maddock 2010.
+Copyright Paul A. Bristow 2010.
+Copyright 2014 Marco Guazzone (marco.guazzone@gmail.com)
+Copyright 2008 Gautam Sewani
+Copyright 2008 John Maddock
+Copyright Thijs van den Berg, 2008.
+Copyright John Maddock 2008.
+Copyright Paul A. Bristow 2008, 2014.
+Copyright Paul A. Bristow 2006, 2007.
+Copyright Paul A. Bristow 2007, 2009
+Copyright Benjamin Sobotta 2012
+Copyright Paul A. Bristow 2006, 2012, 2017.
+Copyright Thomas Mang 2012.
+Copyright (c) 2001-2014 Joel de Guzman
+Copyright Oliver Kowalke 2009.
+Copyright (c) 2010-2012 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (C) 2013 Eurodecision
+Copyright 2004-5 The Trustees of Indiana University.
+Copyright 2012, Philipp Moeller
+Copyright Jeremy Siek 1999-2001.
+Copyright (C) 2006 Trustees of Indiana University
+Copyright Jeremy Siek, 2001.
+Copyright (C) 2009 Trustees of Indiana University
+Copyright (C) Vladimir Prus 2003.
+Copyright (C) 2003-2009 Matthias Christian Schabel
+Copyright (C) 2007-2009 Steven Watanabe
+Copyright (C) 2007-2010 Steven Watanabe
+Copyright Vladimir Prus 2002-2004.
+Copyright (C) 2002-2006 Marcin Kalicinski
+Copyright (C) 2009 Sebastian Redl
+Copyright (C) 2015 Sebastian Redl
+Copyright (c) Marshall Clow 2010-2012.
+Copyright Aleksey Gurtovoy 2000-2008
+Copyright (c) Microsoft Corporation 2014
+Copyright (c) 2004 Joel de Guzman
+Copyright 2013 Niall Douglas additions for colors and alignment.
+Copyright 2013 Paul A. Bristow additions for more colors and alignments.
+Copyright 2017 Tom Westerhout font fixes to support Sphinx
+Copyright (c) 2006 Michael Stevens
+Copyright Nasos Iliopoulos, Gunter Winkler 2009.
+Copyright Beman Dawes 2003
+Copyright Beman Dawes, 2002-2005
+Copyright Vladimir Prus, 2002
+Copyright Beman Dawes 2002-2009
+Copyright Jan Langer 2002
+Copyright Dietmar Kuehl 2001
+Copyright Vladimir Prus 2002
+Copyright Andrey Semashev 2019
+Copyright Beman Dawes 2002
+Copyright Beman Dawes 2002-2005, 2009
+Copyright Beman Dawes 2009
+Copyright (c) 2003 Jonathan de Halleux (dehalleux@pelikhan.com)
+Copyright (c) 2002-2003 Martin Wille
+Copyright (c) 2001 Bruce Florman
+Copyright (c) 2003 Giovanni Bajo
+Copyright Oliver Kowalke  Nat Goodspeed 2015.
+Copyright Oliver Kowalke 2013.
+Copyright Oliver Kowalke 2015.
+Copyright 2008-10 Anthony Williams
+Copyright 2015    Oliver Kowalke
+Copyright (C) 2001-2003
+Copyright (C) 2007 Anthony Williams
+Copyright (C) 2008-2018 Lorenzo Caminiti
+Copyright John Maddock 2011.
+Copyright John Maddock 2012.
+Copyright 2011 Steven Watanabe
+Copyright 2015 Steven Watanabe
+Copyright 2011-2012 Steven Watanabe
+Copyright 2012 Steven Watanabe
+Copyright 2012-2013 Steven Watanabe
+Copyright (c) Henrik Ravn 2004
+Copyright Barend Gehrels 2010, Geodan, Amsterdam, the Netherlands
+Copyright (c) 2018 Jakub Szuppe <j.szuppe@gmail.com>
+Copyright (c) 2016 Jakub Szuppe <j.szuppe@gmail.com>
+Copyright (c) 2013-2015 Kyle Lutz <kyle.r.lutz@gmail.com>
+Copyright (c) 2018 Emil Dotchevski. Distributed under the [Boost Software License, Version 1.0](http:www.boost.org/LICENSE10.txt).
+Copyright (c) 1998-2002
+Copyright (c) 2009 Ion Gaztanaga
+Copyright (c) 2012-2013 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2012-2014 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2012-2013 Andrew Hundt.
+Copyright Ion Gaztanaga 2007-2013. Distributed under the Boost
+Copyright Ion Gaztanaga 2013-2013. Distributed under the Boost
+Copyright Ion Gaztanaga 2013-2014. Distributed under the Boost
+Copyright 2011-2013 Andrew Hundt <ATHundt@gmail.com>
+Copyright 2013-2013 Ion Gaztanaga
+Copyright (c) 2011-2013 Andrew Hundt.
+Copyright (c) 2014-2014 Ion Gaztanaga
+Copyright Andrey Semashev 2016.
+Copyright Andrey Semashev 2007 - 2018.
+Copyright 2019 Mike Dev
+Copyright (c) 2017 Andrey Semashev
+Copyright (c) 2018 Andrey Semashev
+Copyright 2004 Aleksey Gurtovoy
+Copyright 2003 Beman Dawes
+Copyright 2005 Eric Niebler
+Copyright 2005 Hartmut Kaiser
+Copyright 2004 John Maddock
+Copyright (c) 2015 John Fletcher
+Copyright (c) 2010-2011 Thomas Heller
+Copyright (c) 2005-2011 Joel de Guzman
+Copyright (c) 2014 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2013 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2007-2008 Steven Watanabe
+Copyright (c) 2009 Christopher Schmidt
+Copyright (c) 2011 Eric Niebler
+Copyright Douglas Gregor 2001-2004.
+Copyright Frank Mori Hess 2009.
+Copyright Keith MacDonald 2005.
+Copyright 2003-2004 Joaquín M López Muñoz.
+Copyright David Abrahams 2004. 
+Copyright David Abrahams 2006. 
+Copyright 2017 - 2019 James E. King, III. 
+Copyright 2012 Christian Henning, Andreas Pokorny, Lubomir Bourdev
+Copyright 2010 Fabien Castan, Christian Henning
+Copyright Gennadiy Rozental 2011-2015.
+Copyright Gennadiy Rozental 2001-2015.
+Copyright Gennadiy Rozental 2015.
+Copyright Marek Kurdej 2014.
+Copyright Paul A. Bristow 2013
+Copyright Christopher Kormanyos 2013.
+Copyright Raffi Enficiaud 2019
+Copyright Raffi Enficiaud 2017.
+Copyright Tony Lewis 2016.
+Copyright Raffi Enficiaud, 2019
+Copyright Raffi Enficiaud 2015
+Copyright 2018 Paul Fultz II
+Copyright Douglas Gregor 2002-2003. 
+Copyright Douglas Gregor 2001-2006
+Copyright Emil Dotchevski 2007
+Copyright (C) Douglas Gregor 2008
+Copyright (c) 2024 John Fletcher
+Copyright (C) 2009-2012 Lorenzo Caminiti
+Copyright Beman Dawes 2003, 2006, 2008
+Copyright 2010 Howard Hinnant
+Copyright 2009-2010 Vicente J. Botet Escriba
+Copyright (c) 2002-2003 Beman Dawes, William E. Kempf.
+Copyright Jason Rice 2017
+Copyright 2001, 2003, 2004 Daryle Walker.  
+Copyright 2011 Daryle Walker.
+Copyright 2006 - 2010 John Maddock and Paul A. Bristow.
+Copyright (C) 2003, 2012, 2013 Mark Adler
+Copyright 2018 James E. King III. Use, modification and
+Copyright 2009-2013 Karsten Ahnert
+Copyright 2009-2013 Mario Mulansky
+Copyright 2011-2013 Karsten Ahnert
+Copyright 2011-2015 Mario Mulansky
+Copyright 2012 Christoph Koke
+Copyright 2012-2015 Mario Mulansky
+Copyright (c) 2001-2009 Daniel Nuffer
+Copyright Beman Dawes 2008
+Copyright 2009 Howard Hinnant
+Copyright Beman Dawes 2006, 2008
+Copyright 20092010 Vicente J. Botet Escriba
+Copyright Andrey Semashev 2019.
+Copyright (c) 2017 Francisco José Tapia (fjtapia@gmail.com )
+Copyright (c) 2016 Francisco José Tapia (fjtapia@gmail.com )
+Copyright Christopher Kormanyos 2014.
+Copyright Paul Bristow 2014.
+Modifications copyright (c) 2014-2018, Oracle andor its affiliates.
+Modifications copyright (c) 2015-2018, Oracle andor its affiliates.
+Copyright (c) 2010      Eric Niebler
+Copyright (c) 2014-2015 John Fletcher
+Copyright (c) 2016      Kohei Takahashi
+Copyright (c) 2006 Daniel Wallin
+Copyright (c) 2005 Dan Marsden
+Copyright (c) 2007 Joel de Guzman
+Copyright (c) 2005-2008 Hartmut Kaiser
+Copyright (C) 2004-2006 The Trustees of Indiana University.
+Copyright (C) 2007  Douglas Gregor  <doug.gregor@gmail.com>
+Copyright (C) 2007  Matthias Troyer  <troyer@boost-consulting.com>
+Copyright Daniel James 2005-2009
+Copyright Steven Ross 2014. Use, modification and
+Copyright Steven Ross 2009-2014. Use, modification and
+Copyright Steven Ross 2009. Use, modification and
+Copyright (c) 2016 Francisco Jose Tapia (fjtapia@gmail.com )
+Copyright Orson Peters 2017. Use, modification and
+Copyright 2015 John Maddock and Paul A. Bristow.
+Copyright (c) 2010-2010: Joachim Faulhaber
+Copyright (c) 2011-2011: Joachim Faulhaber
+Copyright Neil Groves 2009. Use, modification and
+Copyright Neil Groves 2010. Use, modification and
+Copyright (c) 2003 Thomas Witt
+Copyright (c) 2001, Daniel C. Nuffer
+Copyright (c) 2003, Hartmut Kaiser
+Copyright (c) 2002-2006 Hartmut Kaiser
+Copyright (c) 2019 Mateusz Loskot <mateusz at loskot dot net>
+Copyright 2018 Mateusz Loskot <mateusz at loskot dot net>
+Copyright 2019 Mateusz Loskot <mateusz at loskot dot net>
+Copyright (c) 2005-2012 Joel de Guzman
+Copyright (c) 2005-2013 Joel de Guzman
+Copyright (c) 2005-2007 Dan Marsden
+Copyright 2014 Renato Tegon Forti, Antony Polukhin.
+Copyright 2015-2019 Antony Polukhin.
+Copyright (c) 2001-2003 Dan Nuffer
+Copyright (c) 2003 Pavel Baranov
+Copyright (c) 2003      Martin Wille
+Copyright (c) 2003 2003 Vaclav Vesely
+Copyright (c) 2007 Hartmut Kaiser
+Copyright (c) 2005 Joao Abecasis
+Copyright (c) 2004 Martin Wille
+Copyright (c) 2004 Stefan Slapeta
+Copyright (c) 2006 Joao Abecasis
+Copyright (c) 2004 Hartmut Kaiser
+Copyright (c) 2002-2004 Martin Wille
+Copyright (c) 2019 Nikita Kniazev
+Copyright (c) 2004 Chris Hoeppler
+Copyright (c) 2005 Jordan DeLong
+Copyright (C) 2003 Martin Wille
+Copyright (c) 2004 Vyacheslav E. Andrejev
+Copyrigh (c) 2003 Martin Wille
+Copyright (c) 2004 Angus Leeming
+Copyright (c) 2017 Nikita Kniazev
+Copyright (c) 2001-2007 Hartmut Kaiser
+Copyright Ion Gaztanaga  2006-2013
+Copyright Ion Gaztanaga  2008-2013
+Copyright Ion Gaztanaga 2007-2013
+Copyright Ion Gaztanaga  2007-2013
+Copyright Ion Gaztanaga  2006-2014
+Copyright Ion Gaztanaga 2010-2013
+Copyright Ion Gaztanaga  2015-2015
+Copyright Ion Gaztanaga  2009-2013
+Copyright 2002 The Trustees of Indiana University.
+Copyright 2019 Glen Joseph Fernandes
+Copyright 2007 The Trustees of Indiana University.
+Copyright 2010-2011 Mario Mulansky
+Copyright (c) 2006-2008 Emil Dotchevski and Reverge Studios, Inc.
+Copyright 2013 Karsten Ahnert
+Copyright 2013 Mario Mulansky
+Copyright 2010-2012 Karsten Ahnert
+Copyright 2011 Mario Mulansky
+Copyright 2010 Mario Mulansky
+Modifications copyright (c) 2015-2017 Oracle andor its affiliates.
+Copyright (c) 2007-2016 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2008-2016 Bruno Lalande, Paris, France.
+Copyright (c) 2009-2016 Mateusz Loskot, London, UK.
+Modifications copyright (c) 2016-2017, Oracle andor its affiliates.
+Copyright (c) 2017, Oracle andor its affiliates.
+Copyright (c) 2017-2019, Oracle andor its affiliates.
+Modifications copyright (c) 2016, Oracle andor its affiliates.
+Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler
+Copyright Frank Mori Hess 2008
+Copyright Frank Mori Hess 2019
+Copyright (C) Douglas Gregor 2001-2006. Use, modification and
+Copyright Frank Mori Hess 2007-2008.
+Copyright Douglas Gregor 2001-2003.
+Copyright Frank Mori Hess 2009
+Copyright Douglas Gregor 2002-2004. Use, modification and
+Copyright Douglas Gregor 2001-2003. Use, modification and
+Copyright Frank Mori Hess 2008-2009.
+Copyright Douglas Gregor 2001-2006.
+Copyright Frank Mori Hess 2007
+Copyright 2007-2008 Andreas Pokorny, Christian Henning
+Copyright 2008 Christian Henning, Lubomir Bourdev
+Copyright 2009 Christian Henning
+Copyright 2007-2012 Christian Henning, Lubomir Bourdev
+Copyright 2012 Christian Henning
+Copyright 2007-2008 Christian Henning, Andreas Pokorny, Lubomir Bourdev
+Copyright 2019 Peter Dimov
+Copyright 2018 Peter Dimov
+Copyright 2015, 2017 Peter Dimov.
+Copyright 2015 Peter Dimov.
+Copyright 2017, 2019 Peter Dimov.
+Copyright 2015, 2016 Peter Dimov.
+Copyright 2015, 2016, 2017 Peter Dimov.
+Copyright 2015-2017 Peter Dimov.
+Copyright 2015, 2016, 2019 Peter Dimov.
+Copyright 2019 Peter Dimov.
+Copyright 2015, 2019 Peter Dimov
+Copyright 2015, 2017, 2019 Peter Dimov.
+Copyright 2016 Peter Dimov.
+Copyright 2016, 2017 Peter Dimov.
+Copyright 2018 Glen Joseph Fernandes
+Copyright 2012 Beman Daves
+Copyright 2009-2012 Karsten Ahnert
+Copyright 2009-2012 Mario Mulansky
+Copyright 2010-2012 Mario Mulansky
+Copyright 2010-2011 Karsten Ahnert
+Copyright 2013 Pascal Germroth
+Copyright 2014          LRI    UMR 8623 CNRSUniv Paris Sud XI
+Copyright 2014          NumScale SAS
+Copyright 2010-2013 Mario Mulansky
+Copyright (c) 2018 Stefan Seefeld
+Copyright 2018, 2019 Peter Dimov
+Copyright (c) 2010 Tim Blechmann
+Copyright (c) 2005-2007 Hartmut Kaiser
+Copyright 2007, 2009 Tim Blechmann
+Copyright Charly Chevalier 2015
+Copyright Joel Falcou 2015
+Copyright (c) 2010 Alfredo Correa
+Copyright Akira Takahashi 2011
+Copyright (c) 2019 Barend Gehrels, Amsterdam, the Netherlands.
+Modifications copyright (c) 2019, Oracle andor its affiliates.
+Copyright (c) 2002-2003 William E. Kempf.
+Copyright 2017 James E. King III
+Copyright Peter Dimov and Multi Media Ltd. 2001, 2002, 2003
+Copyright Ion Gaztanaga 2006. 
+Copyright Peter Dimov 2004-2005
+Copyright Ion Gaztanaga 2006-2012. 
+Copyright Ion Gaztanaga 2007-2012.
+Copyright (c) 2001, 2002, 2003 Peter Dimov and Multi Media Ltd.
+Copyright 2004-2005 Peter Dimov
+Copyright 2007-2012 Ion Gaztanaga
+Copyright 2006      Ion Gaztanaga
+Copyright 2018 Rene Rivera
+Copyright 2018 Mike Dev
+Copyright (c) 2014 Rene Rivera
+Copyright 2002-2006 Andreas Huber Doenni
+Copyright (C) 2012 Vicente J. Botet Escriba
+Copyright (c) 2018 Kohei Takahashi
+Copyright (c) 2018-2019, Cem Bassoy, cem.bassoy@gmail.com
+Copyright (c) 2018, Cem Bassoy, cem.bassoy@gmail.com
+Copyright (c) 2018-2019
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2016.
+Copyright 2018 Peter Dimov.
+Copyright (c) 2008-2009 Ben Hanson
+Copyright (c) 2008-2011 Hartmut Kaiser
+Copyright (c) 2014 Joel de Guzman
+Copyright 2005-2007 Jonathan Turkanis
+Copyright (c) 2011 David Bellot
+Copyright (c) 2000-2002
+Copyright (c) 2004 Michael Stevens
+Copyright (c) 2000-2011 Joerg Walter, Mathias Koch, David Bellot
+Copyright (c) 2009-2011 Gunter Winkler, David Bellot
+Copyright (c) 2010 Athanasios Iliopoulos
+Copyright 2010 Gunter Winkler <guwi17@gmx.de>
+Copyright 2008 Gunter Winkler <guwi17@gmx.de>
+Copyright (c) 2013 Joaquim Duran
+Copyright (c) 2012, Marco Guazzone
+Copyright (c) 2009-2012, Marco Guazzone
+Copyright (c) 2001 Samuel Krempp
+Copyright Aleksey Gurtovoy 2003-2004
+Copyright (c) 2001-2015 Joel de Guzman
+Modifications copyright (c) 2013-2016, Oracle andor its affiliates.
+Modifications copyright (c) 2013-2015, Oracle andor its affiliates.
+Copyright (c) 2016 Oracle andor its affiliates.
+Copyright (C) 2007, 2008, 2012 Mark Adler
+Copyright (C) 2003, 2005, 2008, 2010, 2012 Mark Adler
+Copyright (C) 2003, 2012 Mark Adler, all rights reserved
+Copyright (C) 2004, 2005, 2012 Mark Adler, all rights reserved
+Copyright (C) 2004, 2008, 2012, 2016 Mark Adler, all rights reserved
+Copyright (C) 2004, 2008, 2012 Mark Adler, all rights reserved
+Copyright (C) 2005, 2012 Mark Adler
+Copyright Beman Dawes 2002.  Distributed under the Boost
+Copyright (C) 2017 Tom Hughes
+Copyright (c) 2011 Hartmut Kaiser
+Copyright 2016 Peter Dimov
+Copyright (c) 2008 Peter Dimov
+Copyright (c) 2001-2004 Peter Dimov and Multi Media Ltd.
+Copyright (c) 2001 David Abrahams
+Copyright (c) 2004 Peter Dimov
+Copyright (c) 2005 Peter Dimov
+Copyright (c) 2004, 2005, 2009 Peter Dimov
+Copyright (c) 2004, 2005 Peter Dimov
+Copyright (c) 2005, 2008 Peter Dimov
+Copyright (c) 2015 Peter Dimov
+Copyright (C) Markus Schoepflin 2005.
+Copyright (c) 2016 Peter Dimov
+Copyright 2017 Peter Dimov
+Copyright (c) 2001, 2002 Peter Dimov and Multi Media Ltd.
+Copyright (c) 2006 Peter Dimov
+Copyright (c) 2009 Peter Dimov
+Copyright (c) 2006 Douglas Gregor <doug.gregor@gmail.com>
+Copyright (c) 2014 Agustin Berge
+Copyright (c) 2001 Peter Dimov and Multi Media Ltd.
+Copyright 2015 Peter Dimov
+Copyright (c) 2009 Steven Watanabe
+Copyright (c) 2018 Mateusz Loskot <mateusz at loskot dot net>
+Copyright (c) 2018 Mateusz Loskot <mateusz@loskot.net>
+Copyright (c) 2007-2015 Andrey Semashev
+Copyright (c) 2003 Vladimir Prus
+Copyright (c) 2007 Tobias Schwinger
+Copyright Louis Dionne 2015
+Modified Work Copyright Barrett Adair 2015-2017
+Copyright 2015-2016 Barrett Adair
+Copyright Barrett Adair 2016-2017
+Copyright 2006 Vladimir Prus
+Copyright (C) 2013 Vicente J. Botet Escriba
+Copyright (C) 2014 Vicente J. Botet Escriba
+Copyright (C) 2013-2014 Vicente J. Botet Escriba
+Copyright (c) 2016-2017 Oracle andor its affiliates.
+Copyright (c) 2012-2014 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2016-2018 Oracle andor its affiliates.
+Copyright (c) 2018 Oracle andor its affiliates.
+Copyright (c) 2016-2017, Oracle andor its affiliates.
+Modifications copyright (c) 2015-2016 Oracle andor its affiliates.
+Copyright (c) 2018, Oracle andor its affiliates.
+Copyright (c) 2015-2018, Oracle andor its affiliates.
+Copyright (c) 2006, 2007 Julio M. Merino Vidal
+Copyright (c) 2008 Ilya Sokolov, Boris Schaeling
+Copyright (c) 2009 Boris Schaeling
+Copyright (c) 2010 Felipe Tanus, Boris Schaeling
+Copyright (c) 2011, 2012 Jeff Flinn, Boris Schaeling
+Copyright (c) 2016 Klemens D. Morgenstern
+Copyright (c) 2019 Klemens D. Morgenstern
+Copyright (c) 2008 Beman Dawes
+Copyright Neil Groves 2011. Use, modification and distribution is subject
+Copyright 2017-2019 Peter Dimov
+Copyright (c) 2009 Hartmut Kaiser
+Copyright 2007-2008 Christian Henning
+Copyright (C) 1995-2008 Mark Adler
+Copyright (C) 2003 Mark Adler
+Copyright (C) 1995-2017 Mark Adler
+Copyright Rene Rivera 2008-2015
+Copyright Rene Rivera 2008-2017
+Copyright Benjamin Worpitz 2018
+Copyright Louis Dionne 2015
+Copyright (c) 2006-2010 Emil Dotchevski and Reverge Studios, Inc.
+Copyright (C) 2017-2019 Niall Douglas <http:www.nedproductions.biz/>and Andrzej Krzemieński <akrzemi1@gmail.com>
+Copyright Oliver Kowalke 2017.
+Copyright 2018 Andrey Semashev
+Copyright 2014 Daniel James.
+Copyright David Abrahams 2004. 
+Copyright 2005-2009 Daniel James.
+Copyright 2010 Daniel James.
+Copyright 2011 Daniel James.
+Copyright Andreas Huber Doenni 2002-2005, Eric Niebler 2006
+Copyright 2007 David Jenkins.
+Copyright 2007 Eric Niebler.
+Copyright Aleksey Gurtovoy 2000-2006
+Copyright David Abrahams 2003-2004
+Copyright Aleksey Gurtovoy 2004
+Copyright Aleksey Gurtovoy 2000-2009
+Copyright Eric Niebler 2008
+Copyright Eric Friedman 2002
+Copyright Aleksey Gurtovoy 2000-2002
+Copyright Sergey Krivonos 2017
+Copyright Aleksey Gurtovoy 2002-2006
+Copyright David Abrahams 2002-2003
+Copyright Daniel Walker 2007
+Copyright Eric Friedman 2003
+Copyright David Abrahams 2004
+Copyright Eric Friedman 2002-2003
+Copyright David Abrahams 2003
+Copyright John R. Bandela 2000-2002
+Copyright Dave Abrahams 2001-2002
+Copyright Aleksey Gurtovoy 2000-2003
+Copyright Eric Niebler 2009
+Copyright Aleksey Gurtovoy 2000-2010
+Copyright David Abrahams 2000-2002
+Copyright 2017 Valentin Noah Hartmann
+Copyright (C) 2005, 2006 Douglas Gregor.
+Copyright (C) 2006 The Trustees of Indiana University
+Copyright (C) 2010 Bryce Lelbach
+Copyright 2018-2019 Rene Rivera
+Copyright 2013 John Maddock. Distributed under the Boost
+Copyright (c) Alexander Zaitsev <zamazan4ik@gmail.com>, 2017
+Copyright Jesse Williamson 2009
+Copyright (c) Marshall Clow 2012.
+Copyright (c) Marshall Clow 2011-2012.
+Copyright (c) Marshall Clow 2013.
+Copyright (c) T. Zachary Laine 2018.
+Copyright (c) Alexander Zaitsev <zamazan4ik@gmail.com>, 2016
+Copyright (c) Marshall Clow 2011-2012, Alexander Zaitsev <zamazan4ik@gmail.com>, 2017.
+Copyright (c) Marshall Clow 2008-2012.
+Copyright (c) 2010 Nuovation System Designs, LLC
+Copyright (c) Marshall Clow 2014.
+Copyright (c) 1999-2003 Jaakko Jarvi
+Copyright 2005-2007 Adobe Systems Incorporated
+Copyright Daniel Wallin 2006. 
+Copyright (c) 2009-2010 Christopher Schmidt
+Copyright (c) 2015 Kohei Takahashi
+Copyright Daniel James 2013-2018
+Copyright (c)      2011 Bryce Lelbach
+Copyright (c) 2010-2011 Bryce Lelbach
+Copyright (c) 2015 Artyom Beilis (Tonkikh)
+Copyright (c) 2010 Artyom Beilis (Tonkikh)
+Copyright 2009 Vladimir Prus
+Copyright (c) 2001-2010 Hartmut Kaiser.
+Copyright Nick Thompson, 2017
+Copyright Nick Thompson, 2019
+Copyright Nick Thompson 2019.
+Copyright (c) 2001-2002 Chuck Allison and Jeremy Siek
+Copyright (c) 2003-2006, 2008 Gennaro Prota
+Copyright (c) 2014 Ahmed Charles
+Copyright (c) 2014 Glen Joseph Fernandes
+Copyright (c) 2014 Riccardo Marcangelo
+Copyright (c) 2018 Evgeny Shulgin
+Copyright (c) 2015 Seth Heeren
+Copyright 2008 Intel Corporation
+Copyright Andrii Sydorchuk 2010-2012.
+Copyright 2018 John Maddock. 
+Copyright Christopher Kormanyos 2002 - 2013.
+Copyright 2011 -2013 John Maddock. 
+Copyright 2012 John Maddock. 
+Copyright 2011 John Maddock. 
+Copyright Jens Maurer 2006-1011
+Copyright Steven Watanabe 2011
+Copyright Ion Gaztanaga 2005-2012.
+Copyright Peter Dimov 2008.
+Copyright Oliver Kowalke 2014.
+Copyright (C) 1995-2003 Jean-loup Gailly and Mark Adler.
+Copyright (C) 1998 by Bob Dellaca.
+Copyright (C) 2003 by Cosmin Truta.
+Copyright (C) 1995-2003 by Jean-loup Gailly.
+Copyright (C) 1998,1999,2000 by Jacques Nomssi Nzali.
+Copyright (c) 2013-2017 Vinnie Falco (vinnie dot falco at gmail dot com)
+Modifications copyright (c) 2014 Oracle andor its affiliates.
+Copyright (c) 2017 Oracle andor its affiliates.
+Copyright (c) 2019 Oracle andor its affiliates.
+Copyright (c) 2019 Tinko Bartels
+Copyright (c) 2016-2018, Oracle andor its affiliates.
+Copyright (c) 2016, Oracle andor its affiliates.
+Copyright (c) 2011-2015 Barend Gehrels, Amsterdam, the Netherlands.
+Modifications copyright (c) 2014, 2019 Oracle andor its affiliates.
+Modifications copyright (c) 2014-2016 Oracle andor its affiliates.
+Copyright 2004-2007 Jonathan Turkanis
+Copyright (c) 2008-2010: Joachim Faulhaber
+Copyright (c) 2010-2011: Joachim Faulhaber
+Copyright (c) 2008-2011: Joachim Faulhaber
+Copyright Paul Mensonides 2002-2011.
+Copyright Edward Diener 2011.
+Copyright Paul Mensonides 2011.
+Copyright Daryle Walker 2001, 2006.
+Copyright Nick Thompson 2018.
+Copyright John Maddock 2017.
+Copyright John Maddock 2009.
+Copyright Daryle Walker 2001.
+Copyright Beman Dawes 1999.
+Copyright Daryle Walker 2001.
+Copyright (C) 1995-2006, 2011, 2016 Jean-loup Gailly
+Copyright (C) 2011, 2016 Mark Adler
+Copyright (C) 1995-2006, 2010, 2011, 2016 Jean-loup Gailly
+Copyright 2007-2008 Christian Henning, Andreas Pokorny
+Copyright 2007-2012 Christian Henning, Andreas Pokorny
+Copyright 2007-2012 Christian Henning, Andreas Pokorny, Lubomir Bourdev
+Copyright Samuel Krempp 2003. 
+Copyright (c) 2014, 2019, Oracle andor its affiliates.
+Copyright Daniel K. O. 2005.
+Copyright Ion Gaztanaga 2007-2014
+Copyright Ion Gaztanaga  2013-2014
+Copyright Ion Gaztanaga  2007-2014
+Copyright Olaf Krzikalla 2004-2006.
+Copyright Ion Gaztanaga  2006-2015
+Copyright Ion Gaztanaga  2013-2013
+Copyright Ion Gaztanaga  2010-2013
+Copyright Ion Gaztanaga 2014-2014. 
+Copyright Pablo Halpern 2009.
+Copyright Ion Gaztanaga 2011-2014.
+Copyright Ion Gaztanaga 2008
+Copyright Ion Gaztanaga  2006-2014.
+Copyright (c) 2004 Ralf Mattethat
+Copyright Ion Gaztanaga 2008-2013
+Copyright Fernando Luis Cacciola Carballal 2000-2004
+Copyright Beman Dawes, Dave Abrahams 1999. 
+Copyright (C) 2003, Fernando Luis Cacciola Carballal.
+Copyright (C) 2005, Fernando Luis Cacciola Carballal.
+Copyright (c) 2012 Robert Ramey
+Copyright (c) 2015 Robert Ramey
+Copyright (c) 2019 Robert Ramey
+Copyright (c) 2017 Robert Ramey
+Copyright (c) 2018 Robert Ramey
+Copyright (c) 2014 Robert Ramey
+Copyright Paul Moore 1999. 
+Copyright (c) 2019Robert Ramey
+Copyright 2003-2013 Joaquin M Lopez Munoz.
+Copyright 2003-2018 Joaquin M Lopez Munoz.
+Copyright 2003-2016 Joaquin M Lopez Munoz.
+Copyright 2003-2014 Joaquin M Lopez Munoz.
+Copyright 2003-2019 Joaquin M Lopez Munoz.
+Copyright 2003-2008 Joaquin M Lopez Munoz.
+Copyright 2003-2015 Joaquin M Lopez Munoz.
+Copyright 2003-2017 Joaquin M Lopez Munoz.
+Modifications copyright (c) 2019 Oracle andor its affiliates.
+Copyright (c) 2011-2018 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2011-2017 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2008 Federico J. Fernandez.
+Copyright (C) 2010 Tim Blechmann
+Copyright (C) 2011 Tim Blechmann
+Copyright (c) 2014 Christoph Weiss
+Copyright (c) 2003 Institute of Transport
+Copyright 2017-2018 Steven Watanabe
+Copyright 2017 Steven Watanabe
+Copyright 2018 Steven Watanabe
+Copyright (c) 2017 Steven Watanabe
+Copyright 2019 Hans Dembinski
+Copyright 2015-2018 Hans Dembinski
+Copyright 2018-2019 Hans Dembinski
+Copyright 2015-2019 Hans Dembinski
+Copyright Ion Gaztanaga 2006-2012
+Copyright Markus Schoepflin 2007
+Copyright Bryce Lelbach 2010
+Copyright Ion Gaztanaga 2012-2012. 
+Copyright Ion Gaztanaga 2009-2012. 
+Copyright Ion Gaztanaga 2007-2012.
+Copyright Stephen Cleary 2000.
+Copyright Ion Gaztanaga 2005-2012.
+Copyright Ion Gaztanaga 2010-2012.
+Copyright Ion Gaztanaga 2005-2016.
+Copyright Ion Gaztanaga 2014-2015. 
+Copyright Ion Gaztanaga 2005-2013. 
+Copyright (c) 2002 Peter Dimov and Multi Media Ltd.
+Copyright Gennaro Prota 2003 - 2004.
+Copyright Ion Gaztanaga 2010-2012. 
+Copyright Ion Gaztanaga 2007-2014. 
+Copyright Ion Gaztanaga 2005-2015.
+Copyright John Maddock 2000.
+Copyright Ion Gaztanaga 2008-2012. 
+(C) Copyright Ion Gaztanaga 2005-2015. 
+(C) Copyright 2002 Robert Ramey - http:www.rrsd.com .
+(C) Copyright 2002-4 Robert Ramey - http:www.rrsd.com .
+(C) Copyright 2018 Robert Ramey - http:www.rrsd.com .
+(C) Copyright 2018Robert Ramey - http:www.rrsd.com .
+(C) Copyright 2018 Alexander Grund
+(C) Copyright 2009 Brian Ravnsgaard and Kenneth Riddile
+(C) Copyright 2009 Robert Ramey
+(C) Copyright 2005 Matthias Troyer .
+(C) Copyright 2002 Vahan Margaryan.
+(C) Copyright 2002-2009 Vladimir Prus and Robert Ramey.
+(C) Copyright 2002-2009 Vladimir Prus, Robert Ramey and Takatoshi Kondo.
+(C) Copyright 2008 Joaquin M Lopez Munoz.
+(C) Copyright 2014 Jim Bell
+(C) Copyright 2009 Robert Ramey.
+(C) Copyright 2002 Martin Ecker.
+(C) Copyright 2004 Pavel Vozenilek
+(C) Copyright 2009 Robert Ramey - http:www.rrsd.com .
+(C) Copyright 2009 Eric Moyer - http:www.rrsd.com .
+(C) Copyright 2002 Robert Ramey- http:www.rrsd.com - David Tonge  .
+(C) Copyright 2002 Robert Ramey- http:www.rrsd.com and Takatoshi Kondo.
+(C) Copyright Jonathan Turkanis 2004.
+(C) Copyright 2016 Ashish Sadanandan
+(C) Copyright 2002-14 Robert Ramey - http:www.rrsd.com .
+Copyright (C) 2006 Marcin Kalicinski
+Copyright (c) 2005-2006 Joao Abecasis
+Copyright Nat Goodspeed 2013.
+Copyright (C) 2016-2018 T. Zachary Laine
+Copyright (c) 2011 Helge Bahmann
+Copyright (c) 2013-2014 Andrey Semashev
+Copyright David Abrahams 2001.
+Copyright Stefan Seefeld 2005.
+Copyright David Abrahams 2000.
+Copyright (c) 2004 Jonathan Brandmeyer
+Copyright David Abrahams 2004.
+Copyright Klemens Morgenstern, 2012-2015.
+Copyright 2012-2019 Antony Polukhin.
+Copyright (c) 2012-2019 Antony Polukhin.
+Copyright Antony Polukhin, 2018.
+Copyright Chris Glover, 2016.
+Copyright (C) 2008 Jurko Gospodnetic
+Copyright (C) 2016 Edward Diener
+Copyright (C) 2011 John Maddock
+Copyright (C) 2011 Kwan Ting Chan
+Copyright (C) 2000, 2001 Stephen Cleary
+Copyright (c) 2012-2014 Torstein Honsi
+Copyright (c) 2010-2014 Torstein Honsi
+Copyright (c) 2009-2014 Torstein Honsi
+Copyright (C) 2010-2011 Tim Blechmann
+Copyright 2010 Andy Tompkins.
+Copyright (c) 2017, 2018 James E. King III
+Copyright 2006 Andy Tompkins.
+Copyright (c) 2018 James E. King III
+Copyright 2009 Andy Tompkins.
+Copyright 2007 Andy Tompkins.
+Copyright Ankit Daftery 2011-2012.
+Copyright 2011 Stefan Seefeld.
+Copyright Jim Bosch 2011-2012.
+Copyright (c) 2017 Mateusz Loskot <mateusz at loskot dot net>
+Copyright 2019 Miral Shah <miralshah2211@gmail.com>
+Copyright 2019 Pranam Lashkari <plashkari628@gmail.com>
+Copyright Steven J. Ross 2001 - 2009.
+Copyright 1998-2002 John Maddock
+Copyright (c) 2011
+Copyright Lingxi Li 2015.
+Copyright Steven Watanabe 2010
+Copyright Justinas Vygintas Daugmaudis, 2010.
+Copyright John Maddock 2015
+Copyright Justinas Vygintas Daugmaudis, 2010-2018.
+Copyright Jens Maurer 2000, 2002
+Copyright Steven Watanabe 2014
+Copyright Marco Guazzone 2014
+Copyright Thijs van den Berg 2014
+Copyright (c) 2010 Steven Watanabe
+Copyright Thorsten Ottosen 2003-2008. 
+Copyright (c) 2008-2012 Barend Gehrels, Amsterdam, the Netherlands.
+Modifications copyright (c) 2017-2018, Oracle andor its affiliates.
+Modifications copyright (c) 2018, 2019, Oracle andor its affiliates.
+Copyright Jim Bosch & Ankit Daftery 2010-2012.
+Copyright (c) 2001-2006 CrystalClear Software, Inc.
+Copyright &169; 2002 CrystalClear Software, Inc.
+Copyright (c) 2002-2006 CrystalClear Software, Inc.
+Copyright (c) 2004-2005 CrystalClear Software, Inc.
+Copyright 2005 The Trustees of Indiana University.
+Copyright 2012, Trustees of Indiana University
+Copyright Jeremy Siek 2001.
+Copyright 2005 David Abrahams and Aleksey Gurtovoy. Distributed
+Copyright (c) 2001 Peter Dimov
+Copyright (c) 2002 Peter Dimov
+Copyright (c) 2005 Markus Schoepflin
+Copyright Aleksey Gurtovoy 2001-2006
+Copyright Peter Dimov 2000-2002
+Copyright (c) 2002-2003 Eric Friedman
+Copyright (c) 2014-2019 Antony Polukhin
+Copyright (c) 2002-2003
+Copyright (c) 2003 Eric Friedman
+Copyright (c) 2016-2019 Antony Polukhin
+Copyright (c) 2015-2019 Antony Polukhin
+Copyright (c) 2011-2019 Antony Polukhin
+Copyright (c) 2002-2003 Eric Friedman, Itay Maman
+Copyright (c) 2013-2019 Antony Polukhin
+Copyright (c) 2002 by Andrei Alexandrescu
+Copyright Antony Polukhin, 2013-2014.
+Copyright (C) 2002 David Abrahams
+Copyright (c) 2018-2019 Antony Polukhin
+Copyright (C) 2000-2003 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+Copyright (C) 2000-2003 Gary Powell (powellg@amazon.com)
+Copyright (C) 2010 Steven Watanabe
+Copyright (c) 2007 Peter Dimov
+Copyright (C) 2009 Steven Watanabe
+Copyright John Maddock 2015.
+Copyright 2003, 2005 Dave Abrahams
+Copyright 2003, 2004, 2005, 2006, 2007 Vladimir Prus
+Copyright Pedro Ferreira 2005. 
+Copyright 1963-1965 Jane Doe, 2018 Joe Blow, John Coe
+Copyright 1977,1985 Someone else
+Copyright Aleksey Gurtovoy 2004-2008
+Copyright (c) 2014 John Fletcher
+Copyright Thorsten Ottosen 2003-2005. 
+(C) Copyright Jonathan Turkanis 2004-2005.
+(C) Copyright Thorsten Ottosen 2005
+(C) Copyright Howard Hinnant 2004
+(C) Copyright Jonathan Turkanis 2004
+Copyright Thorsten Ottosen 2008. 
+(C) Copyright Daniel Wallin 2004.
+Copyright Sebastian Ramacher, 2007.
+Copyright Thorsten Ottosen 2003-2007. 
+(C) Copyright Thorsten Ottosen 2005.
+Copyright Thorsten Ottosen 2006. 
+Copyright 1993-2002 Christopher Seiwald and Perforce Software, Inc.
+Copyright 2001-2006 David Abrahams.
+Copyright 2003-2006 Vladimir Prus.
+Copyright Daniel Wallin 2006.
+(C) Copyright Jeremy Siek 2000.
+(C) Copyright Jeremy Siek, David Abrahams 2000-2006.
+Copyright Jeremy Siek, David Abrahams 2000-2006. 
+(C) Copyright Jeremy Siek 2000-2002.
+Copyright 2008 Adobe Systems Incorporated
+Copyright (c) Alexander Zaitsev <zamazan4ik@gmail.by>, 2017.
+(C) Copyright Herve Bronnimann 2004.
+Copyright Pavol Droba 2002-2004.
+Copyright (c) 2008
+Copyright (c) 2018-2019, Oracle andor its affiliates.
+Modifications copyright (c) 2014-2018 Oracle andor its affiliates.
+Copyright 2014 Agustin Berge
+Copyright 2001, 2003 Daryle Walker. 
+Copyright (c) 2006, 2007 Matthew Calabrese
+Copyright 2010, Niels Dekker.
+Copyright Jeremy Siek 1999.
+Copyright Beman Dawes 1999. 
+Copyright Douglas Gregor 2003-2004. 
+Copyright (c) Marshall Clow 2012-2012.
+Copyright Andrey Semashev 2013.
+Copyright (c) Marshall Clow 2017-2017.
+Copyright 2002-2008, Fernando Luis Cacciola Carballal.
+Copyright 2002, Fernando Luis Cacciola Carballal.
+Copyright Thorsten Ottosen 2003-2004. 
+Copyright Eric Niebler 2004.
+Copyright Shunsuke Sogame 2005-2006.
+Copyright Neil Groves 2014. 
+Copyright Neil Groves 2014
+Copyright Thorsten Ottosen & Larry Evans 2003-2005. 
+Copyright Akira Takahashi 2013.
+Copyright Neil Groves 2011. 
+Copyright (C) 2015 Vicente J. Botet Escriba
+Copyright (c) Aleksey Gurtovoy 2001-2009
+Copyright 2005 Eric Niebler. 
+Copyright Nat Goodspeed 2015.
+Copyright Nat Goodspeed 2014.
+Copyright Nat Goodspeed + Oliver Kowalke 2015.
+Copyright Edward Diener 2014.
+Copyright Raffi Enficiaud 2014.
+Copyright 2015-2017 Hans Dembinski
+Copyright 2018 Hans Dembinski
+Modifications copyright (c) 2013-2015 Oracle andor its affiliates.
+Copyright (c) 2018 Adam Wulkiewicz, Lodz, Poland.
+Copyright (C) 2012 Lorenzo Caminiti
+Copyright 2008-2009 Daniel James.
+Copyright 2006-2009 Daniel James.
+Copyright 2005-2010 Daniel James.
+Copyright 2012 Daniel James.
+Copyright 2009 Daniel James.
+Copyright Beman Dawes 2014
+Copyright Beman Dawes, 2006
+Copyright Beman Dawes 2013
+Copyright (c) 2009, Marco Guazzone
+Copyright (c) 2009, Gunter Winkler
+Modifications copyright (c) 2014-2017, Oracle andor its affiliates.
+Copyright (c) 2014-2018, Oracle andor its affiliates.
+Copyright (c) 2018 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (C) 2006 Arkadiy Vertleyb
+Copyright (c) 2011 John Maddock
+Copyright 2019 John Maddock. Distributed under the Boost
+Copyright 2012 John Maddock.
+Copyright Christopher Kormanyos 2013. Distributed under the Boost
+Copyright 2016 John Maddock. Distributed under the Boost
+Copyright (c) 2014-2015 Kohei Takahashi
+Copyright (c) 2014,2018 Kohei Takahashi
+Copyright 2009-2011 Karsten Ahnert
+Copyright 2009-2011 Mario Mulansky
+Copyright 2012 Denis Demidov
+Copyright Beman Dawes 2003, 2006, 2011
+Copyright Beman Dawes 1994-99.
+Copyright Peter Dimov 2019.
+Copyright Beman Dawes 1994-2007, 2011
+Copyright (c) 2003-2008 Matthias Christian Schabel
+Copyright (c) 2010 Joel de Guzman
+Copyright (c) 2010 Hartmut Kaiser
+(C) Copyright John Maddock 1999-2005.
+Copyright 2004 Eric Niebler.
+Copyright (c) 2005-2010 Hartmut Kaiser
+Copyright (c) 2009      Edward Grace
+Copyright (c) 2014-2015 Adam Wulkiewicz, Lodz, Poland
+Modifications copyright (c) 2016-2019 Oracle andor its affiliates.
+Copyright (c) 2018-2019 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2012-2019 Barend Gehrels, Amsterdam, the Netherlands.
+Modifications copyright (c) 2016-2018 Oracle andor its affiliates.
+Copyright (c) 2015-2017, Oracle andor its affiliates.
+Copyright (C) 2007 Peder Holt
+Copyright Beman Dawes 2010
+Copyright Beman Dawes 2006
+Copyright Beman Dawes 2007
+Copyright Christoper Kohlhoff 2007
+Copyright (c) 2014 Benoit Dequidt <benoit.dequidt@gmail.com>
+Copyright (c) 2014 Fabian Köhler <fabian2804@googlemail.com>
+Copyright (c) 2013-2014 Mageswaran.D <mageswaran1989@gmail.com>
+Copyright (c) 2014 Kyle Lutz <kyle.r.lutz@gmail.com>
+Copyright (c) 2013 Muhammad Junaid Muzammil <mjunaidmuzammil@gmail.com>
+Copyright 2002 Vladimir Prus
+(C) Copyright Ion Gaztanaga. Distributed under the Boost
+Copyright 2012 Daryle Walker.
+Copyright Vicente J. Botet Escriba 2010
+Copyright (c) 2015      John Fletcher
+Copyright 2012-2013 Karsten Ahnert
+Copyright 2015 Mario Mulansky
+Copyright 2012-2013 Mario Mulansky
+Copyright 2009-2014 Karsten Ahnert
+Copyright 2009-2014 Mario Mulansky
+Copyright 2012 Andreas Angelopoulos
+Copyright 2012-2013 Rajeev Singh
+Copyright 2011-2015 Karsten Ahnert
+Copyright 2016 Karsten Ahnert
+Copyright 2016 Mario Mulansky
+Modifications copyright (c) 2014-2019, Oracle andor its affiliates.
+Copyright (c) 2015-2019, Oracle andor its affiliates.
+Copyright (c) 2011-2012 Bruno Lalande, Paris, France.
+Copyright (c) 2011-2012 Mateusz Loskot, London, UK.
+Copyright (c) Charles Karney (2008-2017) <charles@karney.com> and licensed
+Copyright (c) 2016-2019 Oracle andor its affiliates.
+Copyright (c) 2016, 2019 Oracle andor its affiliates.
+Copyright Daniel James 2006-2009
+Copyright Daniel James 2012
+Copyright 2013 Daniel James.
+(C) Copyright Ion Gaztanaga 2004-2012. 
+(C) Copyright Peter Dimov 2002-2005.
+(C) Copyright Peter Dimov 2002-2005, 2007.
+(C) Copyright Ion Gaztanaga 2006-2012.
+Copyright (c) 2001 Jeremy Siek
+Copyright (c) 2003-2006 Gennaro Prota
+Copyright (C) 2018 James E. King III
+Copyright (C) 2019 James E. King III
+Copyright 2002, 2003 Daryle Walker. 
+Copyright 2003 Daryle Walker. 
+Copyright Beman Dawes 2002, 2006
+Copyright Peter Dimov 2018
+(C) Copyright Edward Diener 2012
+(C) Copyright Edward Diener 2011,2012
+Copyright (c) 2008 Roelof Naude (roelof.naude at gmail dot com)
+Copyright (c) 2005 Stefan Arentz (stefan at soze dot com)
+Copyright (c) 2003-2011 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+Copyright (c) 2008 Rep Invariant Systems, Inc. (info@repinvariant.com)
+Copyright (c) 2011 Boris Schaeling (boris@highscore.de)
+(C) Copyright Ion Gaztanaga 2015-2016.
+(C) Copyright Ion Gaztanaga 2017-2018.
+(C) Copyright Ion Gaztanaga 2014-2014.
+(C) Copyright Ion Gaztanaga 2017-2018. 
+(C) Copyright Orson Peters  2017.
+Copyright (c) 2015 Orson Peters
+(C) Copyright Ion Gaztanaga 2017-2017.
+Copyright (c) 2001-2012 Hartmut Kaiser. 
+Copyright (c) 2005
+Copyright (c) 2005 João Abecasis
+Copyright (c) 2014 fqiang
+Copyright Abel Sinkovics (abel@sinkovics.hu) 2016.
+Copyright (c) 2013 Peter Dimov
+Copyright (c) 2002 Lars Gullik Bjønnes <larsbj@lyx.org>
+Copyright 2003-2005 Peter Dimov
+Copyright 2007 Peter Dimov
+Copyright 2013 Peter Dimov
+Copyright (c) 2001-2005 Peter Dimov
+Copyright (c) 2006 Michael van der Westhuizen
+Copyright (c) 2002, 2003 Peter Dimov and Multi Media Ltd.
+Copyright (c) 2001-2009, 2012 Peter Dimov
+Copyright (c) 2003 David Abrahams
+Copyright (c) 2003 Peter Dimov
+Copyright (c) 2008, 2011 Peter Dimov
+Copyright (c) 2014 Peter Dimov
+Copyright 2008 Peter Dimov
+Copyright 2005-2013 Peter Dimov
+Copyright 2007 Baruch Zilber
+Copyright 2007 Boris Gubenko
+Copyright 2006 Michael van der Westhuizen
+Copyright (c) 2007, 2013, 2015 Peter Dimov
+Copyright 2005 Rene Rivera
+Copyright 2004-2006 Peter Dimov
+Copyright 2005 Ben Hutchings
+Copyright (c) 2009, Spirent Communications, Inc.
+Copyright (c) 2006 Piotr Wyderski
+Copyright (c) 2006 Tomas Puverle
+Copyright (c) 2011 Emil Dotchevski
+Copyright 2004-2008 Peter Dimov
+Copyright (c) 2007, 2013 Peter Dimov
+Copyright 2012 IBM Corp.
+Copyright 2008,2012 Peter Dimov
+Copyright (c) 2008, 2009 Peter Dimov
+Copyright 2005, 2014 Peter Dimov
+Copyright 2016, 2017 Peter Dimov
+Copyright 2007, 2019 Peter Dimov
+Copyright (c) 2003 Sam Nabialek
+Copyright (c) 2003-2004 Joel de Guzman
+Copyright (c) 2005 Joel de Guzman
+Copyright 2012 Daryle Walker
+Copyright 2013 Christian Henning
+Copyright Hans Dembinski 2019
+Copyright Hans Dembinski 2018-2019
+Copyright 2014-2015 Glen Joseph Fernandes
+(C) Copyright Nicolai M. Josuttis 2001.
+Copyright (c) 2007, 2014 Peter Dimov
+Copyright (c) Beman Dawes 2011
+Copyright (c) 2015 Ion Gaztanaga
+Copyright (c) 2009, 2015 Peter Dimov
+@Copyright Barrett Adair 2015-2017
+(C) Copyright Steve Cleary, Beman Dawes, Howard Hinnant & John Maddock 2000.
+(C) Copyright Antony Polukhin 2014.
+Copyright Beman Dawes 2005.
+Copyright (c) 2014 Glen Fernandes
+(C) Copyright Vicente J. Botet Escriba 2010.
+Copyright (c) 2003-2008 Jan Gaspar
+(C) Copyright John Maddock 2002.
+Copyright 2001, 2004, 2011 Daryle Walker.
+\copyright  Boost Software License, version 1.0
+(C) Copyright Beman Dawes 1999.
+(C) Copyright Jens Mauer 2001
+(C) Copyright John Maddock 2001
+Copyright Beman Dawes 2001.  Distributed under the Boost
+Copyright 2002-2018 Peter Dimov
+Copyright Beman Dawes 2011
+Copyright (c) 2006 CrystalClear Software, Inc.
+Copyright (c) 2003-2004, 2008 Gennaro Prota
+Copyright (c) 2003-2004 Gennaro Prota
+Copyright 2006-2008 Joaquin M Lopez Munoz.
+Copyright 2010 Eric Niebler.
+Copyright (c) 2000 Cadenza New Zealand Ltd
+Copyright Douglas Gregor 2004.
+Copyright 2005 Peter Dimov
+(C) Copyright Andrey Semashev 2017.
+Copyright Peter Dimov and David Abrahams 2002.
+Copyright 2018 Stefan Seefeld
+Copyright Beman Dawes and Daryle Walker 1999.  
+(C) Copyright Dave Abrahams and Daryle Walker 2001. 
+Copyright (c) 2001, 2002 Peter Dimov
+Copyright 2002 Daryle Walker. 
+(C) Copyright Beman Dawes 2000. 
+Copyright Kevlin Henney, 2000-2005.
+(C) Copyright John maddock 1999.
+(C) David Abrahams 2002.
+Copyright (c) 2007, 2008 Peter Dimov
+Copyright 2014 Glen Joseph Fernandes
+(C) Copyright Hubert Holin and Daryle Walker 2001-2002.  
+(C) Copyright Dave Abrahams and Daniel Walker 1999-2003.
+Copyright (c) Andrey Semashev 2017
+Copyright (C) 2014, 2015 Andrzej Krzemienski.
+(C) Copyright Gennaro Prota 2003.
+(C) Copyright David Abrahams, Jeremy Siek, Daryle Walker 1999-2001.
+(C) Copyright Daniel Frey 2002-2017.
+Copyright David Abrahams, Daniel Wallin 2005.
+(C) Copyright Ion Gaztanaga 2005.
+Copyright (c) 2005 Peter Dimov.
+(C) Copyright Kevlin Henney and Dave Abrahams 1999.
+(C) Copyright Boris Rasin 2014.
+(C) Copyright Boris Rasin and Antony Polukhin 2014-2019.
+Copyright (c) 2011 Jeff Flinn, Boris Schaeling
+Copyright (c) 2012 Boris Schaeling
+Copyright Vladimir Prus 2002.
+Copyright Beman Dawes 1994-99. 
+Copyright Jens Maurer 2000-2001
+(C) Copyright Paul Moore 1999. 
+(C) Copyright Greg Colvin and Beman Dawes 1998, 1999.
+Copyright (C) 2006-2009, 2012 Alexander Nasonov
+(C) Copyright Ronald Garcia 2002. 
+Copyright (c) 2001-2008 Peter Dimov
+Copyright (c) 2008-2009 Frank Mori Hess
+Copyright (c) 2003 Peter Dimov  
+Copyright Antony Polukhin, 2016-2019.
+(C) Copyright 2008-9 Anthony Williams
+Copyright (c) 2008-2009 Emil Dotchevski and Reverge Studios, Inc.
+(c) Copyright Jeremy Siek and John R. Bandela 2001.
+Copyright John R. Bandela 2001.
+Copyright John R. Bandela 2001
+(C) Copyright David Abrahams 2001.
+Copyright (C) 2003-2004 Jeremy B. Maitin-Shepard.
+Copyright (C) 2005-2008 Daniel James.
+Copyright 1999-2003 Aleksey Gurtovoy.  
+(C) Copyright John maddock 1999. 
+Copyright (c) 2001, 2002, 2003 Peter Dimov
+Copyright 2007 John Maddock.
+Copyright Oliver Kowalke 2016.
+Copyright (c) 2002 Douglas Gregor <doug.gregor -at- gmail.com>
+Copyright (c) 2008-2010 Hartmut Kaiser
+Copyright Douglas Gregor 2003. Use, modification and
+Copyright (c) 2011-2015 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2013 Mateusz Loskot, London, UK.
+Copyright (c) 2011 Joel de Guzman
+Copyright Abel Sinkovics (abel@sinkovics.hu)  2010.
+Copyright (c) 2014 Kohei Takahashi
+Copyright (c) 2012-2014 Kohei Takahashi
+Copyright (c) 2003-2005 Peter Dimov
+Copyright 2019 Damian Jarek
+Copyright Andrey Semashev 2018.
+Copyright (c) 2001 Alexander Peslyak
+Copyright (c) 2017 James E. King III
+Copyright 2008 Christian Henning
+Copyright 2010 Christian Henning
+Copyright 2012 Olivier Tournaire
+Copyright 2007 Christian Henning
+Copyright 2012 Olivier Tournaire, Christian Henning
+Copyright 2010 Kenneth Riddile
+Copyright 2012 Kenneth Riddile, Christian Henning
+Copyright 2010-2012 Kenneth Riddile, Christian Henning
+Copyright 2012 Andreas Pokorny
+Copyright 2012 Chung-Lin Wen
+Copyright 2012 Chung-Lin Wen, Davide Anastasia
+Copyright 2013 Juan V. Puertos G-Cluster, Christian Henning
+Copyright 2013 Christian Henning and Juan V. Puertos
+Copyright 2014 Bill Gallafent
+Copyright 2018 Mateusz Loskot <mateusz@loskot.net>
+Copyright (c) 2013, 2014 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2011-2014 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2018, Oracle andor its affiliates
+Copyright (c) 2015, Oracle andor its affiliates
+Copyright (c) 2014, Oracle andor its affiliates
+Copyright Paul Mensonides 2003
+Copyright 2017-2019 Peter Dimov.
+Copyright 2012-2013 Andreas Angelopoulos
+Copyright Howard Hinnant 2007-2010.
+Copyright Vicente J. Botet Escriba 2012.
+(C) Copyright 2002 Robert Ramey - http:www.rrsd.com . 
+(C) Copyright 2010 Robert Ramey - http:www.rrsd.com .
+(C) Copyright 2002-7 Robert Ramey - http:www.rrsd.com .
+Copyright (C) 2017 Michel Morin.
+(C) Copyright Jeremy Siek 2002.
+Copyright David Abrahams 2003, Jeremy Siek 2004.
+Copyright 2010 (c) Dean Michael Berris
+Copyright 2014 Peter Dimov
+(C) Copyright Jeremy Siek 2004.
+Copyright Thomas Witt 2003.
+Copyright (c) Thomas Witt 2002.
+Copyright David Abrahams 2003.
+Copyright (C) 2004 Jeremy Siek <jsiek@cs.indiana.edu>
+(C) Copyright Thomas Witt 2003.
+Copyright Thomas Witt 2004.
+Copyright Andrey Semashev 2014.
+Copyright 2003 Daniel Walker.  
+(C) Copyright Toon Knapen    2001.
+(C) Copyright Roland Richter 2003.
+Copyright (C) 2018 Andrey Semashev
+Copyright Thomas Witt 2003, Jeremy Siek 2004.
+Copyright 2003 The Trustees of Indiana University.
+Copyright (c) 2014 Kohei Takahashi.
+Copyright 2012-2013 Daniel James
+Copyright 2010 Christophe Henry
+Copyright for the original version:
+Copyright 2000-2009 Michael Stevens, Mathias Koch,
+Joerg Walter, Gunter Winkler.
+(C) Copyright 2015 Boost.Test team.
+(C) Copyright Raffi Enficiaud 2015.
+(C) Copyright Andrzej Krzemienski 2015.
+(C) Copyright Raffi Enficiaud 2019.
+(C) Copyright 2015 Boost.test team
+Copyright (c) 2018 Raffi Enficiaud
+Copyright (c) 2019 Raffi Enficiaud
+Copyright (c) 2015 Boost.Test team
+Copyright (c) 2000-2003 Brian McNamara and Yannis Smaragdakis
+Copyright (c) 2009-2009: Joachim Faulhaber
+(C) Copyright Edward Diener 2015
+Copyright 2010 Thomas Heller
+Copyright 2011 Eric Niebler
+Copyright 2011 Eric Niebler. 
+Copyright 2009 Eric Niebler. 
+Copyright Pierre Esterie & Joel Falcou.
+Modifications copyright (c) 2016-2018, Oracle andor its affiliates.
+Modifications copyright (c) 2015, 2018, Oracle andor its affiliates.
+Copyright (c) 2009-2015 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2008-2014 Barend Gehrels, Amsterdam, the Netherlands.
+Modifications copyright (c) 2014, 2018, Oracle andor its affiliates.
+Copyright (c) 2018-2019 Oracle andor its affiliates.
+Modifications copyright (c) 2015-2019, Oracle andor its affiliates.
+Copyright (c) 2017-2018 Oracle andor its affiliates.
+Copyright (c) 2013-2015 Adam Wulkiewicz, Lodz, Poland
+Copyright (c) 2013 Adam Wulkiewicz, Lodz, Poland.
+Copyright 2011 - 2013 John Maddock.
+Copyright Christopher Kormanyos 2002 - 2011.
+Copyright (c) 2017 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+(C) Copyright Vicente J. Botet Escriba 2014. 
+(C) Copyright Vicente J. Botet Escriba 2013-2014. 
+Copyright (C) 2014 Ian Forbed
+Copyright (C) 2014-2017 Vicente J. Botet Escriba
+Copyright (c) 2002-2003 The Trustees of Indiana University.
+Copyright (c) 2000-2001 University of Notre Dame. 
+Copyright 2002-2003, Trustees of Indiana University.
+Copyright 2000-2001, University of Notre Dame.
+Copyright (c) 2009-2012 Jeremy Ashkenas, DocumentCloud Inc.
+Copyright Jeremy Siek 2002.
+Copyright (c) 2009-2011: Joachim Faulhaber
+Copyright (c) 2007-2012: Joachim Faulhaber
+Copyright (c) 2007-2011: Joachim Faulhaber
+Copyright (c) 2008-2012: Joachim Faulhaber
+Copyright (c) 2007-2010: Joachim Faulhaber
+Copyright Beman Dawes 2003, 2006, 2010
+Copyright Beman Dawes 2003, 2006
+Copyright Beman Dawes 2006, 2007
+Copyright Peter Dimov 2017, 2018
+Copyright 2012,2014 Advanced Micro Devices, Inc.
+Copyright 2013 Google Inc. All rights reserved.
+Copyright (c) 2011 Hannes Hofmann
+Copyright (c) 2017 Kristian Popov <kristian.popov@outlook.com>
+Copyright Andrey Semashev 2017.
+Copyright 2006 Alexander Nasonov.
+Copyright Antony Polukhin, 2017-2019.
+Copyright (C) 2013,2015 Vicente J. Botet Escriba
+Copyright 2005 Felix Höfling, Guillaume Melquiond
+Copyright 2000 Jens Maurer
+Copyright 2002 Hervé Brönnimann, Guillaume Melquiond, Sylvain Pion
+Copyright 2003 Guillaume Melquiond, Sylvain Pion
+Copyright 2006-2007 Boris Gubenko
+Copyright 2000 Maarten Keijzer
+Copyright 2005 Guillaume Melquiond
+Copyright 2005-2007 Daniel James.
+(C) Copyright Gennadiy Rozental 2005-2010.
+(C) Copyright Gennadiy Rozental 2006-2010.
+(C) Copyright Gennadiy Rozental 2011.
+(C) Copyright 2016 Raffi Enficiaud.
+Copyright (C) 2014 Vicente Botet
+Copyright (C) 2012-2013 Vicente Botet
+Copyright Rene Rivera 2014
+Copyright Rene Rivera 2013-2018
+Copyright Rene Rivera 2013
+Copyright Rene Rivera 2011-2012
+Copyright Rene Rivera 2011-2015
+(c) Copyright John R. Bandela 2001.
+Copyright (C) 2014,2015 Vicente J. Botet Escriba
+Copyright (C) 2019 Austin Beer
+Copyright (C) 2019 Vicente J. Botet Escriba
+For copyright reasons the complete is available here:
+Copyright 2005-2008 Redshift Software, Inc.
+Copyright 2005-2006 Redshift Software, Inc.
+Copyright Joel de Guzman 2004. 
+Copyright Nicolas Lelong,  2010. 
+Copyright David Abrahams 2005. 
+Copyright 2004 Jonathan Brandmeyer
+Copyright Jonathan Brandmeyer,  2004. 
+Copyright (C) 2003 Rational Discovery LLC. 
+Copyright (C) 2003 Rational Discovery LLC
+Copyright Gottfried Ganßauge 2006.
+Copyright David Abrahams & Ralf W. Grosse-Kunsteve 2004-2006.
+Copyright Stefan Seefeld 2006. 
+Copyright Stefan Seefeld 2007.
+Copyright David Abrahams and Gottfried Ganssauge 2003.
+Copyright Gottfried Ganßauge 2003..2006.  
+Copyright Ralf W. Grosse-Kunstleve 2002-2004.
+Copyright Ralf W. Grosse-Kunstleve 2004.
+Copyright Joel de Guzman 2005-2006. 
+Copyright David Abrahams and Nikolay Mladenov 2003.
+Copyright Eric Niebler 2005.
+Copyright Troy D. Straszheim 2009
+Copyright Niall Douglas 2005.
+Copyright Sascha Ochsenknecht 2009.
+Copyright Leo Goodstadt 2012
+(C) Copyright Ion Gaztanaga  2014-2014
+(C) Copyright Joaquin M Lopez Munoz  2006-2013
+(C) Copyright Ion Gaztanaga          2014-2014
+(C) Copyright Ion Gaztanaga  2009-2013.
+Copyright 2007 Alexandre Courpron
+(C) Copyright Ion Gaztanaga  2014-2015
+(C) Copyright Ion Gaztanaga        2006-2014
+(C) Copyright Microsoft Corporation  2014
+(C) Copyright Ion Gaztanaga  2006-2013.
+(C) Copyright Ion Gaztanaga 2015-2015.
+Copyright Vicente J. Botet Escriba 2009-2010
+Copyright Beman Dawes, 2010
+(C) Copyright 2010 Daniel James
+(C) Copyright 2002, 2003 Beman Dawes   Boost.Filesystem
+Copyright (c) 2013-2014 Agustin Berge
+Copyright (c) 2011      Bryce Lelbach
+Copyright (c)      2019 Christian Mazakas
+Copyright (c) 2014 Lee Clagett
+Copyright (c) 2001-2013 Joel de Guzman
+Copyright (c) 2018 Nikita Kniazev
+Copyright (c) 2019 Joel de Guzman
+Copyright (c) 2001-2017 Joel de Guzman
+Copyright (c) 2017 think-cell GmbH
+Copyright (c) 2013 Agustin Berge
+Copyright (c) 2013 Carl Barron
+Copyright (c) 2015 Joel de Guzman
+Copyright (c) 2011 Jan Frederick Eick
+Copyright (c) 2001-2016 Joel de Guzman
+(C) Copyright 2007-10 Anthony Williams
+(C) Copyright 2011-2012 Vicente J. Botet Escriba
+(C) Copyright 2007-8 Anthony Williams
+(C) Copyright 2011,2012,2015 Vicente J. Botet Escriba
+(C) Copyright 2013 Andrey Semashev
+(C) Copyright 2013 Vicente J. Botet Escriba
+(C) Copyright 2006-8 Anthony Williams
+(C) Copyright 2012 Vicente J. Botet Escriba
+(C) Copyright 2007 Anthony Williams
+(C) Copyright 2008 Anthony Williams
+Copyright (c) 2009-2015 Artyom Beilis (Tonkikh)
+Copyright (c) 2017 Jakub Szuppe <j.szuppe@gmail.com>
+(C) Copyright 2011-2012,2017-2018 Vicente J. Botet Escriba
+(C) Copyright 2005-8 Anthony Williams
+(C) Copyright 2017 Andrey Semashev
+(C) Copyright 2005-7 Anthony Williams
+(C) Copyright 2005 John Maddock
+(C) Copyright 2011-2013 Vicente J. Botet Escriba
+(C) Copyright 2006-7 Anthony Williams
+(C) Copyright 2007 David Deakins
+(C) Copyright Edward Diener 2019.
+Copyright (C) 2014-2015 Vicente J. Botet Escriba
+Modifications copyright (c) 2014, 2019, Oracle andor its affiliates.
+Copyright (c) Chris Glover, 2016.
+(C) Copyright 2011 Vicente J. Botet Escriba
+(C) Copyright 2011Vicente J. Botet Escriba
+Copyright (c) 1999-2003 Jeremiah Willcock
+Copyright Andrii Sydorchuk 2015.
+Copyright Andrii Sydorchuk 2012.
+Copyright Andrii Sydorchuk 2014.
+Copyright Andrii Sydorchuk 2010-2011.
+Copyright (c) 2002,2003 CrystalClear Software, Inc.
+Copyright (c) 2004 CrystalClear Software, Inc.
+Copyright (c) 2005 CrystalClear Software, Inc.
+Copyright (c) 2002,2003,2005 CrystalClear Software, Inc.
+Copyright (c) 2002-2005 CrystalClear Software, Inc.
+Copyright (c) 2003-2004 CrystalClear Software, Inc.
+Copyright (C) 2002-2013 Mark Adler
+Copyright (C) 2002-2013 Mark Adler, all rights reserved
+Copyright (c) 2014 Roshan <thisisroshansmail@gmail.com>
+Copyright (c) 2015 Jakub Szuppe <j.szuppe@gmail.com>
+Copyright (c) 2014 Benoit
+Copyright (c) 2013-2014 Rastko Anicic <anicic.rastko@gmail.com>
+Copyright 2017, 2018 Peter Dimov.
+Copyright (c) 2014-2018 Oracle andor its affiliates.
+Copyright (c) 2017-2019 Oracle andor its affiliates.
+Copyright (C) 1998-2005 Gilles Vollant
+Copyright (C) 1998-2010 Gilles Vollant (minizip) ( http:www.winimage.com/zLibDll/minizip.html )
+Copyright (C) 2009-2010 Mathias Svensson ( http:result42.com )
+Copyright (C) 2007-2008 Even Rouault
+Copyright (c) 1990-2000 Info-ZIP.  All rights reserved.
+Copyright (C) 1998 - 2010 Gilles Vollant, Even Rouault, Mathias Svensson
+Copyright (C) 2007 Douglas Gregor
+Copyright (c) 2003-2005 CrystalClear Software, Inc.
+(C) Copyright Edward Diener 2015.
+(C) Copyright Edward Diener 2016.
+Copyright (C) 2014 Andrzej Krzemienski.
+Copyright (C) 2003, 2008 Fernando Luis Cacciola Carballal.
+Copyright (C) 2018 Andrzej Krzemienski.
+Copyright (C) 2014, Andrzej Krzemienski.
+Copyright 2017 Vinnie NotDefaultConstructible
+Copyright 2018 Andrzej Krzemienski
+Copyright (C) 2016 Andrzej Krzemienski.
+Copyright (C) 2017 Andrzej Krzemienski.
+Copyright (C) 2018, Andrzej Krzemienski.
+Copyright (C) 2015, Andrzej Krzemienski.
+Copyright (C) 2015 Andrzej Krzemienski.
+Copyright (C) 2014-2015 Andrzej Krzemienski.
+Copyright (C) 2014 - 2015 Andrzej Krzemienski.
+Copyright (C) 2014 - 2018 Andrzej Krzemienski.
+Copyright (C) 2014, andrzej Krzemienski.
+Copyright (C) 2014, 2016 andrzej Krzemienski.
+Copyright (C) 2015 - 2018 Andrzej Krzemienski.
+Copyright (C) 2005-2008 The Trustees of Indiana University.
+Copyright (C) 2006 The Trustees of Indiana University.
+Copyright (C) 2004-2008 The Trustees of Indiana University.
+Copyright (C) 2005-2006 The Trustees of Indiana University.
+Copyright (C) 2007   Douglas Gregor
+Copyright (C) 2007 Hartmut Kaiser
+Copyright (C) 2006-2010 The Trustees of Indiana University.
+Copyright (C) 2002 Brad King and Douglas Gregor
+Copyright 2004, 2005 The Trustees of Indiana University.
+Copyright Daniel Wallin 2007. 
+(C) Copyright Ion Gaztanaga 2011-2013.
+(C) Copyright Ion Gaztanaga 2017-2017. 
+(C) Copyright Ion Gaztanaga 2004-2013. 
+(C) Copyright Ion Gaztanaga 2008. 
+(C) Copyright Ion Gaztanaga 2004-2019. 
+(C) Copyright Ion Gaztanaga 2012-2013. 
+Copyright (C) 2013 Cromwell D. Enage
+(C) Copyright Howard Hinnant 2014.
+(C) Copyright Ion Gaztanaga 2016-2016. 
+(C) Copyright Ion Gaztanaga 2007-2017. 
+Copyright (c) 1998-2002 Joel de Guzman
+Copyright (c) 2017 Levon Tarakchyan
+Copyright (c) 2019 Antony Polukhin
+Copyright (c) 2017-2019 Antony Polukhin
+Copyright (c) 2003 Eric Friedman, Itay Maman
+Copyright (c) 2017
+Copyright (c) 2012-2019 Antony Polukhin
+Copyright (c) 2017-2017 Albert Sverdlov
+Copyright (c) 2009 ArtVPS Ltd.
+Copyright (c) 2013-2019 Antony Polukhin.
+Copyright (c) 2018 Louis Dionne, Antony Polukhin
+Copyright 2017 John Maddock
+Copyright Paul A. Bristow 2008, 2009, 2012, 2016
+Copyright John Maddock 2018.
+Copyright Paul A. Bristow 2016
+Copyright (c) 2008-2015 Barend Gehrels, Amsterdam, the Netherlands.
+Modifications copyright (c) 2017-2019, Oracle andor its affiliates.
+Copyright (c) 1995, Gerald Evenden
+Copyright (c) 2008   Gerald I. Evenden
+Copyright (c) 2002, Frank Warmerdam
+Copyright (c) 2004   Gerald I. Evenden
+Copyright (c) 2012   Martin Raspaud
+Copyright (c) 2001, Thomas Flemming, tf@ttqv.com
+Copyright (c) 2000, Frank Warmerdam
+Copyright (c) 2003, 2006   Gerald I. Evenden
+Copyright (c) 2011, 2012  Martin Lambers <marlam@marlam.de>
+Copyright (c) 2003   Gerald I. Evenden
+Copyright (c) 2005-2007 Joel de Guzman
+Copyright (c) 2014      John Fletcher
+Copyright (c) 2010      Bryce Lelbach
+Copyright (c) 2014      Tomoki Imai
+Copyright (c) 2006-2017 Emil Dotchevski and Reverge Studios, Inc.
+Copyright (c) 2006-2015 Emil Dotchevski and Reverge Studios, Inc.
+Copyright 2017 Andrey Semashev
+(C) Copyright John Maddock 2005.
+Copyright (c) 1998-2003
+@copyright Louis Dionne 2013-2016
+@copyright Louis Dionne 2016
+@copyright Jason Rice 2016
+@copyright Jason Rice 2017
+Copyright (c) 2016 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2014-2019 Oracle andor its affiliates.
+Copyright 2003-2004 Douglas Gregor
+Copyright (c) 2009-2012 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright Bryce Lelbach 2010
+(C) Copyright Daryle Walker 2001-2002.
+Copyright Paul A. Bristow 2006, 2007, 2009, 2010.
+(C) Copyright Hubert Holin 2001.
+Copyright John Maddock 2006, 2007, 2012, 2014.
+Copyright Paul A. Bristow 2006, 2007, 2012
+Copyright (c) 2013 Paul A. Bristow   Doxygen comments changed.
+Copyright (c) 2013 Antony Polukhin   Move semantics implementation.
+Copyright 2014,2018 Glen Joseph Fernandes
+Copyright (c) 2011 Christopher Jefferson
+Copyright (c) 2006 Stephen Nutt
+(C) Copyright Ion Gaztanaga 2007-2017.
+(C) Copyright David Abrahams, Vicente Botet, Ion Gaztanaga 2009-2012.
+Copyright David Abrahams 2009. 
+(C) Copyright Ion Gaztanaga 2016-2016.
+(C) Copyright Ion Gaztanaga 2009-2014.
+(C) Copyright Ion Gaztanaga 2014.
+(C) Copyright Ion Gaztanaga 2015-2015.
+(C) Copyright Howard Hinnant 2009
+Copyright 2016-2017 Joaquin M Lopez Munoz.
+Copyright 2017 Joaquin M Lopez Munoz.
+Copyright Jens Maurer 2002
+Copyright Steven Watanabe 2009-2011
+Copyright Jason Rhinelander 2016
+Copyright Justinas Vygintas Daugmaudis 2010-2018
+Copyright Steven Watanabe 2010-2011
+Copyright (c) 2011 Steven Watanabe
+Copyright Zach Laine 2014
+Copyright (c) 2015 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2016 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright John Maddock 2017.
+Copyright Nick Thompson 2018.
+Copyright Nick Thompson 2017.
+Copyright Paul A. Bristow 2007, 2010.
+Copyright John Maddock 2015.
+Copyright 2006 Matias Capeletto
+Copyright Jason Rice 2016
+Copyright 2005 Douglas Gregor.
+Copyright (C) 2005 Douglas Gregor.
+Copyright (C) 2005-2006 Douglas Gregor <doug.gregor@gmail.com>
+Copyright (C) 2006 Douglas Gregor.
+Copyright Daniel James 2009
+Copyright (c) 2001 Ronald Garcia, Indiana University (garcia@osl.iu.edu)
+Copyright (c) 2001-2011 Thomas Bernard
+Copyright (c) 2017-2019 Mateusz Loskot <mateusz at loskot dot net>
+Copyright 2010-2013 Karsten Ahnert
+Copyright 2010-2015 Mario Mulansky
+Copyright 2009-2015 Mario Mulansky
+Copyright 2005-2014 Daniel James.
+Copyright Felix E. Klee, 2003
+(C) Copyright Paul Mensonides 2003.
+(C) Copyright Edward Diener 2014,2019.
+Copyright 2006-2007 Daniel James.
+Copyright (c) 2019 Hans Dembinski
+Copyright 2019 Hans Dembinski, Henry Schreiner
+(C) Copyright Hans Dembinski 2019.
+Copyright 2019 Przemyslaw Bartosik
+Copyright 2019 Henry Schreiner, Hans Dembinski
+Copyright 2003 David Abrahams and Jeremy Siek
+Copyright Thorsten Ottosen 2009. Use, modification and
+Modifications copyright (c) 2014, 2018 Oracle andor its affiliates.
+Copyright (c) 1995, 2007-2015 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 1995 Maarten Hilferink, Amsterdam, the Netherlands
+Copyright (C) 2005-2011 Daniel James.
+Copyright (C) 2008-2011 Daniel James.
+Copyright Szabolcs Toth (thszabi@gmail.com) 2016.
+Copyright 2002-2003 Hervé Brönnimann, Guillaume Melquiond, Sylvain Pion
+Copyright 2003 Guillaume Melquiond
+Copyright 2013 Cromwell D. Enage
+Copyright Andrey Semashev 2007 - 2014.
+Copyright 2016 Bogumił Chojnowski
+Copyright 2017 Christophe Henry
+(C) Copyright Raffi Enficiaud 2016.
+(C) Copyright Raffi Enficiaud 2018.
+(C) Copyright Gennadiy Rozental 2003-2015.
+Copyright Aleksey Gurtovoy 2008
+Copyright David Abrahams 2002
+Copyright Aleksey Gurtovoy 2001-2008
+Copyright Eric Niebler 2014
+Copyright Aleksey Gurtovoy 2006
+Copyright (c) 2017 Denis Demidov <dennis.demidov@gmail.com>
+Copyright Gottfried Ganßauge 2003.
+Copyright David Abrahams 2002, Joel de Guzman, 2002.
+Copyright David Abrahams 2005.
+// Copyright David Abrahams 2002.
+Copyright (c) 2001, 2002 Python Software Foundation; All Rights
+Copyright Nikolay Mladenov 2007.
+Copyright Shreyans Doshi 2017.
+(C) Copyright Daryle Walker and Stephen Cleary 2001-2002.
+(C) Copyright Jeremy William Murphy 2016.
+Copyright (C) 2001 Daryle Walker.
+Copyright (C) 2003 Vesa Karvonen.
+Copyright (C) 2003 Gennaro Prota.
+Copyright 2017-2018 Glen Joseph Fernandes
+(C) Copyright 2009-2011 Frederic Bron, Robert Stewart, Steven Watanabe & Roman Perepelitsa.
+(C) Copyright John Maddock and Steve Cleary 2000.
+Copyright 2000 John Maddock (john@johnmaddock.co.uk)
+Copyright 2002 Aleksey Gurtovoy (agurtovoy@meta-comm.com)
+(C) Copyright John Maddock 2018.
+(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes,
+Aleksey Gurtovoy, Howard Hinnant & John Maddock 2000.
+(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes, Howard
+Copyright (C) 2017 Daniela Engert
+Copyright (C) 2004 Arkadiy Vertleyb
+Copyright (C) 2005 Arkadiy Vertleyb
+Copyright (C) 2004, 2005 Arkadiy Vertleyb
+Copyright (C) 2004 Peder Holt
+Copyright (C) 2005 Peder Holt
+Copyright (C) 2010 Peder Holt
+Copyright (C) 2006 Tobias Schwinger
+(C) Copyright Gennadiy Rozental 2001-2014.
+(C) Copyright 2010 Bryce Lelbach
+(C) Copyright Beman Dawes 2001.
+Copyright Rene Rivera 2013-2015
+Copyright Rene Rivera 2017
+(C) Copyright Jeremy Siek 2000-2004.
+(C) Copyright Jeremy Siek 1999-2004.
+(C) Copyright Jeremy Siek 2001-2004.
+(C) Copyright 2011-2018 Vicente J. Botet Escriba
+(C) Copyright 2018 Andrey Semashev
+(C) Copyright Michael Glassford 2004.
+(C) Copyright Aaron W. LaFramboise, Roland Schwarz, Michael Glassford 2004.
+(C) Copyright 2007 Roland Schwarz
+Copyright 2002-2003 Guillaume Melquiond
+Copyright 2002-2003 Hervé Brönnimann
+Copyright 2004 Guillaume Melquiond
+Copyright 2002-2003 Guillaume Melquiond, Sylvain Pion
+Copyright (c) 2008-2009 Ben Hanson (http:www.benhanson.net)
+Copyright (c) 2009 Ben Hanson (http:www.benhanson.net)
+(C) Copyright Eric Niebler 2004-2005
+(C) Copyright Daryle Walker 2000-2001.
+Copyright (c) 2014 Eric Niebler
+Copyright (c) 2014,2015,2018 Kohei Takahashi
+Copyright (c) 2006 Eric Niebler
+(C) Copyright Edward Diener 2011,2012,2013
+(C) Copyright Edward Diener 2012,2013
+(C) Copyright 2014 Jorge Lodos
+(C) Copyright 2011 Steven Watanabe
+(C) COPYRIGHT 2017 ARM Limited
+(C) Copyright Jorge Lodos 2008
+(C) Copyright Daniel James 2011.
+(C) Copyright 2018 Mario Suvajac
+(C) Copyright 2007 Jonathan Turkanis
+(C) Copyright Frank Birbacher 2007
+(C) Copyright 2012 Boris Schaeling
+(C) COPYRIGHT 2018 Reimar Döffinger
+Copyright 2015 Vicente J. Botet Escriba
+Copyright 2016 Vicente J. Botet Escriba
+Copyright (c) 2001-2019 Joel de Guzman
+Copyright © 2008 , 2009, 2010, 2012 Paul A. Bristow, John Maddock
+Copyright (C) 2007 Matthias Troyer
+Copyright (c) 2002 2004 2006 Joel de Guzman
+Copyright (c) 2004 Eric Niebler
+Copyright (c) 2005 Thomas Guest
+Copyright (c) 2002 2004  2006Joel de Guzman
+Copyright (c) 2010.2017 Daniel James
+Copyright (c) 2006 Joel de Guzman
+Copyright (c) 2011, 2013 Daniel James
+Copyright (c) 2011,2013 Daniel James
+Copyright (c) 2011-2013 Daniel James
+Copyright (c) 2010 Daniel James
+Copyright (c) 2009 Daniel James
+Copyright (c) 2013, 2017 Daniel James
+Copyright (c) 2005 2006 Joel de Guzman
+Copyright (c) 2011-2013, 2017 Daniel James
+Copyright (c) 2015, 2018, Oracle andor its affiliates.
+Copyright (c) 2016 Barrett Adair
+Copyright (c) 2016 arett Adair
+Copyright Barrett Adair 2015-2017
+Copyright Abel Sinkovics (abel@sinkovics.hu)   2013.
+Copyright 2005 Daniel James.
+Copyright (c) 2015-2016 Vinnie Falco (vinnie dot falco at gmail dot com)
+Copyright (c) 2013-2016 Vinnie Falco (vinnie dot falco at gmail dot com)
+Copyright 2019 Olzhas Zhumabek <anonymous.from.applecity@gmail.com>
+Copyright Markus J. Weber 2015
+Copyright 2005-2009 Ion Gaztanaga
+Copyright 2013-2019 Antony Polukhin
+Copyright Aleksey Gurtovoy 2001-2007
+Copyright Peter Dimov 2000-2003
+Copyright Peter Dimov and Multi Media Ltd 2001, 2002
+Copyright David Abrahams 2001
+Copyright (C) 2005, 2007  Douglas Gregor <doug.gregor -at- gmail.com>
+Copyright 2013-2015 Mario Mulansky
+Copyright 2015 Gregor de Cillia
+Copyright 2015 Mario Mulansky <mario.mulansky@gmx.net>
+(C) Copyright John Maddock 2008.
+Copyright (c) 2005-2006 Danny Havenith
+Copyright (C) 1997-2017 by Dimitri van Heesch
+Copyright (c) 2009 John Resig
+Copyright (c) 2008 samaxes.com
+(C) Copyright Edward Diener 2011-2015
+Copyright (C) 2014-2016 Andrzej Krzemienski.
+Copyright (C) 2015 - 2017 Andrzej Krzemienski.
+Copyright (C) 2015-2018 Andrzej Krzemienski.
+Copyright (c) 2013 Christopher Kormanyos
+Copyright 2013 John Maddock
+Copyright (c) 2013 Anton Bikineev
+Copyright (c) 2006 Xiaogang Zhang
+Copyright (c) 2017 John Maddock
+Copyright (c) 2007 John Maddock
+Copyright (c) 2006 Johan Rade
+Copyright 2014 Anton Bikineev
+Copyright 2014 Christopher Kormanyos
+Copyright 2014 John Maddock
+Copyright 2014 Paul Bristow
+Copyright 2018 John Maddock
+Copyright 2019 John Maddock
+Copyright Paul A. Bristow 2007
+Copyright (c) 2009 John Maddock
+Copyright 2013 Nikhar Agrawal
+Copyright 2013 Christopher Kormanyos
+Copyright 2013 Paul Bristow
+Copyright (C) 2004 The Trustees of Indiana University
+Copyright (C) 2011 Júlio Hoffimann.
+Copyright (C) 2005-2006 Douglas Gregor <doug.gregor@gmail.com>.
+Copyright (C) 2011-2013 Tim Blechmann
+Copyright (c) 2005 Eric Niebler
+Copyright 2004, 2006 Vladimir Prus
+Copyright (c) 2014 Mageswaran.D <mageswaran1989@gmail.com>
+Copyright (c) 2015 Jakub Pola <jakub.pola@gmail.com>
+Copyright (c) 2001-2009 Joel de Guzman
+Copyright (c) 2010 Christopher Schmidt
+Copyright 2014-2015 Renato Tegon Forti, Antony Polukhin.
+Copyright 2016-2019 Antony Polukhin.
+Copyright 2006-2014 Joaquin M Lopez Munoz.
+Copyright 2006-2019 Joaquin M Lopez Munoz.
+Copyright 2006-2018 Joaquin M Lopez Munoz.
+Copyright 2006-2009 Joaquin M Lopez Munoz.
+Copyright 2006-2013 Joaquin M Lopez Munoz.
+Copyright 1999 Beman Dawes
+Copyright 1999 Dave Abrahams
+Copyright 2014 Boris Rasin, Antony Polukhin
+Copyright (c) 2014, 2018, Oracle andor its affiliates.
+Copyright Thomas Kent 2016
+Copyright (c) 2002-2004 CrystalClear Software, Inc.
+Copyright (c) 2002,2003, 2004 CrystalClear Software, Inc.
+Copyright (c) 2002,2003, 2007 CrystalClear Software, Inc.
+Copyright (c) 2016 Frank Hein, maxence business consulting gmbh
+Copyright 2005 Jonathan Turkanis
+Copyright (C) 2007, Tobias Schwinger.
+Copyright Douglas Gregor 2004. Use, modification and
+Copyright Daniel Walker, Eric Niebler, Michel Morin 2008-2012.
+Copyright (c) 2008-2016 Emil Dotchevski and Reverge Studios, Inc.
+Copyright (c) 2018 agate-pris
+Copyright 2015-2019 Peter Dimov
+Copyright 2015-2019 Peter Dimov.
+Copyright 2015, 2019 Peter Dimov.
+Copyright Rene Rivera 2015-2019
+Copyright 2017 James E. King, III
+Copyright Ruslan Baratov 2017
+Copyright Rene Rivera 2015
+Copyright James E. King III, 2017
+Copyright Vladimir Prus 2005.
+Copyright 2010-2011 Vicente J. Botet Escriba
+Copyright (c) 2014, 2018 Oracle andor its affiliates.
+Copyright (c) 2017, 2018 Oracle andor its affiliates.
+Copyright (c) 2017, 2018, Oracle andor its affiliates.
+Copyright Henrik Ravn 2004
+Copyright 2017-2019 Glen Joseph Fernandes
+Copyright 2012-2019 Glen Joseph Fernandes
+Copyright 2002, 2009, 2014 Peter Dimov
+Copyright 2008-2009 Frank Mori Hess
+Copyright 2002, 2009 Peter Dimov
+Copyright Andrey Semashev 2007 - 2013.
+Copyright (c) 2007, 2008, 2012 Peter Dimov
+Copyright (c) 2008 Frank Mori Hess
+Copyright (c) 2001, 2002, 2012 Peter Dimov
+Copyright 2006 Daniel Egloff, Olivier Gygi. 
+Copyright 2005 Daniel Egloff. 
+Copyright 2006 Olivier Gygi, Daniel Egloff.
+Copyright 2006 Eric Niebler, Olivier Gygi. 
+Copyright 2005 Daniel Egloff, Olivier Gygi. 
+Copyright (C) 2008 Eric Niebler.
+Copyright (C) 2012 Pieter Bastiaan Ober (Integricom).
+Copyright 2005 Eric Niebler.
+Copyright (C) 2014 Pieter Bastiaan Ober (Integricom).
+Copyright (C) 2005 Eric Niebler
+Copyright 2010 Gaetano Mendola, 2011 Simon West. 
+Copyright 2005 Eric Niebler, Michael Gauckler. 
+Copyright 2006 Eric Niebler. 
+Copyright 2005 Daniel Egloff, Eric Niebler.
+Copyright 2006, Eric Niebler, Olivier Gygi. 
+Copyright 2011 Simon West.
+Copyright John Maddock 2007.
+Copyright Barrett Adair 2015-2018
+Copyright Douglas Gregor 2003-2004.
+Copyright Rene Rivera 2012-2015
+Copyright (c) 2017 Francisco Jose Tapia (fjtapia@gmail.com )
+Copyright(c) 2016 Francisco José Tapia (fjtapia@gmail.com )
+Copyright (c) 2010 2015 Francisco José Tapia (fjtapia@gmail.com )
+Copyright(c) 2016 Francisco Jose Tapia (fjtapia@gmail.com )
+Copyright Sergey Nizovtsev 2016
+Copyright Steven Watanabe 2009
+Copyright Jens Maurer 2006
+Copyright (c) 2001 Daniel Nuffer
+Copyright (c) 2002 Hartmut Kaiser
+Copyright (C) 2005 Igor Chesnokov, mailto:ichesnokov@gmail.com (VC 6.5,VC 7.1 + counter code)
+Copyright (C) 2005-2007 Peder Holt (VC 7.0 + framework)
+Copyright (C) 2006 Steven Watanabe (VC 8.0)
+Copyright 2018 Joaquin M Lopez Munoz.
+Copyright 2016 Joaquin M Lopez Munoz.
+Copyright 2016-2018 Joaquin M Lopez Munoz.
+Copyright 2017-2018 Joaquin M Lopez Munoz.
+Copyright 2016-2019 Joaquin M Lopez Munoz.
+Copyright 2005-2007 Matthias Troyer
+Copyright (C) 2018 Alain Miniussi <alain.miniussi@oca.eu>.
+Copyright 2015 John Maddock. Distributed under the Boost
+Copyright 2008 Christophe Henry
+Copyright (c) 2011-2019 Adam Wulkiewicz, Lodz, Poland.
+Copyright (c) 2012-2015 Adam Wulkiewicz, Lodz, Poland.
+(C) Copyright Ion Gaztanaga 2005-2014. Distributed under the Boost
+(C) Copyright Ion Gaztanaga 2008-2013. Distributed under the Boost
+(C) Copyright Ion Gaztanaga 2004-2015. Distributed under the Boost
+(C) Copyright Ion Gaztanaga 2008-2015. Distributed under the Boost
+Copyright 2008 Joaquin M Lopez Munoz.
+Copyright (c) 2013-2014 Ion Gaztanaga
+Copyright 2011, Andrew Ross
+Copyright Daniel Wallin 2005.
+Copyright Cromwell D. Enage 2017.
+Copyright Cromwell D. Enage 2018.
+Copyright Cromwell D. Enage 2019.
+Copyright David Abrahams 2006.
+Copyright Bruno Dutra 2015
+Copyright 2017, 2019 Peter Dimov
+Copyright (c) 2010 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright Steven J. Ross 2014
+Copyright 2013 Christian Shelton
+Copyright 2013 Ankur Sinha
+Copyright 2014-2019 Niall Douglas
+Copyright 2003, 2004, 2006 Vladimir Prus
+Copyright David Abrahams 2002. 
+Copyright (c) 2010 Vladimir Prus.
+Copyright Pedro Ferreira 2005.
+Copyright Vladimir Prus 2007.
+Copyright 2007 Vladimir Prus
+Copyright 2001, 2002, 2003 Dave Abrahams
+Copyright 2002, 2006 Rene Rivera
+Copyright Rene Rivera 2006.
+Copyright 2002, 2003 Dave Abrahams
+Copyright 2002, 2005, 2006 Rene Rivera
+Copyright 2001, 2002 Dave Abrahams
+Copyright Vladimir Prus 2002-2007.
+Copyright Andy Tompkins 2008. 
+Copyright Andy Tompkins 2009. 
+Copyright 2017 - 2019 James E. King III
+Copyright 2014 Andrey Semashev
+(C) Copyright Andy Tompkins 2010. 
+(C) Copyright Andy Tompkins 2007. 
+(C) Copyright Andy Tompkins 2011. 
+Copyright (c) 2014 Oliver Kowalke (oliver dot kowalke at gmail dot com)
+Copyright 2014          LASMEA UMR 6602 CNRSUniv. 
+Copyright 2014          MetaScale SAS
+Copyright 2013 Kyle Lutz
+Copyright 2013-2014 Karsten Ahnert
+Copyright 2013-2014 Mario Mulansky
+Copyright 2010-2014 Mario Mulansky
+Copyright (C) 2008 Anthony Williams
+Copyright (C) 2017 Austin J. Beer
+Copyright (C) 2011,2014 Vicente J. Botet Escriba
+Copyright (C) 2018 Tom Hughes
+Copyright 2013 Ruslan Baratov
+Copyright (C) 2015 Vicente Botet
+Copyright (C) 2017 Vicente Botet
+Copyright (C) 2018 Vicente Botet
+Copyright (C) 2010 Vicente Botet
+Copyright (C) 2008 Vicente J. Botet Escriba
+Copyright (C) 2012 Vicente Botet
+Copyright (C) 2013 Vicente Botet
+Copyright (C) 2007-8 Anthony Williams
+Copyright (C) 2013 Tim Blechmann
+Copyright 2009 Anthony Williams
+Copyright (C) 2008 Peter Dimov
+Copyright (C) 2007-9 Anthony Williams
+Copyright (C) 2009 Anthony Williams
+Copyright Beman Dawes, 2007
+Copyright (C) 2013,2014 Vicente J. Botet Escriba
+Copyright 2013,2014 Vicente J. Botet Escriba
+Copyright 2012 Phil Endecott
+Copyright (c) 2008-2017 Emil Dotchevski and Reverge Studios, Inc.
+Copyright 2005 Daniel Wallin.
+Copyright 2005 Joel de Guzman.
+Copyright 2005 Dan Marsden.
+Modeled after rangeex, Copyright 2004 Eric Niebler
+Copyright 2008 Hartmut Kaiser.
+Copyright 2015 John Fletcher.
+Copyright Marshall Clow 2007.
+Copyright Eric Niebler 2010.
+Copyright Beman Dawes 2002.
+Copyright Beman Dawes 2002, 2003.
+Copyright Rene Rivera 2004.
+Copyright Daniel James 2009.
+Copyright Rene Rivera 2004-2006.
+Copyright Gennaro Prota 2006.
+Copyright Beman Dawes 2002-2003.
+Copyright Beman Dawes   2002.
+Copyright Beman Dawes   2002
+Copyright Rene Rivera   2004.
+Copyright Gennaro Prota 2006
+Copyright Beman Dawes, 2003.
+Modifications copyright (c) 2013-2014 Oracle andor its affiliates.
+Modifications copyright (c) 2016-2017 Oracle andor its affiliates.
+Copyright (c) 2005 Carl Barron. Distributed under the Boost
+Copyright Rene Rivera 2011-2013
+Copyright James E. King, III - 2017
+Copyright Rene Rivera 2011-2017
+Copyright Andrey Semashev 2007 - 2016.
+Copyright AlainMiniussi 20014 - 20015.
+Copyright Matthias Troyer
+Copyright (C) 2013 Andreas Hehn <hehn@phys.ethz.ch>, ETH Zurich
+Copyright (C) 2013 Alain Miniussi <alain.miniussi@oca.eu>
+Copyright (C) 2018 Steffen Hirschmann
+Copyright Alain Miniussi 20014.
+Copyright (C) 2017 Alain Miniussi & Vincent Chabannes
+Copyright (C) 2017 Alain Miniussi & Steffen Hirschmann
+Copyright (c) 2017 Kohei Takahashi
+Copyright (c) 2014 Andrey Semashev
+Copyright (c) 2013 Tim Blechmann
+Copyright (c) 2009 Helge Bahmann
+Copyright (c) 2012 Tim Blechmann
+Copyright (c) 2013 - 2018 Andrey Semashev
+Copyright (c) 2009 Phil Endecott
+Copyright (c) 2010 Helge Bahmann
+Copyright (c) 2013 - 2014 Andrey Semashev
+Copyright (c) 2009, 2011 Helge Bahmann
+Copyright (c) 2012 - 2014 Andrey Semashev
+Copyright (c) 2012 Hartmut Kaiser
+Copyright (c) 2017 - 2018 Andrey Semashev
+Copyright (c) 2015 Andrey Semashev
+Copyright (c) 2012 - 2014, 2017 Andrey Semashev
+Copyright (c) 2014 - 2018 Andrey Semashev
+Copyright (c) 2014, 2019 Andrey Semashev
+Copyright 2013 Tim Blechmann
+Copyright Robin Eckert 2015. 
+Copyright (C) 2018 Tobias Loew
+Copyright (C) 2006 Peder Holt
+Copyright iamvfx@gmail.com 2014
+Copyright Duncan Exon Smith 2012
+Copyright Beman Dawes 2012
+Copyright Beman Dawes 2014.
+Copyright (c) 2014 Grav
+Copyright (c) 2016 MATHIEU CORNIC
+Copyright (c) 2017 Valere JEANTET
+Copyright 2006-2011 Daniel James.
+Copyright 2015 Klemens Morgenstern
+Copyright John Maddock 2007-8.
+(C) Copyright John Maddock 2001 - 2003
+(C) Copyright Jens Maurer 2001
+(C) Copyright Peter Dimov 2001
+(C) Copyright Darin Adler 2001
+(C) Copyright Beman Dawes 2002
+Modifications copyright (c) 2018-2019, Oracle andor its affiliates.
+(C) Copyright Vicente J. Botet Escriba 2014-2015. 
+(C) Copyright Howard Hinnant 2007-2010. 
+Copyright (c) 1991-2009 Unicode, Inc.
+table builder) (c) Peter Kankowski, 2008
+(C) Copyright Gennadiy Rozental 2002-2015.
+Copyright 2016 Andrey Semashev
+Copyright 2015 Andrey Semashev
+Copyright 2015-2018 Andrey Semashev
+Copyright 2013, 2017 Andrey Semashev
+Copyright 2014 Antony Polukhin
+Copyright 2016 Jorge Lodos
+Copyright 2017 Vinnie Falco
+Copyright 2014 Renato Tegon Forti, Antony Polukhin
+Copyright 2015 Antony Polukhin
+Copyright 2016 Klemens D. Morgenstern
+Copyright 2016-2018 Andrey Semashev
+Copyright 2015, 2017 Andrey Semashev
+Copyright 2016, 2017 Andrey Semashev
+Copyright 2013 Andrey Semashev
+Copyright 2008 Roland Schwarz
+Copyright (c) 2011 Brandon Kohn
+Copyright John Maddock 2006-15.
+Copyright Paul Fultz II 2016-2018
+Copyright (c) 2001 by Andrei Alexandrescu. 
+Copyright 2017 Daniel James
+Copyright 2014 Paul A. Bristow
+Copyright (c) 2011 Roji Philip
+Copyright (c) 2011 Matthias Born
+Copyright (c) 2011 Joerg Becker
+Copyright (c) 2010 Carl Philipp Reh
+Copyright (c) 2011 Robert Nelson
+Copyright (c) 2011 Bryce Lelbach
+Copyright (c)      2010 Daniel James
+Copyright (c) 2010 Josh Wilson
+Copyright (c) 2010 Olaf Peter
+Copyright (c) 2010 Head Geek
+Copyright (c) 2012 Louis Dionne
+Copyright (c) 2011 Dean Michael Berries
+Copyright (c) 2011 Brian O'Kennedy
+Copyright (c) 2008 Francois Barel
+Copyright 2010 Daniel Wallin, Eric Niebler. 
+Copyright 2003 - 2011  LASMEA UMR 6602 CNRSUniv. 
+Copyright 2009 - 2011  LRI    UMR 8623 CNRSUniv Paris Sud XI
+Copyright 2011         Eric Niebler
+Copyright (c) 2013 Agustín Bergé
+Copyright John Maddock 2002-4.
+Copyright 2007 Aaron Windsor
+Copyright (c) Aaron Windsor 2007
+Copyright (c) 2013, Petr Machata, Red Hat Inc.
+Copyright 2005, 2008 Peter Dimov
+Copyright 2005-2006 Andreas Huber Doenni
+Copyright 2010 Igor R (http:thread.gmane.orggmane.comp.lib.boost.user62985)
+Copyright 2010 Andreas Huber Doenni
+Copyright 2004-2006 Andreas Huber Doenni
+Copyright 2005-2008 Andreas Huber Doenni
+Copyright 2004-2007 Andreas Huber Doenni
+Copyright 2009 Andreas Huber Doenni
+Copyright David Abrahams 2002,  Nikolay Mladenov 2007.
+Copyright 2015 John Fletcher
+Copyright Mike Dev 2018
+Copyright Rene Rivera 2018
+Copyright Edward Diener 2011-2015,2019
+Copyright 2006, 2007, 2008, 2009, 2010, 2012, 2013, 2015, 2016 John Maddock and Paul A. Bristow.
+Copyright Pavol Droba 2002-2003. 
+Copyright (C) 2001-2003 Douglas Gregor
+Copyright (C) Douglas Gregor 2001-2005. 
+Copyright Douglas Gregor 2008. 
+Copyright 2014 Antony Polukhin.
+Copyright Gunter Winkler 2004 - 2009.
+Copyright (c) 2001 Doug Gregor
+Copyright Oliver Kowalke 2018.
+Copyright 2012: Eric Niebler
+Copyright Raffi Enficiaud 2018
+Copyright Gennadiy Rozental 2007-2015.
+Copyright Edward Diener 2018.
+Copyright (2) Beman Dawes 2011
+Copyright 2004 Robert Ramey - http:www.rrsd.com .
+Copyright (c) 2004 Robert Ramey, Indiana University (garcia@osl.iu.edu)
+Copyright 2005 Robert Ramey - http:www.rrsd.com .
+Copyright Antony Polukhin 2012-2014.
+Copyright Hubert Holin 2003.
+Copyright Nick Thompson, 2019
+Copyright John Maddock 2005.
+Copyright Paul A. Bristow 2010
+Copyright Paul A. Bristow 2009, 2011
+Copyright (C) Benjamin Sobotta 2012
+Copyright Bruno Lalande 2008.
+Copyright John Maddock 2012
+Copyright (c) 2011 Paul A. Bristow
+Copyright  Paul A. Bristow 2014.
+Copyright Matthew Pulver 2018 - 2019.
+Copyright (c) 2011 Paul A. Bristow comments
+Copyright  Paul A. Bristow 2007, 2012.
+Copyright John Maddock 2013.
+Copyright John Maddock 2013
+Copyright Paul A. Bristow 2013.
+Copyright John Maddock 2006, 2007
+Copyright  Paul A. Bristow 2007, 2009, 2010, 2012.
+Copyright  Paul A. Bristow 2007.
+Copyright 2006 John Maddock
+Copyright Paul Bristow 2007, 2011.
+Copyright John Maddock 2006, 2011.
+Copyright Xiaogang Zhang 2006
+Copyright Paul A. Bristow 2006-7.
+Copyright John Maddock 2006-7.
+Copyright 2014 Marco Guazzone (marco.guazzone@gmail.com).
+Copyright Paul A. Bristow
+Copyright Gautam Sewani
+Copyright Paul A. Bristow 2016, 2017, 2018.
+Copyright John Maddock 2016.
+Copyright Paul A. Bristow 2008, 2009, 2014.
+Copyright (c) 2011 Paul A. Bristow incorporated Boost.Math
+Copyright 2013 Paul A. Bristow
+Copyright John Maddock 2009
+Copyright John Maddock 2008, 2012.
+Copyright Paul A. Bristow 2012.
+Copyright 2011 Paul A. Bristow
+Copyright Nick Thompson, 2018
+Copyright Benjamin Sobotta 2012.
+Copyright Paul A. Bristow 2007, 2009.
+Copyright John Maddock 2014.
+Copyright John Maddock 20
+Copyright Jeremy Murphy 2015.
+Copyright John Maddock 2010
+Copyright John Maddock 2006
+Copyright John Maddock 2014
+Copyright Paul A. Bristow 2011 (added tests for changesign)
+Copyright 2006 Johan Rade
+Copyright 2011 Paul A. Bristow  To incorporate into Boost.Math
+Copyright 2012 Paul A. Bristow with new tests.
+Copyright Paul A. Bristow 2006, 2017.
+Copyright Paul Bristow 2006, 2007.
+Copyright Paul Bristow 2007.
+Copyright Paul A. Bristow 2017.
+Copyright John Maddock 2006, 2012.
+Copyright Paul A. Bristow 2007, 2012.
+Copyright John Maddock 2018
+Copyright Pierre Talbot 2013.
+Copyright Vicente J. Botet Escriba 2013,2014.
+Copyright (C) 2002 Brad King (brad.king@kitware.com)
+Copyright (C) 2002, 2008, 2013 Peter Dimov
+Copyright (C) 2017 Glen Joseph Fernandes (glenjofe@gmail.com)
+Copyright (c) 2003 Daniel Frey
+Copyright (c) 2003 Howard Hinnant
+Copyright 2003 (c) The Trustees of Indiana University.
+Copyright (c) 2002, 2009, 2014 Peter Dimov
+Copyright (2) Beman Dawes 2010, 2011
+Copyright (3) Ion Gaztanaga 2013
+Copyright Beman Dawes 1999-2003. 
+Copyright 2004 Pavel Vozenilek.
+Copyright (C) 1999, 2000 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+Copyright (C) 2001, 2002 Peter Dimov
+Copyright (C) 2014 Glen Joseph Fernandes
+Copyright (C) 2014 Agustin Berge
+Copyright Beman Dawes, 2009
+Copyright (C) 2011-2012 Vicente J. Botet Escriba
+Copyright (C) 2012 Anthony Williams
+Copyright (C) 2007, 2008 Steven Watanabe, Joseph Gauterin, Niels Dekker
+Copyright 2007, 2014 Peter Dimov
+Copyright (C) 2014 Andrey Semashev
+Copyright (c) 2016-2019, Oracle andor its affiliates.
+Copyright Thorsten Ottosen, Neil Groves 2006 - 2008. Use, modification and
+Copyright Thorsten Ottosen, Neil Groves 2006. Use, modification and
+Copyright Neil Groves 2014.
+Copyright 2014 Neil Groves
+Copyright (c) 2010 Ilya Murav'jov
+Copyright Robin Eckert 2015.
+Copyright Neil Groves 2007. Use, modification and
+(C) Copyright Ion Gaztanaga 2012-2015.
+(C) Copyright Ion Gaztanaga 2010-2016.
+(C) Copyright Ion Gaztanaga 2014-2017.
+Copyright Ion Gaztanaga 2015-2015.
+Copyright Ion Gaztanaga  2017-2017
+Copyright Ion Gaztanaga 2012-2012.
+Copyright Steven Watanabe 2009.
+Copyright 2017 James E. King, III
+Copyright John Maddock 2010, 2012.
+Copyright Paul A. Bristow 2011, 2012.
+Copyright John Maddock 2005-2006, 2011.
+Copyright Paul A. Bristow 2006-2011.
+Copyright 2010, Jeffrey Hellrung.
+Copyright 2018 Daniel James.
+Copyright 2010 Barend Gehrels.
+Copyright Eric Niebler 2005.
+Copyright Eric Niebler 2008.
+Copyright (c) 2011-2012
+Copyright (c) 2002-2006 Pavol Droba.
+Copyright Beman Dawes, 2013
+Copyright 2015 Glen Joseph Fernandes
+Copyright Beman Dawes 2017
+Copyright Beman Dawes, 2002
+Copyright (c) 2004 Beman Dawes
+Copyright Beman Dawes 2004.
+Copyright Beman Dawes 2002, 2009.
+Copyright Beman Dawes 2008, 2009, 2015
+Copyright Beman Dawes 2002, 2008
+Copyright Beman Dawes 2008, 2009
+Copyright Beman Dawes 2009, 2010
+Copyright Jeremy Siek    2002.
+Copyright Thomas Witt    2002.
+Copyright Nick Thompson, 2018
+Copyright Milan Svoboda 2008.
+(C) Copyright Jonathan Turkanis 2003.
+(C) Copyright Craig Henderson 2002 'boostmemmap.hpp' from sandbox
+(C) Copyright Jonathan Graehl 2004.
+(C) Copyright Jorge Lodos 2008.
+(C) Copyright Reimar Döffinger 2018.
+Copyright (C) 2006 Douglas Gregor <doug.gregor@gmail.com>
+Copyright (C) 2005-2006 Matthias Troyer
+Copyright 2008 Lubomir Bourdev and Hailin Jin
+Copyright 2006-2015 Joaquin M Lopez Munoz.
+Copyright 2006-2011 Joaquin M Lopez Munoz.
+Copyright Jason Rice 2015
+Copyright 2018 Nick Thompson. Distributed under the Boost
+Copyright John Maddock 2019.
+Copyright John Maddock 2017
+Copyright Christopher Kormanyos 2013 - 2014.
+Copyright Christopher Kormanyos
+Copyright 2005 Vladimir Prus
+Copyright 2011-2014     Karsten Ahnert
+Copyright 2011-2014     Mario Mulansky
+Copyright (C) 2013-2019 Niall Douglas <http:www.nedproductions.biz/>
+Copyright 2014 John Maddock.
+(C) Copyright Beman Dawes 2002.
+(C) Copyright John Maddock 2011.
+Copyright Beman Dawes 2000.  
+(C) Copyright John Maddock 2014-9.
+Copyright Bryce Lelbach 2010.
+(C) Copyright Gennadiy Rozental 2005-2014.
+Copyright (c) 2007-2019 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2014-2019 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2017-2019 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2015-2019 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2010-2019 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2014-2015 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2014-2015 Bruno Lalande, Paris, France.
+Copyright (c) 2014-2015 Mateusz Loskot, London, UK.
+Modifications copyright (c) 2015, 2019, Oracle andor its affiliates.
+Copyright (c) 2013 Bruno Lalande, Paris, France.
+Copyright (c) 2019-2019 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2014 Bruno Lalande, Paris, France.
+Copyright (c) 2014 Mateusz Loskot, London, UK.
+Copyright Kohei Takahashi 2016.
+Copyright Nicolai M. Josuttis 2001,
+Copyright Craig Henderson 2002.
+Copyright (C) 2001-2008 Joel de Guzman
+Copyright (C) 2001-2008 Hartmut Kaiser
+(C) Copyright David Abrahams 2004.
+(C) Copyright Vicente J. Botet Escriba 20010.
+Copyright 2004. Vladimir Prus
+Copyright 2013 Steven Watanabe
+Copyright 2003. Vladimir Prus
+Copyright Vladimir Prus 2003. 
+Copyright (c) 2002 Institute of Transport,
+Copyright Cromwell D. Enage 2004
+Copyright 2006 The Trustees of Indiana University.
+(C) Copyright Andrew Sutton 2009
+Copyright (c) 2004 Kristopher Beevers
+Copyright 2001 University of Notre Dame.
+Copyright 2002 Indiana University.
+(C) Copyright 2004 Douglas Gregor and Jeremy Siek
+Copyright (c) 2010 Matthias Walter (xammy@xammy.homelinux.net)
+Copyright (c) 2006, Stephan Diederich
+(C) Copyright David Gleich 2007
+Copyright 2013 University of Warsaw.
+Copyright (C) 2006-2009 Dmitry Bufistov and Andrey Parfenov
+Copyright 2013 Louis Dionne
+Copyright (C) 2002 Trustees of Indiana University
+Copyright 2009 Trustees of Indiana University.
+Copyright (C) 2005 Jong Soo Park <jongsoo.park -at- gmail.com>
+Copyright 2002 Rensselaer Polytechnic Institute
+Copyright 2009 The Trustees of Indiana University.
+Copyright (C) 2006  Tiago de Paula Peixoto <tiago@forked.de>
+Copyright 2004-5 Trustees of Indiana University
+Copyright (C) 2001-20044 Douglas Gregor (dgregor at cs dot indiana dot edu)
+Copyright 2008 Aaron Windsor
+Copyright 2009 Andrew Sutton
+Copyright Fernando Vilas 2012.
+Copyright (c) 2005 Aaron Windsor
+Copyright 2017 Felix Salfelder
+Copyright (C) 2007-2008 The Trustees of Indiana University.
+Copyright 2010 The Trustees of Indiana University.
+Copyright (c) 2013 Alberto Santini
+Copyright 2009 Dmitry Bufistov, Andrew Sutton
+Copyright Michael Drexl 2005, 2006.
+Copyright Daniel Trebbien 2010.
+Copyright 2014 Alexander Lauser.
+Copyright (C) Ben Pope 2014.
+Copyright 2009-2010 Andrew Sutton
+Copyright (C) 2001 Vladimir Prus <ghost@cs.msu.su>
+Copyright (C) 2001 Jeremy Siek <jsiek@cs.indiana.edu>
+Copyright (C) 2012, Michele Caini.
+Copyright (C) 2012 Flavio De Lorenzi (fdlorenzi@gmail.com)
+Copyright (C) 2013 Jakob Lykke Andersen, University of Southern Denmark (jlandersen@imada.sdu.dk)
+Copyright (c) 2018 Yi Ji
+Copyright (c) 2008 Dan Marsden
+Copyright (c) 2011-2016 Adam Wulkiewicz, Lodz, Poland.
+Copyright 2008-2010 Gordon Woodhull
+Copyright 2010 Gordon Woodhull
+Copyright (C) 2010 Paul A. Bristow added Doxygen comments.
+Copyright Gennadiy Rozental 2008-2015.
+Copyright (c) 2018 Oxford Nanopore Technologies
+Copyright (c) 2018 Klemens D. Morgenstern
+Copyright (c) 2015 Klemens D. Morgenstern
+Copyright (c) 1998-2004 John Maddock
+Copyright 2011 Garmin Ltd. or its subsidiaries
+Copyright (c) 2002
+Copyright (c) 2004 John Maddock
+Copyright (c) 2003-2005
+Copyright (c) 1998-2009
+Copyright (c) 1998-2009 John Maddock
+Copyright 2008 Eric Niebler.
+Copyright (c) 1998-2005
+Copyright (C) 1995-2017 Jean-loup Gailly and Mark Adler
+Copyright Abel Sinkovics (abel@sinkovics.hu) 2010 - 2011.
+Copyright Robert Ramey 2004
+Copyright 2002-2008 Robert Ramey and Joaquin M Lopez Munoz
+Copyright 2002-2009, 2014 Beman Dawes
+Copyright 2001 Dietmar Kuehl
+Copyright 2019 Andrey Semashev
+Copyright 2002-2005 Beman Dawes
+Copyright David Abrahams, Daniel Wallin 2003.
+Copyright David Abrahams, Matthias Troyer, Michael Gauckler 2005.
+Copyright (c) 2003-2013 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+Copyright (c) 2016 Jeffrey E. Trull
+Copyright (c) 2014 Tomoki Imai
+Copyright (c) 2011 Laurent Gomila
+Copyright (c) 2010 Larry Evans
+Copyright (c) 2010 Peter Schueller
+Copyright (c) 2010 Chris Hoeppler
+Copyright 2010 Intel Corporation
+Copyright (C) 2000 Gary Powell (powellg@amazon.com)
+Copyright (C) 2001 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+Copyright (C) 2000 Gary Powell (gary.powell@sierra.com)
+Copyright 2011-2014 Mario Mulansky
+Copyright 2011-2014 Karsten Ahnert
+Copyright Paul A. Bristow 2006, 2007, 2012.
+Copyright 2017 Glen Joseph Fernandes
+Copyright 2009 Peter Dimov
+Copyright 2014, 2017 Peter Dimov
+Copyright (c) 2017 Bjorn Reese
+Copyright (c) 2017 Hans Dembinski
+Copyright 2014, 2019 Peter Dimov
+Copyright 2017 Kohei Takahashi
+Copyright (c) 2014, 2018 Peter Dimov
+Copyright Beman Dawes 1999. 
+Copyright David Abrahams and Aleksey Gurtovoy 2002-2004. 
+Copyright (c) 2017 Peter Dimov
+Copyright (C) 1995-2011, 2016 Mark Adler
+Copyright (C) 1995-2005, 2014, 2016 Jean-loup Gailly, Mark Adler
+Copyright (C) 1995-2006, 2010, 2011, 2012, 2016 Mark Adler
+Copyright (C) 1995-2017 Jean-loup Gailly and Mark Adler
+Copyright (C) 1995-2016 Jean-loup Gailly
+Copyright (C) 2004, 2010 Mark Adler
+Copyright (C) 2004, 2005, 2010, 2011, 2012, 2013, 2016 Mark Adler
+Copyright (C) 2004-2017 Mark Adler
+Copyright (C) 1995-2016 Mark Adler
+Copyright (C) 1995-2003, 2010 Mark Adler
+Copyright (C) 1995-2005, 2010 Mark Adler
+Copyright (C) 1995-2017 Jean-loup Gailly
+Copyright (C) 1995-2003, 2010, 2014, 2016 Jean-loup Gailly, Mark Adler
+Copyright (C) 1995-2016 Jean-loup Gailly, Mark Adler
+Copyright Paul A. Bristow & John Maddock 2009, 2010
+Copyright Paul A. Bristow 2007, 2009, 2012.
+Copyright Paul A. Bristow & John Maddock 2009
+Copyright Paul A. Bristow 2007, 2009, 2010, 2012
+Copyright (c) 2015 John Maddock
+Copyright Jeremy Murphy 2016.
+Copyright 2017 John Maddock. Distributed under the Boost
+Copyright 2003-2013 Christopher M. Kohlhoff
+Copyright Oliver Kowalke, Nat Goodspeed 2015.
+Copyright Arnaud Kapp, Oliver Kowalke 2016
+Copyright (c) 2010 Mathias Gaunard
+Copyright (c) 2009 Carl Barron
+Copyright (c) 2009 Pavel Baranov
+Copyright (c) 2013 Andreas Pokorny
+Copyright (c) 2011 Ryan Molden
+Copyright (c) 2009 Jean-Francois Ostiguy
+Copyright (c) 2010 Sergey "GooRoo" Olendarenko
+Copyright (c) 2009 Tor Brede Vekterli
+Copyright (C) 2012 David Stone
+Copyright (C) 2003 Vladimir Prus
+Copyright 2001, 2002, 2003, 2005 Dave Abrahams
+Copyright 2003, 2005 Vladimir Prus
+Copyright David Abrahams 2001. 
+Copyright Jessica Hamilton 2014
+Copyright Rene Rivera 2014-2015
+Copyright Franz Detro 2014
+Copyright Beman Dawes 1994, 2006, 2008
+Copyright Ion Gaztanaga 2007-2015. 
+copyright John Maddock 2005
+Copyright (C) 2000 Stephen Cleary
+Copyright (c) 2006, 2007 Marcin Kalicinski
+Copyright (C) 2006, 2009 Marcin Kalicinski
+Copyright (c) 2014-2019, Oracle andor its affiliates.
+Copyright 2008 David Jenkins.
+Copyright 2008 David Jenkins. 
+Copyright (c) 2018 Fady Essam
+Copyright (c) 2015 Orson Peters <orsonpeters@gmail.com>
+Copyright (c) 2019 Damian Jarek(damian.jarek93@gmail.com)
+Copyright (c) 2017 Vinnie Falco (vinnie dot falco at gmail dot com)
+Copyright Eric Niebler 2013-present
+Copyright (c) 2016-2019Damian Jarek (damian dot jarek93 at gmail dot com)
+Copyright (c) 2001, Daniel C. Nuffer.
+Copyright 2018 Daniel James
+Copyright 2019 Dmitry Arkhipov
+Copyright (c) 2018Robert Ramey
+Copyright Nuxi, https:nuxi.nl 2015.
+(C) Copyright Jessica Hamilton 2014.
+(C) Copyright Bill Kempf 2002.
+(C) Copyright Jim Douglas 2005.
+(C) Copyright Yuriy Krasnoschek 2009.
+(C) Copyright Artyom Beilis 2010.
+(C) Copyright Dustin Spicuzza 2009.
+(C) Copyright Bill Kempf 2001.
+(C) Copyright Rene Rivera 2005.
+(C) Copyright Peter Dimov 2002
+(C) Copyright Peter Dimov 2001, 2002
+(C) Copyright Peter Dimov 2001, 2002, 2003
+(C) Copyright Ion Gaztanaga 2006-2014.
+Copyright (c) 2003-2013 Hartmut Kaiser. 
+Copyright (c) 1998, 2002-2005 Kiyoshi Matsui <kmatsui@t3.rim.or.jp>
+Copyright (c) 1998, 2002-2006 Kiyoshi Matsui <kmatsui@t3.rim.or.jp>
+Copyright (c) 2017 Abel Sinkovics.
+Copyright (c) 2001-2013 Hartmut Kaiser. 
+Copyright (c) 2019 Tom Tan
+Copyright 2018-2019 Antony Polukhin.
+Copyright 2015-2018 Klemens D. Morgenstern
+Copyright Christopher Kormanyos 2016.
+Copyright 2013 Christopher Kormanyos. 
+Copyright Andrey Semashev 2018.
+Copyright John Maddock 2016.
+Copyright Beman Dawes 2007, 2011
+Copyright Beman Dawes 1994-2006, 2011
+Copyright 2018-2019 Niall Douglas <http:www.nedproductions.biz/>
+Copyright 2017-2018 Daniel James
+Copyright Rene Rivera 2008-2013
+Copyright Guillaume Melquiond 2003.
+Copyright (c) 2001-2003 John Maddock
+Copyright (c) 2001 Darin Adler
+Copyright (c) 2002 Bill Kempf
+Copyright (c) 2002 Jens Maurer
+Copyright (c) 2002-2003 David Abrahams
+Copyright (c) 2003 Gennaro Prota
+Copyright (c) 2010 Eric Jourdanneau, Joel Falcou
+Copyright Joel de Guzman 2002-2004. 
+Copyright Joel de Guzman 2002-2007. 
+Copyright Vicente J. Botet Escriba 2009-2011
+Copyright (c) 2015-2019 Vinnie Falco (vinnie dot falco at gmail dot com)
+Copyright 2017, 2018 James E. King III
+Copyright 2018 James E. King III
+Copyright 2002, 2005 Vladimir Prus
+Copyright (c) 2002 Eric Friedman, Itay Maman
+Copyright (c) 2003 Gustavo Guerra
+Copyright Marshall Clow 2018
+Copyright 2014-2016 Glen Joseph Fernandes
+Copyright 2015 NumScale SAS
+Copyright 2015 LRI UMR 8623 CNRS/University Paris Sud XI
+Copyright (C) 2008-2019 Lorenzo Caminiti
+Copyright Stephen Silver, 2001. 
+Copyright 2002 Dave Abrahams
+Copyright John Maddock 2004.
+Copyright Darin Adler 2000
+Copyright Beman Dawes 2006, 2009
+Copyright Joel de Guzman 2003.
+Copyright Keld Helsgaun 2000, Oliver Kowalke 2014.
+Modifications copyright (c) 2013, 2014 Oracle andor its affiliates.
+Copyright (c) 2012-2014 Bruno Lalande, Paris, France.
+Copyright (c) 2012-2014 Mateusz Loskot, London, UK.
+Copyright (c) 2013 Jamboree
+Copyright Pavol Droba 2002-2003.
+Copyright Pavol Droba 2002-2006.
+Copyright (c) 2003 Paul Mensonides
+Copyright Steve Cleary & John Maddock 2000.
+Copyright 2005 Redshift Software, Inc.
+Copyright (C) 2008-2016 Daniel James.
+Copyright (C) 2005-2016 Daniel James
+Copyright (c) 2011-2012 Thomas Bernard
+Copyright (c) 2014 Jamboree
+Copyright 2013,2015 Vicente J. Botet Escriba
+Copyright 2014 Vicente J. Botet Escriba
+Copyright 2011-2015 Vicente J. Botet Escriba
+Copyright Vicente J. Botet Escriba 2008-2009,2012. 
+Copyright 2012 Vicente Botet
+Copyright 2009-2012 Vicente J. Botet Escriba
+Copyright 2009-2012 Anthony Williams
+Copyright 2008-2009,2012 Vicente J. Botet Escriba
+Copyright 2010 Just Software Solutions Ltd http:www.justsoftwaresolutions.co.uk
+Copyright Peter Dimov, Hans Dembinski 2018-2019
+Copyright Hans Dembinski 2016 - 2019.
+Copyright 2005-2013 Ion Gaztanaga
+Copyright (c) 2016 Modified Work Barrett Adair
+Copyright (c) 2010-2013 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2011-2014 Bruno Lalande, Paris, France.
+Copyright Barend Gehrels 2010, 2011, Geodan, Amsterdam, the Netherlands
+Copyright (c) 2011-2015 Bruno Lalande, Paris, France.
+(C) Copyright Ion Gaztanaga  2006-2015.
+(C) Copyright Ion Gaztanaga  2015-2015.
+(C) Copyright Matei David 2014
+(C) Copyright Ion Gaztanaga 2014
+(C) Copyright Matei David     2014-2014.
+(C) Copyright Ion Gaztanaga   2014-2014.
+(C) Copyright Ion Gaztanaga  2007-2015
+(C) Copyright Andrey Semashev 2018.
+Copyright 2019 Henry Schreiner
+Copyright 2015-2016 Hans Dembinski
+Copyright 2019 Glen Joseph Fernandes (glenjofe@gmail.com)
+Copyright (c) 2012 Steven Watanabe
+Copyright Andreas Schwab 2019
+Copyright 2016-2019 Peter Dimov
+(C) Copyright Edward Diener 2013.
+(C) Copyright Edward Diener 2011,2013.
+Copyright Cromwell D. Enage 2013.
+Copyright (c) 2018-2019 Mateusz Loskot <mateusz at loskot dot net>
+Copyright Beman Dawes 2006, 2011
+Copyright Beman Dawes 1998.  Distributed under the Boost
+Copyright (C) 2007 Alexey Baskakov
+Copyright (C) 2007 Marcin Kalicinski
+Copyright (C) 2013 Sebastian Redl
+Copyright (C) 2002-2007 Marcin Kalicinski
+Copyright (C) 2017-2019 Niall Douglas <http:www.nedproductions.biz/>
+Copyright Vicente J. Botet Escriba 2009
+Copyright (c) Intel Corporation 2008.
+Copyright (c) 2008-2012 Simonson Lucanus.
+Copyright (c) 2012-2012 Andrii Sydorchuk.
+Copyright 2012 Lucanus Simonson
+(C) Copyright Gennadiy Rozental 2003-2014.
+(C) Copyright Gennadiy Rozental 2001-2006.
+(C) Copyright Gennadiy Rozental 2005.
+(C) Copyright Gennadiy Rozental 2002-2014.
+(C) Copyright Gennadiy Rozental & Ullrich Koethe 2001.
+Copyright Louis Dionne 2016
+Copyright Zach Laine 2016
+Copyright Neil Groves 2013. Use, modification and
+Copyright (c) 2009-2010: Joachim Faulhaber
+Copyright (C) 2001 Gary Powell (gary.powell@sierra.com)
+Copyright (c) 2011 Paul Heil
+Copyright (C) 2004,2009  The Trustees of Indiana University.
+Copyright 2004-9 Trustees of Indiana University
+Copyright 2009-2011 Vicente J. Botet Escriba
+Copyright 2009-2012 Vicente J. Botet Escriba
+Copyright (c) 2018 Vinnie Falco (vinnie dot falco at gmail dot com)
+Copyright (c) 2018      Kohei Takahashi
+Copyright (c) 2018      Kohei Takahshi
+Modifications copyright (c) 2017-2019 Oracle andor its affiliates.
+Modifications copyright (c) 2015-2018 Oracle andor its affiliates.
+Copyright (c) 2013 Adam Wulkiewicz, Lodz, Poland
+Copyright (c) 2017-2017 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2013-2017 Adam Wulkiewicz, Lodz, Poland
+Copyright (c) 2015-2016 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2002-2010 Hartmut Kaiser
+Copyright (c) 2002-2010 Joel de Guzman
+Copyright Edward Diener 2011,2014.
+Copyright (c) 2106 Klemens D. Morgenstern
+Copyright Rene Rivera 2008-2019
+Copyright 2005-2011 Ion Gaztanaga
+Copyright Eric Niebler 2006.
+Copyright Beman Dawes 2014, 2015
+Copyright Beman Dawes 1999-2008
+Copyright (c) 2016 Lee Clagett
+Copyright (c) 2015,2018 Kohei Takahashi
+Copyright (c) 2018 Louis Dionne
+Copyright Raffi Enficiaud 2017.
+Copyright (c) 2008 Michael Marcin
+Copyright (c) 2009 Frank Mori Hess
+Copyright Frank Mori Hess 2008.
+Copyright Frank Mori Hess 2007-2010.
+Copyright Frank Mori Hess 2007.
+Copyright Frank Mori Hess 2007-2008
+Copyright Frank Mori Hess 2007-2009.
+Copyright Timmo Stange 2007.
+Copyright Douglas Gregor 2001-2004. Use, modification and
+Copyright Frank Mori Hess 2007-2009
+Copyright Frank Mori Hess 2007,2009.
+Copyright (c) 2003 Jonathan de Halleux
+Copyright Juergen Hunold 2015
+Copyright Juergen Hunold 2016
+Copyright 2007, 2008 Steven Watanabe, Joseph Gauterin, Niels Dekker
+Copyright David Abrahams, Vicente Botet 2009.
+Copyright Ion Gaztanaga 2009-2012.
+Copyright 2017 Antony Polukhin.
+Copyright 2017-2018 Daniel James.
+Copyright (c) Alexander Zaitsev <zamazan4ik@gmail.by>, 2016
+Copyright (c) Alexander Zaitsev <zamazan4ik@gmail.by>, 2017
+Copyright 2007-2009 Daniel James.
+Copyright 2006-2010 Daniel James.
+Copyright 2017 Daniel James.
+Copyright 2016 Daniel James.
+Copyright Ion Gaztanaga 2012-2016.
+Copyright 2008 Eric Niebler. Distributed
+Copyright (c) 2013 John Maddock, Antony Polukhin
+Copyright (c)  2000 David Abrahams.
+Copyright Beman Dawes 1995-2001. 
+Copyright 2005-2011 Daniel James.
+Copyright 2013 Rene Rivera
+Copyright Matthias Troyerk 2006.
+Copyright 2018, 2019 Andrey Semashev
+Copyright (c) 2008, 2018 Peter Dimov
+Copyright David Abrahams 2001, Howard Hinnant 2001.
+Copyright 2012 Lee Hodgkinson
+Copyright (c) 2014 Anton Bikineev
+Copyright John Maddock 2009.
+Copyright Paul A. Bristow 2017, 2018
+Copyright John Z. Maddock 2017
+Copyright (c) 2018 Mike Dev
+Copyright (C) 2017 Minmin Gong
+Copyright (C) 2011-2013, 2016 Tim Blechmann
+Copyright (C) 2011, 2016 Tim Blechmann
+Copyright (C) 2008-2016 Tim Blechmann
+Copyright (C) 2009, 2016 Tim Blechmann
+Copyright (C) 2008, 2016 Tim Blechmann
+Copyright (C) 2008, 2009, 2016 Tim Blechmann, based on code by Cory Nelson
+Copyright Aleksey Gurtovoy 2009
+Copyright Aleksey Gurtovoy 2007-2009
+Copyright (C) 2008 Matthias Christian Schabel
+Copyright (c) 2015-2017 Oracle andor its affiliates.
+Copyright (c) 2015-2018 Oracle andor its affiliates.
+Copyright (c) 2016, 2018 Oracle andor its affiliates.
+Copyright (c) 2014-2016 Oracle andor its affiliates.
+Copyright (c) 2015-2016 Oracle andor its affiliates.
+Copyright 2010 Thomas Claveirole
+Copyright 2001 Universite Joseph Fourier, Grenoble.
+Copyright 2006 Trustees of Indiana University
+Copyright 2005 Jeremy G. Siek
+Copyright (c) Jeremy Siek 2001, Marc Wintermantel 2002
+Copyright (c) Jeremy Siek 2001
+Copyright (c) Douglas Gregor 2004
+Copyright 2005-2009 The Trustees of Indiana University.
+Copyright 1997-2001 University of Notre Dame.
+Copyright 2007 Stanford University
+Copyright 2004, 2005 Trustees of Indiana University
+Copyright 2003 Bruce Barr
+Copyright 2003 Jeremy Siek
+Copyright (C) 2005-2009 Jongsoo Park <jongsoo.park -at- gmail.com>
+Copyright 2013 Maciej Piechotka
+Copyright 2000 University of Notre Dame.
+Copyright (C) 2004  The Trustees of Indiana University.
+Copyright 2009, Andrew Sutton
+Copyright (C) 2009 Andrew Sutton
+Copyright Louis Dionne 2013
+Copyright (C) 2001 Jeremy Siek, Douglas Gregor, Brian Osman
+Copyright 2001 Indiana University
+Copyright 2007 University of Karlsruhe
+Copyright 2009 Trustees of Indiana University
+Copyright 2012 Fernando Vilas
+Copyright 2010 Daniel Trebbien
+Copyright (C) 2005-2010 The Trustees of Indiana University.
+Copyright 2002 Brad King and Douglas Gregor
+Copyright 2004-2006 The Trustees of Indiana University.
+Copyright 2002 Marc Wintermantel (wintermantel@even-ag.ch)
+Copyright Francois Faure, iMAGIS-GRAVIR  UJF, 2001.
+Copyright (C) Vladimir Prus 2003
+Copyright 2004 The Trustees of Indiana University
+Copyright 2005 Trustees of Indiana University
+Copyright 2009 Eric Bose-Wolf
+Copyright (C) 2004-2009 The Trustees of Indiana University.
+Copyright 2002 William E. Kempf
+Copyright 2019 Rene Rivera
+Copyright 2014 John Maddock. 
+Copyright Christopher Brown 2013
+Copyright Paul Mensonides 2012.
+Copyright 2013 Davide Anastasia <davideanastasia@users.sourceforge.net>
+Copyright (c) 2015, 2019, Oracle andor its affiliates.
+Copyright 2003-2019 Christopher M. Kohlhoff
+Copyright (C) 2017 James E. King III
+Copyright (C) 2018 Peter Dimov
+Copyright (C) 2001 Stephen Cleary
+Copyright Thorsten Ottosen 2003-2006.
+Copyright Antony Polukhin, 2012-2019.
+Copyright Daniel James 2008-2009
+Copyright (c) 2001 Ralf W. Grosse-Kunstleve.
+Copyright 2008 Eric Niebler
+Copyright 2010 Eric Niebler
+Copyright Eric Ford 2001 & Hubert Holin.
+Copyright Eric Ford & Hubert Holin 2001.
+Copyright (c) 2007, 2013 John Maddock
+Copyright Nick Thompson 2017.
+Copyright (c) 2006 John Maddock
+Copyright (c) 2006 Xiaogang Zhang, 2015 John Maddock
+Copyright (c) 2006 Xiaogang Zhang, 2015 John Maddock.
+Copyright John Maddock 2006, 2010.
+Copyright John Maddock 2005-2008.
+Copyright (c) 2006-2008 Johan Rade
+Copyright John Maddock 2006-7, 2013-14.
+Copyright Paul A. Bristow 2007, 2013-14.
+Copyright Nikhar Agrawal 2013-14
+Copyright Christopher Kormanyos 2013-14
+Copyright John Maddock 2005-2006.
+Copyright Nicholas Thompson 2018
+Copyright 2012 K R Walker
+Copyright 2011, 2012 Paul A. Bristow
+Copyright John Maddock 2006, 2015
+Copyright Johan Rade 2006.
+Copyright Paul A. Bristow 2011 (added changesign).
+Copyright John Maddock 2007, 2014.
+Copyright 2002 Robert Ramey - http://www.rrsd.com .
+Copyright 2007-2009, 2017 Peter Dimov
+Copyright 2007-2009, 2014 Peter Dimov
+Copyright 2012-2015 Glen Joseph Fernandes
+Copyright 2007-2009 Peter Dimov
+Copyright (c) 2012 Peter Dimov
+Copyright 2017, 2018 Peter Dimov
+Copyright 2008, 2017 Peter Dimov
+Copyright (c) 2016 Karolin Varner
+Copyright (c) 2002, 2011 Peter Dimov
+Copyright 2002, 2011, 2017 Peter Dimov
+Copyright 2002, 2017 Peter Dimov
+Copyright (c) 2002-2005 Peter Dimov
+Copyright 2011 Peter Dimov
+Copyright 2002, 2003, 2017 Peter Dimov
+Copyright 2012, 2017 Peter Dimov
+Copyright 2007-2009, 2017, 2018 Peter Dimov
+Copyright 2007-2009, 2018 Peter Dimov
+Copyright 2010 Georg Fritzsche
+Copyright 2016 Giel van Schijndel
+Copyright 2009 Frank Mori Hess
+Copyright (c) 2005 Ion Gaztanaga
+Copyright 2012, 2013 Peter Dimov
+Copyright (c) 2002, 2003, 2014 Peter Dimov
+Copyright (c) 2008, 2014 Peter Dimov
+Copyright 2009, 2014 Peter Dimov
+Copyright (c) 2005, 2014 Peter Dimov
+Copyright 2006 Peter Dimov
+Copyright (c) 2016 Chris Glover
+Copyright Beman Dawes 1998, 1999.  
+Copyright (c) 2012, 2015 Peter Dimov
+Copyright 2011, 2015 Peter Dimov
+Copyright 2012 Peter Dimov
+Copyright (c) 2014, 2015 Peter Dimov
+Copyright 2014, 2015, 2019 Peter Dimov
+Copyright (c) 2002, 2003, 2015 Peter Dimov
+Copyright (C) 2007  Douglas Gregor
+Copyright (C) 2005, 2006 The Trustees of Indiana University.
+Copyright 2001 Jeremy G. Siek, Andrew Lumsdaine, Lie-Quan Lee,
+Copyright 2004 Douglas Gregor
+Copyright Nakhar Agrawal 2013.
+Copyright Christopher Kormanyos 2012.
+Copyright Paul A. 2007, 2010
+Copyright John Maddock 2007
+Copyright Paul A. Bristow 2007, 2009, 2010
+Copyright Paul A. Bristow 2015, 2018.
+Copyright Nicholas Thompson 2017.
+Copyright Paul Bristow 2013.
+Copyright Paul A. Bristow 2016.
+Copyright Paul A. Bristow 2007, 2010, 2012.
+Copyright Datasim Education BV 2009-2010
+Copyright John Maddock and Paul A. Bristow 2010
+Copyright Christopher Kormanyos 2012, 2013.
+Copyright John Maddock 2016
+Copyright Paul A. Bristow 2015.
+Copyright Paul A. Bristow 2007, 2008, 2010
+Copyright John Maddock, 2017
+Copyright Thomas Mang 2011.
+Copyright Paul A. Bristow 2011.
+Copyright Thomas Mang 2010.
+Copyright Paul A. Bristow, 2019
+Copyright Paul A. Bristow 2018
+Copyright John Z. Maddock 2016
+Copyright Paul A. Bristow 2017
+Copyright Paul A. Bristow 2016, 2018.
+Copyright Paul A. Bristow 2016, 2017.
+Copyright (c) 2011 Paul A. Bristow
+Copyright Paul A. Bristow 2010, 2013
+Copyright Paul A. Bristow 2007, 2010
+Copyright (c) 2011 Francois Mauger
+Copyright (c) 2012 Paul A. Bristow
+Copyright Paul A. Bristow 2007, 2010, 2014, 2016.
+Copyright Paul A> Bristow 2010
+Copyright Paul a. Bristow 2010
+Copyright Jeremy W. Murphy 2015.
+Copyright Paul A. Bristow 2015
+Copyright Paul A. Bristow 2010, 2015
+Copyright Paul A. Bristow 2014, 2015.
+Copyright A N Other, 2019.
+Copyright Robin Linden 2018
+Copyright Aleksey Gurtovoy 2003-2006
+Copyright Aleksey Gurtovoy 2003-2007
+Copyright Aleksey Gurtovoy 2000-2005
+Copyright Aleksey Gurtovoy 2002-2010
+Copyright (c) 2006-7 John Maddock
+Copyright Jeremy William Murphy 2015.
+Copyright John Maddock 2005-2006.
+Copyright Anton Bikineev 2014
+Copyright John Maddock 2010.
+Copyright Thorsten Ottosen 2009.
+Copyright 2010 Beman Dawes
+Copyright Peter Dimov 2015
+Copyright Peter Dimov 2017
+Copyright John Maddock & Thorsten Ottosen 2005.
+Copyright Frederic Bron 2009-2011.
+Copyright 2009-2011 Frederic Bron.
+Copyright Antony Polukhin 2013.
+Copyright Rani Sharoni,Robert Ramey, Pavel Vozenilek and Christoph Ludwig 2004.
+Copyright Peter Dimov 2018.
+Copyright 2005 Alexander Nasonov.
+Copyright 2009 Alexander Nasonov.
+Copyright 2005-2006 Alexander Nasonov.
+Copyright Peter Dimov 2017.
+Copyright Dave Abrahams 2003. 
+Copyright Peter Dimov 2015.
+Copyright Ralf W. Grosse-Kunstleve 2006. 
+Copyright (c) 2002-2018 Joel de Guzman
+Copyright (c) 2002-2015 Joel de Guzman
+Copyright (c) 2015 Ahmed Charles
+Copyright 2016 Klemens Morgenstern, Antony Polukhin
+Copyright Francois Faure 2001
+Copyright 2001 Indiana University.
+Copyright W.P. McNeill 2010.
+Copyright (c) 2002 Trustees of Indiana University
+Copyright 2001 Jeremy G. Siek, Andrew Lumsdaine, Lie-Quan Lee
+Copyright 2008 Trustees of Indiana University
+Copyright 2012 David Doria
+Copyright 2004 Trustees of Indiana University
+Copyright 2002 Marc Wintermantel (wintermantel@imes.mavt.ethz.ch)
+Copyright 2002 Jeremy G. Siek, Andrew Lumsdaine, Lie-Quan Lee,
+Copyright 2007 Trustees of Indiana University
+Copyright (c) 2012 Kohei Takahashi
+Copyright 2005 Eric Niebler, Daniel Egloff. 
+Copyright (c) 2000-2013
+Copyright (c) 2010-2011 David Bellot
+Copyright (c) 2000-2009
+Copyright (c) 2000-2010
+Copyright (c) 2014, Athanasios Iliopoulos
+Copyright (c) 2000-2007
+Copyright (c) 2012 Oswin Krause
+Copyright (c) 2013 Antony Polukhin
+Copyright 2013 Paul A. Bristow.  
+Copyright (c) 2009 Jan Gaspar
+Copyright 2009 (C) Dean Michael Berris <me@deanberris.com>
+Copyright 2012 (C) Google, Inc.
+Copyright 2012 (C) Jeffrey Lee Hellrung, Jr.
+Copyright (c) David Abrahams 2001.
+Copyright (c) Jeremy Siek 2001-2003.
+Copyright David Abrahams 2003.
+Copyright David Abrahams and Thomas Becker 2000-2006.
+Copyright Kohei Takahashi 2012-2014.
+Copyright Barend Gehrels 2011, Geodan, Amsterdam, the Netherlands
+Modifications copyright (c) 2013, 2014, Oracle andor its affiliates.
+Copyright Neil Groves 2014. Use, modification and distribution is subject
+Copyright Craig Rodrigues 2005.
+Copyright Vladimir Prus 2010.
+Copyright (C) 2016 Andrzej Krzemienski
+Copyright (c) 2011 Nathan Ridge
+Copyright 2011 Christophe Henry
+Copyright Thorsten Ottosen 2003-2005. 
+Copyright 2011-2012 Renato Tegon Forti
+Copyright 2015-2019 Antony Polukhin
+Copyright 2018-2019 Antony Polukhin
+Copyright 2011-2012 Renato Tegon Forti.
+Copyright (C) 1996-2010 Julian Seward <jseward@bzip.org>
+Copyright (C) 1996-2010 Julian R Seward. 
+Copyright (c) 2001-2018 Joel de Guzman
+Copyright 2003-2017 Beman Dawes
+Copyright Alisdair Meredith 2006.
+Copyright Marshall Clow 2012
+Copyright Nicolai M. Josuttis 1999.
+Copyright Hans Dembinski 2018 - 2019.
+Copyright (c) 2015 Francisco José Tapia (fjtapia@gmail.com )
+Copyright Steven Ross 2009-2014.
+Copyright Steven Ross 2009.
+Copyright Steven Ross 2014
+Copyright 2014 Mario Mulansky
+Copyright Barrett Adair 2016-2017
+Copyright 2016 Rene Rivera
+Copyright (c) 2007-2017 Barend Gehrels, Amsterdam, the Netherlands.
+Copyright (c) 2008-2017 Bruno Lalande, Paris, France.
+Copyright (c) 2009-2017 Mateusz Loskot, London, UK.
+Copyright 2001, 2003, 2004, 2012 Daryle Walker. 
+Copyright (c) 2005 Matthew Calabrese
+Copyright (c) Marshall Clow 2012-2015.
+Copyright (c) Glen Joseph Fernandes 2019 (glenjofe@gmail.com)
+Copyright (c) Beman Dawes 2015
+Copyright 2002-2008, Fernando Luis Cacciola Carballal.
+Copyright (C) 2005 Arkadiy Vertleyb, Peder Holt.
+Copyright (C) 2011-2013 Vicente J. Botet Escriba
+Copyright (C) 2012-2013 Vicente J. Botet Escriba
+Copyright 2006 Roland Schwarz.
+Copyright 2007-2010 Anthony Williams
+Copyright 2007-9 Anthony Williams
+Copyright 2005 Robert Ramey - http:www.rrsd.com
+Copyright 2007 Robert Ramey - http:www.rrsd.com .
+Copyright Orson Peters 2017.
+Copyright 2003-2008 Jan Gaspar.
+Copyright 2013 Paul A. Bristow. 
+Copyright Samuel Krempp 2003.
+Copyright (c) 2013-2014 Denis Demidov
+Copyright (c) 2014 Denis Demidov
+Copyright (c) 2016 Jason Rhinelander <jason@imaginary.ca>
+Copyright Ion Gaztanaga 2009-2013.
+Modifications copyright (c) 2018, 2019 Oracle andor its affiliates.
+(C) Copyright 2005 Daniel Egloff, Eric Niebler
+(C) Copyright 2006 Eric Niebler, Olivier Gygi.
+(C) Copyright 2006 Eric Niebler, Olivier Gygi
+(C) Copyright Eric Niebler, Olivier Gygi 2006.
+Copyright (C) Eric Niebler 2008.
+Copyright (C) Pieter Bastiaan Ober 2014.
+Copyright (C) Eric Niebler 2005.
+(C) Copyright Pieter Bastiaan Ober 2014.
+(C) Copyright Gaetano Mendola 2010, Simon West 2011.
+(C) Copyright Simon West 2011.
+Copyright (c) 2009 Matthias Vallentin
+Copyright (c) 2011 Colin Rundel
+Copyright (c) 2012 yyyy yyyy <typhoonking77@hotmail.com>
+Copyright (c) 2011 Jeroen Habraken
+Copyright (c) 2012 Benjamin Schindler
+Copyright (c) 2013 Louis Dionne
+Copyright (c) 2012 Agustin K-ballo Berge
+Copyright (c) 2013 Alex Korobka
+Copyright (c) 2010 Lars Kielhorn
+Copyright (c) 2010 Michael Caisse
+Copyright (c) 2012 David Bailey
+Copyright 2007 Tobias Schwinger
+Copyright (c) 2007-2008 Tobias Schwinger
+Copyright and license
+Copyright 2001-2014, Gennadiy Rozental.
+Copyright 2013-2018, Boost.Test team.
+Copyright (c) 2009-2010, Marco Guazzone
+Copyright (c) 2008 Gordon Woodhull
+Copyright Ion Gaztanaga 2009.
+Copyright Ion Gaztanaga 2008-2012.
+Copyright Daniel Wallin, David Abrahams 2005.
+Copyright (c) 2014-2018 Adam Wulkiewicz, Lodz, Poland.
+Copyright 2005 The Trustees of Indiana University.
+Copyright (C) 2005 The Trustees of Indiana University.
+Copyright (c) 2015 Agustin K-ballo Berge
+Copyright 2011-2013 Thorsten Ottosen
+Copyright (C) 2009 Tim Blechmann
+Copyright 2005-2012 Daniel James.
+Copyright Daniel Wallin, David Abrahams 2010.
+Copyright Ion Gaztanaga 2005-2013.
+Copyright Ion Gaztanaga 2007-2013.
+Copyright Stephen Cleary 2000
+Copyright Ion Gaztanaga  2015-2017.
+Copyright (C) 2008 Ion Gaztanaga
+Copyright Ion Gaztanaga 2018-2018. 
+Copyright (c) 2009  Hartmut Kaiser
+Copyright (c) 2014  Joel de Guzman
+Copyright (C) 2009 The Trustees of Indiana University.
+Copyright (C) 2010 Daniel Trebbien.
+Copyright (C) 2001 Douglas Gregor (gregod@cs.rpi.edu)
+Copyright (c) 2013-2015 Louis Dionne
+Copyright 2014, Raffi Enficiaud
+Copyright (C) 2002 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+Copyright (C) 2002 Gary Powell (gwpowell@hotmail.com)
+Copyright (C) 1999-2001 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+Copyright (C) 2000 Gary Powell (gwpowell@hotmail.com)
+Copyright (C) 2001-2002 Joel de Guzman
+Copyright (c) 2005 Voipster  Indrek dot Juhani at voipster dot com
+Copyright (c) 2005-2019 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+Copyright (c) 2008 Gennaro Prota
+Copyright Ralf W. Grosse-Kunstleve 2006.
+Copyright Gottfried Ganßauge 2003..2006.
+Copyright (C) 2001 Peter Dimov
+Copyright Ralf W. Grosse-Kunstleve & David Abrahams 2006.
+Copyright Andrey Semashev 2018
+Copyright (c) 2015 Mario Lang
+Copyright (c) 2014 Thomas Bernard
+Copyright (c) 2011-2015 Akira Takahashi
+Copyright (c) 2016 Norbert Wenzel
+Copyright Rene Rivera 2015-2016
+Copyright Rene Rivera 2005-2016
+Copyright 2008 Jurko Gospodnetic
+Copyright 2011-2012,2015 Vicente J. Botet Escriba
+Copyright 2012 Howard Hinnant
+Copyright 2013 Andrey
+Copyright 2014 Vicente Botet
+Copyright (c) 2018-2019 Cem Bassoy
+Copyright (C) 2002 Beman Dawes
+Copyright (C) 2001 Dietmar Kuehl
+Copyright Ion Gaztanaga 2009. 
+Copyright (c) 2015 Muhammad Junaid Muzammil <mjunaidmuzammil@gmail.com>
+Copyright (C) 2002-2005 Marcin Kalicinski
+Copyright (C) 2009-2010 Sebastian Redl
+Copyright (c) Dan Marsden
+Copyright 2002-2007 Andreas Huber Doenni
+Copyright 2002-2008 Andreas Huber Doenni
+Copyright 2002-2010 Andreas Huber Doenni
+Copyright 2008 Andreas Huber Doenni
+Copyright Bertolt Mildner 2004.
+Copyright Ronald Garcia, Jeremy Siek 2002.
+Copyright R.W. Grosse-Kunstleve 2002.
+Copyright Neil Groves 2009.
+Copyright (C) 2007 Douglas Gregor and Matthias Troyer
+Copyright (c) 2009 Erik Bryan
+Copyright (c) 2007-2010 Hartmut Kaiser
+Copyright (c) 2011 Michael Caisse
+Copyright (c) 2010 Jeroen Habraken
+Copyright Ion Gaztanaga 2011-2012. 
+Copyright 2003-2009 Joaquin M Lopez Munoz.
+Copyright 2014-2017 Peter Dimov
+Copyright 2007 Eric Niebler. Distributed under the Boost
+Copyright Edward Diener 2011
+Copyright Edward Diener 2013
+Copyright (c) 2014 Louis Dionne
+Copyright (c) 2016,2018 Kohei Takahashi
+Copyright (c) 2010, 2012 Christopher Schmidt, Nathan Ridge
+Copyright (c) 2016-2018 Kohei Takahashi
+Copyright (c) 2010, 2012 Christopher Schmidt, nathan Ridge
+Copyright (c) 2015 Louis Dionne
+Copyright (c) 2012 Joel de Guzman
+Copyright (C) 2015 Kohei Takahshi
+Copyright (C) 1999-2003 Jaakko Jarvi
+Copyright (c) 2012 Joel falcou
+Copyright (C) 2013 Mateusz Loskot <mateusz@loskot.net>
+Copyright (c) 2009 Joel de Guzman
+Copyright (C) 2016 Lee Clagett
+Copyright (C) 2018 Kohei Takahashi
+Copyright John Maddock 2002 - 2003.
+Copyright Jens Maurer 2002 - 2003.
+Copyright Christopher Jefferson 2011.
+Copyright Boris Gubenko 2007.
+Copyright Vladimir Prus, 2003
+Copyright 2010 Vladimir Prus
+Copyright (c) 2005, 2014 Eric Niebler
+Copyright 2004 Eric Niebler. 
+Copyright (c) 2019 Andrey Semashev
+Copyright (c) 2009 Dr John Maddock
+Copyright (c) 2003 Dr John Maddock
+Copyright (c) 2003-7 John Maddock
+Copyright (c) 2007 Bjorn Roald
+Copyright (arg) 2001-2014 Joel de Guzman
+Copyright 2002-2004 Pavol Droba
+Copyright John Maddock 2019.
+Copyright Deniz Bahadir 2015
+Copyright Aleksey Gurtovoy 2003-2008
+Copyright Thorsten Ottosen, 2009.
+Copyright Frank Mori Hess 2007. 
+Copyright 2019 Mike Dev <mike.dev@gmx.de>
+Copyright 2016, 2018, 2019 Peter Dimov.
+Copyright 1995-2012 Barend Gehrels
+Copyright 2008-2012 Bruno Lalande
+Copyright 2010-2012 Mateusz Loskot
+Copyright (c) 2007-2011 Hartmut Kaiser
+Copyright (c) Christopher Diggins 2005
+Copyright (c) Pablo Aguilar 2005
+Copyright (c) Kevlin Henney 2001
+Copyright 2002-2019 Rene Rivera.
+Copyright 1993-2002 Christopher Seiwald and Perforce Software, Inc.
+Copyright 2005-2006 Vladimir Prus.
+Copyright 1993, 1995 Christopher Seiwald.
+Copyright 2001-2004 David Abrahams.
+Copyright 1994 Christopher Seiwald.
+Copyright 1993, 2000 Christopher Seiwald.
+Copyright 2002-2018 Rene Rivera.
+Copyright 2002. Vladimir Prus
+Copyright 2005. Rene Rivera
+Copyright 2005, 2016. Rene Rivera
+Copyright 2007 Noel Belcourt.
+Copyright 2007 Rene Rivera.
+Copyright 2015 Artur Shepilko.
+Copyright 2005 Rene Rivera.
+Copyright 1994 Christopher Seiwald.  
+Copyright 1993-2002 Christopher Seiwald and Perforce Software, Inc.
+Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2019 Free Software Foundation,Inc.
+Copyright (C) 1999, 2000, 2002 Aladdin Enterprises.  
+Copyright (C) 1999, 2002 Aladdin Enterprises. 
+Copyright 2006. Rene Rivera
+Copyright 2003. David Abrahams
+Copyright 2007 Rene Rivera
+Copyright (c) 1986 by University of Toronto.
+Copyright 2004. David Abrahams
+Copyright 2005 Reece H. Dunn.
+Copyright Paul Lin 2003. Copyright 2006 Bojan Resnik.
+Copyright 2002 Rene Rivera.
+Copyright (c) 2002-2003,2005 CrystalClear Software, Inc.
+Copyright (c) 2014, 2018, 2019, Oracle andor its affiliates.
+Copyright Thorsten Ottosen 2002-2003. 
+Copyright Jeremy Siek 2001. 
+Copyright Arno Schoedl & Neil Groves 2009.
+Copyright Neil Groves 2009. 
+Copyright Eric Niebler 2014. 
+Copyright Jonathan Turkanis 2005. 
+Copyright (c) 2010 Neil Groves
+Copyright (c) 2008 Joseph Gauterin, Niels Dekker
+Copyright 2018 Andrzej Krzemieński
+Copyright (c) 2007 Joseph Gauterin
+Copyright (c) 2008 - 2010 Joseph Gauterin, Niels Dekker
+Copyright (c) 2007-2008 Joseph Gauterin
+Copyright (c) 2006-2013 Emil Dotchevski and Reverge Studios, Inc.
+Copyright 2005 Matthias Troyer and Dave Abrahams
+Copyright 2008 Robert Ramey
+Copyright 2004 Brian Ravnsgaard Riis
+Copyright 2007 Matthias Troyer .
+Copyright 2006 David Abrahams - http:www.boost.org.
+Copyright 2007 Matthias Troyer
+Copyright 2010 Robert Ramey
+Copyright 2002-2014 Robert Ramey - http:www.rrsd.com .
+Copyright 2002-4 Pavel Vozenilek .
+Copyright 2014 Robert Ramey - http:www.rrsd.com .
+Copyright (c) 2003 Vladimir Prus.
+Copyright 2004 Robert Ramey and Martin Ecker
+Copyright 2004-2009 Robert Ramey, Martin Ecker and Takatoshi Kondo
+Copyright David Abrahams 2006. Original version
+Copyright Robert Ramey 2007.  Changes made to permit
+Copyright 2003-4 Pavel Vozenilek and Robert Ramey - http:www.rrsd.com.
+Copyright Robert Ramey 2003. Jonathan Turkanis 2004.
+Copyright 2005 Matthias Troyer
+Copyright 2008 Matthias Troyer
+Copyright 2002-2009 Robert Ramey - http:www.rrsd.com .
+Copyright 2005-2006 Matthias Troyer
+Copyright (c) 2017 - 2019 Andrey Semashev
+Copyright Neil Groves 2007.
+Copyright Thorsten Ottosen 2006.
+Copyright 2009 Neil Groves.
+Copyright Daniel Walker 2006. 
+Copyright Neil Groves & Thorsten Ottosen & Pavol Droba 2003-2004.
+Copyright Adam D. Walling 2012. 
+Copyright 2009-2014 Neil Groves.
+Copyright 2006 Thorsten Ottosen.
+Copyright Neil Groves 2003-2004.
+Copyright (c) 2017-2018 Daniel James
+Copyright 2009 Daniel James
+Copyright John Maddock 2006-8.
+Copyright (c) 2017 Klemens D. Morgenstern
+Copyright 2003, 2004 Vladimir Prus
+Copyright 2003, 2006 Vladimir Prus
+Copyright 2016 Steven Watanabe
+Copyright 2002-2005 Vladimir Prus.
+Copyright 2002-2003 Dave Abrahams.
+Copyright 2002, 2003, 2005 Vladimir Prus
+Copyright (C) 2006. Vladimir Prus
+Copyright (C) 2008. Jurko Gospodnetic
+Copyright (C) Vladimir Prus 2006.
+Copyright 2014 Steven Watanabe
+Copyright 2015 Artur Shepilko
+Copyright 2012. Jurko Gospodnetic
+Copyright (C) 2013 Steven Watanabe
+Copyright 2002, 2003 Vladimir Prus
+Copyright 2015 Aaron Boman
+Copyright 2012 Jurko Gospodnetic
+Copyright 2002, 2003, 2004 Vladimir Prus
+Copyright 2008, 2012 Jurko Gospodnetic
+Copyright 2001 Dave Abrahams
+Copyright 2008 Jurko Gospodnetic, Vladimir Prus
+Copyright 2003, 2004, 2005 Vladimir Prus
+Copyright 2002, 2003, 2005, 2006 Vladimir Prus
+Copyright (C) 2003. Vladimir Prus
+Copyright (C) Vladimir Prus 2010.
+Copyright (c) Steven Watanabe 2018.
+Copyright (C) Steven Watanabe 2018
+Copyright 2003, 2004, 2005, 2006 Vladimir Prus
+Copyright 2014-2015 Steven Watanabe
+Copyright 2004 Vladimir Prus.
+Copyright (C) Vladimir Prus 2005.
+Copyright 2006 Vladimir Prus.
+Copyright (C) 2012. Jurko Gospodnetic
+Copyright 2002, 2003, 2004, 2006 Vladimir Prus
+Copyright 2002, 2006 Vladimir Prus
+Copyright (C) Craig Rodrigues 2005.
+Copyright (C) 2003. Pedro Ferreira
+Copyright (C) FILL SOMETHING HERE 2006.
+Copyright 2000 Steven Knight
+Copyright 2002-2005 Dave Abrahams.
+Copyright 2002-2006 Vladimir Prus.
+Copyright 2005 David Abrahams
+Copyright 2001, 2002 Vladimir Prus
+Copyright (c) 2001 Sam Tobin-Hochstadt.  
+Copyright 2007 Andrew Sutton
+Copyright 2012 The Trustees of Indiana University.
+Copyright (C) 2008-2013 Tim Blechmann
+Copyright (C) 2009-2013 Tim Blechmann
+Copyright John Maddock 20010.
+Copyright Paul A. Britow 2009
+Copyright (c) Aleksey Gurtovoy 2008-2009
+Copyright 2010 John Maddock
+Copyright 2000 Jeremy Siek (jsiek@lsc.nd.edu)
+Copyright 1999, 2000 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+Copyright 2003 The Trustees of Indiana University
+Copyright Runar Undheim, Robert Ramey & John Maddock 2008.
+Copyright Eric Friedman 2002-2003.
+Copyright 2002 Rani Sharoni (ranisharoni@hotmail.com) and Robert Ramey
+Copyright Rani Sharoni 2003.
+Copyright Rani Sharoni 2003-2005.
+Copyright Howard Hinnant and John Maddock 2000.
+Copyright Mat Marcus, Jesse Jones and Adobe Systems Inc 2001
+Copyright Steve Cleary, Beman Dawes, Howard Hinnant & John Maddock 2000-2005.
+Copyright Howard Hinnant and John Maddock 2000, 2010.
+Copyright Daniel Frey and Robert Ramey 2009.
+Copyright Balint Cserni 2017
+Copyright Steve Cleary, Beman Dawes, Aleksey Gurtovoy, Howard Hinnant & John Maddock 2000.
+Copyright 2008 The Trustees of Indiana University.
+Copyright 2001-2007 Beman Dawes, Vesa Karvonen, John
+Copyright 2003-2010 Joaquin M Lopez Munoz.
+Copyright 2003-20015 Joaquin M Lopez Munoz.
+Copyright Beman Dawes, 2004
+Copyright Beman Dawes 2005
+Copyright Beman Dawes 2005
+Copyright Jeff Garland and Beman Dawes, 2002
+
+License: Boost Software License V1.0
+Boost Software License - Version 1.0 - August 17th, 2003
+
+Permission is hereby granted, free of charge, to any person or organization
+obtaining a copy of the software and accompanying documentation covered by
+this license (the "Software") to use, reproduce, display, distribute,
+execute, and transmit the Software, and to prepare derivative works of the
+Software, and to permit third-parties to whom the Software is furnished to
+do so, all subject to the following:
+
+The copyright notices in the Software and this entire statement, including
+the above license grant, this restriction and the following disclaimer,
+must be included in all copies of the Software, in whole or in part, and
+all derivative works of the Software, unless such copies or derivative
+works are solely in the form of machine-executable object code generated by
+a source language processor.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+

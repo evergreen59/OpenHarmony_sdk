@@ -1,0 +1,157 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp-gles3-functional build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-gles3-functional_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-gles3-functional_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fASTCDecompressionCases.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fApiCase.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fAttribLocationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fBlendTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fBooleanStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fBufferCopyTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fBufferMapTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fBufferObjectQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fBufferWriteTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fBuiltinPrecisionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fClippingTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fColorClearTest.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fCompressedTextureTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fDefaultVertexArrayObjectTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fDefaultVertexAttributeTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fDepthStencilClearTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fDepthStencilTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fDepthTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fDitheringTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fDrawTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboColorbufferTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboCompletenessTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboDepthbufferTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboInvalidateTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboMultisampleTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboRenderTest.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboStencilbufferTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboTestCase.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFboTestUtil.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFloatStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFlushFinishTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFragDepthTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFragOpInteractionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFragmentOutputTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFramebufferBlitTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fFunctionalTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fImplementationLimitTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fIndexedStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fInstancedRenderingTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fInteger64StateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fIntegerStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fInternalFormatQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fLifetimeTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fMultisampleTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fMultiviewTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fNegativeBufferApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fNegativeFragmentApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fNegativeShaderApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fNegativeStateApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fNegativeTextureApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fNegativeVertexArrayApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fOcclusionQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fPixelBufferObjectTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fPolygonOffsetTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fPrerequisiteTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fPrimitiveRestartTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fRandomFragmentOpTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fRandomShaderTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fRasterizationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fRasterizerDiscardTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fRboStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fReadPixelsTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fSamplerObjectTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fSamplerStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fScissorTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderBuiltinVarTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderCommonFunctionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderConstExprTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderDerivateTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderDiscardTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderFragDataTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderIndexingTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderInvarianceTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderLoopTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderMatrixTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderMetamorphicTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderOperatorTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderPackingFunctionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderPrecisionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderReturnTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderStructTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderSwitchTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fShaderTextureFunctionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fStencilTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fStringQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fSyncTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureFilteringTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureFormatTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureMipmapTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureShadowTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureSizeTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureSpecificationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureSwizzleTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureUnitTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTextureWrapTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fTransformFeedbackTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fUniformApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fUniformBlockTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fVertexArrayObjectTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fVertexArrayTest.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/functional/es3fVertexTextureTests.cpp",
+
+  ]
+  include_dirs = [
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/modules/gles3/functional",
+    "//third_party/vk-gl-cts/modules/gles3",
+  ]
+
+  include_dirs += deqp_common_include_dirs
+
+  deps = [
+    "//third_party/vk-gl-cts/modules/glshared:libdeqp-gl-shared",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference:libdeqp_glutil-sglr",
+    "//third_party/vk-gl-cts/framework/referencerenderer:libdeqp_referencerenderer",
+  ]
+
+  configs = [ ":deqp-gles3-functional_config" ]
+}
+
+ohos_static_library("libdeqp-gles3-functional") {
+  deps = [ ":deqp-gles3-functional_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

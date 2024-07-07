@@ -1,0 +1,59 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# modules de-internal-tests build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("de-internal-tests_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("de-internal-tests_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/internal/ditAstcTests.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditBuildInfoTests.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditDelibsTests.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditFrameworkTests.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditImageCompareTests.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditImageIOTests.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditSRGB8ConversionTest.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditSeedBuilderTests.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditTestCase.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditTestLogTests.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditTestPackage.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditTextureFormatTests.cpp",
+    "//third_party/vk-gl-cts/modules/internal/ditVulkanTests.cpp",
+  ]
+  include_dirs = [
+    "//third_party/vulkancts/framework/vulkan",
+    "//third_party/vk-gl-cts/modules/internal",
+    "//third_party/vk-gl-cts/build/external/vulkancts/framework/vulkan",
+  ]
+  include_dirs += deqp_common_include_dirs
+  deps = [
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/referencerenderer:libdeqp_referencerenderer",
+    "//third_party/vulkancts/framework/vulkan:libdeqp_vkutil",
+  ]
+
+  configs = [ ":de-internal-tests_config" ]
+}
+
+ohos_static_library("libdeqp-internal-tests") {
+  deps = [ ":de-internal-tests_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

@@ -1,0 +1,65 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp-gles2-performance build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-gles2-performance_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-gles2-performance_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pBlendTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pDrawCallBatchingTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pPerformanceTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pRedundantStateChangeTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pShaderCompilationCases.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pShaderCompilerTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pShaderControlStatementTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pShaderOperatorTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pShaderOptimizationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pStateChangeCallTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pStateChangeTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pTextureCases.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pTextureCountTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pTextureFilteringTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pTextureFormatTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles2/performance/es2pTextureUploadTests.cpp",
+
+  ]
+  include_dirs = [
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/modules/gles2/performance",
+    "//third_party/vk-gl-cts/modules/gles2",
+  ]
+  include_dirs += deqp_common_include_dirs
+
+  deps = [
+    "//third_party/vk-gl-cts/modules/glshared:libdeqp-gl-shared",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+  ]
+
+  configs = [ ":deqp-gles2-performance_config" ]
+
+}
+
+ohos_static_library("libdeqp-gles2-performance") {
+  deps = [ ":deqp-gles2-performance_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

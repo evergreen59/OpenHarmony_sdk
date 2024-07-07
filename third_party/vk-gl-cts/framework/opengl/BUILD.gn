@@ -1,0 +1,74 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp framwork opengl build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp_opengl_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp_opengl_source") {
+  sources = [
+    "//third_party/vk-gl-cts/framework/opengl/gluDrawUtil.cpp",            
+    "//third_party/vk-gl-cts/framework/opengl/gluProgramInterfaceQuery.cpp",  
+    "//third_party/vk-gl-cts/framework/opengl/gluStateReset.cpp",       
+    "//third_party/vk-gl-cts/framework/opengl/gluVarTypeUtil.cpp",               
+    "//third_party/vk-gl-cts/framework/opengl/gluDummyRenderContext.cpp",  
+    "//third_party/vk-gl-cts/framework/opengl/gluRenderConfig.cpp",           
+    "//third_party/vk-gl-cts/framework/opengl/gluStrUtil.cpp",          
+    "//third_party/vk-gl-cts/framework/opengl/gluCallLogWrapper.cpp",  
+    "//third_party/vk-gl-cts/framework/opengl/gluFboRenderContext.cpp",    
+    "//third_party/vk-gl-cts/framework/opengl/gluRenderContext.cpp",          
+    "//third_party/vk-gl-cts/framework/opengl/gluTexture.cpp",          
+    "//third_party/vk-gl-cts/framework/opengl/gluContextFactory.cpp",  
+    "//third_party/vk-gl-cts/framework/opengl/gluObjectWrapper.cpp",       
+    "//third_party/vk-gl-cts/framework/opengl/gluShaderLibrary.cpp",          
+    "//third_party/vk-gl-cts/framework/opengl/gluTextureTestUtil.cpp",
+    "//third_party/vk-gl-cts/framework/opengl/gluContextInfo.cpp",     
+    "//third_party/vk-gl-cts/framework/opengl/gluPixelTransfer.cpp",       
+    "//third_party/vk-gl-cts/framework/opengl/gluShaderProgram.cpp",          
+    "//third_party/vk-gl-cts/framework/opengl/gluTextureUtil.cpp",
+    "//third_party/vk-gl-cts/framework/opengl/gluDefs.cpp",            
+    "//third_party/vk-gl-cts/framework/opengl/gluPlatform.cpp",            
+    "//third_party/vk-gl-cts/framework/opengl/gluShaderUtil.cpp",             
+    "//third_party/vk-gl-cts/framework/opengl/gluVarType.cpp", 
+  ]
+
+  include_dirs = deqp_common_include_dirs
+  deps = [  
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/opengl/wrapper:libdeqp_glwrapper",
+    "//third_party/vk-gl-cts/framework/referencerenderer:libdeqp_referencerenderer",
+    "//third_party/vk-gl-cts/framework/xexml:libdeqp_xexml"
+  ]
+
+  #lib_dirs = ["//third_party/outlibs"]
+
+  #libs=[
+  #  "png",
+  #  "z",
+  #]
+
+  configs = [ ":deqp_opengl_config" ]
+}
+
+ohos_static_library("libdeqp_glutil") {
+  deps = [ ":deqp_opengl_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}
+

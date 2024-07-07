@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2021 Huawei Device Co., Ltd.
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<configuration>
+    <oatconfig>
+		<licensefile>LICENSE_1_0.txt</licensefile>
+        <policylist>
+            <policy name="projectPolicy" desc="">
+                <policyitem type="compatibility" name="BSL-1.0" path="boost/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="doc/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="libs/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="more/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="status/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="INSTALL" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="Jamroot" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="boost-build.jam" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="boostcpp.jam" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="bootstrap.bat" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="bootstrap.sh" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="tools/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="GPL-2.0+" path="tools/.*" desc="对应boost软件包中boost_install中test文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPL-2.0+" path="libs/.*" desc="对应boost软件包中libs/beast/test目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="ThirdPartyNotice" path="NOTICE" desc="Boost v1.72.三方软件NOTICE"/>
+                <policyitem type="compatibility" name="InvalidLicense" path="boost/.*" desc="Boost Software License V1.0，同MIT LICENSE"/>
+                <policyitem type="compatibility" name="InvalidLicense" path="libs/.*" desc="Boost Software License V1.0，同MIT LICENS"/>
+                <policyitem type="compatibility" name="InvalidLicense" path="tools/.*" desc="Boost Software License V1.0，同MIT LICENS"/>
+                <policyitem type="compatibility" name="zlib-acknowledgement" path="boost/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="zlib-acknowledgement" path="libs/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="zlib-acknowledgement" path="tools/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="Spencer-86" path="tools/build/src/engine/regexp.cpp" desc="Spencer License 86，原样使用，满足其许可要求"/>
+                <policyitem type="compatibility" name="bzip2 and libbzip2 License" path=".*" desc="该许可证兼容"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path=".*" desc="该许可证兼容"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="LICENSE_1_0.txt" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="libs/thread/build/Jamfile.v2" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="LGPLStyleLicense" path="libs/thread/build/Jamfile.v2" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="libs/sort/benchmark/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="libs/sort/benchmark/.*" desc="boost软件包，实际使用只用了里面部分头文件，协议友好，满足开源义务履行"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="libs/nowide/doc/html/jquery.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="MIT" path="libs/nowide/doc/html/jquery.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="libs/locale/doc/html/jquery.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="MIT" path="libs/hana/doc/html/jquery.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="libs/hana/doc/html/jquery.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="MIT" path="libs/sort/doc/doxygen/html/jquery.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="libs/sort/doc/doxygen/html/jquery.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="MIT" path="libs/gil/doc/html/reference/jquery.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="libs/gil/doc/html/reference/jquery.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="libs/numeric/ublas/doc/js/jquery-1.3.2.min.js" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="BSL-1.0" path="libs/iterator/doc/GNUmakefile" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="libs/iterator/doc/GNUmakefile" desc="对应boost软件包中doc目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="libs/beast/test/extern/zlib-1.2.11/contrib/ada/zlib.ads" desc="对应boost软件包中test目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="tools/boost_install/test/iostreams/zlib-1.2.11/contrib/ada/zlib.ads" desc="对应boost软件包中test目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPL-3.0+" path="tools/build/src/engine/jamgram.hpp" desc="对应boost软件包中tools/build目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="GPL-3.0+" path="tools/build/src/engine/jamgram.cpp" desc="对应boost软件包中tools/build目录下文件，明确不使用"/>
+                <policyitem type="compatibility" name="bzip2-1.0.6" path="tools/boost_install/test/iostreams/bzip2-1.0.6/LICENSE" desc="License本身且该许可证兼容"/>
+                <policyitem type="compatibility" name="GPLStyleLicense" path="doc/latex.version" desc="三方开源版本文档，明确不使用"/>
+            </policy>
+        </policylist>
+		<filefilterlist>
+			<filefilter name="defaultPolicyFilter" desc="Filters for compatibility，license header policies">
+				<filteritem type="filename" name="README.OpenSource"/>
+				<filteritem type="filename" name="README"/>
+			</filefilter>
+			<filefilter name="binaryFileTypePolicyFilter" desc="Filters for binary file policies">
+				<filteritem type="filepath" name=".*.tif|.*.bmp|.*.jpg|.*.jpeg|.*.png|.*.PNG|.*.gif|.*.jam|.*.pdf|.*.zip|.*.cs|.*.rst|.*.raw|.*.dia|.*.suo|.*.spirv64|.*.spirv32|.*.doc|.*.vpp|.*.v2|.*.mo|.*.o|.*.r|.*.mcp|.*.qbk|.*.dsp|.*.ref|.*.bz2|.*.pk|.*.gz|.*.quickbook|.*.chm|.*.TFF|.*.TTF|.*.xls|.*.xlsx|.*.pptx|.*.ico|.*.doctree|.*.pickle|.*.inv|.*.odp|.*.pnm|.*.tga|.*.CRW|.*.dat|.*.pem|.*.db" desc="开源三方库中以上后缀二进制不涉及License"/>
+				<filteritem type="filepath" name="libs/serialization/test/testfile2" desc="开源三方test目录二进制文件不涉及License"/>
+				<filteritem type="filepath" name="libs/lambda/test/Jamfile" desc="开源三方test目录二进制文件不涉及License"/>
+			</filefilter>
+		</filefilterlist>
+                <licensematcherlist>
+          		<licensematcher name="bzip2 and libbzip2 License" desc="">
+          			<licensetext name="
+          				Redistribution and use in source and binary forms, with or without
+          				modification, are permitted provided that the following conditions
+          				are met:
+          				1. Redistributions of source code must retain the above copyright
+          				   notice, this list of conditions and the following disclaimer.
+          				2. The origin of this software must not be misrepresented; you must
+          				   not claim that you wrote the original software.  If you use this
+          				   software in a product, an acknowledgment in the product
+          				   documentation would be appreciated but is not required.
+          				3. Altered source versions must be plainly marked as such, and must
+          				   not be misrepresented as being the original software.
+          				4. The name of the author may not be used to endorse or promote
+          				   products derived from this software without specific prior written
+          				   permission.
+          				THIS SOFTWARE IS PROVIDED BY " desc=""/>
+          		</licensematcher>
+          	</licensematcherlist>
+    </oatconfig>
+</configuration>

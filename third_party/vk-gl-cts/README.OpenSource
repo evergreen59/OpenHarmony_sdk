@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "vk-gl-cts",
+    "License": "Apache-2.0",
+    "License File": "LICENSE",
+    "Version Number": "3.2.8.0",
+    "Owner": "zhangleiyu1@huawei.com",
+    "Upstream URL": "https://github.com/KhronosGroup/VK-GL-CTS",
+    "Description": "This repository contains a GPU testing suite called dEQP (drawElements Quality Program). dEQP contains tests for several graphics APIs, including OpenGL ES, EGL, and Vulkan."
+  }
+]

@@ -1,0 +1,145 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# modules deqp-gles31-functional build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-gles31-functional_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-gles31-functional_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fAdvancedBlendTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fAndroidExtensionPackES31ATests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fAtomicCounterTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fBasicComputeShaderTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fBooleanStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fBuiltinPrecisionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fComputeShaderBuiltinVarTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fCopyImageTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fDebugTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fDefaultVertexArrayObjectTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fDrawBuffersIndexedTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fDrawElementsBaseVertexTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fDrawTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fFboColorbufferTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fFboNoAttachmentTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fFboSRGBWriteControlTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fFboTestCase.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fFboTestUtil.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fFramebufferDefaultStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fFunctionalTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fGeometryShaderTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fIndexedStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fIndirectComputeDispatchTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fInfoLogQueryShared.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fIntegerStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fInternalFormatQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fLayoutBindingTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fMultisampleShaderRenderCase.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fMultisampleTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeAdvancedBlendEquationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeAtomicCounterTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeBufferApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeComputeTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeFragmentApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativePreciseTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeSSBOBlockTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeSampleVariablesTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeShaderApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeShaderDirectiveTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeShaderFramebufferFetchTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeShaderFunctionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeShaderImageLoadStoreTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeShaderStorageTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeStateApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeTessellationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeTestShared.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeTextureApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fNegativeVertexArrayApiTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fOpaqueTypeIndexingTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fPrimitiveBoundingBoxTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fProgramInterfaceDefinition.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fProgramInterfaceDefinitionUtil.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fProgramInterfaceQueryTestCase.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fProgramInterfaceQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fProgramPipelineStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fProgramStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fProgramUniformTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fSRGBDecodeTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fSSBOArrayLengthTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fSSBOLayoutCase.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fSSBOLayoutTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fSampleShadingTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fSampleVariableTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fSamplerStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fSeparateShaderTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderAtomicOpTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderBuiltinConstantTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderCommonFunctionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderFramebufferFetchTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderHelperInvocationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderImageLoadStoreTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderIntegerFunctionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderMultisampleInterpolationStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderMultisampleInterpolationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderPackingFunctionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderSharedVarTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderTextureSizeTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fShaderUniformIntegerFunctionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fStencilTexturingTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fSynchronizationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTessellationGeometryInteractionTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTessellationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTextureBorderClampTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTextureBufferTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTextureFilteringTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTextureFormatTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTextureGatherTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTextureLevelStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTextureMultisampleTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTextureSpecificationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fTextureStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fUniformBlockTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fUniformLocationTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fVertexAttributeBindingStateQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles31/functional/es31fVertexAttributeBindingTests.cpp",
+
+  ]
+  include_dirs = [
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/modules/gles31/functional",
+    "//third_party/vk-gl-cts/modules/gles31",
+  ]
+  include_dirs += deqp_common_include_dirs
+  deps = [
+    "//third_party/vk-gl-cts/modules/glshared:libdeqp-gl-shared",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+    "//third_party/vk-gl-cts/framework/opengl/simplereference:libdeqp_glutil-sglr",
+    "//third_party/vk-gl-cts/framework/referencerenderer:libdeqp_referencerenderer",
+  ]
+
+  configs = [ ":deqp-gles31-functional_config" ]
+}
+
+ohos_static_library("libdeqp-gles31-functional") {
+  deps = [ ":deqp-gles31-functional_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

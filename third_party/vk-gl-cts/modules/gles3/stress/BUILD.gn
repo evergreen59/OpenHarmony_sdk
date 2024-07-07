@@ -1,0 +1,56 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# deqp-gles3-stress build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp-gles3-stress_config") {
+  cflags_cc = deqp_common_cflags_cc
+  defines = deqp_common_defines
+}
+
+ohos_source_set("deqp-gles3-stress_source") {
+  sources = [
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sDrawTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sLongRunningShaderTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sLongRunningTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sLongShaderTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sMemoryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sOcclusionQueryTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sSpecialFloatTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sStressTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sSyncTests.cpp",
+    "//third_party/vk-gl-cts/modules/gles3/stress/es3sVertexArrayTests.cpp",
+  ]
+  include_dirs = [
+    "//third_party/vk-gl-cts/modules/glshared",
+    "//third_party/vk-gl-cts/modules/gles3/stress",
+    "//third_party/vk-gl-cts/modules/gles3",
+  ]
+  include_dirs += deqp_common_include_dirs
+  deps = [
+    "//third_party/vk-gl-cts/modules/glshared:libdeqp-gl-shared",
+    "//third_party/vk-gl-cts/framework/opengl:libdeqp_glutil",
+    "//third_party/vk-gl-cts/framework/common:libdeqp_tcutil",
+  ]
+
+  configs = [ ":deqp-gles3-stress_config" ]
+}
+
+ohos_static_library("libdeqp-gles3-stress") {
+  deps = [ ":deqp-gles3-stress_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

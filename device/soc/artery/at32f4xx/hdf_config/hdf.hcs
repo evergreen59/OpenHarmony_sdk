@@ -1,0 +1,11 @@
+#include "device_info.hcs"
+root {
+    platform {
+        gpio_config {
+            match_attr = "gpio_config";
+            groupNum = 1;
+            pinNum = 48;
+            config = [5, 2];
+        }
+    }
+}

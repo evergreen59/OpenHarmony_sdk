@@ -1,0 +1,59 @@
+# Copyright (c) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+ohos_static_library("distributeddata_uninstaller_static") {
+  sources = [
+    "uninstaller.cpp",
+    "uninstaller_impl.cpp",
+  ]
+
+  include_dirs = [
+    "../../../adapter/include/account",
+    "../../src",
+    "//foundation/distributeddatamgr/kv_store/frameworks/innerkitsimpl/distributeddatafwk/include",
+    "//foundation/distributeddatamgr/kv_store/interfaces/innerkits/distributeddata/include",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/framework/include",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/service/kvdb",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/service/permission/include",
+    "//third_party/json/single_include",
+    "//commonlibrary/c_utils/base/include",
+    "//base/security/huks/interfaces/innerkits/huks_standard/main/include",
+  ]
+
+  cflags_cc = [ "-fvisibility=hidden" ]
+
+  deps = [
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/adapter:distributeddata_adapter",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/framework:distributeddatasvcfwk",
+    "//foundation/distributeddatamgr/datamgr_service/services/distributeddataservice/service:distributeddatasvc",
+    "//foundation/distributeddatamgr/kv_store/frameworks/libs/distributeddb:distributeddb",
+  ]
+
+  external_deps = [
+    "bundle_framework:appexecfwk_base",
+    "c_utils:utils",
+
+    # "ces:libcommonevent",
+    "ability_base:want",
+    "common_event_service:cesfwk_innerkits",
+    "dataclassification:data_transit_mgr",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+  subsystem_name = "distributeddatamgr"
+  part_name = "datamgr_service"
+}

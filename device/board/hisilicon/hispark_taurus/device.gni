@@ -1,0 +1,37 @@
+# Copyright (C) 2022 Hisilicon (Shanghai) Technologies Co., Ltd. All rights reserved.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+soc_company = "hisilicon"
+soc_name = "hi3516dv300"
+
+import("//device/soc/${soc_company}/${soc_name}/soc.gni")
+
+if (!defined(defines)) {
+  defines = []
+}
+if (product_name == "ipcamera_hispark_taurus") {
+  product_config_path = "//vendor/hisilicon/hispark_taurus_standard"
+} else {
+  product_config_path = "//vendor/hisilicon/${product_name}"
+}
+board_camera_path = "//device/board/hisilicon/hispark_taurus/camera"
+is_support_mpi = true
+if (is_support_mpi) {
+  is_support_v4l2 = false
+  defines += [ "SUPPORT_MPI" ]
+  chipset_build_deps = "$board_camera_path:hispark_taurus_build"
+  camera_device_manager_deps =
+      "$board_camera_path/device_manager:camera_device_manager"
+  camera_pipeline_core_deps =
+      "$board_camera_path/pipeline_core:camera_pipeline_core"
+}

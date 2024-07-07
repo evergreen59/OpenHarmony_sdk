@@ -1,0 +1,105 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+group("fuzztest") {
+  testonly = true
+  deps = []
+
+  deps += [
+    # deps file
+    "abilityinfofromjson_fuzzer:AbilityInfoFromJsonFuzzTest",
+    "abilityinfomarshalling_fuzzer:AbilityInfoMarshallingFuzzTest",
+    "abilityinfounmarshalling_fuzzer:AbilityInfoUnmarshallingFuzzTest",
+    "addappInstallcontrolrule_fuzzer:AddAppInstallControlRuleFuzzTest",
+    "addapprunningcontrolrule_fuzzer:AddAppRunningControlRuleFuzzTest",
+    "applicationinfo_fuzzer:ApplicationInfoFuzzTest",
+    "applicationinfofromjson_fuzzer:ApplicationInfoFromJsonFuzzTest",
+    "apprunningcontrolrule_fuzzer:AppRunningControlRuleFuzzTest",
+    "apprunningcontrolruleresult_fuzzer:AppRunningControlRuleResultFuzzTest",
+    "bundlefileutil_fuzzer:BundleFileUtilFuzzTest",
+    "bundleinfo_fuzzer:BundleInfoFuzzTest",
+    "bundleinfofromjson_fuzzer:BundleInfoFromJsonFuzzTest",
+    "bundleinstallerproxy_fuzzer:BundleInstallerProxyFuzzTest",
+    "bundlemgrproxy_fuzzer:BundleMgrProxyFuzzTest",
+    "bundlestatuscallbackproxy_fuzzer:BundleStatusCallbackProxyFuzzTest",
+    "bundlestreaminstallerproxy_fuzzer:BundleStreamInstallerProxyFuzzTest",
+    "bundlesyscap_fuzzer:BundleSysCapFuzzTest",
+    "bundleusermgrproxy_fuzzer:BundleUserMgrProxyFuzzTest",
+    "bundleuserinfo_fuzzer:BundleUserInfoFuzzTest",
+    "checkissystemappbyuid_fuzzer:CheckIsSystemAppByUidFuzzTest",
+    "checkpublickeys_fuzzer:CheckPublicKeysFuzzTest",
+    "cleanbundlecachefiles_fuzzer:CleanBundleCacheFilesFuzzTest",
+    "cleanbundledatafiles_fuzzer:CleanBundleDataFilesFuzzTest",
+    "cleancachecallbackproxy_fuzzer:CleanCacheCallbackProxyFuzzTest",
+    "commonevent_fuzzer:CommonEventFuzzTest",
+    "compatibleabilityinfo_fuzzer:CompatibleAbilityInfoFuzzTest",
+    "compatibleapplicationinfo_fuzzer:CompatibleApplicationInfoFuzzTest",
+    "copyfiles_fuzzer:CopyFilesFuzzTest",
+    "deleteappinstallcontrolrule_fuzzer:DeleteAppInstallControlRuleFuzzTest",
+    "deleteapprunningcontrolrule_fuzzer:DeleteAppRunningControlRuleFuzzTest",
+    "deletedisposedstatus_fuzzer:DeleteDisposedStatusFuzzTest",
+    "deletequickfix_fuzzer:DeleteQuickFixFuzzTest",
+    "elementname_fuzzer:ElementNameFuzzTest",
+    "extensionabilityinfo_fuzzer:ExtensionAbilityInfoFuzzTest",
+    "forminfo_fuzzer:FormInfoFuzzTest",
+    "getabilitylabel_fuzzer:GetAbilityLabelFuzzTest",
+    "getaccessibleappcodepaths_fuzzer:GetAccessibleAppCodePathsFuzzTest",
+    "getappidbybundlename_fuzzer:GetAppIdByBundleNameFuzzTest",
+    "getappinstallcontrolrule_fuzzer:GetAppInstallControlRuleFuzzTest",
+    "getapplicationinfo_fuzzer:GetApplicationInfoFuzzTest",
+    "getapplicationinfos_fuzzer:GetApplicationInfosFuzzTest",
+    "getapprunningcontrolrule_fuzzer:GetAppRunningControlRuleFuzzTest",
+    "getapptype_fuzzer:GetAppTypeFuzzTest",
+    "getbundleInfosbymetadata_fuzzer:GetBundleInfosByMetaDataFuzzTest",
+    "getbundlearchiveinfo_fuzzer:GetBundleArchiveInfoFuzzTest",
+    "getbundlegids_fuzzer:GetBundleGidsFuzzTest",
+    "getbundlegidsbyuid_fuzzer:GetBundleGidsByUidFuzzTest",
+    "getbundleinfo_fuzzer:GetBundleInfoFuzzTest",
+    "getbundleinfos_fuzzer:GetBundleInfosFuzzTest",
+    "getbundlenameforuid_fuzzer:GetBundleNameForUidFuzzTest",
+    "getbundlepackinfo_fuzzer:GetBundlePackInfoFuzzTest",
+    "getbundlesforuid_fuzzer:GetBundlesForUidFuzzTest",
+    "getdefaultapplication_fuzzer:GetDefaultApplicationFuzzTest",
+    "getdisposedstatus_fuzzer:GetDisposedStatusFuzzTest",
+    "gethapmoduleinfo_fuzzer:GetHapModuleInfoFuzzTest",
+    "getlaunchwantforbundle_fuzzer:GetLaunchWantForBundleFuzzTest",
+    "getnameforuid_fuzzer:GetNameForUidFuzzTest",
+    "getpermissiondef_fuzzer:GetPermissionDefFuzzTest",
+    "getsystemavailablecapabilities_fuzzer:GetSystemAvailableCapabilitiesFuzzTest",
+    "getuidbybundlename_fuzzer:GetUidByBundleNameFuzzTest",
+    "hapmoduleinfo_fuzzer:HapModuleInfoFuzzTest",
+    "hassystemcapability_fuzzer:HasSystemCapabilityFuzzTest",
+    "installparam_fuzzer:InstallParamFuzzTest",
+    "installparamunmarshalling_fuzzer:InstallParamUnmarshallingFuzzTest",
+    "isdefaultapplication_fuzzer:IsDefaultApplicationFuzzTest",
+    "launcherservice_fuzzer:LauncherServiceFuzzTest",
+    "moduleinfo_fuzzer:ModuleInfoFuzzTest",
+    "moduleusagerecord_fuzzer:ModuleUsageRecordFuzzTest",
+    "parsesyscap_fuzzer:ParseSysCapFuzzTest",
+    "permissiondef_fuzzer:PermissionDefFuzzTest",
+    "queryabilityinfo_fuzzer:QueryAbilityInfoFuzzTest",
+    "queryabilityinfobyuri_fuzzer:QueryAbilityInfoByUriFuzzTest",
+    "queryabilityinfos_fuzzer:QueryAbilityInfosFuzzTest",
+    "queryabilityinfosbyuri_fuzzer:QueryAbilityInfosByUriFuzzTest",
+    "queryallabilityinfos_fuzzer:QueryAllAbilityInfosFuzzTest",
+    "querykeepalivebundleinfos_fuzzer:QueryKeepAliveBundleInfosFuzzTest",
+    "remoteabilityinfo_fuzzer:RemoteAbilityInfoFuzzTest",
+    "resetdefaultapplication_fuzzer:ResetDefaultApplicationFuzzTest",
+    "setdefaultapplication_fuzzer:SetDefaultApplicationFuzzTest",
+    "setdisposedstatus_fuzzer:SetDisposedStatusFuzzTest",
+    "shortcutinfo_fuzzer:ShortcutInfoFuzzTest",
+    "switchquickfix_fuzzer:SwitchQuickFixFuzzTest",
+    "upgradeatomicservice_fuzzer:UpgradeAtomicServiceFuzzTest",
+    "verifycallingpermission_fuzzer:VerifyCallingPermissionFuzzTest",
+  ]
+}

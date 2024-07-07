@@ -1,0 +1,126 @@
+{
+    "name": "@ohos/player_framework",
+    "description": "Media standard provides atomic capabilities",
+    "version": "3.1",
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+      "destPath": "foundation/multimedia/player_framework"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+      "name": "multimedia_player_framework",
+      "subsystem": "multimedia",
+      "syscap": [
+        "SystemCapability.Multimedia.Media.Core",
+        "SystemCapability.Multimedia.Media.AudioPlayer",
+        "SystemCapability.Multimedia.Media.VideoPlayer",
+        "SystemCapability.Multimedia.Media.AudioRecorder",
+        "SystemCapability.Multimedia.Media.VideoRecorder",
+        "SystemCapability.Multimedia.Media.AudioDecoder",
+        "SystemCapability.Multimedia.Media.AudioEncoder",
+        "SystemCapability.Multimedia.Media.VideoDecoder",
+        "SystemCapability.Multimedia.Media.VideoEncoder",
+        "SystemCapability.Multimedia.Media.CodecBase",
+        "SystemCapability.Multimedia.Media.AVPlayer",
+        "SystemCapability.Multimedia.Media.AVRecorder"
+      ],
+      "features": [],
+      "adapted_system_type": [ "standard" ],
+      "rom": "10000KB",
+      "ram": "10000KB",
+      "hisysevent_config": [
+        "//foundation/multimedia/player_framework/hisysevent.yaml"
+      ],
+      "deps": {
+        "components": [
+          "safwk",
+          "hiviewdfx_hilog_native",
+          "window_manager",
+          "napi",
+          "startup_l2",
+          "samgr",
+          "libxml2",
+          "thirdparty_bounds_checking_function",
+          "hitrace_native",
+          "multimedia_audio_framework",
+          "ipc",
+          "graphic_standard",
+          "hisysevent_native",
+          "c_utils",
+          "hilog_native",
+          "zlib",
+          "access_token",
+          "multimedia_image_framework",
+          "common"
+        ],
+        "third_party": [
+          "glib",
+          "gstreamer",
+          "libffi",
+          "ffmpeg",
+          "libsoup",
+          "libpsl",
+          "libgettext"
+        ]
+      },
+      "build": {
+        "group_type": {
+          "base_group": [],
+          "fwk_group": [
+            "//foundation/multimedia/player_framework/interfaces/kits/js:napi_packages",
+            "//foundation/multimedia/player_framework/interfaces/kits/c:capi_packages",
+            "//foundation/multimedia/player_framework/interfaces/inner_api/native:media_client"
+          ],
+          "service_group": [
+            "//foundation/multimedia/player_framework/services:media_services_package",
+            "//foundation/multimedia/player_framework/sa_profile:media_service_sa_profile"
+          ]
+        },
+        "inner_kits": [
+          {
+            "type": "so",
+            "name": "//foundation/multimedia/player_framework/interfaces/inner_api/native:media_client",
+            "header": {
+              "header_files": [
+                "avcodec_audio_decoder.h",
+                "avcodec_audio_encoder.h",
+                "avcodec_video_decoder.h",
+                "avcodec_video_encoder.h",
+                "player.h",
+                "recorder.h"
+              ],
+              "header_base": "//foundation/multimedia/player_framework/interfaces/inner_api/native"
+            }
+          },
+          {
+            "type": "none",
+            "name": "//foundation/multimedia/player_framework/interfaces/kits/js:napi_packages",
+            "header": {
+              "header_files": [
+                "native_module_ohos_media.h"
+              ],
+              "header_base": "//foundation/multimedia/player_framework/interfaces/kits/js"
+            }
+          },
+          {
+            "type": "none",
+            "name": "//foundation/multimedia/audio_framework/frameworks/native/systemsound:audio_ringtone_client",
+            "header": {
+              "header_files": [
+                "iringtone_player.h",
+                "iringtone_sound_manager.h"
+              ],
+              "header_base": "//foundation/multimedia/audio_framework/interfaces/inner_api/native/audioringtone/include"
+            }
+          }
+        ],
+        "test": [
+            "//foundation/multimedia/player_framework/test:media_demo_test",
+            "//foundation/multimedia/player_framework/test:media_fuzz_test",
+            "//foundation/multimedia/player_framework/test:media_unit_test"
+        ]
+      }
+    }
+  }

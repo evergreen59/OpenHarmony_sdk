@@ -1,0 +1,28 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "srcEntrance": "./ets/Application/MyAbilityStage.ts",
+    "description": "$string:entry_desc",
+    "mainElement": "MainAbility",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [],
+    "extensionAbilities": [
+      {
+        "name": "DialogExtensionAbility",
+        "srcEntrance": "./ets/DialogExtensionAbility/DialogExtensionAbility.ts",
+        "description": "$string:ExtensionAbility_desc",
+        "icon": "$media:icon",
+        "label": "$string:ExtensionAbility_label",
+        "visible": true,
+        "type": "service"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//build/ohos/ace/ace.gni")
+
+js_declaration("camera_js") {
+  part_name = "multimedia_camera_framework"
+  sources = [ "./@ohos.multimedia.camera.d.ts" ]
+}
+
+ohos_copy("camera_declaration") {
+  sources = [ "./@ohos.multimedia.camera.d.ts" ]
+  outputs = [ target_out_dir + "/$target_name/" ]
+  module_source_dir = target_out_dir + "/$target_name"
+  module_install_name = ""
+}
+
+ohos_shared_library("camera_napi") {
+  include_dirs = [
+    "//drivers/peripheral/camera/interfaces/metadata/include",
+    "//foundation/multimedia/camera_framework/interfaces/kits/js/camera_napi/include",
+    "//foundation/multimedia/camera_framework/interfaces/inner_api/native/camera/include",
+    "//foundation/multimedia/camera_framework/services/camera_service/include",
+    "//foundation/multimedia/camera_framework/frameworks/native/camera/include",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/base/include/",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/client/include",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/server/include",
+    "//foundation/multimedia/graphic/graphic_2d/interfaces/inner_api/surface",
+  ]
+  sources = [
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/input/camera_info_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/input/camera_input_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/input/camera_manager_callback_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/input/camera_manager_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/input/camera_mute_listener_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/input/camera_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/input/camera_profile_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/input/camera_size_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/native_module_ohos_camera.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/output/camera_output_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/output/metadata_object_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/output/metadata_output_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/output/photo_output_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/output/preview_output_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/output/video_output_napi.cpp",
+    "//foundation/multimedia/camera_framework/frameworks/js/camera_napi/src/session/camera_session_napi.cpp",
+  ]
+  deps = [
+    "//foundation/arkui/napi:ace_napi",
+    "//foundation/graphic/graphic_2d/frameworks/surface:surface",
+    "//foundation/multimedia/camera_framework/frameworks/native/camera:camera_framework",
+    "//foundation/multimedia/image_framework/interfaces/innerkits:image_native",
+  ]
+  external_deps = [
+    "hisysevent_native:libhisysevent",
+    "hitrace_native:hitrace_meter",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+  ]
+  cflags = [ "-fPIC" ]
+  cflags_cc = cflags
+  relative_install_dir = "module/multimedia"
+  part_name = "multimedia_camera_framework"
+  subsystem_name = "multimedia"
+}

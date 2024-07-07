@@ -1,0 +1,10 @@
+{
+  "parts": {
+    "device_hispark_taurus": {
+      "module_list": [
+        "//device/board/hisilicon/hispark_taurus:hispark_taurus"
+      ]
+    }
+  },
+  "subsystem": "hisilicon_products"
+}

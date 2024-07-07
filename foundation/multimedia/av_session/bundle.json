@@ -1,0 +1,85 @@
+{
+    "name": "@ohos/multimedia_av_session",
+    "description": "Audio and Video Session Management",
+    "version": "4.0",
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+      "destPath": "foundation/multimedia/av_session"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+      "name": "multimedia_av_session",
+      "subsystem": "multimedia",
+      "syscap": [
+          "SystemCapability.Multimedia.AVSession",
+          "SystemCapability.Multimedia.AVSession.Core",
+          "SystemCapability.Multimedia.AVSession.Manager"
+      ],
+      "features": [],
+      "adapted_system_type": [ "standard" ],
+      "rom": "10000KB",
+      "ram": "10000KB",
+      "hisysevent_config": [
+          "//foundation/multimedia/av_session/hisysevent.yaml"
+      ],
+      "deps": {
+        "components": [
+          "ace_napi",
+          "ipc_core",
+          "libhilog",
+          "samgr_proxy",
+          "system_ability_fwk",
+          "libaccesstoken_sdk",
+          "bytrace_core"
+        ],
+        "third_party": [
+        ]
+      },
+      "build": {
+        "group_type": {
+          "base_group": [
+          ],
+          "fwk_group": [
+            "//foundation/multimedia/av_session/frameworks/common:avsession_common",
+            "//foundation/multimedia/av_session/frameworks/native/session:avsession_client",
+            "//foundation/multimedia/av_session/frameworks/js/napi/session:avsession_napi",
+            "//foundation/multimedia/av_session/utils:avsession_utils"
+          ],
+          "service_group": [
+            "//foundation/multimedia/av_session/services/session:avession_server",
+            "//foundation/multimedia/av_session/services/session/server/remote:remote_session_source",
+            "//foundation/multimedia/av_session/services/session/server/remote:remote_session_sink"
+          ]
+        },
+        "inner_kits": [
+          {
+            "header": {
+              "header_files": [
+                  "avsession_manager.h",
+                  "av_session.h",
+                  "avsession_controller.h",
+                  "avsession_info.h",
+                  "avsession_errors.h"
+              ],
+              "header_base": "//foundation/multimedia/av_session/interfaces/inner_api/native/session/include"
+            },
+            "name": "//foundation/multimedia/av_session/frameworks/native/session:avsession_client"
+          }
+        ],
+        "test": [
+          "//foundation/multimedia/av_session/frameworks/native/session/test/unittest:unittest",
+          "//foundation/multimedia/av_session/frameworks/native/session/test/fuzztest:fuzztest",
+          "//foundation/multimedia/av_session/frameworks/native/session/test/benchmarktest:benchmarktest",
+          "//foundation/multimedia/av_session/interfaces/inner_api/native/session/test/fuzztest/avcontrolcommand_fuzzer:fuzztest",
+          "//foundation/multimedia/av_session/interfaces/inner_api/native/session/test/fuzztest/avmetadata_fuzzer:fuzztest",
+          "//foundation/multimedia/av_session/interfaces/inner_api/native/session/test/fuzztest/avplaybackstate_fuzzer:fuzztest",
+          "//foundation/multimedia/av_session/interfaces/inner_api/native/session/test/fuzztest/avsessiondescriptor_fuzzer:fuzztest",
+          "//foundation/multimedia/av_session/interfaces/inner_api/native/session/test/fuzztest/avsessionpixelmap_fuzzer:fuzztest",
+          "//foundation/multimedia/av_session/services/session/server/test:unittest",
+          "//foundation/multimedia/av_session/services/session/server/test/fuzztest:fuzztest"
+        ]
+      }
+    }
+  }

@@ -1,0 +1,85 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//build/ohos/ace/ace.gni")
+import("//foundation/multimedia/av_session/config.gni")
+
+ohos_shared_library("avsession_napi") {
+  sanitize = {
+    cfi = true
+    debug = false
+  }
+  include_dirs = [
+    "include",
+    "//foundation/multimedia/av_session/interfaces/inner_api/native/session/include",
+    "//foundation/multimedia/av_session/frameworks/native/session/include",
+  ]
+
+  sources = [
+    "src/napi_async_callback.cpp",
+    "src/napi_async_work.cpp",
+    "src/napi_avcontroller_callback.cpp",
+    "src/napi_avsession.cpp",
+    "src/napi_avsession_callback.cpp",
+    "src/napi_avsession_controller.cpp",
+    "src/napi_avsession_enum.cpp",
+    "src/napi_avsession_manager.cpp",
+    "src/napi_control_command.cpp",
+    "src/napi_meta_data.cpp",
+    "src/napi_module.cpp",
+    "src/napi_playback_state.cpp",
+    "src/napi_session_listener.cpp",
+    "src/napi_utils.cpp",
+  ]
+
+  deps = [
+    "//foundation/multimedia/av_session/frameworks/common:avsession_common",
+    "//foundation/multimedia/av_session/frameworks/native/session:avsession_client",
+    "//foundation/multimedia/av_session/utils:avsession_utils",
+  ]
+
+  external_deps = [
+    "ability_base:base",
+    "ability_base:want",
+    "ability_base:zuri",
+    "ability_runtime:ability_context_native",
+    "ability_runtime:ability_manager",
+    "ability_runtime:abilitykit_native",
+    "ability_runtime:app_manager",
+    "ability_runtime:napi_base_context",
+    "ability_runtime:wantagent_innerkits",
+    "bundle_framework:appexecfwk_base",
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+    "input:libmmi-client",
+    "multimedia_audio_framework:audio_client",
+    "multimedia_image_framework:image",
+    "multimedia_image_framework:image_native",
+    "napi:ace_napi",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+  if (multimedia_av_session_enable_trace_control) {
+    cflags = [ "-DENBABLE_AVSESSION_TRACE_CONTROL" ]
+    external_deps += [ "hitrace_native:hitrace_meter" ]
+  }
+  if (multimedia_av_session_enable_sysevent_control) {
+    cflags += [ "-DENABLE_AVSESSION_SYSEVENT_CONTROL" ]
+    external_deps += [ "hisysevent_native:libhisysevent" ]
+  }
+  relative_install_dir = "module/multimedia"
+
+  subsystem_name = "multimedia"
+  part_name = "multimedia_av_session"
+}

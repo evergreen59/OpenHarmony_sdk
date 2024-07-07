@@ -1,0 +1,92 @@
+{
+    "name": "@ohos/media_library",
+    "description": "provides a set of easy-to-use APIs for getting media file metadata information",
+    "version": "3.1",
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "foundation/multimedia/media_library"
+    },
+    "component": {
+      "name": "media_library",
+      "subsystem": "multimedia",
+      "syscap": [
+        "SystemCapability.Multimedia.MediaLibrary.Core",
+        "SystemCapability.Multimedia.MediaLibrary.DistributedCore",
+        "SystemCapability.FileManagement.UserFileManager.Core",
+        "SystemCapability.FileManagement.UserFileManager.DistributedCore"
+      ],
+      "features": [],
+      "adapted_system_type": [ "standard" ],
+      "rom": "4068KB",
+      "ram": "4068KB",
+      "hisysevent_config": [
+        "//foundation/multimedia/media_library/hisysevent.yaml"
+      ],
+      "deps": {
+        "components": [
+          "device_manager",
+          "bundle_framework",
+          "multimedia_player_framework",
+          "hilog_native",
+          "common_event_service",
+          "device_security_level",
+          "napi",
+          "device_auth",
+          "hitrace_native",
+          "distributeddatamgr",
+          "access_token",
+          "ipc",
+          "ability_runtime",
+          "ipc_js",
+          "data_share",
+          "multimedia_image_framework",
+          "samgr",
+          "hiviewdfx_hilog_native",
+          "user_file_service",
+          "eventhandler",
+          "common",
+          "relational_store",
+          "init",
+          "ability_base"
+        ],
+        "third_party": [
+          "json",
+          "node",
+          "openssl"
+        ]
+      },
+      "build": {
+        "group_type": {
+          "base_group": [],
+          "fwk_group": [
+            "//foundation/multimedia/media_library/interfaces/kits/js:medialibrary",
+            "//foundation/multimedia/media_library/interfaces/kits/js:medialibrary_js",
+            "//foundation/multimedia/media_library/interfaces/kits/js:userfilemanager"
+          ],
+          "service_group": [
+            "//foundation/multimedia/media_library/frameworks/innerkitsimpl/media_library_helper:media_library_packages",
+            "//foundation/multimedia/media_library/frameworks/innerkitsimpl/media_library_manager:media_library_manager",
+            "//foundation/multimedia/media_library/frameworks/innerkitsimpl/medialibrary_data_extension:medialibrary_data_extension",
+            "//foundation/multimedia/media_library/frameworks/innerkitsimpl/test/unittest/medialibrary_scanner:scanner"
+          ]
+        },
+        "inner_kits": [
+            {
+                "header": {
+                  "header_base": "//foundation/multimedia/media_library/interfaces/inner_api/media_library_helper/include",
+                  "header_files": [
+                    "media_library_manager.h",
+                    "medialibrary_db_const.h"
+                  ]
+                },
+                "name": "//foundation/multimedia/media_library/frameworks/innerkitsimpl/media_library_helper:media_library"
+            }
+        ],
+        "test": [
+          "//foundation/multimedia/media_library/frameworks/innerkitsimpl/test:test",
+          "//foundation/multimedia/media_library/frameworks/innerkitsimpl/test/fuzztest:media_library_fuzztest"
+        ]
+      }
+    }
+  }

@@ -1,0 +1,70 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "srcEntrance": "./ets/Application/AbilityStage.ts",
+    "description": "$string:entry_desc",
+    "mainElement": "MainAbility",
+    "deviceTypes": [
+      "default",
+      "phone",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "uiSyntax": "ets",
+    "abilities": [
+      {
+        "name": "MainAbility",
+        "srcEntrance": "./ets/MainAbility/MainAbility.ts",
+        "description": "$string:MainAbility_desc",
+        "icon": "$media:icon",
+        "label": "$string:MainAbility_label",
+        "visible": false
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "srcEntrance": "./ets/DataShareExtAbility/DataShareExtAbility.ts",
+        "name": "DataShareExtAbility",
+        "icon": "$media:icon",
+        "srcLanguage": "ets",
+        "description": "mediadatashare",
+        "type": "dataShare",
+        "uri": "datashare://media",
+        "visible": true
+      },
+      {
+        "srcEntrance": "./ets/FileExtensionAbility/FileExtensionAbility.ts",
+        "name": "FileExtensionAbility",
+        "icon": "$media:icon",
+        "srcLanguage": "ets",
+        "description": "mediafileextension",
+        "type": "fileAccess",
+        "uri": "fileAccess://media",
+        "visible": true
+      }
+    ],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED"
+      },
+      {
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC"
+      },
+      {
+        "name": "ohos.permission.PERMISSION_USED_STATS"
+      },
+      {
+        "name": "ohos.permission.READ_MEDIA"
+      },
+      {
+        "name": "ohos.permission.WRITE_MEDIA"
+      },
+      {
+        "name": "ohos.permission.START_ABILITIES_FROM_BACKGROUND"
+      }
+    ]
+  }
+}

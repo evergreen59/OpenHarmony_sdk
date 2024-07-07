@@ -1,0 +1,65 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//foundation/multimedia/media_library/media_library.gni")
+
+ohos_static_library("medialibrary_common_utils") {
+  include_dirs = [
+    "./include/",
+    "//third_party/openssl/include/",
+    "//foundation/multimedia/media_library/interfaces/inner_api/media_library_helper/include",
+  ]
+
+  sources = [ "src/medialibrary_common_utils.cpp" ]
+
+  deps = [ "//third_party/openssl:libcrypto_shared" ]
+
+  external_deps = [
+    "hitrace_native:hitrace_meter",
+    "hiviewdfx_hilog_native:libhilog",
+  ]
+}
+
+ohos_static_library("permission_utils") {
+  sources = [ "src/permission_utils.cpp" ]
+  include_dirs = [
+    "./include",
+    "${MEDIA_LIB_INNERKITS_DIR}/media_library_helper/include",
+    "${MEDIA_LIB_INTERFACES_INNER_DIR}/media_library_helper/include",
+
+    # appexecfwk_core
+    "//foundation/bundlemanager/bundle_framework/interfaces/inner_api/appexecfwk_core/include/bundlemgr",
+    "//foundation/bundlemanager/bundle_framework/interfaces/inner_api/appexecfwk_base/include/",
+    "//third_party/json/include",
+    "//foundation/ability/ability_base/interfaces/kits/native/want/include",
+    "//foundation/ability/ability_base/interfaces/kits/native/uri/include",
+    "//foundation/ability/ability_base/interfaces/inner_api/base/include",
+    "//foundation/ability/ability_runtime/services/abilitymgr/include",
+
+    # Security stuff
+    "//base/security/access_token/interfaces/innerkits/accesstoken/include",
+    "//base/security/access_token/interfaces/innerkits/privacy/include",
+  ]
+  deps = [
+    "//base/security/access_token/interfaces/innerkits/privacy:libprivacy_sdk",
+    "//foundation/bundlemanager/bundle_framework/interfaces/inner_api/appexecfwk_core:appexecfwk_core",
+  ]
+  external_deps = [
+    "access_token:libaccesstoken_sdk",
+    "hitrace_native:hitrace_meter",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+    "samgr:samgr_proxy",
+  ]
+}

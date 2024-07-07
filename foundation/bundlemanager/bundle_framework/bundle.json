@@ -1,0 +1,126 @@
+{
+    "name": "@ohos/bundle_framework",
+    "description": "提供OpenHarmony应用和服务安装包的安装、更新、卸载以及信息查询等能力，包含包管理接口和包管理服务",
+    "version": "3.1",
+    "license": "Apache 2.0",
+    "segment": {
+        "destPath": "foundation/bundlemanager/bundle_framework"
+    },
+    "component": {
+        "name": "bundle_framework",
+        "subsystem": "bundlemanager",
+        "syscap": [
+            "SystemCapability.BundleManager.BundleFramework",
+            "SystemCapability.BundleManager.Zlib",
+            "SystemCapability.BundleManager.BundleFramework.AppControl",
+            "SystemCapability.BundleManager.BundleFramework.Core",
+            "SystemCapability.BundleManager.BundleFramework.FreeInstall",
+            "SystemCapability.BundleManager.BundleFramework.Launcher",
+            "SystemCapability.BundleManager.BundleFramework.DefaultApp",
+            "SystemCapability.BundleManager.BundleFramework.Resource"
+        ],
+        "features": [
+            "bundle_framework_graphics",
+            "bundle_framework_free_install",
+            "bundle_framework_default_app",
+            "bundle_framework_launcher",
+            "bundle_framework_sandbox_app",
+            "bundle_framework_quick_fix"
+        ],
+        "hisysevent_config": [
+            "//foundation/bundlemanager/bundle_framework/hisysevent.yaml"
+        ],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "4000KB",
+        "ram": "4000KB",
+        "deps": {
+            "components": [
+                "ability_base",
+                "ability_runtime",
+                "access_token",
+                "appverify",
+                "battery_manager",
+                "common",
+                "common_event_service",
+                "config_policy",
+                "c_utils",
+                "device_manager",
+                "device_info_manager",
+                "device_usage_statistics",
+                "display_manager",
+                "distributeddatamgr",
+                "eventhandler",
+                "hicollie_native",
+                "hilog_native",
+                "hisysevent_native",
+                "hitrace_native",
+                "hiviewdfx_hilog_native",
+                "i18n",
+                "init",
+                "ipc",
+                "jsoncpp",
+                "libuv",
+                "multimedia_image_framework",
+                "napi",
+                "os_account",
+                "power_manager",
+                "safwk",
+                "resource_management",
+                "samgr",
+                "selinux",
+                "syscap_codec",
+                "zlib"
+            ],
+            "third_party": [
+                "json",
+                "libuv",
+                "node",
+                "zlib"
+            ]
+        },
+        "build": {
+            "sub_component": [
+                "//foundation/bundlemanager/bundle_framework:bms_target"
+            ],
+            "inner_kits": [
+                {
+                    "header": {
+                      "header_base": "//foundation/bundlemanager/bundle_framework/interfaces/inner_api/appexecfwk_base/include",
+                      "header_files": [
+                        "ability_info.h",
+                        "appexecfwk_errors.h",
+                        "application_info.h",
+                        "bundle_info.h"
+                      ]
+                    },
+                    "name": "//foundation/bundlemanager/bundle_framework/interfaces/inner_api/appexecfwk_base:appexecfwk_base"
+                  },
+                  {
+                    "header": {
+                      "header_base": "//foundation/bundlemanager/bundle_framework/interfaces/inner_api/appexecfwk_core/include",
+                      "header_files": [
+                        "bundlemgr/bundle_installer_interface.h",
+                        "bundlemgr/bundle_mgr_interface.h",
+                        "bundlemgr/bundle_status_callback_interface.h",
+                        "bundlemgr/clean_cache_callback_interface.h",
+                        "bundlemgr/status_receiver_interface.h",
+                        "bundlemgr/bundle_installer_proxy.h",
+                        "bundlemgr/bundle_mgr_proxy.h",
+                        "bundlemgr/bundle_status_callback_proxy.h",
+                        "bundlemgr/bundle_stream_installer_proxy.h",
+                        "bundlemgr/bundle_user_mgr_proxy.h",
+                        "bundlemgr/clean_cache_callback_proxy.h",
+                        "bundlemgr/bundle_mgr_client_impl.h"
+                      ]
+                    },
+                    "name": "//foundation/bundlemanager/bundle_framework/interfaces/inner_api/appexecfwk_core:appexecfwk_core"
+                  }
+            ],
+            "test": [
+                "//foundation/bundlemanager/bundle_framework:test_target"
+            ]
+        }
+    }
+}

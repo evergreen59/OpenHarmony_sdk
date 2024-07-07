@@ -1,0 +1,10 @@
+{
+  "name": "TextInput",
+  "atomic": true,
+  "attrs": [
+    "type", "placeholderColor", "placeholderFont", "enterKeyType", "caretColor", "maxLength",
+    "onEditChanged", "onSubmit", "onChange", "onCopy", "OnCut", "OnPaste", "fontSize",
+    "fontColor", "fontStyle", "fontWeight", "fontFamily", "inputFilter", "onEditChange",
+    "copyOption", "style"
+  ]
+}

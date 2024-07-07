@@ -1,0 +1,15 @@
+# Copyright (C) 2021 Hisilicon (Shanghai) Technologies Co., Ltd. All rights reserved.
+
+import("//build/ohos.gni")
+
+print("hi3516dv300_group in")
+group("hi3516dv300_group") {
+  deps = [
+    "distributedhardware:distributedhardware",
+    "images:all_image_conf",
+    "system:sys_files",
+    "system/cfg:init_configs",
+    "updater:updater_files",
+    "//device/soc/hisilicon/hi3516dv300/sdk_linux:hispark_taurus_sdk",
+  ]
+}

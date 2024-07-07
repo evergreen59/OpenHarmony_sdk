@@ -1,0 +1,190 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//foundation/ability/ability_base/ability_base.gni")
+
+################################### base ########################################
+config("base_config") {
+  visibility = [ ":*" ]
+}
+
+config("base_public_config") {
+  visibility = [ ":*" ]
+  include_dirs = [ "interfaces/inner_api/base/include" ]
+}
+
+config("base_all_dependent_config") {
+  include_dirs = [ "${ability_base_innerapi_path}/base/include" ]
+}
+
+ohos_shared_library("base") {
+  sources = [
+    "interfaces/inner_api/base/src/base.cpp",
+    "interfaces/inner_api/base/src/base_object.cpp",
+    "interfaces/inner_api/base/src/bool_wrapper.cpp",
+    "interfaces/inner_api/base/src/byte_wrapper.cpp",
+    "interfaces/inner_api/base/src/double_wrapper.cpp",
+    "interfaces/inner_api/base/src/float_wrapper.cpp",
+    "interfaces/inner_api/base/src/int_wrapper.cpp",
+    "interfaces/inner_api/base/src/long_wrapper.cpp",
+    "interfaces/inner_api/base/src/remote_object_wrapper.cpp",
+    "interfaces/inner_api/base/src/short_wrapper.cpp",
+    "interfaces/inner_api/base/src/string_wrapper.cpp",
+    "interfaces/inner_api/base/src/user_object_wrapper.cpp",
+    "interfaces/inner_api/base/src/zchar_wrapper.cpp",
+  ]
+  configs = [ ":base_config" ]
+  public_configs = [ ":base_public_config" ]
+
+  all_dependent_configs = [ ":base_all_dependent_config" ]
+
+  external_deps = [ "c_utils:utils" ]
+
+  subsystem_name = "ability"
+  part_name = "ability_base"
+}
+
+################################### configuration ########################################
+config("configuration_sdk_config") {
+  include_dirs = [
+    "interfaces/kits/native/configuration/include",
+    "${ability_base_innerapi_path}/log/include",
+    "${base_global_innerapi_path}/include",
+    "//third_party/json/include",
+  ]
+}
+
+ohos_shared_library("configuration") {
+  sources = [
+    "interfaces/kits/native/configuration/src/configuration.cpp",
+    "interfaces/kits/native/configuration/src/configuration_convertor.cpp",
+  ]
+
+  public_configs = [ ":configuration_sdk_config" ]
+
+  defines = [ "ABILITYBASE_LOG_TAG = \"Configuration\"" ]
+  cflags = []
+  if (target_cpu == "arm") {
+    cflags += [ "-DBINDER_IPC_32BIT" ]
+  }
+
+  external_deps = [
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+  ]
+
+  subsystem_name = "ability"
+  part_name = "ability_base"
+}
+
+################################### zuri ########################################
+config("zuri_config") {
+  visibility = [ ":*" ]
+  include_dirs = [ "interfaces/kits/native/uri/include" ]
+  cflags = []
+  if (target_cpu == "arm") {
+    cflags += [ "-DBINDER_IPC_32BIT" ]
+  }
+}
+
+config("zuri_all_dependent_config") {
+  include_dirs = [ "${ability_base_kits_native_path}/uri/include" ]
+}
+
+ohos_shared_library("zuri") {
+  public_configs = [ ":zuri_config" ]
+
+  all_dependent_configs = [ ":zuri_all_dependent_config" ]
+
+  sources = [ "interfaces/kits/native/uri/src/uri.cpp" ]
+
+  deps = []
+
+  external_deps = [
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+  ]
+
+  subsystem_name = "ability"
+  part_name = "ability_base"
+}
+
+################################### want ########################################
+config("want_config") {
+  visibility = [ ":*" ]
+  include_dirs = []
+  cflags = []
+  if (target_cpu == "arm") {
+    cflags += [ "-DBINDER_IPC_32BIT" ]
+  }
+  defines = [ "ABILITYBASE_LOG_TAG = \"Want\"" ]
+}
+
+config("want_public_config") {
+  visibility = [ ":*" ]
+  include_dirs = [
+    "interfaces/inner_api/base/include",
+    "interfaces/kits/native/uri/include",
+    "interfaces/kits/native/want/include",
+    "${ability_base_innerapi_path}/log/include",
+    "//third_party/jsoncpp/include",
+    "//third_party/json/include",
+    "//commonlibrary/c_utils/base/include",
+  ]
+}
+
+config("want_all_dependent_config") {
+  include_dirs = [ "${ability_base_kits_native_path}/want/include" ]
+}
+
+ohos_shared_library("want") {
+  sources = [
+    "interfaces/kits/native/want/src/array_wrapper.cpp",
+    "interfaces/kits/native/want/src/element_name.cpp",
+    "interfaces/kits/native/want/src/extra_params.cpp",
+    "interfaces/kits/native/want/src/operation.cpp",
+    "interfaces/kits/native/want/src/operation_builder.cpp",
+    "interfaces/kits/native/want/src/pac_map.cpp",
+    "interfaces/kits/native/want/src/patterns_matcher.cpp",
+    "interfaces/kits/native/want/src/skills.cpp",
+    "interfaces/kits/native/want/src/want.cpp",
+    "interfaces/kits/native/want/src/want_params.cpp",
+    "interfaces/kits/native/want/src/want_params_wrapper.cpp",
+  ]
+
+  deps = [ "//third_party/jsoncpp:jsoncpp" ]
+
+  all_dependent_configs = [ ":want_all_dependent_config" ]
+
+  external_deps = [
+    "ability_base:base",
+    "ability_base:zuri",
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+  ]
+
+  configs = [ ":want_config" ]
+  public_configs = [ ":want_public_config" ]
+  subsystem_name = "ability"
+  part_name = "ability_base"
+}
+
+group("base_innerkits_target") {
+  deps = [
+    ":base",
+    ":configuration",
+    ":want",
+  ]
+}

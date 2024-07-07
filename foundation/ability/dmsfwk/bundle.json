@@ -1,0 +1,110 @@
+{
+    "name": "@ohos/dmsfwk",
+    "description": "distributed ability manager service",
+    "version": "3.1",
+    "license": "Apache License 2.0",
+    "repository": "https://gitee.com/openharmony/ability_dmsfwk",
+    "publishAs": "code-segment",
+    "segment": {
+      "destPath": "foundation/ability/dmsfwk"
+    },
+    "dirs": {},
+    "scripts": {},
+    "license": "Apache License 2.0",
+    "component": {
+      "name": "dmsfwk",
+      "subsystem": "ability",
+      "syscap": [
+        "SystemCapability.Ability.DistributedAbilityManager"
+      ],
+      "adapted_system_type": [ "standard" ],
+      "features" : [
+        "dmsfwk_feature_coverage = false",
+        "dmsfwk_standard_form_share",
+        "dmsfwk_mission_manager",
+        "dmsfwk_report_memmgr",
+        "dmsfwk_report_memmgr_plugins"
+      ],
+      "hisysevent_config": [
+        "//foundation/ability/dmsfwk/hisysevent.yaml"
+      ],
+      "rom": "",
+      "ram": "",
+      "deps": {
+        "components": [
+          "ability_base",
+          "ability_runtime",
+          "access_token",
+          "bundle_framework",
+          "c_utils",
+          "device_auth",
+          "device_info_manager",
+          "distributeddatamgr",
+          "dsoftbus",
+          "eventhandler",
+          "form_fwk",
+          "hisysevent_native",
+          "hitrace_native",
+          "hiviewdfx_hilog_native",
+          "ipc",
+          "multimedia_image_framework",
+          "napi",
+          "os_account",
+          "safwk",
+          "samgr",
+          "startup_l2"
+        ],
+        "third_party": []
+      },
+      "build": {
+        "group_type": {
+          "base_group": [],
+          "fwk_group": [
+            "//foundation/ability/dmsfwk/interfaces/innerkits/common:common_sdk",
+            "//foundation/ability/dmsfwk/interfaces/innerkits/continuation_manager:continuation_manager",
+            "//foundation/ability/dmsfwk/interfaces/kits/napi:napi_packages"
+          ],
+          "service_group": [
+            "//foundation/ability/dmsfwk/etc/init:etc",
+            "//foundation/ability/dmsfwk/etc/profile:distributedsched_trust",
+            "//foundation/ability/dmsfwk/sa_profile:dms_sa_profile",
+            "//foundation/ability/dmsfwk/services/base:dmsbaseinner",
+            "//foundation/ability/dmsfwk/services/dtbabilitymgr:distributed_ability_manager_svr",
+            "//foundation/ability/dmsfwk/services/dtbschedmgr:distributedschedsvr"
+          ]
+        },
+        "inner_kits": [
+          {
+            "header": {
+              "header_base": "//foundation/ability/dmsfwk/interfaces/innerkits/continuation_manager/include",
+              "header_files": [
+                "continuation_extra_params.h",
+                "continuation_mode.h",
+                "continuation_result.h",
+                "device_connect_status.h",
+                "device_selection_notifier_stub.h",
+                "idevice_selection_notifier.h"
+              ]
+            },
+            "name": "//foundation/ability/dmsfwk/interfaces/innerkits/continuation_manager:continuation_manager"
+          },
+          {
+            "header": {
+              "header_base": "//foundation/ability/dmsfwk/interfaces/innerkits/common/include",
+              "header_files": [
+                "distributed_ability_manager_client.h",
+                "distributed_ability_manager_proxy.h"
+              ]
+            },
+            "name": "//foundation/ability/dmsfwk/interfaces/innerkits/common:common_sdk"
+          }
+        ],
+        "test": [
+          "//foundation/ability/dmsfwk/services/base:unittest",
+          "//foundation/ability/dmsfwk/services/dtbschedmgr:unittest",
+          "//foundation/ability/dmsfwk/services/dtbabilitymgr:unittest",
+          "//foundation/ability/dmsfwk/test/fuzztest/continuationmanager_fuzzer:fuzztest"
+        ]
+      }
+    }
+  }

@@ -1,0 +1,110 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//build/ohos_var.gni")
+import(
+    "//foundation/distributedhardware/distributed_hardware_fwk/distributedhardwarefwk.gni")
+
+ohos_shared_library("distributedhardwarefwksvr") {
+  include_dirs = [
+    "//base/hiviewdfx/hisysevent/interfaces/native/innerkits/hisysevent/include",
+    "//base/hiviewdfx/hitrace/interfaces/native/innerkits/include/hitrace_meter",
+    "//commonlibrary/c_utils/base/include",
+    "//foundation/distributeddatamgr/kv_store/interfaces/innerkits/distributeddata/include",
+    "//utils/system/safwk/native/include",
+    "include",
+    "include/accessmanager",
+    "${common_path}/log/include",
+    "${common_path}/utils/include",
+    "${utils_path}/include/log",
+    "${utils_path}/include",
+    "//foundation/distributedhardware/device_manager/interfaces/inner_kits/native_cpp/include",
+    "//foundation/distributedhardware/device_manager/common/include",
+    "//third_party/json/include",
+    "include/componentloader",
+    "include/versionmanager",
+    "include/componentmanager",
+    "include/task",
+    "include/utils",
+    "include/localhardwaremanager",
+    "include/publisher",
+    "include/resourcemanager",
+    "include/hidumphelper",
+    "include/ipc",
+    "${utils_path}/include/eventbus",
+  ]
+
+  sources = [
+    "src/accessmanager/access_manager.cpp",
+    "src/componentloader/component_loader.cpp",
+    "src/componentmanager/component_disable.cpp",
+    "src/componentmanager/component_enable.cpp",
+    "src/componentmanager/component_manager.cpp",
+    "src/componentmanager/component_monitor.cpp",
+    "src/distributed_hardware_manager.cpp",
+    "src/distributed_hardware_manager_factory.cpp",
+    "src/distributed_hardware_service.cpp",
+    "src/distributed_hardware_stub.cpp",
+    "src/hidumphelper/enabled_comps_dump.cpp",
+    "src/hidumphelper/hidump_helper.cpp",
+    "src/ipc/publisher_listener_proxy.cpp",
+    "src/localhardwaremanager/local_hardware_manager.cpp",
+    "src/localhardwaremanager/plugin_listener_impl.cpp",
+    "src/publisher/publisher.cpp",
+    "src/publisher/publisher_item.cpp",
+    "src/resourcemanager/capability_info.cpp",
+    "src/resourcemanager/capability_info_manager.cpp",
+    "src/resourcemanager/capability_utils.cpp",
+    "src/resourcemanager/db_adapter.cpp",
+    "src/resourcemanager/version_info.cpp",
+    "src/resourcemanager/version_info_manager.cpp",
+    "src/task/disable_task.cpp",
+    "src/task/enable_task.cpp",
+    "src/task/monitor_task_timer.cpp",
+    "src/task/offline_task.cpp",
+    "src/task/online_task.cpp",
+    "src/task/task.cpp",
+    "src/task/task_board.cpp",
+    "src/task/task_executor.cpp",
+    "src/task/task_factory.cpp",
+    "src/utils/dh_context.cpp",
+    "src/versionmanager/version_manager.cpp",
+  ]
+
+  deps = [
+    "${utils_path}:distributedhardwareutils",
+    "//foundation/distributedhardware/device_manager/interfaces/inner_kits/native_cpp:devicemanagersdk",
+    "//foundation/systemabilitymgr/safwk/interfaces/innerkits/safwk:system_ability_fwk",
+  ]
+
+  defines = [
+    "HI_LOG_ENABLE",
+    "DH_LOG_TAG=\"dhfwksvr\"",
+    "LOG_DOMAIN=0xD004100",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "eventhandler:libeventhandler",
+    "init:libbegetutil",
+    "ipc:ipc_core",
+    "kv_store:distributeddata_inner",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+
+  subsystem_name = "distributedhardware"
+
+  part_name = "distributed_hardware_fwk"
+}

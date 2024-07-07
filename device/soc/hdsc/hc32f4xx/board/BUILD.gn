@@ -1,0 +1,58 @@
+# Copyright (C) 2022 HiHope Open Source Organization .
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+if (ohos_kernel_type == "liteos_m") {
+  import("//kernel/liteos_m/liteos.gni")
+  module_name = get_path_info(rebase_path("."), "name")
+  config("board_config") {
+    libs = [
+        "gcc",
+        #"m",
+        #"c",
+        "nosys",
+    ]
+
+    ldflags = [
+      "-Wl,--gc-sections",
+      "-Wl,-T" + rebase_path("drivers/cmsis/Device/HDSC/hc32f4xx/Source/GCC/linker/HC32F4A0xG.ld"),
+      "-Wl,--start-group",
+      "-Wl,--end-group",
+      "-nostartfiles",
+      "-nodefaultlibs",
+    ]
+
+    include_dirs = [
+      ".",
+      "./board/inc",
+      "./drivers/hc32_ll_driver/inc",
+      "./drivers/cmsis/Device/HDSC/hc32f4xx/Include",
+      "//commonlibrary/utils_lite/hals/file",
+      "//commonlibrary/utils_lite/include",
+      "//third_party/musl/porting/liteos_m/kernel/src/include",
+      "//third_party/musl/porting/liteos_m/kernel/src/internal",
+      "//third_party/wpa_supplicant/wpa_supplicant-2.9/src/utils",
+      "//drivers/hdf_core/framework/core/common/include/manager",
+      "//drivers/hdf_core/framework/include/platform",
+      "//drivers/hdf_core/framework/include/utils",
+      "//drivers/hdf_core/adapter/khdf/liteos_m/osal/include",
+    ]
+  }
+
+  module_group(module_name) {
+    modules = [
+      "board",
+      "drivers",
+    ]
+  configs = [ ":board_config" ]
+  }
+}

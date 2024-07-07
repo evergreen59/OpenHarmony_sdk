@@ -1,0 +1,32 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "description": "$string:entry_desc",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "",
+    "uiSyntax": "ets",
+    "abilities": [],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.ACCESS_BUNDLE_DIR"
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "ServiceExtension",
+        "description": "service",
+        "icon": "",
+        "type": "service",
+        "visible": false,
+        "srcEntrance": "./ets/ServiceExtension/ServiceExtension.ts",
+        "uri": "ServiceExtension://com.ohos.formrenderservice.ServiceExtension"
+      }
+    ]
+  }
+}

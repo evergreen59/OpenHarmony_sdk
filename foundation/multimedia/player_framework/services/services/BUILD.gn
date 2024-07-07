@@ -1,0 +1,177 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//foundation/multimedia/player_framework/config.gni")
+
+config("media_service_config") {
+  visibility = [ ":*" ]
+
+  cflags = [
+    "-std=c++17",
+    "-fno-rtti",
+    "-fno-exceptions",
+    "-Wall",
+    "-fno-common",
+    "-fstack-protector-strong",
+    "-Wshadow",
+    "-FPIC",
+    "-FS",
+    "-O2",
+    "-D_FORTIFY_SOURCE=2",
+    "-fvisibility=hidden",
+    "-Wformat=2",
+    "-Wfloat-equal",
+    "-Wdate-time",
+    "-Werror",
+    "-Wextra",
+    "-Wimplicit-fallthrough",
+    "-Wsign-compare",
+    "-Wunused-parameter",
+  ]
+
+  include_dirs = [
+    "sa_media/ipc",
+    "sa_media/server",
+    "common",
+    "player/ipc",
+    "player/server",
+    "media_data_source/ipc",
+    "media_data_source/server",
+    "recorder/ipc",
+    "recorder/server",
+    "avmetadatahelper/ipc",
+    "avmetadatahelper/server",
+    "avcodec/ipc",
+    "avcodec/server",
+    "avcodeclist/ipc",
+    "avcodeclist/server",
+    "recorder_profiles/ipc",
+    "recorder_profiles/server",
+    "avmuxer/ipc",
+    "avmuxer/server",
+    "//base/security/access_token/interfaces/innerkits/access_token/include",
+    "//base/hiviewdfx/hisysevent/interfaces/native/innerkits/hisysevent/include",
+    "//foundation/multimedia/player_framework/services/include",
+    "//foundation/multimedia/player_framework/services/services/factory",
+    "//foundation/multimedia/player_framework/services/services/engine_intf",
+    "//foundation/multimedia/player_framework/services/utils/include",
+    "//foundation/multimedia/player_framework/interfaces/inner_api/native",
+    "//foundation/multimedia/player_framework/services/services/common",
+    "//commonlibrary/c_utils/base/include",
+    "//foundation/multimedia/image_framework/interfaces/innerkits/include",
+    "//foundation/multimedia/player_framework/services/engine/common/avcodeclist",
+    "//foundation/multimedia/player_framework/services/engine/common/recorder_profiles",
+    "//third_party/glib/glibmemdfx",
+  ]
+
+  defines = []
+  defines += player_framework_defines
+
+  if (target_cpu == "arm") {
+    cflags += [ "-DBINDER_IPC_32BIT" ]
+  }
+}
+
+ohos_shared_library("media_service") {
+  install_enable = true
+
+  sources = [
+    "//foundation/multimedia/player_framework/frameworks/native/common/media_errors.cpp",
+    "//foundation/multimedia/player_framework/services/utils/avsharedmemorybase.cpp",
+    "common/avsharedmemory_ipc.cpp",
+    "factory/engine_factory_repo.cpp",
+    "sa_media/ipc/media_listener_proxy.cpp",
+    "sa_media/ipc/media_parcel.cpp",
+    "sa_media/ipc/media_service_stub.cpp",
+    "sa_media/server/media_server.cpp",
+    "sa_media/server/media_server_manager.cpp",
+  ]
+  if (multimedia_player_framework_support_player) {
+    sources += [
+      "media_data_source/ipc/media_data_source_proxy.cpp",
+      "player/ipc/player_listener_proxy.cpp",
+      "player/ipc/player_service_stub.cpp",
+      "player/server/player_server.cpp",
+      "player/server/player_server_state.cpp",
+      "player/server/player_server_task_mgr.cpp",
+    ]
+  }
+  if (multimedia_player_framework_support_histreamer) {
+    sources += [ "player/server/player_server_hi.cpp" ]
+  }
+  if (multimedia_player_framework_support_recorder) {
+    sources += [
+      "//foundation/multimedia/player_framework/services/engine/common/recorder_profiles/recorder_profiles_ability_singleton.cpp",
+      "//foundation/multimedia/player_framework/services/engine/common/recorder_profiles/recorder_profiles_xml_parser.cpp",
+      "recorder/ipc/recorder_listener_proxy.cpp",
+      "recorder/ipc/recorder_service_stub.cpp",
+      "recorder/server/recorder_server.cpp",
+      "recorder_profiles/ipc/recorder_profiles_service_stub.cpp",
+      "recorder_profiles/server/recorder_profiles_server.cpp",
+      "sa_media/ipc/recorder_profiles_parcel.cpp",
+    ]
+  }
+  if (multimedia_player_framework_support_codec) {
+    sources += [
+      "avcodec/ipc/avcodec_listener_proxy.cpp",
+      "avcodec/ipc/avcodec_service_stub.cpp",
+      "avcodec/server/avcodec_server.cpp",
+      "avcodeclist/ipc/avcodeclist_service_stub.cpp",
+      "avcodeclist/server/avcodeclist_server.cpp",
+      "sa_media/ipc/avcodeclist_parcel.cpp",
+    ]
+  }
+  if (multimedia_player_framework_support_muxer) {
+    sources += [
+      "avmuxer/ipc/avmuxer_service_stub.cpp",
+      "avmuxer/server/avmuxer_server.cpp",
+    ]
+  }
+  if (multimedia_player_framework_support_metadata) {
+    sources += [
+      "avmetadatahelper/ipc/avmetadatahelper_service_stub.cpp",
+      "avmetadatahelper/server/avmetadatahelper_server.cpp",
+    ]
+  }
+
+  configs = [
+    ":media_service_config",
+    "//foundation/multimedia/player_framework/services/dfx:media_service_log_dfx_public_config",
+  ]
+
+  deps = [
+    "//foundation/multimedia/player_framework/services/dfx:media_service_dfx",
+    "//foundation/multimedia/player_framework/services/dfx:media_service_log_dfx",
+    "//foundation/multimedia/player_framework/services/utils:media_format",
+    "//foundation/multimedia/player_framework/services/utils:media_service_utils",
+    "//third_party/libxml2:xml2",
+  ]
+
+  if (multimedia_player_framework_support_video) {
+    configs += [ "//foundation/graphic/graphic_2d/frameworks/surface:surface_public_config" ]
+    deps += [ "//foundation/graphic/graphic_2d/frameworks/surface:surface" ]
+  }
+
+  external_deps = [
+    "access_token:libaccesstoken_sdk",
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+    "init:libbegetutil",
+    "ipc:ipc_core",
+    "safwk:system_ability_fwk",
+  ]
+
+  subsystem_name = "multimedia"
+  part_name = "multimedia_player_framework"
+}

@@ -1,0 +1,112 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+config("camera_framework_public_config") {
+  include_dirs = [
+    "//foundation/multimedia/camera_framework/interfaces/inner_api/native/camera/include",
+    "//foundation/multimedia/camera_framework/interfaces/inner_api/native/camera/include/input",
+    "//foundation/multimedia/camera_framework/interfaces/inner_api/native/camera/include/output",
+    "//foundation/multimedia/camera_framework/interfaces/inner_api/native/camera/include/session",
+  ]
+}
+
+config("camera_framework_local_config") {
+  include_dirs = [
+    "//foundation/multimedia/camera_framework/services/camera_service/include",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/base/include",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/client/include",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/server/include",
+    "//foundation/multimedia/camera_framework/interfaces/inner_api/native/camera/include",
+  ]
+}
+
+config("camera_framework_drivers_config") {
+  include_dirs = [
+    "//drivers/peripheral/camera/interfaces/include",
+    "//drivers/peripheral/camera/interfaces/hdi_ipc",
+    "//drivers/peripheral/camera/interfaces/hdi_ipc/server",
+    "//drivers/peripheral/camera/interfaces/metadata/include",
+  ]
+}
+
+ohos_shared_library("camera_framework") {
+  install_enable = true
+  sources = [
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/base/src/icamera_util.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/client/src/hcamera_device_proxy.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/client/src/hcamera_service_proxy.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/client/src/hcapture_session_proxy.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/client/src/hstream_capture_proxy.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/client/src/hstream_metadata_proxy.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/client/src/hstream_repeat_proxy.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/server/src/hcamera_device_callback_stub.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/server/src/hcamera_listener_stub.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/server/src/hcamera_service_callback_stub.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/server/src/hcapture_session_callback_stub.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/server/src/hstream_capture_callback_stub.cpp",
+    "//foundation/multimedia/camera_framework/services/camera_service/binder/server/src/hstream_repeat_callback_stub.cpp",
+    "src/input/camera_device.cpp",
+    "src/input/camera_input.cpp",
+    "src/input/camera_manager.cpp",
+    "src/input/capture_input.cpp",
+    "src/output/camera_output_capability.cpp",
+    "src/output/capture_output.cpp",
+    "src/output/metadata_output.cpp",
+    "src/output/photo_output.cpp",
+    "src/output/preview_output.cpp",
+    "src/output/video_output.cpp",
+    "src/session/capture_session.cpp",
+  ]
+
+  cflags = [
+    "-fPIC",
+    "-Wall",
+    "-DSUPPORT_CAMERA_AUTH",
+  ]
+  if (target_cpu == "arm") {
+    cflags += [ "-DBINDER_IPC_32BIT" ]
+  }
+
+  public_configs = [
+    ":camera_framework_public_config",
+    ":camera_framework_local_config",
+    ":camera_framework_drivers_config",
+  ]
+
+  include_dirs = [
+    "//foundation/graphic/graphic_2d/frameworks/surface/include",
+    "//utils/system/safwk/native/include",
+  ]
+
+  deps = [
+    "//drivers/interface/camera/v1_0:libcamera_proxy_1.0",
+    "//drivers/peripheral/camera/interfaces/metadata:metadata",
+    "//foundation/graphic/graphic_2d:libsurface",
+  ]
+
+  external_deps = [
+    "hisysevent_native:libhisysevent",
+    "hitrace_native:hitrace_meter",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+
+  cflags_cc = cflags
+
+  part_name = "multimedia_camera_framework"
+  subsystem_name = "multimedia"
+}

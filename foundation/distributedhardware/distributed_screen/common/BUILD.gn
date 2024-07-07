@@ -1,0 +1,52 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//build/ohos_var.gni")
+import(
+    "//foundation/distributedhardware/distributed_screen/distributedscreen.gni")
+
+ohos_shared_library("distributed_screen_utils") {
+  include_dirs = [
+    "//commonlibrary/c_utils/base/include",
+    "include",
+    "//base/hiviewdfx/hisysevent/interfaces/native/innerkits/hisysevent/include",
+    "//base/hiviewdfx/hitrace/interfaces/native/innerkits/include/hitrace_meter",
+    "//third_party/json/include",
+  ]
+
+  sources = [
+    "src/dscreen_hisysevent.cpp",
+    "src/dscreen_json_util.cpp",
+    "src/dscreen_log.cpp",
+    "src/dscreen_sa_process_state.cpp",
+    "src/dscreen_util.cpp",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "dsoftbus:softbus_client",
+    "hisysevent_native:libhisysevent",
+    "hiviewdfx_hilog_native:libhilog",
+  ]
+
+  defines = [
+    "HI_LOG_ENABLE",
+    "DH_LOG_TAG=\"dscreenutil\"",
+    "LOG_DOMAIN=0xD004100",
+  ]
+
+  subsystem_name = "distributedhardware"
+
+  part_name = "distributed_screen"
+}

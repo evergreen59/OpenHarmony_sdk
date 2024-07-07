@@ -1,0 +1,89 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//build/ohos_var.gni")
+import(
+    "//foundation/distributedhardware/distributed_screen/distributedscreen.gni")
+
+ohos_shared_library("distributed_screen_sink") {
+  include_dirs = [
+    "//base/hiviewdfx/hisysevent/interfaces/native/innerkits/hisysevent/include",
+    "//third_party/json/include",
+    "//commonlibrary/c_utils/base/include",
+    "//utils/system/safwk/native/include",
+    "//foundation/graphic/graphic_2d/interfaces/inner_api/surface",
+    "//foundation/graphic/graphic_2d/interfaces/inner_api/common",
+    "//foundation/graphic/graphic_2d/utils/buffer_handle/export",
+    "${windowmanager_path}/interfaces/innerkits/dm",
+    "${fwk_common_path}/utils/include",
+    "${distributedhardwarefwk_path}/interfaces/inner_kits/include",
+  ]
+
+  include_dirs += [
+    "./dscreenservice/include",
+    "./screenregionmgr/include",
+    "${interfaces_path}/innerkits/native_cpp/screen_sink/include",
+    "${interfaces_path}/innerkits/native_cpp/screen_sink/include/callback",
+    "${interfaces_path}/innerkits/native_cpp/screen_source/include",
+    "${interfaces_path}/innerkits/native_cpp/screen_source/include/callback",
+    "${common_path}/include",
+    "${services_path}/common/utils/include",
+    "${services_path}/common/databuffer/include",
+    "${services_path}/common/screen_channel/include",
+    "${services_path}/screentransport/screensinktrans/include",
+    "${services_path}/screentransport/screensinkprocessor/include",
+    "${services_path}/screentransport/screensinkprocessor/decoder/include",
+    "${services_path}/screenclient/include/",
+    "//foundation/multimedia/image_framework/interfaces/innerkits/include",
+    "//drivers/peripheral/display/interfaces/include",
+    "//drivers/peripheral/base",
+  ]
+
+  sources = [
+    "${interfaces_path}/innerkits/native_cpp/screen_sink/src/dscreen_sink_proxy.cpp",
+    "${interfaces_path}/innerkits/native_cpp/screen_source/src/dscreen_source_proxy.cpp",
+    "${services_path}/common/utils/src/dscreen_fwkkit.cpp",
+    "${services_path}/common/utils/src/dscreen_maprelation.cpp",
+    "${services_path}/common/utils/src/video_param.cpp",
+    "./dscreenservice/src/dscreen_sink_service.cpp",
+    "./dscreenservice/src/dscreen_sink_stub.cpp",
+    "./screenregionmgr/src/screenregion.cpp",
+    "./screenregionmgr/src/screenregionmgr.cpp",
+  ]
+
+  deps = [
+    "${common_path}:distributed_screen_utils",
+    "${distributedhardwarefwk_path}/interfaces/inner_kits:libdhfwk_sdk",
+    "${services_path}/screenclient:distributed_screen_client",
+    "${services_path}/screentransport/screensinktrans:distributed_screen_sinktrans",
+    "${windowmanager_path}/dm:libdm",
+  ]
+
+  defines = [
+    "HI_LOG_ENABLE",
+    "DH_LOG_TAG=\"dscreensink\"",
+    "LOG_DOMAIN=0xD004100",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "ipc:ipc_core",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+
+  subsystem_name = "distributedhardware"
+
+  part_name = "distributed_screen"
+}

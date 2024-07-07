@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_HOME">../logs</Property>
+        <property name="ERROR_LOG_FILE_NAME">../logs</property>
+        <property name="WARN_LOG_FILE_NAME">../logs</property>
+
+        <property name="FULL_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t-%L] %-5level %logger{36} - %msg%n</property>
+        <property name="PATTERN">%d{MM-dd HH:mm:ss} %-5level - %msg%n</property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <ThresholdFilter level="warn" onMatch="DENY"
+                             onMismatch="ACCEPT"/>
+            <PatternLayout
+                    pattern="${PATTERN}"/>
+        </Console>
+        <Console name="Ide" target="SYSTEM_ERR">
+            <ThresholdFilter level="warn" onMatch="ACCEPT"
+                             onMismatch="DENY"/>
+            <PatternLayout
+                    pattern="${PATTERN}"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <logger name="org.jboss.netty" level="warn"/>
+        <logger name="org.apache.http" level="warn"/>
+        <root level="info">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="Ide"/>
+        </root>
+    </Loggers>
+</Configuration>

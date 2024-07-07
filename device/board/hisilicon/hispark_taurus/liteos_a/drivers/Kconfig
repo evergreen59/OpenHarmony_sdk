@@ -1,0 +1,1 @@
+source "../../device/soc/hisilicon/common/platform/Kconfig"

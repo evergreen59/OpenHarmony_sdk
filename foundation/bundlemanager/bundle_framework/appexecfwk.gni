@@ -1,0 +1,140 @@
+# Copyright (c) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+VENDOR_CONFIG_PATH = rebase_path(
+        "//vendor/${product_company}/${product_name}/foundation/bundlemanager/bundle_framework/appexecfwk_impl.gni")
+CMD = "if [ -f ${VENDOR_CONFIG_PATH} ]; then echo true; else echo false; fi"
+
+vendor_config_exist =
+    exec_script("//build/lite/run_shell_cmd.py", [ CMD ], "value")
+if (vendor_config_exist) {
+  import(
+      "//vendor/${product_company}/${product_name}/foundation/bundlemanager/bundle_framework/appexecfwk_impl.gni")
+} else {
+  bundle_mgr_impl_sources = []
+  bundle_mgr_impl_include_dirs = []
+}
+
+ability_runtime_path = "//foundation/ability/ability_runtime"
+ability_runtime_innerkits_path = "${ability_runtime_path}/interfaces/inner_api"
+
+appexecfwk_path = "//foundation/bundlemanager/bundle_framework"
+common_path = "${appexecfwk_path}/common"
+services_path = "${appexecfwk_path}/services"
+kits_path = "${appexecfwk_path}/interfaces/kits"
+inner_api_path = "${appexecfwk_path}/interfaces/inner_api"
+tools_path = "${appexecfwk_path}/tools"
+core_path = "//foundation/bundlemanager/bundle_framework/interfaces/inner_api/appexecfwk_core"
+
+declare_args() {
+  bundle_framework_graphics = true
+  bundle_framework_free_install = true
+  bundle_framework_default_app = true
+  bundle_framework_launcher = true
+  bundle_framework_sandbox_app = true
+  bundle_framework_quick_fix = true
+  bundle_framework_app_control = true
+  distributed_bundle_framework = true
+
+  ability_runtime_enable = true
+  account_enable = true
+  configpolicy_enable = true
+  device_manager_enable = true
+  global_resmgr_enable = true
+  global_i18n_enable = true
+  hicollie_enable = true
+  hisysevent_enable = true
+  bms_rdb_enable = true
+  use_pre_bundle_profile = true
+
+  if (defined(global_parts_info) &&
+      !defined(global_parts_info.ability_ability_runtime)) {
+    ability_runtime_enable = false
+    bundle_framework_free_install = false
+  }
+
+  if (defined(global_parts_info) &&
+      !defined(global_parts_info.account_os_account)) {
+    account_enable = false
+    bundle_framework_free_install = false
+  }
+
+  if (defined(global_parts_info) &&
+      !defined(global_parts_info.bundlemanager_distributed_bundle_framework)) {
+    distributed_bundle_framework = false
+  }
+
+  if (defined(global_parts_info) &&
+      !defined(global_parts_info.customization_config_policy)) {
+    configpolicy_enable = false
+  }
+
+  if (defined(global_parts_info) &&
+      !defined(global_parts_info.distributedhardware_device_manager)) {
+    device_manager_enable = false
+  }
+
+  if (defined(global_parts_info) &&
+      !defined(global_parts_info.global_resource_management)) {
+    global_resmgr_enable = false
+  }
+
+  if (defined(global_parts_info) && !defined(global_parts_info.global_i18n)) {
+    global_i18n_enable = false
+  }
+
+  if (defined(global_parts_info) &&
+      !defined(global_parts_info.hiviewdfx_hicollie_native)) {
+    hicollie_enable = false
+  }
+
+  if (defined(global_parts_info) &&
+      (!defined(global_parts_info.powermgr_power_manager) ||
+       !defined(global_parts_info.powermgr_battery_manager) ||
+       !defined(global_parts_info.powermgr_display_manager) ||
+       !defined(global_parts_info.resourceschedule_device_usage_statistics))) {
+    bundle_framework_free_install = false
+  }
+
+  if (defined(global_parts_info) &&
+      !defined(global_parts_info.hiviewdfx_hisysevent_native)) {
+    hisysevent_enable = false
+  }
+
+  if (defined(global_parts_info) &&
+      !defined(global_parts_info.distributeddatamgr_relational_store)) {
+    bms_rdb_enable = false
+  }
+}
+
+if (!bms_rdb_enable) {
+  bundle_framework_app_control = false
+}
+
+print("bundle_framework_graphics = " + "$bundle_framework_graphics")
+print("bundle_framework_free_install = " + "$bundle_framework_free_install")
+print("bundle_framework_default_app = " + "$bundle_framework_default_app")
+print("bundle_framework_launcher = " + "$bundle_framework_launcher")
+print("bundle_framework_sandbox_app = " + "$bundle_framework_sandbox_app")
+print("bundle_framework_quick_fix = " + "$bundle_framework_quick_fix")
+print("bundle_framework_app_control = " + "$bundle_framework_app_control")
+print("distributed_bundle_framework = " + "$distributed_bundle_framework")
+print("ability_runtime_enable = " + "$ability_runtime_enable")
+print("account_enable = " + "$account_enable")
+print("configpolicy_enable = " + "$configpolicy_enable")
+print("device_manager_enable = " + "$device_manager_enable")
+print("global_resmgr_enable = " + "$global_resmgr_enable")
+print("hicollie_enable = " + "$hicollie_enable")
+print("support_jsapi = " + "$support_jsapi")
+print("hisysevent_enable = " + "$hisysevent_enable")
+print("bms_rdb_enable = " + "$bms_rdb_enable")

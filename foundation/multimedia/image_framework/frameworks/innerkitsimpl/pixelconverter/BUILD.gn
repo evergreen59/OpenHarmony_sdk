@@ -1,0 +1,229 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//foundation/multimedia/image_framework/ide/image_decode_config.gni")
+
+config("pixelconvertadapter_public_config") {
+  visibility = [ ":*" ]
+  include_dirs = [
+    "//foundation/multimedia/utils/include",
+    "//foundation/multimedia/image_framework/interfaces/innerkits/include",
+    "//foundation/multimedia/image_framework/frameworks/innerkitsimpl/pixelconverter/include",
+    "//base/hiviewdfx/hilog/interfaces/native/innerkits/include",
+    "//foundation/communication/ipc/utils/include",
+    "//foundation/multimedia/utils/lite/interfaces/kits",
+    "//third_party/flutter/skia/include/core",
+    "//third_party/flutter/skia/include/encode",
+    "//third_party/flutter/skia",
+    "//third_party/flutter/skia/src/ports/skia_ohos",
+    "//third_party/flutter/skia/src/ports",
+    "//third_party/flutter/skia/src/images",
+    "//third_party/flutter/skia/src/ports/skia_ohos",
+    "//third_party/flutter/skia/third_party/externals/freetype/include/freetype",
+    "//third_party/flutter/skia/include/private",
+    "//third_party/bounds_checking_function/include",
+  ]
+
+  if (use_mingw_win) {
+    include_dirs += [
+      "//foundation/multimedia/image_framework/mock/native/include",
+      "//base/hiviewdfx/hilog/interfaces/native/innerkits/include",
+      "//foundation/communication/ipc/utils/include",
+      "//third_party/flutter/skia/include/core",
+      "//third_party/flutter/skia/include/encode",
+      "//third_party/flutter/skia",
+      "//third_party/flutter/skia/src/ports/skia_ohos",
+      "//third_party/flutter/skia/src/ports",
+      "//third_party/flutter/skia/src/images",
+      "//third_party/flutter/skia/src/ports/skia_ohos",
+      "//third_party/flutter/skia/third_party/externals/freetype/include/freetype",
+      "//third_party/bounds_checking_function/include",
+    ]
+  } else if (use_clang_mac) {
+    include_dirs += [
+      "//foundation/multimedia/image_framework/mock/native/include",
+      "//base/hiviewdfx/hilog/interfaces/native/innerkits/include",
+      "//third_party/flutter/skia/include/core",
+      "//third_party/flutter/skia/include/encode",
+      "//third_party/flutter/skia",
+      "//third_party/flutter/skia/src/ports/skia_ohos",
+      "//third_party/flutter/skia/src/ports",
+      "//third_party/flutter/skia/src/images",
+      "//third_party/flutter/skia/src/ports/skia_ohos",
+      "//third_party/flutter/skia/third_party/externals/freetype/include/freetype",
+      "//third_party/bounds_checking_function/include",
+    ]
+  } else if (use_clang_ios) {
+    include_dirs += [
+      "//commonlibrary/c_utils/base/include",
+      "//foundation/communication/ipc/utils/include",
+      "//base/hiviewdfx/hilog/interfaces/native/innerkits/include",
+      "//third_party/flutter/skia/include/core",
+      "//third_party/flutter/skia/include/encode",
+      "//third_party/flutter/skia",
+      "//third_party/flutter/skia/src/ports/skia_ohos",
+      "//third_party/flutter/skia/src/ports",
+      "//third_party/flutter/skia/src/images",
+      "//third_party/expat/lib",
+      "//third_party/flutter/skia/include/private",
+      "//third_party/flutter/skia/third_party/externals/freetype/include/freetype",
+      "//third_party/bounds_checking_function/include",
+      "//foundation/multimedia/image_framework/mock/native/include",
+    ]
+  } else if (use_clang_android) {
+    include_dirs += [
+      "//commonlibrary/c_utils/base/include",
+      "//foundation/communication/ipc/utils/include",
+      "//base/hiviewdfx/hilog/interfaces/native/innerkits/include",
+      "//third_party/flutter/skia/include/core",
+      "//third_party/flutter/skia/include/encode",
+      "//third_party/flutter/skia",
+      "//third_party/flutter/skia/src/ports/skia_ohos",
+      "//third_party/flutter/skia/src/ports",
+      "//third_party/flutter/skia/src/images",
+      "//third_party/expat/lib",
+      "//third_party/flutter/skia/include/private",
+      "//third_party/flutter/skia/third_party/externals/freetype/include/freetype",
+      "//third_party/bounds_checking_function/include",
+      "//foundation/multimedia/image_framework/mock/native/include",
+    ]
+  } else {
+    include_dirs += [
+      "//commonlibrary/c_utils/base/include",
+      "//foundation/communication/ipc/utils/include",
+      "//base/hiviewdfx/hilog/interfaces/native/innerkits/include",
+      "//third_party/flutter/skia/include/core",
+      "//third_party/flutter/skia/include/encode",
+      "//third_party/flutter/skia",
+      "//third_party/flutter/skia/src/ports/skia_ohos",
+      "//third_party/flutter/skia/src/ports",
+      "//third_party/flutter/skia/src/images",
+      "//third_party/expat/lib",
+      "//third_party/flutter/skia/include/private",
+      "//third_party/flutter/skia/third_party/externals/freetype/include/freetype",
+      "//third_party/bounds_checking_function/include",
+    ]
+  }
+}
+
+if (use_clang_ios) {
+  ohos_source_set("pixelconvertadapter") {
+    sources = [ "//foundation/multimedia/image_framework/frameworks/innerkitsimpl/pixelconverter/src/pixel_convert_adapter.cpp" ]
+
+    public_configs = [ ":pixelconvertadapter_public_config" ]
+
+    defines = image_decode_ios_defines
+    deps = [
+      "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+      "//foundation/multimedia/image_framework/mock/native:utils_mock_static",
+      "//third_party/flutter/build/skia:ace_skia_ios",
+    ]
+
+    #relative_install_dir = "module/multimedia"
+    subsystem_name = "multimedia"
+    part_name = "multimedia_image_framework"
+  }
+} else {
+  ohos_shared_library("pixelconvertadapter") {
+    if (!use_clang_android) {
+      sanitize = {
+        cfi = true
+        debug = false
+      }
+    }
+    sources = [ "//foundation/multimedia/image_framework/frameworks/innerkitsimpl/pixelconverter/src/pixel_convert_adapter.cpp" ]
+
+    public_configs = [ ":pixelconvertadapter_public_config" ]
+
+    if (use_mingw_win) {
+      defines = image_decode_windows_defines
+      deps = [
+        "//base/hiviewdfx/hilog/interfaces/native/innerkits/include",
+        "//foundation/communication/ipc/utils/include",
+        "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+        "//third_party/flutter/build/skia:ace_skia_windows",
+        "//utils/jni:utils_jnikit_win",
+      ]
+    } else if (use_clang_mac) {
+      defines = image_decode_mac_defines
+      deps = [
+        "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+        "//third_party/flutter/build/skia:ace_skia_mac",
+      ]
+    } else if (use_clang_android) {
+      deps = [
+        "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+        "//third_party/flutter/build/skia:ace_skia_android",
+      ]
+
+      aosp_deps = [ "shared_library:libnativewindow" ]
+    } else {
+      deps = [
+        "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+        "//third_party/flutter/build/skia:ace_skia_ohos",
+      ]
+
+      external_deps = [ "c_utils:utils" ]
+    }
+
+    #relative_install_dir = "module/multimedia"
+    subsystem_name = "multimedia"
+    part_name = "multimedia_image_framework"
+  }
+}
+
+ohos_static_library("pixelconvertadapter_static") {
+  sources = [ "//foundation/multimedia/image_framework/frameworks/innerkitsimpl/pixelconverter/src/pixel_convert_adapter.cpp" ]
+  public_configs = [ ":pixelconvertadapter_public_config" ]
+
+  if (use_mingw_win) {
+    defines = image_decode_windows_defines
+    deps = [
+      "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+      "//third_party/flutter/build/skia:ace_skia_windows",
+    ]
+  } else if (use_clang_mac) {
+    defines = image_decode_mac_defines
+    deps = [
+      "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+      "//third_party/flutter/build/skia:ace_skia_mac",
+    ]
+  } else if (use_clang_ios) {
+    defines = image_decode_ios_defines
+    deps = [
+      "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+      "//foundation/multimedia/image_framework/mock/native:utils_mock_static",
+      "//third_party/flutter/build/skia:ace_skia_ios",
+    ]
+  } else if (use_clang_android) {
+    deps = [
+      "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+      "//third_party/flutter/build/skia:ace_skia_android",
+    ]
+
+    aosp_deps = [ "shared_library:libnativewindow" ]
+  } else {
+    deps = [
+      "//foundation/multimedia/image_framework/mock/native:log_mock_static",
+      "//third_party/flutter/build/skia:ace_skia_ohos",
+    ]
+
+    external_deps = [
+      "c_utils:utils",
+      "hiviewdfx_hilog_native:libhilog",
+    ]
+  }
+  subsystem_name = "multimedia"
+  part_name = "multimedia_image_framework"
+}

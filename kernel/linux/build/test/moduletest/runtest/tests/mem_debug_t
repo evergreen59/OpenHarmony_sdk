@@ -1,0 +1,35 @@
+################################################################################
+#
+# Copyright (C) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+################################################################################
+# File: mem_debug_t
+#
+# Description: mem debug testcase list
+#
+# Authors:     Wang Yuting - wangyuting36@huawei.com
+#
+# History:     May 24 2022 - init scripts
+#
+################################################################################
+mem_debug01 mem_debug01.sh
+mem_debug02 mem_debug02.sh
+mem_debug03 mem_debug03.sh
+mem_debug04 mem_debug04.sh
+mem_debug05 mem_debug05.sh
+mem_debug06 mem_debug06.sh
+mem_debug07 mem_debug07.sh
+mem_debug08 mem_debug08.sh
+mem_debug09 mem_debug09.sh
+mem_debug10 mem_debug10.sh

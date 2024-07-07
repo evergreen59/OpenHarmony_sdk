@@ -1,0 +1,41 @@
+{
+    "name": "@openharmony/linux",
+    "version": "3.1.0",
+    "description": "Linux内核",
+    "homePage": "https://gitee.com/openharmony",
+    "license": "GPL 2.0",
+    "publishAs": "",
+    "private": false,
+    "scripts": {},
+    "dirs": {},
+    "segment": {
+        "destPath": "kernel/linux/build"
+    },
+    "component": {
+        "name": "linux",
+        "subsystem": "kernel",
+        "syscap": [
+            "SystemCapability.Kernel.Linux"
+        ],
+        "features": [],
+        "adapted_system_type": [
+            "small",
+            "standard"
+        ],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [
+              "//kernel/linux/build:linux_kernel"
+            ],
+            "inner_kits": [],
+            "test": [
+            "//kernel/linux/build/test:linuxkerneltest"
+            ]
+        }
+    }
+}

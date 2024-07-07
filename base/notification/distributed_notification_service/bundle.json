@@ -1,0 +1,116 @@
+{
+  "name": "@ohos/distributed_notification_service",
+  "version": "",
+  "description": "为应用程序提供发布通知的能力",
+  "homePage": "https://gitee.com/openharmony",
+  "license": "Apache V2",
+  "repository": "https://gitee.com/openharmony/notification_ans_standard",
+  "domain": "os",
+  "language": "",
+  "publishAs": "code-segment",
+  "private": false,
+  "scripts": {},
+  "tags": [
+    "base"
+  ],
+  "keywords": [
+    "notification",
+    "ans",
+    "distributed_notification_service"
+  ],
+  "envs": [],
+  "dirs": [],
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "contributors": [
+    {
+      "name": "",
+      "email": "",
+      "url": ""
+    }
+  ],
+  "segment": {
+    "destPath": "base/notification/distributed_notification_service"
+  },
+  "component": {
+    "name": "distributed_notification_service",
+    "subsystem": "notification",
+    "syscap": [
+      "SystemCapability.Notification.Notification",
+      "SystemCapability.Notification.ReminderAgent"
+    ],
+    "features": [],
+    "adapted_system_type": [
+      "standard"
+    ],
+    "rom": "3000KB",
+    "ram": "16000KB",
+    "hisysevent_config":[
+      "//base/notification/distributed_notification_service/hisysevent.yaml"
+    ],
+    "deps": {
+      "components": [
+        "distributeddatamgr",
+        "ace_engine",
+        "samgr",
+        "hitrace_native",
+        "napi",
+        "window_manager",
+        "hiviewdfx_hilog_native",
+        "relational_store",
+        "device_usage_statistics",
+        "bundle_framework",
+        "time_service",
+        "safwk",
+        "ability_runtime",
+        "ability_base",
+        "common_event_service",
+        "os_account",
+        "hicollie_native",
+        "hisysevent_native",
+        "access_token",
+        "ipc",
+        "multimedia_player_framework",
+        "multimedia_image_framework",
+        "eventhandler",
+        "utils_base"
+      ],
+      "third_party": [
+        "libuv"
+      ]
+    },
+    "build": {
+      "group_type": {
+        "base_group": [
+
+        ],
+        "fwk_group": [
+          "//base/notification/distributed_notification_service/frameworks/ans:ans_client",
+          "//base/notification/distributed_notification_service/frameworks/core:ans_core",
+          "//base/notification/distributed_notification_service/frameworks/js/napi:napi_notification",
+          "//base/notification/distributed_notification_service/frameworks/js/napi:napi_reminder"
+        ],
+        "service_group": [
+          "//base/notification/distributed_notification_service/sa_profile:ans_sa_profile",
+          "//base/notification/distributed_notification_service/services:ans_service",
+          "//base/notification/distributed_notification_service/tools:tools_shell"
+        ]
+      },
+      "test": [
+        "//base/notification/distributed_notification_service/services/ans/test/unittest:ans_unit_test",
+        "//base/notification/distributed_notification_service/services/distributed/test/unittest:ans_unit_test",
+        "//base/notification/distributed_notification_service/services/test/moduletest:moduletest",
+        "//base/notification/distributed_notification_service/frameworks/test/moduletest:moduletest",
+        "//base/notification/distributed_notification_service/frameworks/ans/test/unittest:unittest",
+        "//base/notification/distributed_notification_service/frameworks/core/test/unittest:unittest",
+        "//base/notification/distributed_notification_service/test:systemtest",
+        "//base/notification/distributed_notification_service/tools:unittest",
+        "//base/notification/distributed_notification_service/test/bechmarktest:benchmarktest",
+        "//base/notification/distributed_notification_service/test/fuzztest:fuzztest"
+      ]
+    }
+  }
+}

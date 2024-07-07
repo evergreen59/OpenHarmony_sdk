@@ -1,0 +1,72 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base/telephony/core_service/telephony.gni")
+import("//build/ohos.gni")
+import("//drivers/hdf_core/adapter/uhdf2/uhdf.gni")
+
+RIL_ADAPTER = "//base/telephony/ril_adapter"
+RIL_HRIL = "//base/telephony/ril_adapter/services/hril/src"
+
+ohos_shared_library("hril") {
+  sources = [
+    "$RIL_HRIL/hril_base.cpp",
+    "$RIL_HRIL/hril_call.cpp",
+    "$RIL_HRIL/hril_data.cpp",
+    "$RIL_HRIL/hril_event.cpp",
+    "$RIL_HRIL/hril_manager.cpp",
+    "$RIL_HRIL/hril_modem.cpp",
+    "$RIL_HRIL/hril_network.cpp",
+    "$RIL_HRIL/hril_sim.cpp",
+    "$RIL_HRIL/hril_sms.cpp",
+    "$RIL_HRIL/hril_timer_callback.cpp",
+  ]
+
+  include_dirs = [
+    "$RIL_ADAPTER/services/hril/include",
+    "//drivers/hdf_core/adapter/uhdf2/include/hdi",
+    "//third_party/json/include",
+  ]
+
+  configs = [ "$RIL_ADAPTER/utils:utils_config" ]
+
+  defines += [
+    "TELEPHONY_LOG_TAG = \"Hril\"",
+    "LOG_DOMAIN = 0xD001F08",
+  ]
+
+  deps = [
+    "//base/telephony/ril_adapter/interfaces/innerkits:hril_innerkits",
+    "//drivers/hdf_core/adapter/uhdf2/ipc:libhdf_ipc_adapter",
+    "//drivers/hdf_core/adapter/uhdf2/utils:libhdf_utils",
+  ]
+
+  external_deps = [
+    "drivers_interface_power:libpower_proxy_1.0",
+    "drivers_interface_ril:ril_idl_headers",
+    "init:libbegetutil",
+    "ipc:ipc_single",
+  ]
+
+  public_deps = [ "//commonlibrary/c_utils/base:utils" ]
+
+  if (is_standard_system) {
+    external_deps += [ "hiviewdfx_hilog_native:libhilog" ]
+  } else {
+    external_deps += [ "hilog:libhilog" ]
+  }
+
+  install_images = [ chipset_base_dir ]
+  part_name = "ril_adapter"
+  subsystem_name = "telephony"
+}

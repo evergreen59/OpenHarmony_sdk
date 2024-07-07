@@ -1,0 +1,63 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base/hiviewdfx/hiappevent/hiappevent_aafwk.gni")
+import("//build/ohos.gni")
+
+config("libhiappevent_source_config") {
+  visibility = [ "*:*" ]
+  include_dirs = [
+    "include",
+    "//base/hiviewdfx/hiappevent/interfaces/native/kits/include",
+    "${ability_runtime_path}/interfaces/kits/native/appkit/ability_runtime/context",
+  ]
+}
+
+ohos_shared_library("libhiappevent_base") {
+  public_configs = [
+    ":libhiappevent_source_config",
+    "cache:hiappevent_cache_config",
+    "watcher:hiappevent_watcher_config",
+  ]
+
+  sources = [
+    "hiappevent_base.cpp",
+    "hiappevent_c.cpp",
+    "hiappevent_clean.cpp",
+    "hiappevent_config.cpp",
+    "hiappevent_read.cpp",
+    "hiappevent_verify.cpp",
+    "hiappevent_write.cpp",
+  ]
+
+  deps = [
+    "${ability_runtime_path}/frameworks/native/appkit:app_context",
+    "cache:hiappevent_cache",
+    "cleaner:hiappevent_cleaner",
+    "utility:hiappevent_utility",
+    "watcher:hiappevent_watcher",
+  ]
+
+  version_script = "libhiappevent_base.map"
+
+  external_deps = [
+    "bundle_framework:appexecfwk_base",
+    "bundle_framework:appexecfwk_core",
+    "hilog_native:libhilog",
+    "hitrace_native:libhitracechain",
+    "relational_store:native_rdb",
+  ]
+
+  part_name = "hiappevent_native"
+  subsystem_name = "hiviewdfx"
+}

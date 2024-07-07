@@ -1,0 +1,46 @@
+{
+    "name": "@ohos/crypto_framework",
+    "version": "3.1",
+    "description": "Openharmony's crypto framework.",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "base/security/crypto_framework"
+    },
+    "dirs": {},
+    "scripts": {},
+    "author": {},
+    "repository": "",
+    "license": "Apache License 2.0",
+    "component": {
+      "name": "crypto_framework",
+      "subsystem": "security",
+      "syscap": [ "SystemCapability.Security.CryptoFramework", "SystemCapability.Security.Cert" ],
+      "features": [],
+      "adapted_system_type": [
+          "standard"
+        ],
+      "rom": "1024KB",
+      "ram": "",
+      "deps": {
+        "components": [
+          "hiviewdfx_hilog_native"
+        ],
+        "third_party": [
+          "bounds_checking_function",
+          "openssl"
+        ]
+      },
+      "build": {
+        "sub_component": [
+          "//base/security/crypto_framework:crypto_framework_lib",
+          "//base/security/crypto_framework:crypto_openssl_plugin_lib",
+          "//base/security/crypto_framework:cryptoframework_napi"
+        ],
+        "inner_kits": [],
+        "test": [
+            "//base/security/crypto_framework:crypto_framework_test",
+            "//base/security/crypto_framework:crypto_framework_fuzztest"
+        ]
+      }
+    }
+}

@@ -1,0 +1,61 @@
+# Copyright (C) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+SUBSYSTEM_DIR = "//base/location/services"
+LOCATION_COMMON_ROOT = "//base/location/frameworks/location_common/common"
+
+ohos_shared_library("lbsservice_common") {
+  sources = [
+    "$LOCATION_COMMON_ROOT/source/app_identity.cpp",
+    "$LOCATION_COMMON_ROOT/source/common_hisysevent.cpp",
+    "$LOCATION_COMMON_ROOT/source/common_utils.cpp",
+    "$LOCATION_COMMON_ROOT/source/geo_address.cpp",
+    "$LOCATION_COMMON_ROOT/source/geo_coding_mock_info.cpp",
+    "$LOCATION_COMMON_ROOT/source/geofence_state.cpp",
+    "$LOCATION_COMMON_ROOT/source/location.cpp",
+    "$LOCATION_COMMON_ROOT/source/location_dumper.cpp",
+    "$LOCATION_COMMON_ROOT/source/request_config.cpp",
+    "$LOCATION_COMMON_ROOT/source/satellite_status.cpp",
+  ]
+
+  include_dirs = [
+    "//base/location/interfaces/inner_api/include",
+    "$SUBSYSTEM_DIR/location_geocode/geocode/include",
+    "$SUBSYSTEM_DIR/location_gnss/gnss/include",
+    "$SUBSYSTEM_DIR/location_locator/callback/include",
+    "$SUBSYSTEM_DIR/location_locator/distribute/include",
+    "$SUBSYSTEM_DIR/location_locator/locator/include",
+    "$SUBSYSTEM_DIR/location_network/network/include",
+    "$SUBSYSTEM_DIR/location_passive/passive/include",
+  ]
+
+  deps = []
+
+  external_deps = [
+    "ability_runtime:wantagent_innerkits",
+    "access_token:libaccesstoken_sdk",
+    "bundle_framework:appexecfwk_base",
+    "bundle_framework:appexecfwk_core",
+    "c_utils:utils",
+    "hisysevent_native:libhisysevent",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+    "os_account:os_account_innerkits",
+    "samgr:samgr_proxy",
+  ]
+
+  part_name = "location"
+  subsystem_name = "location"
+}

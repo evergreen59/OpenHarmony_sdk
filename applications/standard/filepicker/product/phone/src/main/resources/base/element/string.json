@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "phone_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "btn_upload",
+      "value": "upload"
+    },
+    {
+      "name": "btn_cancel",
+      "value": "cancel"
+    },
+    {
+      "name": "btn_save",
+      "value": "save"
+    }
+  ]
+}

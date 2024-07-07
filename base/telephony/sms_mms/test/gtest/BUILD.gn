@@ -1,0 +1,83 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base/telephony/core_service/telephony.gni")
+import("//build/test.gni")
+ohos_unittest("tel_sms_mms_gtest") {
+  subsystem_name = "telephony"
+  part_name = "sms_mms"
+  test_module = "tel_sms_mms_gtest"
+  module_out_path = part_name + "/" + test_module
+
+  sources = [
+    "//base/telephony/sms_mms/frameworks/native/sms/src/sms_service_proxy.cpp",
+    "sms_delivery_callback_gtest.cpp",
+    "sms_mms_gtest.cpp",
+    "sms_mms_test_helper.cpp",
+    "sms_send_callback_gtest.cpp",
+    "zero_branch_test.cpp",
+  ]
+
+  include_dirs = [
+    "//base/telephony/sms_mms/services/include",
+    "//base/telephony/sms_mms/interfaces/innerkits",
+    "//base/telephony/sms_mms/interfaces/kits/native",
+    "//base/telephony/call_manager/services/telephony_interaction/include",
+    "//base/telephony/sms_mms/frameworks/native/sms/include",
+    "//base/telephony/sms_mms/utils",
+    "//third_party/curl/include",
+  ]
+
+  configs = [ "//base/telephony/core_service/utils:telephony_log_config" ]
+
+  deps = [
+    "//base/telephony/core_service/utils:libtel_common",
+    "//base/telephony/sms_mms:tel_sms_mms",
+    "//base/telephony/sms_mms/frameworks/native:tel_sms_mms_api",
+    "//foundation/ability/ability_runtime/frameworks/native/ability/native:data_ability_helper",
+    "//foundation/ability/ability_runtime/interfaces/inner_api/ability_manager:ability_manager",
+    "//third_party/curl:curl",
+    "//third_party/googletest:gtest_main",
+  ]
+
+  external_deps = [
+    "access_token:libaccesstoken_sdk",
+    "access_token:libnativetoken",
+    "access_token:libtoken_setproc",
+    "c_utils:utils",
+    "common_event_service:cesfwk_innerkits",
+    "core_service:tel_core_service_api",
+    "eventhandler:libeventhandler",
+    "init:libbegetutil",
+    "ipc:ipc_core",
+    "netmanager_base:net_conn_manager_if",
+    "relational_store:native_dataability",
+    "relational_store:native_rdb",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+  defines += [
+    "TELEPHONY_LOG_TAG = \"SmsMmmsGtest\"",
+    "LOG_DOMAIN = 0xD000F00",
+  ]
+  if (is_standard_system) {
+    external_deps += [ "hiviewdfx_hilog_native:libhilog" ]
+  } else {
+    external_deps += [ "hilog:libhilog" ]
+  }
+}
+
+group("unittest") {
+  testonly = true
+  deps = [ ":tel_sms_mms_gtest" ]
+}

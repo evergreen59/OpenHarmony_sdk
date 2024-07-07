@@ -1,0 +1,86 @@
+{
+  "name": "@openharmony/user_auth_framework",
+  "version": "3.1.0",
+  "description": "User Authentication capability",
+  "homePage": "https://gitee.com/openharmony",
+  "author": {},
+  "repository": "",
+  "license": "Apache License 2.0",
+  "publishAs": "code-segment",
+  "segment": {
+    "destPath": "base/useriam/user_auth_framework"
+  },
+  "dirs": {},
+  "scripts": {},
+  "component": {
+    "name": "user_auth_framework",
+    "subsystem": "useriam",
+    "adapted_system_type": [
+      "standard"
+    ],
+    "syscap": [
+      "SystemCapability.UserIAM.UserAuth.Core"
+    ],
+    "features": [],
+    "hisysevent_config": [
+      "//base/useriam/user_auth_framework/hisysevent.yaml"
+    ],
+    "rom": "3924KB",
+    "ram": "5000KB",
+    "deps": {
+      "components": [
+        "hiviewdfx_hilog_native",
+        "ipc",
+        "safwk",
+        "samgr",
+        "hilog",
+        "user_auth_framework"
+      ],
+      "third_party": [
+        "openssl"
+      ]
+    },
+    "build": {
+      "group_type": {
+        "base_group": [
+        ],
+        "fwk_group": [
+          "//base/useriam/user_auth_framework/frameworks/js/napi/user_auth:userauth"
+        ],
+        "service_group": [
+          "//base/useriam/user_auth_framework/sa_profile:useriam.init",
+          "//base/useriam/user_auth_framework/services:userauthservice",
+          "//base/useriam/user_auth_framework/common/executors:userauth_executors",
+          "//base/useriam/user_auth_framework/sa_profile:userauth_sa_profile",
+          "//base/useriam/user_auth_framework/param:param_files"
+        ]
+      },
+      "inner_kits": [
+        {
+          "type": "so",
+          "name": "//base/useriam/user_auth_framework/frameworks/native/client:userauth_client",
+          "header": {
+            "header_files": [
+              "attributes.h",
+              "co_auth_client.h",
+              "co_auth_client_callback.h",
+              "co_auth_client_defines.h",
+              "iam_common_defines.h",
+              "user_auth_client.h",
+              "user_auth_client_callback.h",
+              "user_auth_client_defines.h",
+              "user_idm_client.h",
+              "user_idm_client_callback.h",
+              "user_idm_client_defines.h"
+            ],
+            "header_base": "//base/useriam/user_auth_framework/interfaces/inner_api/"
+          }
+        }
+      ],
+      "test": [
+        "//base/useriam/user_auth_framework/test:iam_unittest",
+        "//base/useriam/user_auth_framework/test:iam_fuzztest"
+      ]
+    }
+  }
+}

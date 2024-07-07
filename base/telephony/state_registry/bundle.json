@@ -1,0 +1,86 @@
+{
+    "name": "@ohos/state_registry",
+    "version": "3.1.0",
+    "description": "telephony state_registry service",
+    "publishAs": "code-segment",
+    "homePage": "https://gitee.com/openharmony",
+    "repository": "https://gitee.com/openharmony/telephony_state_registry",
+    "license": "Apache License 2.0",
+    "language": "",
+    "private": false,
+    "scripts": {},
+    "envs": [],
+    "dirs": [],
+    "author": {},
+    "contributors": [],
+    "segment": {
+        "destPath": "base/telephony/state_registry"
+    },
+    "component": {
+        "name": "state_registry",
+        "subsystem": "telephony",
+        "syscap": [
+            "SystemCapability.Telephony.StateRegistry"
+        ],
+        "features": [],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "550KB",
+        "ram": "1MB",
+        "deps": {
+            "components": [
+                "ability_base",
+                "c_utils",
+                "common_event_service",
+                "core_service",
+                "eventhandler",
+                "hiviewdfx_hilog_native",
+                "init",
+                "ipc",
+                "napi",
+                "safwk",
+                "samgr"
+            ],
+            "third_party": [
+                "libuv"
+            ]
+        },
+        "build": {
+            "group_type": {
+                "base_group": [
+                ],
+                "fwk_group": [
+                    "//base/telephony/state_registry/frameworks/native/observer:tel_state_registry_api",
+                    "//base/telephony/state_registry/frameworks/js/napi:observer"
+                ],
+                "service_group": [
+                    "//base/telephony/state_registry:tel_state_registry",
+                    "//base/telephony/state_registry/sa_profile:state_registry_sa_profile"
+                ]
+            },
+            "inner_kits": [
+                {
+                    "type": "so",
+                    "header": {
+                        "header_files": [
+                            "../../../../state_registry/interfaces/innerkits/observer/telephony_observer_client.h",
+                            "i_telephony_state_notify.h",
+                            "telephony_observer_broker.h",
+                            "cell_information.h",
+                            "network_state.h",
+                            "signal_information.h",
+                            "sim_state_type.h"
+                        ],
+                        "header_base": "//base/telephony/core_service/interfaces/innerkits/include"
+                    },
+                    "name": "//base/telephony/state_registry/frameworks/native/observer:tel_state_registry_api"
+                }
+            ],
+            "test": [
+                "//base/telephony/state_registry/test:unittest"
+            ]
+        }
+    }
+}
+

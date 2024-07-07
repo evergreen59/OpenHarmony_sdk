@@ -1,0 +1,28 @@
+{
+  "string": [
+     {
+      "name": "pad_desc",
+      "value": "文件选择器"
+    },
+    {
+      "name": "MainAbility_desc",
+      "value": "文件选择器"
+    },
+    {
+      "name": "MainAbility_label",
+      "value": "文件选择器"
+    },
+    {
+      "name": "btn_upload",
+      "value": "上传"
+    },
+    {
+      "name": "btn_cancel",
+      "value": "取消"
+    },
+    {
+      "name": "btn_save",
+      "value": "保存"
+    }
+  ]
+}

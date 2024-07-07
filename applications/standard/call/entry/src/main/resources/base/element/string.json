@@ -1,0 +1,212 @@
+{
+  "string": [
+    {
+      "name": "callui_description",
+      "value": "Phone"
+    },
+    {
+      "name": "sms",
+      "value": "Message"
+    },
+    {
+      "name": "remind",
+      "value": "Reminder"
+    },
+    {
+      "name": "hangUpReply",
+      "value": "Respond with"
+    },
+    {
+      "name": "backLater",
+      "value": "I'll call you back."
+    },
+    {
+      "name": "answerThePhone",
+      "value": "Sorry, I can't talk right now."
+    },
+    {
+      "name": "contactMeLater",
+      "value": "I'm in a meeting. I'll get back to you ASAP."
+    },
+    {
+      "name": "beThereSoon",
+      "value": "I'm on my way."
+    },
+    {
+      "name": "customSMS",
+      "value": "Custom..."
+    },
+    {
+      "name": "cancel",
+      "value": "CANCEL"
+    },
+    {
+      "name": "callBackReminder",
+      "value": "Callback reminder"
+    },
+    {
+      "name": "minutes",
+      "value": "In 30 minutes"
+    },
+    {
+      "name": "oneHourLater",
+      "value": "In 1 hour"
+    },
+    {
+      "name": "twoHoursLater",
+      "value": "In 2 hours"
+    },
+    {
+      "name": "dialing",
+      "value": "Dialing"
+    },
+    {
+      "name": "calling",
+      "value": "calling"
+    },
+    {
+      "name": "callHold",
+      "value": "Call hold"
+    },
+    {
+      "name": "hangUpCompleted",
+      "value": "Hang up completed"
+    },
+    {
+      "name": "hangingUp",
+      "value": "Hanging up"
+    },
+    {
+      "name": "recording",
+      "value": "Record"
+    },
+    {
+      "name": "keep",
+      "value": "Hold"
+    },
+    {
+      "name": "addCall",
+      "value": "Add call"
+    },
+    {
+      "name": "videoCall",
+      "value": "Video call"
+    },
+    {
+      "name": "mute",
+      "value": "Mute"
+    },
+    {
+      "name": "contactPerson",
+      "value": "Contacts"
+    },
+    {
+      "name": "partyIsRinging",
+      "value": "Ringing"
+    },
+    {
+      "name": "saveNumber",
+      "value": "Save number"
+    },
+    {
+      "name": "addToBlacklist",
+      "value": "add to blacklist"
+    },
+    {
+      "name": "shutDown",
+      "value": "shut down"
+    },
+    {
+      "name": "speaker",
+      "value": "Speaker"
+    },
+    {
+      "name": "phoneHandset",
+      "value": "Handset earpiece"
+    },
+    {
+      "name": "mobileNetwork",
+      "value": "Unable to access the mobile network."
+    },
+    {
+      "name": "gotIt",
+      "value": "Got it"
+    },
+    {
+      "name": "currentCall",
+      "value": "Current cal"
+    },
+    {
+      "name": "hangUp",
+      "value": "hang up"
+    },
+    {
+      "name": "handsFree",
+      "value": "Hands-free"
+    },
+    {
+      "name": "incomingCall",
+      "value": "Incoming call"
+    },
+    {
+      "name": "reject",
+      "value": "DECLINE"
+    },
+    {
+      "name": "answer",
+      "value": "ANSWER"
+    },
+    {
+      "name": "maintain",
+      "value": "On hold"
+    },
+    {
+      "name": "exchange",
+      "value": "Swap"
+    },
+    {
+      "name": "mergeCall",
+      "value": "Merge calls"
+    },
+    {
+      "name": "manageUsers",
+      "value": "Manage users"
+    },
+    {
+      "name": "telephoneConference",
+      "value": "Conference"
+    },
+    {
+      "name": "unknownNumber",
+      "value": "Unknown number"
+    },
+    {
+      "name": "noCard",
+      "value": "Can't access mobile network"
+    },
+    {
+      "name": "telephone_Conference",
+      "value": "Conference"
+    },
+    {
+      "name": "message_Failed",
+      "value": "message failed to send"
+    },
+    {
+      "name": "SMS_Sent",
+      "value": "SMS sent to"
+    },
+    {
+      "name": "SMS_Authorization_Notification",
+      "value": "Go to settings for SMS Authorization"
+    },
+    {
+      "name": "emergency",
+      "value": "Emergency"
+    },
+    {
+      "name": "end_holding_call",
+      "value": "Answering this call will end the one currently on hold"
+    }
+  ]
+}

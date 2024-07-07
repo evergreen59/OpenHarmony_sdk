@@ -1,0 +1,123 @@
+# Copyright (c) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/test.gni")
+import("../../updateengine.gni")
+
+module_output_path = "updater/updateservice_test"
+config("utest_config") {
+  visibility = [ ":*" ]
+
+  cflags = [
+    "-fprofile-arcs",
+    "-ftest-coverage",
+    "-Wno-implicit-fallthrough",
+    "-Wno-unused-function",
+  ]
+  cflags_cc = [ "-Wno-implicit-fallthrough" ]
+
+  ldflags = [ "--coverage" ]
+}
+
+ohos_unittest("$updateengine_unittest_name") {
+  testonly = true
+  module_out_path = module_output_path
+  sources = [
+    "update_client/client_stub.cpp",
+    "update_client/client_unittest.cpp",
+    "update_engine/server_unittest.cpp",
+    "update_server_ut_entry.cpp",
+  ]
+
+  sources += [
+    "$updateengine_root_path/frameworks/js/napi/client/update_client.cpp",
+    "$updateengine_root_path/frameworks/js/napi/client/update_module.cpp",
+    "$updateengine_root_path/frameworks/js/napi/client/update_session.cpp",
+    "$updateengine_root_path/interfaces/inner_api/engine/update_service_kits_impl.cpp",
+    "$updateengine_root_path/interfaces/inner_api/engine/update_service_proxy.cpp",
+    "$updateengine_root_path/services/callback/src/update_callback.cpp",
+    "$updateengine_root_path/services/callback/src/update_callback_proxy.cpp",
+    "$updateengine_root_path/services/callback/src/update_callback_stub.cpp",
+    "$updateengine_root_path/services/engine/src/progress_thread.cpp",
+    "$updateengine_root_path/services/engine/src/update_helper.cpp",
+    "$updateengine_root_path/services/engine/src/update_service.cpp",
+    "$updateengine_root_path/services/engine/src/update_service_stub.cpp",
+    "//base/update/updater/interfaces/kits/packages/package.cpp",
+    "//base/update/updater/interfaces/kits/updaterkits/updaterkits.cpp",
+  ]
+  include_dirs = [
+    "//base/update/updater/interfaces/kits/include/",
+    "//base/update/updater/interfaces/kits/include/package",
+    "$updateengine_root_path",
+    "$updateengine_root_path/interfaces/inner_api/include",
+    "$updateengine_root_path/frameworks/js/napi/client/",
+    "$updateengine_root_path/services/engine/include",
+    "$updateengine_root_path/services/callback/include",
+    "//base/update/updater/utils/include/",
+    "//base/update/updater/services/include/",
+    "//base/update/updater/services/include/log",
+    "//base/update/updater/services/include/package",
+    "//base/update/updater/test/unittest",
+    "//third_party/bounds_checking_function/include",
+    "//third_party/googletest/googletest/include",
+    "//third_party/node/src",
+    "//foundation/arkui/napi/interfaces/kits",
+    "//third_party/cJSON",
+    "//third_party/libxml2/include",
+    "//third_party/curl/include",
+    "//third_party/openssl/include",
+    "//foundation/communication/ipc/interfaces/innerkits/ipc_core/include",
+    "//foundation/systemabilitymgr/samgr/interfaces/innerkits/samgr_proxy/include",
+    "//foundation/systemabilitymgr/safwk/services/safwk/include",
+    "//foundation/systemabilitymgr/safwk/interfaces/innerkits/safwk",
+    "//foundation/systemabilitymgr/samgr/adapter/interfaces/innerkits/include",
+    "//foundation/systemabilitymgr/samgr/interfaces/innerkits/samgr_proxy/include",
+  ]
+
+  deps = [
+    "//base/update/updater/interfaces/kits/misc_info:libmiscinfo",
+    "//base/update/updater/interfaces/kits/packages:libpackageExt",
+    "//base/update/updater/interfaces/kits/updaterkits:libupdaterkits",
+    "//base/update/updater/services/log:libupdaterlog",
+    "//base/update/updater/services/package:libupdaterpackage",
+    "//base/update/updater/utils:libutils",
+    "//third_party/bounds_checking_function:libsec_static",
+    "//third_party/cJSON:cjson_static",
+    "//third_party/curl:curl",
+    "//third_party/googletest:gmock_main",
+    "//third_party/googletest:gtest_main",
+    "//third_party/libxml2:xml2",
+    "//third_party/lz4:liblz4_static",
+    "//third_party/openssl:libcrypto_shared",
+    "//third_party/openssl:libssl_shared",
+  ]
+
+  defines = [
+    "UPDATER_UT",
+    "UPDATER_API_TEST",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+    "init:libbegetutil",
+    "ipc:ipc_core",
+    "samgr:samgr_proxy",
+  ]
+
+  cflags_cc = [ "-fexceptions" ]
+
+  public_configs = [ ":utest_config" ]
+  install_enable = true
+  part_name = "$updateengine_part_name"
+}

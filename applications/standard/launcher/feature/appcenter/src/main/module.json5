@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "launcher_appcenter",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets"
+  }
+}

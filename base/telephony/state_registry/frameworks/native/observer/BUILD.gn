@@ -1,0 +1,61 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+import("//build/ohos.gni")
+SUBSYSTEM_DIR = "//base/telephony/state_registry"
+CORE_DIR = "//base/telephony/core_service"
+
+config("state_registry_observer_config") {
+  include_dirs = [
+    "$SUBSYSTEM_DIR/interfaces/innerkits/observer",
+    "$SUBSYSTEM_DIR/frameworks/native/common/include",
+  ]
+}
+
+ohos_shared_library("tel_state_registry_api") {
+  sources = [
+    "$CORE_DIR/frameworks/native/src/cell_information.cpp",
+    "$CORE_DIR/frameworks/native/src/network_state.cpp",
+    "$CORE_DIR/frameworks/native/src/signal_information.cpp",
+    "$CORE_DIR/frameworks/native/src/telephony_state_registry_proxy.cpp",
+    "$SUBSYSTEM_DIR/frameworks/native/observer/src/telephony_observer.cpp",
+    "$SUBSYSTEM_DIR/frameworks/native/observer/src/telephony_observer_client.cpp",
+    "$SUBSYSTEM_DIR/frameworks/native/observer/src/telephony_observer_proxy.cpp",
+    "$SUBSYSTEM_DIR/frameworks/native/observer/src/telephony_state_manager.cpp",
+  ]
+
+  include_dirs = [
+    "$SUBSYSTEM_DIR/frameworks/native/observer/include",
+    "$CORE_DIR/interfaces/innerkits/include",
+  ]
+
+  configs = [ "//base/telephony/core_service/utils:telephony_log_config" ]
+
+  public_configs = [ ":state_registry_observer_config" ]
+
+  deps = [ "$CORE_DIR/utils:libtel_common" ]
+
+  external_deps = [
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+    "samgr:samgr_proxy",
+  ]
+
+  defines = [
+    "TELEPHONY_LOG_TAG = \"StateRegistryApi\"",
+    "LOG_DOMAIN = 0xD001F07",
+  ]
+  install_images = [ system_base_dir ]
+  relative_install_dir = "platformsdk"
+  part_name = "state_registry"
+  subsystem_name = "telephony"
+}

@@ -1,0 +1,49 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//drivers/hdf_core/adapter/uhdf2/uhdf.gni")
+
+RIL_ADAPTER = "//base/telephony/ril_adapter"
+HRIL_HDF_ROOT = "$RIL_ADAPTER/services/hril_hdf"
+
+ohos_shared_library("hril_hdf") {
+  sources = [ "$HRIL_HDF_ROOT/src/hril_hdf.c" ]
+
+  include_dirs = [ "$HRIL_HDF_ROOT/include" ]
+
+  configs = [ "$RIL_ADAPTER/utils:utils_config" ]
+
+  public_deps = [ "//third_party/eudev:libudev" ]
+
+  deps = [
+    "$RIL_ADAPTER/services/hril:hril",
+    "${hdf_uhdf_path}/host:libhdf_host",
+    "${hdf_uhdf_path}/utils:libhdf_utils",
+  ]
+
+  external_deps = [ "init:libbegetutil" ]
+  defines = [
+    "LOG_TAG = \"HrilHdf\"",
+    "LOG_DOMAIN = 0xD001F08",
+  ]
+  if (is_standard_system) {
+    external_deps += [ "hiviewdfx_hilog_native:libhilog" ]
+  } else {
+    external_deps += [ "hilog:libhilog" ]
+  }
+
+  install_images = [ chipset_base_dir ]
+  part_name = "ril_adapter"
+  subsystem_name = "telephony"
+}

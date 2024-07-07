@@ -1,0 +1,81 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//foundation/distributeddatamgr/preferences/preferences.gni")
+
+group("common_target") {
+  deps = [ ":libtel_common" ]
+}
+
+config("telephony_log_config") {
+  include_dirs = [ "log/include" ]
+}
+
+config("tel_utils_config") {
+  include_dirs = [
+    "common/include",
+    "preferences/include",
+    "log/include",
+  ]
+}
+
+ohos_shared_library("libtel_common") {
+  include_dirs = [ "//base/hiviewdfx/hisysevent/interfaces/native/innerkits/hisysevent/include" ]
+
+  sources = [
+    "common/src/enum_convert.cpp",
+    "common/src/str_convert.cpp",
+    "common/src/telephony_common_utils.cpp",
+    "common/src/telephony_permission.cpp",
+    "preferences/src/tel_profile_util.cpp",
+  ]
+
+  defines = [
+    "TELEPHONY_LOG_TAG = \"TelephonyCommon\"",
+    "LOG_DOMAIN = 0xD001F04",
+  ]
+
+  if (is_standard_system) {
+    defines += [ "STANDARD_SYSTEM_ENABLE" ]
+  }
+
+  configs = [ "//base/telephony/core_service/utils:telephony_log_config" ]
+
+  public_configs = [ ":tel_utils_config" ]
+
+  public_deps = [ "//commonlibrary/c_utils/base:utils" ]
+
+  if (is_double_framework) {
+    cflags_cc = [ "-DCONFIG_DUAL_FRAMEWORK" ]
+  }
+
+  if (is_standard_system) {
+    external_deps = [ "hiviewdfx_hilog_native:libhilog" ]
+  } else {
+    external_deps = [ "hilog:libhilog" ]
+  }
+
+  external_deps += [
+    "access_token:libaccesstoken_sdk",
+    "access_token:libprivacy_sdk",
+    "bundle_framework:appexecfwk_base",
+    "bundle_framework:appexecfwk_core",
+    "ipc:ipc_single",
+    "preferences:native_preferences",
+    "samgr:samgr_proxy",
+  ]
+
+  part_name = "core_service"
+  subsystem_name = "telephony"
+}

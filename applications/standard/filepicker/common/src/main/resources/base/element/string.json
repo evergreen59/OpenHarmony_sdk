@@ -1,0 +1,68 @@
+{
+  "string": [
+    {
+      "name": "page_show",
+      "value": "page from npm package"
+    },
+    {
+      "name": "save_file_has_same_file",
+      "value": "Duplicate name file already exists"
+    },
+    {
+      "name": "save_file_no_media_permission",
+      "value": "Saving to media library is not currently supported"
+    },
+    {
+      "name": "save_file_unknown_reason",
+      "value": "Unknown error"
+    },
+    {
+      "name": "file_unknown",
+      "value": "Unknown file"
+    },
+    {
+      "name": "file_zip",
+      "value": "Compressed (zipped) file"
+    },
+    {
+      "name": "file_xml",
+      "value": "XML document"
+    },
+    {
+      "name": "file_xls",
+      "value": "Microsoft Excel worksheet"
+    },
+    {
+      "name": "file_txt",
+      "value": "Txt document"
+    },
+    {
+      "name": "file_rar",
+      "value": "Rar compressed file"
+    },
+    {
+      "name": "file_pdf",
+      "value": "Adobe Acrobat Document"
+    },
+    {
+      "name": "file_html",
+      "value": "HTML Document"
+    },
+    {
+      "name": "file_pptx",
+      "value": "Microsoft PowerPoint Presentation"
+    },
+    {
+      "name": "file_docx",
+      "value": "Microsoft Word Document"
+    },
+    {
+      "name": "file_type",
+      "value": "file type"
+    },
+    {
+      "name": "file_name",
+      "value": "file name : "
+    }
+  ]
+}

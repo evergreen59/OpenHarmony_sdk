@@ -1,0 +1,117 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+config("ohos_adapter_public_interface") {
+  include_dirs = [
+    "//base/web/webview/ohos_adapter/interfaces",
+    "//foundation/bundlemanager/bundle_framework/interfaces/inner_api/appexecfwk_core/include/bundlemgr",
+    "//base/global/resource_management/interfaces/inner_api/include",
+    "//foundation/systemabilitymgr/safwk/services/safwk/include",
+  ]
+}
+
+ohos_shared_library("nweb_ohos_adapter") {
+  sources = [
+    "aafwk_adapter/src/aafwk_app_mgr_client_adapter_impl.cpp",
+    "aafwk_adapter/src/aafwk_render_scheduler_impl.cpp",
+    "audio_adapter/src/audio_renderer_adapter_impl.cpp",
+    "audio_adapter/src/audio_system_manager_adapter_impl.cpp",
+    "battery_mgr_adapter/src/battery_mgr_client_adapter_impl.cpp",
+    "datashare_adapter/src/datashare_adapter_impl.cpp",
+    "display_manager_adapter/src/display_manager_adapter_impl.cpp",
+    "distributeddatamgr_adapter/webdatabase/src/ohos_web_data_base_adapter_impl.cpp",
+    "distributeddatamgr_adapter/webdatabase/src/ohos_web_dns_data_base_adapter_impl.cpp",
+    "distributeddatamgr_adapter/webdatabase/src/ohos_web_permission_data_base_adapter_impl.cpp",
+    "inputmethodframework_adapter/src/imf_adapter_impl.cpp",
+    "interfaces/ohos_adapter_helper.cpp",
+    "multimodalinput_adapter/src/mmi_adapter_impl.cpp",
+    "net_connect_adapter/src/net_connect_adapter_impl.cpp",
+    "net_connect_adapter/src/net_connect_callback_impl.cpp",
+    "net_connect_adapter/src/net_connect_utils.cpp",
+    "ohos_init_web_adapter/src/ohos_init_web_adapter_impl.cpp",
+    "pasteboard_adapter/src/pasteboard_client_adapter_impl.cpp",
+    "power_mgr_adapter/src/power_mgr_client_adapter_impl.cpp",
+    "pre_dns_adapter/src/nweb_pre_dns_adapter.cpp",
+    "soc_perf_adapter/src/soc_perf_client_adapter_impl.cpp",
+  ]
+
+  cflags = [
+    "-Wall",
+    "-Werror",
+    "-g3",
+  ]
+
+  include_dirs = [
+    "aafwk_adapter/include",
+    "display_manager_adapter/include",
+    "net_connect_adapter/include",
+    "ohos_init_web_adapter/include",
+    "power_mgr_adapter/include",
+    "battery_mgr_adapter/include",
+    "distributeddatamgr_adapter/webdatabase/include",
+    "pasteboard_adapter/include",
+    "datashare_adapter/include",
+    "audio_adapter/include",
+    "multimodalinput_adapter/include",
+    "soc_perf_adapter/include",
+    "inputmethodframework_adapter/include",
+    "//base/web/webview/ohos_nweb/include",
+    "//third_party/jsoncpp/include",
+    "//third_party/json/include",
+  ]
+
+  public_configs = [ ":ohos_adapter_public_interface" ]
+
+  external_deps = [
+    "ability_base:want",
+    "ability_base:zuri",
+    "ability_runtime:abilitykit_native",
+    "ability_runtime:app_manager",
+    "battery_manager:batterysrv_client",
+    "c_utils:utils",
+    "cellular_data:tel_cellular_data_api",
+    "common_event_service:cesfwk_innerkits",
+    "core_service:tel_core_service_api",
+    "data_share:datashare_common",
+    "data_share:datashare_consumer",
+    "file_api:remote_uri_native",
+    "hiviewdfx_hilog_native:libhilog",
+    "imf:inputmethod_client",
+    "init:libbegetutil",
+    "input:libmmi-client",
+    "ipc:ipc_core",
+    "multimedia_audio_framework:audio_client",
+    "multimedia_audio_framework:audio_renderer",
+    "multimedia_image_framework:image_native",
+    "netmanager_base:net_conn_manager_if",
+    "pasteboard:pasteboard_client",
+    "power_manager:powermgr_client",
+    "relational_store:native_rdb",
+    "samgr:samgr_proxy",
+    "window_manager:libdm",
+  ]
+
+  if (defined(global_parts_info.resourceschedule_soc_perf)) {
+    external_deps += [ "soc_perf:socperf_client" ]
+    defines = [ "NWEB_SOC_PERF" ]
+  }
+
+  deps = [
+    "//foundation/ability/ability_runtime/frameworks/native/appkit:app_context",
+  ]
+
+  part_name = "webview"
+  subsystem_name = "web"
+}

@@ -1,0 +1,67 @@
+{
+  "name": "@ohos/screenlock_mgr",
+  "description": "Provide communication capability between windowmanager and screenlock app",
+  "version": "3.1",
+  "license": "Apache License 2.0",
+  "publishAs": "code-segment",
+  "segment": {
+    "destPath": "base/theme/screenlock_mgr"
+  },
+  "dirs": {},
+  "scripts": {},
+  "component": {
+    "name": "screenlock_mgr",
+    "subsystem": "theme",
+    "syscap": [
+      "SystemCapability.MiscServices.ScreenLock"
+    ],
+    "features": [
+    ],
+    "adapted_system_type": [
+      "standard"
+    ],
+    "rom":"300KB",
+    "ram":"1024KB",
+    "deps": {
+      "components": [
+        "multimedia_image_framework",
+        "safwk",
+        "napi",
+        "samgr",
+        "common_event_service",
+        "ipc",
+        "eventhandler",
+        "os_account",
+        "bundle_framework",
+        "ability_base",
+        "hiviewdfx_hilog_native",
+        "ril_device_driver_interface",
+        "user_auth_framework",
+        "core_service",
+        "utils_base"
+      ],
+      "third_party": []
+    },
+    "build": {
+      "group_type": {
+        "base_group": [
+        ],
+        "fwk_group": [
+          "//base/theme/screenlock_mgr/frameworks/kitsimpl:screenlock_client",
+          "//base/theme/screenlock_mgr/interfaces/kits/napi:screenlock",
+          "//base/theme/screenlock_mgr/utils:screenlock_utils"
+        ],
+        "service_group": [
+          "//base/theme/screenlock_mgr:screenlock_mgr_packages"
+        ]
+      },
+      "inner_kits": [
+      ],
+      "test": [
+        "//base/theme/screenlock_mgr/interfaces/kits/napi/test:unittest",
+        "//base/theme/screenlock_mgr/test:unittest",
+        "//base/theme/screenlock_mgr/test/fuzztest:fuzztest"
+      ]
+    }
+  }
+}

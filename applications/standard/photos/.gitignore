@@ -1,0 +1,15 @@
+/node_modules
+/local.properties
+/.hvigor
+/.idea
+/.deveco
+**/build
+*.iml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/entry/.preview
+.cxx
+/package-lock.json
+/tsconfig.json

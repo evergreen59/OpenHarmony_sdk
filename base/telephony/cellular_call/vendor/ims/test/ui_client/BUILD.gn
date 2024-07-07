@@ -1,0 +1,63 @@
+# Copyright (C) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+ohos_executable("tel_vendor_ims_ui_test") {
+  install_enable = true
+  sources = [
+    "ims_test_handler.cpp",
+    "ims_unit_test.cpp",
+  ]
+
+  include_dirs = [
+    "//base/telephony/call_manager/interfaces/innerkits",
+    "//base/telephony/cellular_call/interfaces/innerkits/ims/",
+    "//base/telephony/cellular_call/services/common/include",
+    "//base/telephony/sms_mms/interfaces/innerkits/ims/",
+    "//base/telephony/core_service/interfaces/innerkits/ims/",
+    "//foundation/appexecfwk/standard/interfaces/innerkits/libeventhandler/include",
+  ]
+
+  configs = [ "//base/telephony/core_service/utils:telephony_log_config" ]
+
+  deps = [
+    "//base/telephony/cellular_call:tel_cellular_call",
+    "//base/telephony/core_service:tel_core_service",
+    "//base/telephony/sms_mms:tel_sms_mms",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "core_service:tel_core_service_api",
+    "eventhandler:libeventhandler",
+    "ipc:ipc_core",
+    "ril_adapter:hril_innerkits",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+
+  defines = [
+    "TELEPHONY_LOG_TAG = \"VendorImsServiceUiTest\"",
+    "LOG_DOMAIN = 0xD000F00",
+  ]
+
+  if (is_standard_system) {
+    external_deps += [ "hiviewdfx_hilog_native:libhilog" ]
+  } else {
+    external_deps += [ "hilog:libhilog" ]
+  }
+
+  part_name = "cellular_call"
+  subsystem_name = "telephony"
+}

@@ -1,0 +1,74 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base/telephony/sms_mms/sms_mms_aafwk.gni")
+
+#import("//build/test.gni")
+import("//build/ohos.gni")
+ohos_executable("tel_sms_mms_test") {
+  sources = [
+    "gsm_sms_sender_test.cpp",
+    "mms_msg_test.cpp",
+    "short_message_test.cpp",
+    "sms_broadcast_subscriber.cpp",
+    "sms_cb_message_test.cpp",
+    "sms_delivery_callback_test.cpp",
+    "sms_mms_test.cpp",
+    "sms_send_callback_test.cpp",
+  ]
+
+  include_dirs = []
+
+  configs = [ "//base/telephony/core_service/utils:telephony_log_config" ]
+
+  deps = [
+    "${ability_runtime_inner_api_path}/ability_manager:ability_manager",
+    "${ability_runtime_path}/frameworks/native/ability/native:abilitykit_native",
+    "//base/telephony/sms_mms:tel_sms_mms",
+    "//base/telephony/sms_mms/frameworks/native:tel_sms_mms_api",
+  ]
+
+  external_deps = [
+    "ability_base:want",
+    "ability_base:zuri",
+    "access_token:libaccesstoken_sdk",
+    "access_token:libnativetoken",
+    "access_token:libtoken_setproc",
+    "bundle_framework:appexecfwk_base",
+    "c_utils:utils",
+    "common_event_service:cesfwk_innerkits",
+    "common_event_service:cesfwk_services",
+    "core_service:tel_core_service_api",
+    "eventhandler:libeventhandler",
+    "ipc:ipc_core",
+    "relational_store:native_appdatafwk",
+    "relational_store:native_dataability",
+    "relational_store:native_rdb",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+
+  if (is_standard_system) {
+    external_deps += [ "hiviewdfx_hilog_native:libhilog" ]
+  } else {
+    external_deps += [ "hilog:libhilog" ]
+  }
+
+  defines = [
+    "TELEPHONY_LOG_TAG = \"SmsMmmsUTest\"",
+    "LOG_DOMAIN = 0xD000F00",
+  ]
+
+  part_name = "sms_mms"
+  subsystem_name = "telephony"
+}

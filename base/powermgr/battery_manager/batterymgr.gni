@@ -1,0 +1,29 @@
+# Copyright (c) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+ability_runtime_path = "//foundation/ability/ability_runtime"
+ability_runtime_napi_path = "${ability_runtime_path}/frameworks/js/napi"
+ability_runtime_inner_api_path = "${ability_runtime_path}/interfaces/inner_api"
+ability_runtime_services_path = "${ability_runtime_path}/services"
+batterymgr_native_part_name = "battery_manager"
+module_output_path = "${batterymgr_native_part_name}/batterysrv"
+battery_manager_path = "//base/powermgr/battery_manager"
+battery_kits = "${battery_manager_path}/interfaces/kits"
+battery_innerkits = "${battery_manager_path}/interfaces/innerkits"
+battery_frameworks = "${battery_manager_path}/frameworks"
+battery_service = "${battery_manager_path}/services"
+battery_service_native = "${battery_service}/native"
+battery_service_zidl = "${battery_service}/zidl"
+battery_utils = "${battery_manager_path}/utils"

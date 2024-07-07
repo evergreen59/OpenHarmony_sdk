@@ -1,0 +1,59 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+import("//build/ohos.gni")
+SUBSYSTEM_DIR = "//base/telephony"
+import("//base/telephony/core_service/telephony.gni")
+ohos_shared_library("sms") {
+  include_dirs = [
+    "//third_party/node/src",
+    "include",
+    "$SUBSYSTEM_DIR/sms_mms/frameworks/js/napi/include",
+    "$SUBSYSTEM_DIR/core_service/frameworks/js/napi",
+  ]
+
+  sources = [
+    "$SUBSYSTEM_DIR/core_service/frameworks/js/napi/napi_util.cpp",
+    "src/delivery_callback.cpp",
+    "src/napi_mms.cpp",
+    "src/napi_sms.cpp",
+    "src/send_callback.cpp",
+  ]
+
+  configs = [ "//base/telephony/core_service/utils:telephony_log_config" ]
+
+  deps = [
+    "$SUBSYSTEM_DIR/sms_mms/frameworks/native:tel_sms_mms_api",
+    "//foundation/arkui/napi:ace_napi",
+  ]
+
+  defines += [
+    "TELEPHONY_LOG_TAG = \"SmsMmsJsApi\"",
+    "LOG_DOMAIN = 0xD001F06",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "core_service:tel_core_service_api",
+    "init:libbegetutil",
+    "ipc:ipc_core",
+  ]
+
+  if (is_standard_system) {
+    external_deps += [ "hiviewdfx_hilog_native:libhilog" ]
+  } else {
+    external_deps += [ "hilog:libhilog" ]
+  }
+  relative_install_dir = "module/telephony"
+  part_name = "sms_mms"
+  subsystem_name = "telephony"
+}

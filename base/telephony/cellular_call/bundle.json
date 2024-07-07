@@ -1,0 +1,86 @@
+{
+    "name": "@ohos/cellular_call",
+    "version": "3.1.0",
+    "description": "telephony cellular call service",
+    "publishAs": "code-segment",
+    "homePage": "https://gitee.com/openharmony",
+    "repository": "https://gitee.com/openharmony/telephony_cellular_call",
+    "license": "Apache License 2.0",
+    "language": "",
+    "private": false,
+    "scripts": {},
+    "envs": [],
+    "dirs": [],
+    "author": {},
+    "contributors": [],
+    "segment": {
+        "destPath": "base/telephony/cellular_call"
+    },
+    "component": {
+        "name": "cellular_call",
+        "subsystem": "telephony",
+        "syscap": [
+            "SystemCapability.Telephony.CellularCall"
+        ],
+        "features": [],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "1MB",
+        "ram": "650KB",
+        "deps": {
+            "components": [
+                "ability_base",
+                "c_utils",
+                "call_manager",
+                "common_event_service",
+                "core_service",
+                "drivers_interface_ril",
+                "eventhandler",
+                "hisysevent_native",
+                "hitrace_native",
+                "hiviewdfx_hilog_native",
+                "init",
+                "ipc",
+                "safwk",
+                "samgr"
+            ],
+            "third_party": [
+                "libphonenumber"
+            ]
+        },
+        "build": {
+            "group_type": {
+                "base_group": [
+                ],
+                "fwk_group": [
+                ],
+                "service_group": [
+                    "//base/telephony/cellular_call:tel_cellular_call",
+                    "//base/telephony/cellular_call/sa_profile:cellular_call_sa_profile"
+                ]
+            },
+            "inner_kits": [
+                {
+                    "header": {
+                        "header_base" : "//base/telephony/cellular_call/interfaces/innerkits/ims",
+                        "header_files": [
+                            "ims_call_callback_interface.h",
+                            "ims_call_callback_proxy.h",
+                            "ims_call_callback_stub.h",
+                            "ims_call_client.h",
+                            "ims_call_interface.h",
+                            "ims_call_proxy.h",
+                            "ims_call_types.h"
+                        ]
+                    },
+                    "name":"//base/telephony/cellular_call/interfaces/innerkits/ims:tel_ims_call_api"
+                }
+            ],
+            "test": [
+                "//base/telephony/cellular_call/test:unittest",
+                "//base/telephony/cellular_call/test/fuzztest:fuzztest"
+            ]
+        }
+    }
+}

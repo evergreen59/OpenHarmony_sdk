@@ -1,0 +1,46 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+type accesstoken_data_file, file_attr, data_file_attr;
+
+allow accesstoken_service accesstoken_data_file:dir { search add_name open read write remove_name };
+
+allow accesstoken_service accesstoken_data_file:file { open read getattr ioctl lock write create unlink };
+
+allow accesstoken_service data_file:dir { search };
+
+allow accesstoken_service data_system:dir { add_name getattr open read remove_name search write };
+allow accesstoken_service data_system:file { create getattr open read unlink write };
+
+allow accesstoken_service devinfo_private_param:file { map open read };
+
+allow accesstoken_service dev_unix_socket:dir { search };
+
+allow accesstoken_service sa_softbus_service:samgr_class { get };
+
+allow accesstoken_service sa_token_sync_manager_service:samgr_class { get };
+
+allow accesstoken_service system_bin_file:dir { search };
+
+allow accesstoken_service token_sync_service:binder { call };
+
+allow accesstoken_service accesstoken_perm_param:parameter_service { set };
+# avc:  denied  { write } for  pid=545 comm="accesstoken_ser" name="paramservice" dev="tmpfs" ino=30 scontext=u:r:accesstoken_service:s0 tcontext=u:object_r:paramservice_socket:s0 tclass=sock_file permissive=0
+allow accesstoken_service paramservice_socket:sock_file { write };
+allow accesstoken_service kernel:unix_stream_socket { connectto };
+allow { domain -limit_domain } accesstoken_perm_param:file { map open read };
+
+binder_call(accesstoken_service, foundation);
+binder_call(accesstoken_service, sh);
+binder_call(accesstoken_service, softbus_server);
+binder_call(accesstoken_service, privacy_service);

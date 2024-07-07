@@ -1,0 +1,97 @@
+{
+    "plugins": {
+        "SysEventSource": {
+            "path": "core",
+            "name": "sysevent_source"
+        },
+        "SysEventService": {
+            "path": "plugins/eventservice",
+            "name": "sys_event_service"
+        },
+        "Faultlogger": {
+            "path": "plugins/faultlogger",
+            "name": "faultlogger"
+        },
+        "EventLogger": {
+            "path": "plugins/eventlogger",
+            "name": "eventlogger"
+        },
+        "FreezeDetectorPlugin": {
+            "path": "plugins/freeze_detector",
+            "name": "freeze_detector"
+        },
+        "HiCollieCollector": {
+            "path": "plugins/hicollie_collector",
+            "name": "hicollie_collector"
+        },
+        "UsageEventReport": {
+            "path": "plugins/usage_event_report",
+            "name": "usage_event_report"
+        },
+        "BBoxDetectorPlugin": {
+            "path": "plugins/reliability/bbox_detectors",
+            "name": "bbox_detector"
+        }
+    },
+    "rules": [
+        {
+            "rule": [
+                {
+                    "rom": "1G",
+                    "ram": "1G"
+                }
+            ],
+            "info": {
+                "loadorder": {
+                    "SysEventSource": {
+                        "loadtime": 0
+                    },
+                    "EventLogger": {
+                        "loadtime": 0
+                    },
+                    "FreezeDetectorPlugin": {
+                        "loadtime": 0
+                    },
+                    "HiCollieCollector": {
+                        "loadtime": 0
+                    },
+                    "SysEventService": {
+                        "loadtime": 0
+                    },
+                    "Faultlogger": {
+                        "loadtime": 0
+                    },
+                    "UsageEventReport": {
+                        "loadtime": 0
+                    },
+                    "BBoxDetectorPlugin": {
+                        "loadtime": 0
+                    }
+                },
+                "pipelines": {
+                    "SysEventPipeline": [
+                        "SysEventService",
+                        "Faultlogger",
+                        "EventLogger",
+                        "BBoxDetectorPlugin"
+                    ]
+                },
+                "pipelinegroups": {
+                    "SysEventSource": [
+                        "SysEventPipeline"
+                    ]
+                },
+                "threads": {
+                    "singledthread": {
+                        "SysEventSource": "sysevent_source",
+                        "SysEventService": "sysevent_service",
+                        "EventLogger": "event_logger",
+                        "FreezeDetectorPlugin": "freeze_detector",
+                        "UsageEventReport": "usage_event_report",
+                        "BBoxDetectorPlugin": "bbox_detector"
+                    }
+                }
+            }
+        }
+    ]
+}

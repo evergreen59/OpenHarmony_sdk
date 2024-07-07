@@ -1,0 +1,3575 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+ohos_prebuilt_etc("Africa/Abidjan") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Abidjan"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Accra") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Accra"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Addis_Ababa") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Addis_Ababa"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Algiers") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Algiers"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Asmara") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Asmara"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Bamako") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Bamako"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Bangui") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Bangui"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Banjul") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Banjul"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Bissau") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Bissau"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Blantyre") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Blantyre"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Brazzaville") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Brazzaville"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Bujumbura") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Bujumbura"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Cairo") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Cairo"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Casablanca") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Casablanca"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Ceuta") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Ceuta"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Conakry") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Conakry"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Dakar") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Dakar"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Dar_es_Salaam") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Dar_es_Salaam"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Djibouti") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Djibouti"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Douala") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Douala"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/El_Aaiun") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/El_Aaiun"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Freetown") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Freetown"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Gaborone") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Gaborone"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Harare") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Harare"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Johannesburg") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Johannesburg"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Juba") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Juba"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Kampala") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Kampala"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Khartoum") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Khartoum"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Kigali") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Kigali"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Kinshasa") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Kinshasa"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Lagos") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Lagos"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Libreville") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Libreville"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Lome") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Lome"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Luanda") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Luanda"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Lubumbashi") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Lubumbashi"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Lusaka") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Lusaka"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Malabo") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Malabo"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Maputo") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Maputo"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Maseru") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Maseru"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Mbabane") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Mbabane"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Mogadishu") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Mogadishu"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Monrovia") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Monrovia"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Nairobi") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Nairobi"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Ndjamena") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Ndjamena"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Niamey") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Niamey"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Nouakchott") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Nouakchott"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Ouagadougou") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Ouagadougou"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Porto-Novo") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Porto-Novo"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Sao_Tome") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Sao_Tome"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Tripoli") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Tripoli"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Tunis") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Tunis"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Africa/Windhoek") {
+  source = "//base/global/timezone/data/prebuild/posix/Africa/Windhoek"
+  module_install_dir = "etc/zoneinfo/Africa"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Adak") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Adak"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Anchorage") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Anchorage"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Anguilla") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Anguilla"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Antigua") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Antigua"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Araguaina") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Araguaina"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/Buenos_Aires") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Argentina/Buenos_Aires"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/Catamarca") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Argentina/Catamarca"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/Cordoba") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Argentina/Cordoba"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/Jujuy") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Argentina/Jujuy"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/La_Rioja") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Argentina/La_Rioja"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/Mendoza") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Argentina/Mendoza"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/Rio_Gallegos") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Argentina/Rio_Gallegos"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/Salta") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Argentina/Salta"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/San_Juan") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Argentina/San_Juan"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/San_Luis") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Argentina/San_Luis"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/Tucuman") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Argentina/Tucuman"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Argentina/Ushuaia") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Argentina/Ushuaia"
+  module_install_dir = "etc/zoneinfo/America/Argentina"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Aruba") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Aruba"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Asuncion") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Asuncion"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Atikokan") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Atikokan"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Bahia") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Bahia"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Bahia_Banderas") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Bahia_Banderas"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Barbados") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Barbados"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Belem") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Belem"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Belize") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Belize"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Blanc-Sablon") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Blanc-Sablon"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Boa_Vista") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Boa_Vista"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Bogota") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Bogota"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Boise") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Boise"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Cambridge_Bay") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Cambridge_Bay"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Campo_Grande") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Campo_Grande"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Cancun") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Cancun"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Caracas") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Caracas"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Cayenne") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Cayenne"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Cayman") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Cayman"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Chicago") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Chicago"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Chihuahua") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Chihuahua"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Costa_Rica") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Costa_Rica"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Creston") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Creston"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Cuiaba") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Cuiaba"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Curacao") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Curacao"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Danmarkshavn") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Danmarkshavn"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Dawson") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Dawson"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Dawson_Creek") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Dawson_Creek"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Denver") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Denver"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Detroit") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Detroit"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Dominica") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Dominica"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Edmonton") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Edmonton"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Eirunepe") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Eirunepe"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/El_Salvador") {
+  source = "//base/global/timezone/data/prebuild/posix/America/El_Salvador"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Fort_Nelson") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Fort_Nelson"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Fortaleza") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Fortaleza"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Glace_Bay") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Glace_Bay"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Goose_Bay") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Goose_Bay"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Grand_Turk") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Grand_Turk"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Grenada") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Grenada"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Guadeloupe") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Guadeloupe"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Guatemala") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Guatemala"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Guayaquil") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Guayaquil"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Guyana") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Guyana"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Halifax") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Halifax"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Havana") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Havana"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Hermosillo") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Hermosillo"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Indiana/Indianapolis") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Indiana/Indianapolis"
+  module_install_dir = "etc/zoneinfo/America/Indiana"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Indiana/Knox") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Indiana/Knox"
+  module_install_dir = "etc/zoneinfo/America/Indiana"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Indiana/Marengo") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Indiana/Marengo"
+  module_install_dir = "etc/zoneinfo/America/Indiana"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Indiana/Petersburg") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Indiana/Petersburg"
+  module_install_dir = "etc/zoneinfo/America/Indiana"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Indiana/Tell_City") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Indiana/Tell_City"
+  module_install_dir = "etc/zoneinfo/America/Indiana"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Indiana/Vevay") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Indiana/Vevay"
+  module_install_dir = "etc/zoneinfo/America/Indiana"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Indiana/Vincennes") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Indiana/Vincennes"
+  module_install_dir = "etc/zoneinfo/America/Indiana"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Indiana/Winamac") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Indiana/Winamac"
+  module_install_dir = "etc/zoneinfo/America/Indiana"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Inuvik") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Inuvik"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Iqaluit") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Iqaluit"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Jamaica") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Jamaica"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Juneau") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Juneau"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Kentucky/Louisville") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Kentucky/Louisville"
+  module_install_dir = "etc/zoneinfo/America/Kentucky"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Kentucky/Monticello") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/Kentucky/Monticello"
+  module_install_dir = "etc/zoneinfo/America/Kentucky"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Kralendijk") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Kralendijk"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/La_Paz") {
+  source = "//base/global/timezone/data/prebuild/posix/America/La_Paz"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Lima") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Lima"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Los_Angeles") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Los_Angeles"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Lower_Princes") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Lower_Princes"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Maceio") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Maceio"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Managua") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Managua"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Manaus") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Manaus"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Marigot") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Marigot"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Martinique") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Martinique"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Matamoros") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Matamoros"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Mazatlan") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Mazatlan"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Menominee") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Menominee"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Merida") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Merida"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Metlakatla") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Metlakatla"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Mexico_City") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Mexico_City"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Miquelon") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Miquelon"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Moncton") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Moncton"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Monterrey") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Monterrey"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Montevideo") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Montevideo"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Montserrat") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Montserrat"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Nassau") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Nassau"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/New_York") {
+  source = "//base/global/timezone/data/prebuild/posix/America/New_York"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Nipigon") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Nipigon"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Nome") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Nome"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Noronha") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Noronha"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/North_Dakota/Beulah") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/North_Dakota/Beulah"
+  module_install_dir = "etc/zoneinfo/America/North_Dakota"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/North_Dakota/Center") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/America/North_Dakota/Center"
+  module_install_dir = "etc/zoneinfo/America/North_Dakota"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/North_Dakota/New_Salem") {
+  source = "//base/global/timezone/data/prebuild/posix/America/North_Dakota/New_Salem"
+  module_install_dir = "etc/zoneinfo/America/America/North_Dakota"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Nuuk") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Nuuk"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Ojinaga") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Ojinaga"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Panama") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Panama"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Pangnirtung") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Pangnirtung"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Paramaribo") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Paramaribo"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Phoenix") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Phoenix"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Port-au-Prince") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Port-au-Prince"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Port_of_Spain") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Port_of_Spain"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Porto_Velho") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Porto_Velho"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Puerto_Rico") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Puerto_Rico"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Punta_Arenas") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Punta_Arenas"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Rainy_River") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Rainy_River"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Rankin_Inlet") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Rankin_Inlet"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Recife") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Recife"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Regina") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Regina"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Resolute") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Resolute"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Rio_Branco") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Rio_Branco"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Santarem") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Santarem"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Santiago") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Santiago"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Santo_Domingo") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Santo_Domingo"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Sao_Paulo") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Sao_Paulo"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Scoresbysund") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Scoresbysund"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Sitka") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Sitka"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/St_Barthelemy") {
+  source = "//base/global/timezone/data/prebuild/posix/America/St_Barthelemy"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/St_Johns") {
+  source = "//base/global/timezone/data/prebuild/posix/America/St_Johns"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/St_Kitts") {
+  source = "//base/global/timezone/data/prebuild/posix/America/St_Kitts"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/St_Lucia") {
+  source = "//base/global/timezone/data/prebuild/posix/America/St_Lucia"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/St_Thomas") {
+  source = "//base/global/timezone/data/prebuild/posix/America/St_Thomas"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/St_Vincent") {
+  source = "//base/global/timezone/data/prebuild/posix/America/St_Vincent"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Swift_Current") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Swift_Current"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Tegucigalpa") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Tegucigalpa"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Thule") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Thule"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Thunder_Bay") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Thunder_Bay"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Tijuana") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Tijuana"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Toronto") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Toronto"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Tortola") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Tortola"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Vancouver") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Vancouver"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Whitehorse") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Whitehorse"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Winnipeg") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Winnipeg"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Yakutat") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Yakutat"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("America/Yellowknife") {
+  source = "//base/global/timezone/data/prebuild/posix/America/Yellowknife"
+  module_install_dir = "etc/zoneinfo/America"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/Casey") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/Casey"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/Davis") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/Davis"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/DumontDUrville") {
+  source =
+      "//base/global/timezone/data/prebuild/posix/Antarctica/DumontDUrville"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/Macquarie") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/Macquarie"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/Mawson") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/Mawson"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/McMurdo") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/McMurdo"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/Palmer") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/Palmer"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/Rothera") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/Rothera"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/Syowa") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/Syowa"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/Troll") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/Troll"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Antarctica/Vostok") {
+  source = "//base/global/timezone/data/prebuild/posix/Antarctica/Vostok"
+  module_install_dir = "etc/zoneinfo/Antarctica"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Arctic/Longyearbyen") {
+  source = "//base/global/timezone/data/prebuild/posix/Arctic/Longyearbyen"
+  module_install_dir = "etc/zoneinfo/Arctic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Aden") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Aden"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Almaty") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Almaty"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Amman") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Amman"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Anadyr") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Anadyr"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Aqtau") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Aqtau"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Aqtobe") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Aqtobe"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Ashgabat") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Ashgabat"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Atyrau") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Atyrau"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Baghdad") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Baghdad"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Bahrain") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Bahrain"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Baku") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Baku"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Bangkok") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Bangkok"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Barnaul") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Barnaul"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Beirut") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Beirut"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Bishkek") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Bishkek"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Brunei") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Brunei"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Chita") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Chita"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Choibalsan") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Choibalsan"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Colombo") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Colombo"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Damascus") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Damascus"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Dhaka") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Dhaka"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Dili") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Dili"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Dubai") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Dubai"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Dushanbe") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Dushanbe"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Famagusta") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Famagusta"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Gaza") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Gaza"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Hebron") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Hebron"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Ho_Chi_Minh") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Ho_Chi_Minh"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Hong_Kong") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Hong_Kong"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Hovd") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Hovd"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Irkutsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Irkutsk"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Istanbul") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Istanbul"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Jakarta") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Jakarta"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Jayapura") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Jayapura"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Jerusalem") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Jerusalem"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Kabul") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Kabul"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Kamchatka") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Kamchatka"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Karachi") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Karachi"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Kathmandu") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Kathmandu"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Khandyga") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Khandyga"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Kolkata") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Kolkata"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Krasnoyarsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Krasnoyarsk"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Kuala_Lumpur") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Kuala_Lumpur"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Kuching") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Kuching"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Kuwait") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Kuwait"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Macau") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Macau"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Magadan") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Magadan"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Makassar") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Makassar"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Manila") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Manila"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Muscat") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Muscat"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Nicosia") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Nicosia"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Novokuznetsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Novokuznetsk"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Novosibirsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Novosibirsk"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Omsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Omsk"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Oral") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Oral"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Phnom_Penh") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Phnom_Penh"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Pontianak") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Pontianak"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Pyongyang") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Pyongyang"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Qatar") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Qatar"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Qostanay") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Qostanay"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Qyzylorda") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Qyzylorda"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Riyadh") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Riyadh"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Sakhalin") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Sakhalin"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Samarkand") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Samarkand"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Seoul") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Seoul"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Shanghai") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Shanghai"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Singapore") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Singapore"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Srednekolymsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Srednekolymsk"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Taipei") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Taipei"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Tashkent") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Tashkent"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Tbilisi") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Tbilisi"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Tehran") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Tehran"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Thimphu") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Thimphu"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Tokyo") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Tokyo"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Tomsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Tomsk"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Ulaanbaatar") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Ulaanbaatar"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Urumqi") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Urumqi"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Ust-Nera") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Ust-Nera"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Vientiane") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Vientiane"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Vladivostok") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Vladivostok"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Yakutsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Yakutsk"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Yangon") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Yangon"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Yekaterinburg") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Yekaterinburg"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Asia/Yerevan") {
+  source = "//base/global/timezone/data/prebuild/posix/Asia/Yerevan"
+  module_install_dir = "etc/zoneinfo/Asia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/Azores") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/Azores"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/Bermuda") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/Bermuda"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/Canary") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/Canary"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/Cape_Verde") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/Cape_Verde"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/Faroe") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/Faroe"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/Madeira") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/Madeira"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/Reykjavik") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/Reykjavik"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/South_Georgia") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/South_Georgia"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/St_Helena") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/St_Helena"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Atlantic/Stanley") {
+  source = "//base/global/timezone/data/prebuild/posix/Atlantic/Stanley"
+  module_install_dir = "etc/zoneinfo/Atlantic"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Adelaide") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Adelaide"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Brisbane") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Brisbane"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Broken_Hill") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Broken_Hill"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Darwin") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Darwin"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Eucla") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Eucla"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Hobart") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Hobart"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Lindeman") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Lindeman"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Lord_Howe") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Lord_Howe"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Melbourne") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Melbourne"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Perth") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Perth"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Australia/Sydney") {
+  source = "//base/global/timezone/data/prebuild/posix/Australia/Sydney"
+  module_install_dir = "etc/zoneinfo/Australia"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("CET") {
+  source = "//base/global/timezone/data/prebuild/posix/CET"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("CST6CDT") {
+  source = "//base/global/timezone/data/prebuild/posix/CST6CDT"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("EET") {
+  source = "//base/global/timezone/data/prebuild/posix/EET"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("EST") {
+  source = "//base/global/timezone/data/prebuild/posix/EST"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("EST5EDT") {
+  source = "//base/global/timezone/data/prebuild/posix/EST5EDT"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Amsterdam") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Amsterdam"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Andorra") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Andorra"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Astrakhan") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Astrakhan"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Athens") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Athens"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Belgrade") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Belgrade"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Berlin") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Berlin"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Bratislava") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Bratislava"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Brussels") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Brussels"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Bucharest") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Bucharest"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Budapest") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Budapest"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Busingen") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Busingen"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Chisinau") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Chisinau"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Copenhagen") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Copenhagen"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Dublin") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Dublin"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Gibraltar") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Gibraltar"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Guernsey") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Guernsey"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Helsinki") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Helsinki"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Isle_of_Man") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Isle_of_Man"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Istanbul") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Istanbul"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Jersey") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Jersey"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Kaliningrad") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Kaliningrad"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Kiev") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Kiev"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Kirov") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Kirov"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Lisbon") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Lisbon"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Ljubljana") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Ljubljana"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/London") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/London"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Luxembourg") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Luxembourg"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Madrid") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Madrid"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Malta") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Malta"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Mariehamn") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Mariehamn"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Minsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Minsk"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Monaco") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Monaco"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Moscow") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Moscow"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Nicosia") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Nicosia"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Oslo") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Oslo"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Paris") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Paris"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Podgorica") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Podgorica"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Prague") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Prague"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Riga") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Riga"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Rome") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Rome"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Samara") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Samara"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/San_Marino") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/San_Marino"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Sarajevo") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Sarajevo"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Saratov") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Saratov"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Simferopol") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Simferopol"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Skopje") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Skopje"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Sofia") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Sofia"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Stockholm") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Stockholm"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Tallinn") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Tallinn"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Tirane") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Tirane"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Ulyanovsk") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Ulyanovsk"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Uzhgorod") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Uzhgorod"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Vaduz") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Vaduz"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Vatican") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Vatican"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Vienna") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Vienna"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Vilnius") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Vilnius"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Volgograd") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Volgograd"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Warsaw") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Warsaw"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Zagreb") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Zagreb"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Zaporozhye") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Zaporozhye"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Europe/Zurich") {
+  source = "//base/global/timezone/data/prebuild/posix/Europe/Zurich"
+  module_install_dir = "etc/zoneinfo/Europe"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("HST") {
+  source = "//base/global/timezone/data/prebuild/posix/HST"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Antananarivo") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Antananarivo"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Chagos") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Chagos"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Christmas") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Christmas"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Cocos") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Cocos"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Comoro") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Comoro"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Kerguelen") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Kerguelen"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Mahe") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Mahe"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Maldives") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Maldives"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Mauritius") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Mauritius"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Mayotte") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Mayotte"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Indian/Reunion") {
+  source = "//base/global/timezone/data/prebuild/posix/Indian/Reunion"
+  module_install_dir = "etc/zoneinfo/Indian"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("MET") {
+  source = "//base/global/timezone/data/prebuild/posix/MET"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("MST") {
+  source = "//base/global/timezone/data/prebuild/posix/MST"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("MST7MDT") {
+  source = "//base/global/timezone/data/prebuild/posix/MST7MDT"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("PST8PDT") {
+  source = "//base/global/timezone/data/prebuild/posix/PST8PDT"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Apia") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Apia"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Auckland") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Auckland"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Bougainville") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Bougainville"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Chatham") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Chatham"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Chuuk") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Chuuk"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Easter") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Easter"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Efate") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Efate"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Kanton") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Kanton"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Fakaofo") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Fakaofo"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Fiji") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Fiji"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Funafuti") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Funafuti"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Galapagos") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Galapagos"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Gambier") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Gambier"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Guadalcanal") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Guadalcanal"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Guam") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Guam"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Honolulu") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Honolulu"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Kiritimati") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Kiritimati"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Kosrae") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Kosrae"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Kwajalein") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Kwajalein"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Majuro") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Majuro"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Marquesas") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Marquesas"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Midway") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Midway"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Nauru") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Nauru"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Niue") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Niue"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Norfolk") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Norfolk"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Noumea") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Noumea"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Pago_Pago") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Pago_Pago"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Palau") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Palau"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Pitcairn") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Pitcairn"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Pohnpei") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Pohnpei"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Port_Moresby") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Port_Moresby"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Rarotonga") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Rarotonga"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Saipan") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Saipan"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Tahiti") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Tahiti"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Tarawa") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Tarawa"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Tongatapu") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Tongatapu"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Wake") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Wake"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("Pacific/Wallis") {
+  source = "//base/global/timezone/data/prebuild/posix/Pacific/Wallis"
+  module_install_dir = "etc/zoneinfo/Pacific"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("WET") {
+  source = "//base/global/timezone/data/prebuild/posix/WET"
+  module_install_dir = "etc/zoneinfo"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+group("zoneinfo") {
+  # just for standard system
+  if (is_standard_system) {
+    deps = [
+      ":Africa/Abidjan",
+      ":Africa/Accra",
+      ":Africa/Addis_Ababa",
+      ":Africa/Algiers",
+      ":Africa/Asmara",
+      ":Africa/Bamako",
+      ":Africa/Bangui",
+      ":Africa/Banjul",
+      ":Africa/Bissau",
+      ":Africa/Blantyre",
+      ":Africa/Brazzaville",
+      ":Africa/Bujumbura",
+      ":Africa/Cairo",
+      ":Africa/Casablanca",
+      ":Africa/Ceuta",
+      ":Africa/Conakry",
+      ":Africa/Dakar",
+      ":Africa/Dar_es_Salaam",
+      ":Africa/Djibouti",
+      ":Africa/Douala",
+      ":Africa/El_Aaiun",
+      ":Africa/Freetown",
+      ":Africa/Gaborone",
+      ":Africa/Harare",
+      ":Africa/Johannesburg",
+      ":Africa/Juba",
+      ":Africa/Kampala",
+      ":Africa/Khartoum",
+      ":Africa/Kigali",
+      ":Africa/Kinshasa",
+      ":Africa/Lagos",
+      ":Africa/Libreville",
+      ":Africa/Lome",
+      ":Africa/Luanda",
+      ":Africa/Lubumbashi",
+      ":Africa/Lusaka",
+      ":Africa/Malabo",
+      ":Africa/Maputo",
+      ":Africa/Maseru",
+      ":Africa/Mbabane",
+      ":Africa/Mogadishu",
+      ":Africa/Monrovia",
+      ":Africa/Nairobi",
+      ":Africa/Ndjamena",
+      ":Africa/Niamey",
+      ":Africa/Nouakchott",
+      ":Africa/Ouagadougou",
+      ":Africa/Porto-Novo",
+      ":Africa/Sao_Tome",
+      ":Africa/Tripoli",
+      ":Africa/Tunis",
+      ":Africa/Windhoek",
+      ":America/Adak",
+      ":America/Anchorage",
+      ":America/Anguilla",
+      ":America/Antigua",
+      ":America/Araguaina",
+      ":America/Argentina/Buenos_Aires",
+      ":America/Argentina/Catamarca",
+      ":America/Argentina/Cordoba",
+      ":America/Argentina/Jujuy",
+      ":America/Argentina/La_Rioja",
+      ":America/Argentina/Mendoza",
+      ":America/Argentina/Rio_Gallegos",
+      ":America/Argentina/Salta",
+      ":America/Argentina/San_Juan",
+      ":America/Argentina/San_Luis",
+      ":America/Argentina/Tucuman",
+      ":America/Argentina/Ushuaia",
+      ":America/Aruba",
+      ":America/Asuncion",
+      ":America/Atikokan",
+      ":America/Bahia",
+      ":America/Bahia_Banderas",
+      ":America/Barbados",
+      ":America/Belem",
+      ":America/Belize",
+      ":America/Blanc-Sablon",
+      ":America/Boa_Vista",
+      ":America/Bogota",
+      ":America/Boise",
+      ":America/Cambridge_Bay",
+      ":America/Campo_Grande",
+      ":America/Cancun",
+      ":America/Caracas",
+      ":America/Cayenne",
+      ":America/Cayman",
+      ":America/Chicago",
+      ":America/Chihuahua",
+      ":America/Costa_Rica",
+      ":America/Creston",
+      ":America/Cuiaba",
+      ":America/Curacao",
+      ":America/Danmarkshavn",
+      ":America/Dawson",
+      ":America/Dawson_Creek",
+      ":America/Denver",
+      ":America/Detroit",
+      ":America/Dominica",
+      ":America/Edmonton",
+      ":America/Eirunepe",
+      ":America/El_Salvador",
+      ":America/Fort_Nelson",
+      ":America/Fortaleza",
+      ":America/Glace_Bay",
+      ":America/Goose_Bay",
+      ":America/Grand_Turk",
+      ":America/Grenada",
+      ":America/Guadeloupe",
+      ":America/Guatemala",
+      ":America/Guayaquil",
+      ":America/Guyana",
+      ":America/Halifax",
+      ":America/Havana",
+      ":America/Hermosillo",
+      ":America/Indiana/Indianapolis",
+      ":America/Indiana/Knox",
+      ":America/Indiana/Marengo",
+      ":America/Indiana/Petersburg",
+      ":America/Indiana/Tell_City",
+      ":America/Indiana/Vevay",
+      ":America/Indiana/Vincennes",
+      ":America/Indiana/Winamac",
+      ":America/Inuvik",
+      ":America/Iqaluit",
+      ":America/Jamaica",
+      ":America/Juneau",
+      ":America/Kentucky/Louisville",
+      ":America/Kentucky/Monticello",
+      ":America/Kralendijk",
+      ":America/La_Paz",
+      ":America/Lima",
+      ":America/Los_Angeles",
+      ":America/Lower_Princes",
+      ":America/Maceio",
+      ":America/Managua",
+      ":America/Manaus",
+      ":America/Marigot",
+      ":America/Martinique",
+      ":America/Matamoros",
+      ":America/Mazatlan",
+      ":America/Menominee",
+      ":America/Merida",
+      ":America/Metlakatla",
+      ":America/Mexico_City",
+      ":America/Miquelon",
+      ":America/Moncton",
+      ":America/Monterrey",
+      ":America/Montevideo",
+      ":America/Montserrat",
+      ":America/Nassau",
+      ":America/New_York",
+      ":America/Nipigon",
+      ":America/Nome",
+      ":America/Noronha",
+      ":America/North_Dakota/Beulah",
+      ":America/North_Dakota/Center",
+      ":America/North_Dakota/New_Salem",
+      ":America/Nuuk",
+      ":America/Ojinaga",
+      ":America/Panama",
+      ":America/Pangnirtung",
+      ":America/Paramaribo",
+      ":America/Phoenix",
+      ":America/Port-au-Prince",
+      ":America/Port_of_Spain",
+      ":America/Porto_Velho",
+      ":America/Puerto_Rico",
+      ":America/Punta_Arenas",
+      ":America/Rainy_River",
+      ":America/Rankin_Inlet",
+      ":America/Recife",
+      ":America/Regina",
+      ":America/Resolute",
+      ":America/Rio_Branco",
+      ":America/Santarem",
+      ":America/Santiago",
+      ":America/Santo_Domingo",
+      ":America/Sao_Paulo",
+      ":America/Scoresbysund",
+      ":America/Sitka",
+      ":America/St_Barthelemy",
+      ":America/St_Johns",
+      ":America/St_Kitts",
+      ":America/St_Lucia",
+      ":America/St_Thomas",
+      ":America/St_Vincent",
+      ":America/Swift_Current",
+      ":America/Tegucigalpa",
+      ":America/Thule",
+      ":America/Thunder_Bay",
+      ":America/Tijuana",
+      ":America/Toronto",
+      ":America/Tortola",
+      ":America/Vancouver",
+      ":America/Whitehorse",
+      ":America/Winnipeg",
+      ":America/Yakutat",
+      ":America/Yellowknife",
+      ":Antarctica/Casey",
+      ":Antarctica/Davis",
+      ":Antarctica/DumontDUrville",
+      ":Antarctica/Macquarie",
+      ":Antarctica/Mawson",
+      ":Antarctica/McMurdo",
+      ":Antarctica/Palmer",
+      ":Antarctica/Rothera",
+      ":Antarctica/Syowa",
+      ":Antarctica/Troll",
+      ":Antarctica/Vostok",
+      ":Arctic/Longyearbyen",
+      ":Asia/Aden",
+      ":Asia/Almaty",
+      ":Asia/Amman",
+      ":Asia/Anadyr",
+      ":Asia/Aqtau",
+      ":Asia/Aqtobe",
+      ":Asia/Ashgabat",
+      ":Asia/Atyrau",
+      ":Asia/Baghdad",
+      ":Asia/Bahrain",
+      ":Asia/Baku",
+      ":Asia/Bangkok",
+      ":Asia/Barnaul",
+      ":Asia/Beirut",
+      ":Asia/Bishkek",
+      ":Asia/Brunei",
+      ":Asia/Chita",
+      ":Asia/Choibalsan",
+      ":Asia/Colombo",
+      ":Asia/Damascus",
+      ":Asia/Dhaka",
+      ":Asia/Dili",
+      ":Asia/Dubai",
+      ":Asia/Dushanbe",
+      ":Asia/Famagusta",
+      ":Asia/Gaza",
+      ":Asia/Hebron",
+      ":Asia/Ho_Chi_Minh",
+      ":Asia/Hong_Kong",
+      ":Asia/Hovd",
+      ":Asia/Irkutsk",
+      ":Asia/Istanbul",
+      ":Asia/Jakarta",
+      ":Asia/Jayapura",
+      ":Asia/Jerusalem",
+      ":Asia/Kabul",
+      ":Asia/Kamchatka",
+      ":Asia/Karachi",
+      ":Asia/Kathmandu",
+      ":Asia/Khandyga",
+      ":Asia/Kolkata",
+      ":Asia/Krasnoyarsk",
+      ":Asia/Kuala_Lumpur",
+      ":Asia/Kuching",
+      ":Asia/Kuwait",
+      ":Asia/Macau",
+      ":Asia/Magadan",
+      ":Asia/Makassar",
+      ":Asia/Manila",
+      ":Asia/Muscat",
+      ":Asia/Nicosia",
+      ":Asia/Novokuznetsk",
+      ":Asia/Novosibirsk",
+      ":Asia/Omsk",
+      ":Asia/Oral",
+      ":Asia/Phnom_Penh",
+      ":Asia/Pontianak",
+      ":Asia/Pyongyang",
+      ":Asia/Qatar",
+      ":Asia/Qostanay",
+      ":Asia/Qyzylorda",
+      ":Asia/Riyadh",
+      ":Asia/Sakhalin",
+      ":Asia/Samarkand",
+      ":Asia/Seoul",
+      ":Asia/Shanghai",
+      ":Asia/Singapore",
+      ":Asia/Srednekolymsk",
+      ":Asia/Taipei",
+      ":Asia/Tashkent",
+      ":Asia/Tbilisi",
+      ":Asia/Tehran",
+      ":Asia/Thimphu",
+      ":Asia/Tokyo",
+      ":Asia/Tomsk",
+      ":Asia/Ulaanbaatar",
+      ":Asia/Urumqi",
+      ":Asia/Ust-Nera",
+      ":Asia/Vientiane",
+      ":Asia/Vladivostok",
+      ":Asia/Yakutsk",
+      ":Asia/Yangon",
+      ":Asia/Yekaterinburg",
+      ":Asia/Yerevan",
+      ":Atlantic/Azores",
+      ":Atlantic/Bermuda",
+      ":Atlantic/Canary",
+      ":Atlantic/Cape_Verde",
+      ":Atlantic/Faroe",
+      ":Atlantic/Madeira",
+      ":Atlantic/Reykjavik",
+      ":Atlantic/South_Georgia",
+      ":Atlantic/St_Helena",
+      ":Atlantic/Stanley",
+      ":Australia/Adelaide",
+      ":Australia/Brisbane",
+      ":Australia/Broken_Hill",
+      ":Australia/Darwin",
+      ":Australia/Eucla",
+      ":Australia/Hobart",
+      ":Australia/Lindeman",
+      ":Australia/Lord_Howe",
+      ":Australia/Melbourne",
+      ":Australia/Perth",
+      ":Australia/Sydney",
+      ":CET",
+      ":CST6CDT",
+      ":EET",
+      ":EST",
+      ":EST5EDT",
+      ":Europe/Amsterdam",
+      ":Europe/Andorra",
+      ":Europe/Astrakhan",
+      ":Europe/Athens",
+      ":Europe/Belgrade",
+      ":Europe/Berlin",
+      ":Europe/Bratislava",
+      ":Europe/Brussels",
+      ":Europe/Bucharest",
+      ":Europe/Budapest",
+      ":Europe/Busingen",
+      ":Europe/Chisinau",
+      ":Europe/Copenhagen",
+      ":Europe/Dublin",
+      ":Europe/Gibraltar",
+      ":Europe/Guernsey",
+      ":Europe/Helsinki",
+      ":Europe/Isle_of_Man",
+      ":Europe/Istanbul",
+      ":Europe/Jersey",
+      ":Europe/Kaliningrad",
+      ":Europe/Kiev",
+      ":Europe/Kirov",
+      ":Europe/Lisbon",
+      ":Europe/Ljubljana",
+      ":Europe/London",
+      ":Europe/Luxembourg",
+      ":Europe/Madrid",
+      ":Europe/Malta",
+      ":Europe/Mariehamn",
+      ":Europe/Minsk",
+      ":Europe/Monaco",
+      ":Europe/Moscow",
+      ":Europe/Nicosia",
+      ":Europe/Oslo",
+      ":Europe/Paris",
+      ":Europe/Podgorica",
+      ":Europe/Prague",
+      ":Europe/Riga",
+      ":Europe/Rome",
+      ":Europe/Samara",
+      ":Europe/San_Marino",
+      ":Europe/Sarajevo",
+      ":Europe/Saratov",
+      ":Europe/Simferopol",
+      ":Europe/Skopje",
+      ":Europe/Sofia",
+      ":Europe/Stockholm",
+      ":Europe/Tallinn",
+      ":Europe/Tirane",
+      ":Europe/Ulyanovsk",
+      ":Europe/Uzhgorod",
+      ":Europe/Vaduz",
+      ":Europe/Vatican",
+      ":Europe/Vienna",
+      ":Europe/Vilnius",
+      ":Europe/Volgograd",
+      ":Europe/Warsaw",
+      ":Europe/Zagreb",
+      ":Europe/Zaporozhye",
+      ":Europe/Zurich",
+      ":HST",
+      ":Indian/Antananarivo",
+      ":Indian/Chagos",
+      ":Indian/Christmas",
+      ":Indian/Cocos",
+      ":Indian/Comoro",
+      ":Indian/Kerguelen",
+      ":Indian/Mahe",
+      ":Indian/Maldives",
+      ":Indian/Mauritius",
+      ":Indian/Mayotte",
+      ":Indian/Reunion",
+      ":MET",
+      ":MST",
+      ":MST7MDT",
+      ":PST8PDT",
+      ":Pacific/Apia",
+      ":Pacific/Auckland",
+      ":Pacific/Bougainville",
+      ":Pacific/Chatham",
+      ":Pacific/Chuuk",
+      ":Pacific/Easter",
+      ":Pacific/Efate",
+      ":Pacific/Fakaofo",
+      ":Pacific/Fiji",
+      ":Pacific/Funafuti",
+      ":Pacific/Galapagos",
+      ":Pacific/Gambier",
+      ":Pacific/Guadalcanal",
+      ":Pacific/Guam",
+      ":Pacific/Honolulu",
+      ":Pacific/Kanton",
+      ":Pacific/Kiritimati",
+      ":Pacific/Kosrae",
+      ":Pacific/Kwajalein",
+      ":Pacific/Majuro",
+      ":Pacific/Marquesas",
+      ":Pacific/Midway",
+      ":Pacific/Nauru",
+      ":Pacific/Niue",
+      ":Pacific/Norfolk",
+      ":Pacific/Noumea",
+      ":Pacific/Pago_Pago",
+      ":Pacific/Palau",
+      ":Pacific/Pitcairn",
+      ":Pacific/Pohnpei",
+      ":Pacific/Port_Moresby",
+      ":Pacific/Rarotonga",
+      ":Pacific/Saipan",
+      ":Pacific/Tahiti",
+      ":Pacific/Tarawa",
+      ":Pacific/Tongatapu",
+      ":Pacific/Wake",
+      ":Pacific/Wallis",
+      ":WET",
+    ]
+  }
+}
+
+ohos_prebuilt_etc("metaZones") {
+  source = "//base/global/timezone/data/prebuild/icu/metaZones.res"
+  module_install_dir = "etc/icu_tzdata"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("timezoneTypes") {
+  source = "//base/global/timezone/data/prebuild/icu/timezoneTypes.res"
+  module_install_dir = "etc/icu_tzdata"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("windowsZones") {
+  source = "//base/global/timezone/data/prebuild/icu/windowsZones.res"
+  module_install_dir = "etc/icu_tzdata"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+ohos_prebuilt_etc("zoneinfo64") {
+  source = "//base/global/timezone/data/prebuild/icu/zoneinfo64.res"
+  module_install_dir = "etc/icu_tzdata"
+  part_name = "timezone"
+  subsystem_name = "global"
+}
+
+group("icu_tzdata") {
+  # just for standard system
+  if (is_standard_system) {
+    deps = [
+      ":metaZones",
+      ":timezoneTypes",
+      ":windowsZones",
+      ":zoneinfo64",
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base/security/access_token/access_token.gni")
+import("//build/ohos.gni")
+
+ohos_prebuilt_etc("privacy.rc") {
+  source = "privacy.cfg"
+  relative_install_dir = "init"
+  subsystem_name = "security"
+  part_name = "access_token"
+}
+
+group("privacymanager") {
+  if (is_standard_system && ability_base_enable == true) {
+    deps = [
+      "//base/security/access_token/services/privacymanager:privacy_manager_service",
+      "//base/security/access_token/services/privacymanager/sa_profile:privacy_sa_profile_standard",
+    ]
+  }
+}
+
+if (is_standard_system && ability_base_enable == true) {
+  ohos_shared_library("privacy_manager_service") {
+    subsystem_name = "security"
+    part_name = "access_token"
+    version_script = "libprivacy_map"
+
+    include_dirs = [
+      "include/active",
+      "include/common",
+      "include/database",
+      "include/record",
+      "include/sensitive",
+      "include/sensitive/ability_manager/",
+      "include/sensitive/app_manager/",
+      "include/sensitive/audio_manager/",
+      "include/sensitive/camera_manager/",
+      "include/sensitive/window_manager/",
+      "include/service",
+      "//base/security/access_token/frameworks/privacy/include",
+      "//base/security/access_token/frameworks/common/include",
+      "//base/security/access_token/interfaces/innerkits/accesstoken/include",
+      "//base/security/access_token/interfaces/innerkits/privacy/include",
+      "//base/security/access_token/services/common/database/include",
+      "//third_party/json/include",
+      "//third_party/sqlite/include/",
+      "//foundation/graphic/graphic_2d/frameworks/surface/include",
+    ]
+
+    sources = [
+      "src/active/active_status_callback_manager.cpp",
+      "src/active/perm_active_status_callback_death_recipient.cpp",
+      "src/active/perm_active_status_change_callback_proxy.cpp",
+      "src/active/state_change_callback_proxy.cpp",
+      "src/common/constant.cpp",
+      "src/common/memory_guard.cpp",
+      "src/common/privacy_field_const.cpp",
+      "src/common/time_util.cpp",
+      "src/database/data_translator.cpp",
+      "src/database/permission_used_record_db.cpp",
+      "src/record/on_permission_used_record_callback_proxy.cpp",
+      "src/record/permission_record.cpp",
+      "src/record/permission_record_manager.cpp",
+      "src/record/permission_record_repository.cpp",
+      "src/record/permission_used_record_cache.cpp",
+      "src/sensitive/ability_manager/ability_manager_privacy_client.cpp",
+      "src/sensitive/ability_manager/ability_manager_privacy_death_recipient.cpp",
+      "src/sensitive/ability_manager/ability_manager_privacy_proxy.cpp",
+      "src/sensitive/app_manager/app_manager_death_recipient.cpp",
+      "src/sensitive/app_manager/app_manager_privacy_client.cpp",
+      "src/sensitive/app_manager/app_manager_privacy_proxy.cpp",
+      "src/sensitive/app_manager/app_state_data.cpp",
+      "src/sensitive/app_manager/app_status_change_callback.cpp",
+      "src/sensitive/audio_manager/audio_global_switch_change_stub.cpp",
+      "src/sensitive/audio_manager/audio_manager_privacy_client.cpp",
+      "src/sensitive/audio_manager/audio_manager_privacy_death_recipient.cpp",
+      "src/sensitive/audio_manager/audio_manager_privacy_proxy.cpp",
+      "src/sensitive/camera_manager/camera_manager_privacy_client.cpp",
+      "src/sensitive/camera_manager/camera_manager_privacy_death_recipient.cpp",
+      "src/sensitive/camera_manager/camera_manager_privacy_proxy.cpp",
+      "src/sensitive/camera_manager/camera_service_callback_stub.cpp",
+      "src/sensitive/window_manager/window_manager_privacy_agent.cpp",
+      "src/sensitive/window_manager/window_manager_privacy_client.cpp",
+      "src/sensitive/window_manager/window_manager_privacy_death_recipient.cpp",
+      "src/sensitive/window_manager/window_manager_privacy_proxy.cpp",
+      "src/service/privacy_manager_service.cpp",
+      "src/service/privacy_manager_stub.cpp",
+    ]
+
+    if (use_musl) {
+      if (use_jemalloc && use_jemalloc_dfx_intf) {
+        defines = [ "CONFIG_USE_JEMALLOC_DFX_INTF" ]
+      }
+    }
+    cflags_cc = [ "-DHILOG_ENABLE" ]
+    configs = [ "//base/security/access_token/config:coverage_flags" ]
+
+    deps = [
+      "//base/security/access_token/frameworks/common:accesstoken_common_cxx",
+      "//base/security/access_token/frameworks/privacy:privacy_communication_adapter_cxx",
+      "//base/security/access_token/interfaces/innerkits/accesstoken:libaccesstoken_sdk",
+      "//base/security/access_token/services/common/database:accesstoken_database_cxx",
+      "//base/security/access_token/services/privacymanager:privacy.rc",
+    ]
+
+    external_deps = [
+      "ability_base:want",
+      "c_utils:utils",
+      "hisysevent_native:libhisysevent",
+      "hiviewdfx_hilog_native:libhilog",
+      "ipc:ipc_core",
+      "safwk:system_ability_fwk",
+      "samgr:samgr_proxy",
+    ]
+  }
+}

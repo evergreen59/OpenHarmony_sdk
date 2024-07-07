@@ -1,0 +1,96 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+webview_root_path = "//base/web/webview"
+native_source_path = rebase_path("$webview_root_path")
+web_dir = "nweb_hap"
+position = exec_script(
+        "$webview_root_path/run_shell_cmd.py",
+        [ "cd $native_source_path; if [ -d $web_dir ]; then echo true; else echo false; fi" ],
+        "value")
+if (!position) {
+  if (target_cpu == "arm64") {
+    web_source = "prebuilts/arm64/NWeb.hap"
+    defines = [ "webview_arm64" ]
+  } else if (target_cpu == "arm") {
+    web_source = "prebuilts/arm/NWeb.hap"
+  }
+} else {
+  if (target_cpu == "arm64") {
+    if (use_musl) {
+      web_source = "../nweb_hap/arm64_musl/NWeb.hap"
+    } else {
+      web_source = "../nweb_hap/arm64/NWeb.hap"
+    }
+    defines = [ "webview_arm64" ]
+  } else if (target_cpu == "x86_64") {
+    web_source = "../nweb_hap/x86_64/NWeb.hap"
+    defines = [ "webview_x86_64" ]
+  }
+}
+
+config("nweb_config") {
+  include_dirs = [
+    "include",
+    "//commonlibrary/c_utils/base/include",
+    "//foundation/window/window_manager/interfaces/innerkits/wm",
+    "//foundation/multimodalinput/input/interfaces/native/innerkits/event/include",
+    "//foundation/graphic/graphic_2d/frameworks/surface/include",
+    "//foundation/graphic/graphic_2d/interfaces/innerkits/surface",
+    "//foundation/communication/ipc/interfaces/innerkits/ipc_core/include",
+  ]
+
+  cflags = [
+    "-Wall",
+    "-Werror",
+    "-g3",
+  ]
+}
+
+config("nweb_public_interface") {
+  include_dirs = [ "//base/web/webview/ohos_nweb/include" ]
+}
+
+ohos_shared_library("libnweb") {
+  configs = [ ":nweb_config" ]
+  public_configs = [ ":nweb_public_interface" ]
+  sources = [
+    "src/nweb_enhance_surface_adapter.cpp",
+    "src/nweb_helper.cpp",
+    "src/nweb_input_event_consumer.cpp",
+    "src/nweb_surface_adapter.cpp",
+    "src/nweb_window_adapter.cpp",
+  ]
+
+  deps = [
+    "//foundation/graphic/graphic_2d/rosen/modules/composer:libcomposer",
+    "//foundation/graphic/graphic_2d/rosen/modules/render_service_client:librender_service_client",
+  ]
+
+  external_deps = [
+    "hiviewdfx_hilog_native:libhilog",
+    "input:libmmi-client",
+  ]
+
+  part_name = "webview"
+  subsystem_name = "web"
+}
+
+ohos_prebuilt_etc("nweb_hap") {
+  source = web_source
+  module_install_dir = "app/com.ohos.nweb"
+  part_name = "webview"
+  subsystem_name = "web"
+}

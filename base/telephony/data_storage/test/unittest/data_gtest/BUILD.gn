@@ -1,0 +1,66 @@
+# Copyright (C) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base\telephony/data_storage/data_storage_ability_runtime.gni")
+import("//build/test.gni")
+SOURCE_DIR = "//base/telephony/data_storage"
+
+ohos_unittest("tel_data_storage_gtest") {
+  part_name = "data_storage"
+  subsystem_name = "telephony"
+  test_module = "tel_data_storage_gtest"
+  module_out_path = part_name + "/" + test_module
+
+  sources = [ "$SOURCE_DIR/test/unittest/data_gtest/data_storage_gtest.cpp" ]
+
+  include_dirs = [
+    "$SOURCE_DIR/common/include",
+    "$SOURCE_DIR/sim/include",
+    "$SOURCE_DIR/pdp_profile/include",
+    "$SOURCE_DIR/sms_mms/include",
+    "$SOURCE_DIR/opkey/include",
+  ]
+  defines = [
+    "TELEPHONY_LOG_TAG = \"DataStorageGtest\"",
+    "LOG_DOMAIN = 0xD000F00",
+  ]
+
+  deps = [
+    "${ability_runtime_inner_api_path}/ability_manager:ability_manager",
+    "${ability_runtime_path}/frameworks/native/ability/native:abilitykit_native",
+    "${ability_runtime_path}/frameworks/native/ability/native:data_ability_helper",
+  ]
+
+  external_deps = [
+    "ability_base:want",
+    "ability_base:zuri",
+    "access_token:libaccesstoken_sdk",
+    "access_token:libnativetoken",
+    "access_token:libtoken_setproc",
+    "c_utils:utils",
+    "common_event_service:cesfwk_innerkits",
+    "eventhandler:libeventhandler",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+    "relational_store:native_appdatafwk",
+    "relational_store:native_dataability",
+    "relational_store:native_rdb",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+}
+
+group("unittest") {
+  testonly = true
+  deps = [ ":tel_data_storage_gtest" ]
+}

@@ -1,0 +1,42 @@
+{
+  "app": {
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "release"
+      }
+    ],
+  },
+  "modules": [
+    {
+      "name": "phone",
+      "srcPath": "./product/phone",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "component",
+      "srcPath": "./common/component",
+    },
+    {
+      "name": "search",
+      "srcPath": "./common/search",
+    },
+    {
+      "name": "settingsBase",
+      "srcPath": "./common/settingsBase",
+    },
+    {
+      "name": "utils",
+      "srcPath": "./common/utils",
+    }
+  ]
+}

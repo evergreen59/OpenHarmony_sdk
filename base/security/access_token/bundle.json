@@ -1,0 +1,122 @@
+{
+  "name": "@openharmony/access_token",
+  "description": "access_token",
+  "version": "3.1.0",
+  "license": "Apache License 2.0",
+  "publishAs": "code-segment",
+  "segment": {
+    "destPath": "base/security/access_token"
+  },
+  "dirs": {},
+  "scripts": {},
+  "component": {
+    "name": "access_token",
+    "subsystem": "security",
+    "syscap": [
+      "SystemCapability.Security.AccessToken"
+    ],
+    "hisysevent_config": [
+      "//base/security/access_token/hisysevent.yaml"
+    ],
+    "features": [ "access_token_feature_coverage = false" ],
+    "adapted_system_type": [ "standard" ],
+    "rom": "2048KB",
+    "ram": "5102KB",
+    "deps": {
+      "components": [
+        "ability_tools",
+        "bounds_checking_function",
+        "bundle_framework",
+        "cjson",
+        "common",
+        "device_manager",
+        "dsoftbus",
+        "eventhandler",
+        "hiviewdfx_hilog_native",
+        "init",
+        "ipc",
+        "napi",
+        "safwk",
+        "samgr",
+        "selinux",
+        "startup_l2",
+        "zlib"
+      ],
+      "third_party": [
+        "cJSON",
+        "sqlite",
+        "mbedtls"
+      ]
+    },
+    "build": {
+      "group_type": {
+        "base_group": [
+          "//base/security/access_token/tools:tools_atm"
+        ],
+        "fwk_group": [
+          "//base/security/access_token/interfaces/kits:napi_packages"
+        ],
+        "service_group": [
+          "//base/security/access_token/services/accesstokenmanager:accesstoken_manager_service",
+          "//base/security/access_token/services/accesstokenmanager/main/sa_profile:accesstoken_sa_profile_standard",
+          "//base/security/access_token/services/tokensyncmanager:tokensyncmanager",
+          "//base/security/access_token/services/privacymanager:privacymanager",
+          "//base/security/access_token/services/accesstokenmanager/etc:access_token.para",
+          "//base/security/access_token/services/accesstokenmanager/etc:access_token.para.dac"
+        ]
+      },
+      "inner_kits": [
+        {
+          "name": "//base/security/access_token/interfaces/innerkits/accesstoken:libaccesstoken_sdk",
+          "header": {
+            "header_files": [
+              "accesstoken_kit.h"
+            ],
+            "header_base": "//base/security/access_token/interfaces/innerkits/accesstoken/include"
+          }
+        },
+        {
+          "name": "//base/security/access_token/interfaces/innerkits/nativetoken:libnativetoken",
+          "header": {
+            "header_files": [
+              "nativetoken_kit.h"
+            ],
+            "header_base": "//base/security/access_token/interfaces/innerkits/nativetoken/include"
+          }
+        },
+        {
+          "name": "//base/security/access_token/interfaces/innerkits/privacy:libprivacy_sdk",
+          "header": {
+            "header_files": [
+              "privacy_kit.h"
+            ],
+            "header_base": "//base/security/access_token/interfaces/innerkits/privacy/include"
+          }
+        },
+        {
+          "name": "//base/security/access_token/interfaces/innerkits/token_callback:libtoken_callback_sdk",
+          "header": {
+            "header_files": [
+              "token_callback_stub.h"
+            ],
+            "header_base": "//base/security/access_token/interfaces/innerkits/token_callback/include"
+          }
+        },
+        {
+          "name": "//base/security/access_token/interfaces/innerkits/token_setproc:libtoken_setproc",
+          "header": {
+            "header_files": [
+              "token_setproc.h"
+            ],
+            "header_base": "//base/security/access_token/interfaces/innerkits/token_setproc/include"
+          }
+        }
+      ],
+      "test": [
+        "//base/security/access_token/interfaces/kits/accesstoken/test/benchmarktest:benchmarktest",
+        "//base/security/access_token/test/fuzztest/access_token:fuzztest",
+        "//base/security/access_token:accesstoken_build_module_test"
+      ]
+    }
+  }
+}

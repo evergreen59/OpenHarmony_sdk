@@ -1,0 +1,61 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base/account/os_account/os_account.gni")
+import("//build/ohos.gni")
+
+config("osaccountinterface_config") {
+  visibility = [ ":*" ]
+  include_dirs = [
+    "${common_path}/account_error/include",
+    "${common_path}/database/include",
+    "${os_account_interfaces_native_path}/include",
+    "//third_party/json/include",
+    "//commonlibrary/c_utils/base/include",
+  ]
+  cflags = []
+  if (target_cpu == "arm") {
+    cflags += [ "-DBINDER_IPC_32BIT" ]
+  }
+  cflags += [ "-pipe" ]
+}
+
+ohos_shared_library("os_account_innerkits") {
+  sources = [
+    "src/os_account_info.cpp",
+    "src/os_account_manager.cpp",
+    "src/os_account_subscribe_info.cpp",
+    "src/os_account_subscriber.cpp",
+  ]
+
+  defines = [
+    "ACCOUNT_LOG_TAG = \"OsAccountNativeFwk\"",
+    "LOG_DOMAIN = 0xD001B00",
+  ]
+
+  configs = [
+    ":osaccountinterface_config",
+    "${account_coverage_config_path}:coverage_flags",
+  ]
+  public_configs = [ ":osaccountinterface_config" ]
+  use_exceptions = true
+
+  deps = [ "${os_account_core_path}:os_account_core" ]
+
+  external_deps = [
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+  ]
+  subsystem_name = "account"
+  part_name = "os_account"
+}

@@ -1,0 +1,107 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+# Type of all devices.
+# i.e. /dev/camera_dev
+attribute dev_attr;
+
+# Type of all processes, including the hap process and native process.
+# i.e. hdbd, media
+attribute domain;
+
+# Type of all virtual file system files.
+# i.e. /sys/block,
+#      /sys/bus,
+#      /proc/mtd,
+#      /dev/camera_dev
+attribute fs_attr;
+
+# Type of all proc files.
+# i.e. /proc/mtd
+attribute proc_attr;
+
+# Type of all common files.
+# i.e. /data/user,
+#      /system/bin
+attribute file_attr;
+
+# Type of all rootfs files.
+# i.e. /*
+attribute rootfs_file_attr;
+
+# Type of all system files.
+# i.e. /system/*
+attribute system_file_attr;
+
+# Type of all sys_prod files.
+# i.e. /sys_prod/*
+attribute sys_prod_file_attr;
+
+# Type of all vendor files.
+# i.e. /vendor/*
+attribute vendor_file_attr;
+
+# Type of all chip_prod files.
+# i.e. /chip_prod/*
+attribute chip_prod_file_attr;
+
+# Type of all domain access points, which is used in domain trasition.
+# i.e. vold_exec,
+#      appspawn_exec
+attribute exec_attr;
+
+# Types of all files in the /data directory.
+# i.e. /data/user
+attribute data_file_attr;
+
+# All types in the sysfs file system.
+# i.e. /sys/firmware
+attribute sysfs_attr;
+
+# All types in the debugfs file system.
+# i.e. /sys/kernel/debug/*
+attribute debugfs_attr;
+
+# All types of parameters.
+# i.e. ohos_param
+attribute parameter_attr;
+
+# All types of services.
+# i.e. bms_service
+attribute sa_service_attr;
+
+# All types of hdf_services.
+# i.e. camera_service
+attribute hdf_service_attr;
+
+# Type of all processes in the hap format.
+# i.e. com.ohos.setting
+attribute hap_domain;
+
+# File type of all processes in the hap format.
+# i.e. com.ohos.setting
+attribute hap_file_attr;
+
+# Type of hdf processes.
+# i.e. hdv_devmgr,
+attribute hdfdomain;
+
+# Type of all native processes.
+# i.e. at,
+attribute sadomain;
+
+# Type of left native processes not in sadomain.
+# i.e. appspawn,
+#      media
+attribute nativedomain;

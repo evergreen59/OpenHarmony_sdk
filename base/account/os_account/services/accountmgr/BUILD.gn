@@ -1,0 +1,308 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base/account/os_account/os_account.gni")
+import("//build/ohos.gni")
+
+ohos_prebuilt_etc("accountmgr.init") {
+  source = "accountmgr.cfg"
+  relative_install_dir = "init"
+  part_name = "os_account"
+}
+
+ohos_prebuilt_etc("osaccount_constraint") {
+  source = "osaccount_constraints.json"
+  relative_install_dir = "account"
+  part_name = "os_account"
+}
+
+ohos_prebuilt_etc("constraints_list_collection") {
+  source = "constraints_list_collection.json"
+  relative_install_dir = "account"
+  part_name = "os_account"
+}
+
+config("accountmgr_config") {
+  include_dirs = [
+    "./include",
+    "./include/ability_manager_adapter",
+    "./include/appaccount",
+    "./include/osaccount",
+    "${common_path}/log/include",
+    "${common_path}/perf_stat/include",
+    "${common_path}/account_error/include",
+    "${innerkits_path}/include",
+    "${os_account_dfx_path}/hidumper_adapter",
+    "${os_account_dfx_path}/hisysevent_adapter",
+    "${app_account_innerkits_native_path}/include",
+    "//third_party/json/include",
+    "//third_party/mbedtls/include",
+    "//commonlibrary/c_utils/base/include",
+    "//utils/system/safwk/native/include",
+  ]
+
+  if (has_storage_service_part) {
+    include_dirs += [
+      "//foundation/storage/storage_manager/interfaces/innerkits/storage_manager/native",
+      "//foundation/filemanagement/storage_service/services/storage_manager/include/ipc",
+      "//foundation/storage/storage_manager/services/storage_manager/include/ipc",
+    ]
+  }
+}
+
+config("account_iam_config") {
+  include_dirs = [
+    "${account_iam_interfaces_native_path}/include",
+    "//base/useriam/user_auth_framework/interfaces/inner_api",
+  ]
+}
+
+config("domain_account_config") {
+  include_dirs = [
+    "include/domain_account",
+    "${domain_account_framework_path}/include",
+    "${domain_account_interfaces_native_path}/include",
+  ]
+}
+
+config("ability_manager_config") {
+  include_dirs = [
+    "${ability_runtime_path}/interfaces/inner_api/ability_manager/include",
+    "${ability_runtime_path}/ability_base/interfaces/inner_api/want/include",
+    "${ability_runtime_path}/services/abilitymgr/include",
+    "${ability_runtime_path}/services/common/include",
+  ]
+}
+
+config("accountmgr_public_config") {
+  visibility = [ ":*" ]
+
+  include_dirs = [
+    "${services_path}/accountmgr/include",
+    "${services_path}/accountmgr/include/appaccount",
+    "${services_path}/accountmgr/include/osaccount",
+    "${services_path}/accountmgr/include/domain_account",
+  ]
+
+  if (has_user_auth_part) {
+    include_dirs += [ "${services_path}/accountmgr/include/account_iam" ]
+  }
+}
+
+ability_manager_sources = [
+  "${ability_runtime_path}/services/abilitymgr/src/ability_connect_callback_stub.cpp",
+  "${ability_runtime_path}/services/abilitymgr/src/stop_user_callback_stub.cpp",
+  "src/ability_manager_adapter/ability_manager_adapter.cpp",
+]
+
+config("bundle_manager_config") {
+  include_dirs = [
+    "${services_path}/accountmgr/include/bundle_manager_adapter",
+    "${bundle_framework_path}/common/log/include",
+    "${bundle_framework_path}/interfaces/inner_api/appexecfwk_core/include/bundlemgr",
+  ]
+}
+
+bundle_manager_sources = [
+  "${bundle_framework_path}/common/log/src/app_log_wrapper.cpp",
+  "src/bundle_manager_adapter/bundle_manager_adapter.cpp",
+  "src/bundle_manager_adapter/bundle_manager_adapter_proxy.cpp",
+  "src/bundle_manager_adapter/bundle_user_manager_adapter_proxy.cpp",
+]
+
+group("accountmgr_target") {
+  deps = [
+    ":accountmgr",
+    ":accountmgr.init",
+    ":constraints_list_collection",
+    ":osaccount_constraint",
+  ]
+}
+
+ohos_shared_library("accountmgr") {
+  visibility = [ "${os_account_path}/*" ]
+
+  cflags = [ "-pipe" ]
+  version_script = "libaccountmgr.map"
+  cflags_cc = [
+    "-Wdate-time",
+    "-Wformat=2",
+    "-Wfloat-equal",
+    "-Wshadow",
+  ]
+  if (os_account_multiple_active_accounts) {
+    cflags += [ "-DENABLE_MULTIPLE_ACTIVE_ACCOUNTS" ]
+  }
+
+  if (os_account_distributed_feature) {
+    cflags += [ "-DDISTRIBUTED_FEATURE_ENABLED" ]
+  }
+
+  sources = [
+    "${app_account_innerkits_native_path}/src/app_account_authenticator_callback_proxy.cpp",
+    "${app_account_innerkits_native_path}/src/app_account_authenticator_callback_stub.cpp",
+    "${app_account_innerkits_native_path}/src/app_account_common.cpp",
+    "${app_account_innerkits_native_path}/src/app_account_info.cpp",
+    "${app_account_innerkits_native_path}/src/app_account_subscribe_info.cpp",
+    "${domain_account_framework_path}/src/domain_auth_callback_proxy.cpp",
+    "${domain_account_framework_path}/src/domain_auth_callback_service.cpp",
+    "${domain_account_framework_path}/src/domain_auth_callback_stub.cpp",
+    "${innerkits_native_path}/src/account_info_parcel.cpp",
+    "${os_account_dfx_path}/hidumper_adapter/account_dump_helper.cpp",
+    "${os_account_dfx_path}/hisysevent_adapter/hisysevent_adapter.cpp",
+    "src/account_data_storage.cpp",
+    "src/account_event_provider.cpp",
+    "src/account_helper_data.cpp",
+    "src/account_mgr_service.cpp",
+    "src/account_permission_manager.cpp",
+    "src/account_state_machine.cpp",
+    "src/account_stub.cpp",
+    "src/appaccount/app_account_app_state_observer.cpp",
+    "src/appaccount/app_account_authenticator_callback.cpp",
+    "src/appaccount/app_account_authenticator_manager.cpp",
+    "src/appaccount/app_account_authenticator_proxy.cpp",
+    "src/appaccount/app_account_authenticator_session.cpp",
+    "src/appaccount/app_account_authenticator_session_manager.cpp",
+    "src/appaccount/app_account_check_labels_callback.cpp",
+    "src/appaccount/app_account_check_labels_session.cpp",
+    "src/appaccount/app_account_common_event_observer.cpp",
+    "src/appaccount/app_account_common_event_subscriber.cpp",
+    "src/appaccount/app_account_control_manager.cpp",
+    "src/appaccount/app_account_data_storage.cpp",
+    "src/appaccount/app_account_event_proxy.cpp",
+    "src/appaccount/app_account_manager_service.cpp",
+    "src/appaccount/app_account_stub.cpp",
+    "src/appaccount/app_account_subscribe_death_recipient.cpp",
+    "src/appaccount/app_account_subscribe_manager.cpp",
+    "src/appaccount/inner_app_account_manager.cpp",
+    "src/domain_account/domain_account_manager_service.cpp",
+    "src/domain_account/domain_account_plugin_death_recipient.cpp",
+    "src/domain_account/domain_account_plugin_proxy.cpp",
+    "src/domain_account/domain_account_stub.cpp",
+    "src/domain_account/inner_domain_account_manager.cpp",
+    "src/ohos_account_data_deal.cpp",
+    "src/ohos_account_manager.cpp",
+    "src/osaccount/inner_os_account_manager.cpp",
+    "src/osaccount/os_account_control_file_manager.cpp",
+    "src/osaccount/os_account_data_storage.cpp",
+    "src/osaccount/os_account_database_operator.cpp",
+    "src/osaccount/os_account_delete_user_idm_callback.cpp",
+    "src/osaccount/os_account_file_operator.cpp",
+    "src/osaccount/os_account_interface.cpp",
+    "src/osaccount/os_account_manager_service.cpp",
+    "src/osaccount/os_account_photo_operator.cpp",
+    "src/osaccount/os_account_stop_user_callback.cpp",
+    "src/osaccount/os_account_subscribe_death_recipient.cpp",
+    "src/osaccount/os_account_subscribe_manager.cpp",
+  ]
+
+  sources += ability_manager_sources
+  sources += bundle_manager_sources
+
+  if (has_user_auth_part) {
+    sources += [
+      "src/account_iam/account_iam_callback.cpp",
+      "src/account_iam/account_iam_client_callback_proxy.cpp",
+      "src/account_iam/account_iam_mgr_stub.cpp",
+      "src/account_iam/account_iam_service.cpp",
+      "src/account_iam/inner_account_iam_manager.cpp",
+    ]
+  }
+
+  defines = [
+    "ACCOUNT_LOG_TAG = \"AccountMgrService\"",
+    "LOG_DOMAIN = 0xD001B00",
+  ]
+
+  configs = [
+    ":accountmgr_config",
+    ":ability_manager_config",
+    ":bundle_manager_config",
+    ":domain_account_config",
+    "${account_coverage_config_path}:coverage_flags",
+  ]
+
+  if (has_user_auth_part) {
+    configs += [ ":account_iam_config" ]
+  }
+
+  public_configs = [
+    ":accountmgr_public_config",
+    ":domain_account_config",
+  ]
+
+  use_exceptions = true
+
+  deps = [
+    "${common_path}:libaccount_common",
+    "${os_account_core_path}:os_account_core",
+    "${os_account_innerkits_native_path}:os_account_innerkits",
+    "//third_party/mbedtls:mbedtls",
+  ]
+
+  if (has_user_auth_part) {
+    cflags_cc += [
+      "-DHAS_USER_AUTH_PART",
+      "-DHAS_USER_IDM_PART",
+    ]
+    deps += [
+      "//base/security/access_token/interfaces/innerkits/token_setproc:libtoken_setproc",
+      "//base/useriam/user_auth_framework/frameworks/native/client:userauth_client",
+      "//base/useriam/user_auth_framework/frameworks/native/ipc:userauth_client_ipc",
+    ]
+  }
+
+  external_deps = [
+    "ability_base:want",
+    "ability_runtime:app_manager",
+    "ability_runtime:wantagent_innerkits",
+    "access_token:libaccesstoken_sdk",
+    "bundle_framework:appexecfwk_base",
+    "c_utils:utils",
+    "eventhandler:libeventhandler",
+    "hiviewdfx_hilog_native:libhilog",
+    "init:libbegetutil",
+    "ipc:ipc_core",
+    "kv_store:distributeddata_inner",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+
+  if (has_storage_service_part && os_account_storage_feature) {
+    cflags += [ "-DHAS_STORAGE_PART" ]
+    external_deps += [ "storage_service:storage_manager_sa_proxy" ]
+  }
+
+  if (build_selinux) {
+    external_deps += [ "selinux:librestorecon" ]
+    cflags += [ "-DWITH_SELINUX" ]
+  }
+
+  if (has_ces_part) {
+    cflags_cc += [ "-DHAS_CES_PART" ]
+    external_deps += [ "common_event_service:cesfwk_innerkits" ]
+  }
+
+  if (has_hiviewdfx_hisysevent_part) {
+    cflags_cc += [ "-DHAS_HISYSEVENT_PART" ]
+    external_deps += [ "hisysevent_native:libhisysevent" ]
+  }
+
+  if (use_musl) {
+    cflags_cc += [ "-DUSE_MUSL" ]
+  }
+
+  external_deps += [ "hitrace_native:hitrace_meter" ]
+
+  part_name = "os_account"
+}

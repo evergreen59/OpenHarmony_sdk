@@ -1,0 +1,91 @@
+{
+    "name": "@ohos/call_manager",
+    "version": "3.1.0",
+    "description": "telephony call manager service",
+    "publishAs": "code-segment",
+    "homePage": "https://gitee.com/openharmony",
+    "repository": "https://gitee.com/openharmony/telephony_call_manager",
+    "license": "Apache License 2.0",
+    "language": "",
+    "private": false,
+    "scripts": {},
+    "envs": [],
+    "dirs": [],
+    "author": {},
+    "contributors": [],
+    "segment": {
+        "destPath": "base/telephony/call_manager"
+    },
+    "component": {
+        "name": "call_manager",
+        "subsystem": "telephony",
+        "syscap": [
+            "SystemCapability.Telephony.CallManager"
+        ],
+        "features": [],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "1.6MB",
+        "ram": "6MB",
+        "deps": {
+            "components": [
+                "ability_base",
+                "ability_runtime",
+                "bluetooth",
+                "c_utils",
+                "common_event_service",
+                "core_service",
+                "distributed_notification_service",
+                "eventhandler",
+                "hisysevent_native",
+                "hitrace_native",
+                "hiviewdfx_hilog_native",
+                "init",
+                "ipc",
+                "libuv",
+                "multimedia_audio_framework",
+                "multimedia_camera_framework",
+                "napi",
+                "power_manager",
+                "relational_store",
+                "safwk",
+                "samgr",
+                "sms_mms"
+            ],
+            "third_party": [
+                "libphonenumber"
+            ]
+        },
+        "build": {
+            "group_type": {
+                "base_group": [
+                ],
+                "fwk_group": [
+                    "//base/telephony/call_manager/frameworks/js:call"
+                ],
+                "service_group": [
+                    "//base/telephony/call_manager:tel_call_manager",
+                    "//base/telephony/call_manager/sa_profile:call_manager_sa_profile",
+                    "//base/telephony/call_manager/resource/audio:ring.wav"
+                ]
+            },
+            "inner_kits": [
+                {
+                    "header": {
+                        "header_base" : "//base/telephony/call_manager/interfaces/innerkits/",
+                        "header_files": [
+                            "call_manager_client.h",
+                            "call_manager_callback.h"
+                        ]
+                    },
+                    "name":"//base/telephony/call_manager/frameworks/native:tel_call_manager_api"
+                }
+            ],
+            "test": [
+                "//base/telephony/call_manager/test/unittest:unittest",
+                "//base/telephony/call_manager/test/fuzztest:fuzztest"
+            ]
+        }
+    }
+}

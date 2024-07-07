@@ -1,0 +1,88 @@
+{
+  "module": {
+    "name": "callui",
+    "type": "entry",
+    "srcEntrance": "./ets/Application/MyAbilityStage.ts",
+    "description": "$string:callui_description",
+    "mainElement": "com.ohos.callui.ServiceAbility",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "metadata": [
+      {
+        "name": "ArkTSPartialUpdate",
+        "value": "false"
+      }
+    ],
+    "uiSyntax": "ets",
+    "abilities": [
+      {
+        "name": "com.ohos.callui.MainAbility",
+        "srcEntrance": "./ets/MainAbility/MainAbility.ts",
+        "description": "$string:callui_description",
+        "icon": "$media:app_icon",
+        "label": "$string:callui_description",
+        "startWindowIcon": "$media:app_icon",
+        "startWindowBackground": "$color:black",
+        "removeMissionAfterTerminate": true,
+        "visible": true,
+        "minWindowHeight": 700,
+        "minWindowWidth": 320,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "backgroundModes": [
+          "voip"
+        ]
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "com.ohos.callui.ServiceAbility",
+        "icon": "$media:app_icon",
+        "description": "service",
+        "type": "service",
+        "visible": true,
+        "srcEntrance": "./ets/ServiceAbility/ServiceAbility.ts",
+        "label": "$string:callui_description"
+      }
+    ],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.READ_CONTACTS"
+      },
+      {
+        "name": "ohos.permission.SEND_MESSAGES"
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED"
+      },
+      {
+        "name": "ohos.permission.GET_TELEPHONY_STATE"
+      },
+      {
+        "name": "ohos.permission.NOTIFICATION_CONTROLLER"
+      },
+      {
+        "name": "ohos.permission.START_ABILITIES_FROM_BACKGROUND"
+      },
+      {
+        "name": "ohos.permission.KEEP_BACKGROUND_RUNNING"
+      },
+      {
+        "name": "ohos.permission.ANSWER_CALL"
+      }
+    ]
+  }
+}

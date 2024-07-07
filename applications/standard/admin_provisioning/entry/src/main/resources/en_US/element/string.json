@@ -1,0 +1,164 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "Device Management Configuration"
+    },
+    {
+      "name": "description_mainability",
+      "value": "激活DeviceAdmin"
+    },
+    {
+      "name": "description_autoManagerAbility",
+      "value": "激活SuperDeviceAdmin"
+    },
+    {
+      "name": "description_adminProvisioning",
+      "value": "支撑EDM下发业务"
+    },
+    {
+      "name": "adminprovisioning",
+      "value": "Activate Device Manager?"
+    },
+    {
+      "name": "appManagement",
+      "value": "Application Management"
+    },
+    {
+      "name": "description_appmanagementmodel",
+      "value": "hap sample empty service"
+    },
+    {
+      "name": "activation",
+      "value": "activate"
+    },
+    {
+      "name": "deActivate",
+      "value": "Deactivate"
+    },
+    {
+      "name": "cancel",
+      "value": "cancel"
+    },
+    {
+      "name": "inActivated",
+      "value": "Inactive"
+    },
+    {
+      "name": "device_active_1",
+      "value": "This device administrator is currently active and allows \""
+    },
+    {
+      "name": "device_active_2",
+      "value": "\" to perform the following operations:"
+    },
+    {
+      "name": "device_deactivate",
+      "value": "Activating this administrator will allow \""
+    },
+    {
+      "name": "enterprise_name",
+      "value": "enterprise name:  "
+    },
+    {
+      "name": "enterprise_description",
+      "value": "enterprise description:  "
+    },
+    {
+      "name": "permissionLabel",
+      "value": "Setting the system time"
+    },
+    {
+      "name": "permissionDescription",
+      "value": "Permission required for the application to set the system time"
+    },
+    {
+      "name": "device_mgr_info_content",
+      "value": "your organization administrator can monitor this device's setting, apps, permissions, and data, including your web activity and your device's location, call history, and contact search history."
+    },
+    {
+      "name": "returnVal",
+      "value": "return"
+    },
+    {
+      "name": "nextVal",
+      "value": "next"
+    },
+    {
+      "name": "tips",
+      "value": "Tips"
+    },
+    {
+      "name": "tipsInfo",
+      "value": "The current setting is not completed. The device will be reset after canceling the setting. Do you want to continue?"
+    },
+    {
+      "name": "CancelSetting",
+      "value": "cancelSetting"
+    },
+    {
+      "name": "deviceManageInfo",
+      "value": "device management information"
+    },
+    {
+      "name": "unitManageDevice",
+      "value": "your organization will manage this device"
+    },
+    {
+      "name": "unitManage",
+      "value": "unit administrator"
+    },
+    {
+      "name": "textManagerBefore",
+      "value": ", if you have any questions, please contact your "
+    },
+    {
+      "name": "textManagerBeforeFinish",
+      "value": "if you have any questions, please contact your "
+    },
+    {
+      "name": "textManagerAfter",
+      "value": " contact."
+    },
+    {
+      "name": "textTerms",
+      "value": "view terms"
+    },
+    {
+      "name": "textTermsBefore",
+      "value": "you can "
+    },
+    {
+      "name": "buttonAcceptAndContinue",
+      "value": "Accept And Continue"
+    },
+    {
+      "name": "loadingSearch",
+      "value": "setting up device..."
+    },
+    {
+      "name": "terms",
+      "value": "Terms"
+    },
+    {
+      "name": "manageInfo",
+      "value": "Management information"
+    },
+    {
+      "name": "settingFailed",
+      "value": "setup failed"
+    },
+    {
+      "name": "settingFailedInfo",
+      "value": "your app settings failed, please reset to factory."
+    },
+    {
+      "name": "resetFactorySet",
+      "value": "restoreFactorySettings"
+    },
+    {
+      "name": "setupComplete",
+      "value": "setup complete"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "launcher_smartDock",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets"
+  }
+}

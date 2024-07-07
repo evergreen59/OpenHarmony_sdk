@@ -1,0 +1,53 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+config("accesstoken_communication_adapter_cxx_public_config") {
+  visibility = [ ":*" ]
+  include_dirs = [
+    "include",
+    "//base/security/access_token/frameworks/common/include",
+    "//base/security/access_token/interfaces/innerkits/accesstoken/include",
+  ]
+}
+
+ohos_shared_library("accesstoken_communication_adapter_cxx") {
+  subsystem_name = "security"
+  part_name = "access_token"
+
+  public_configs = [ ":accesstoken_communication_adapter_cxx_public_config" ]
+  configs = [ "//base/security/access_token/config:coverage_flags" ]
+
+  include_dirs = [
+    "include",
+    "//base/security/access_token/interfaces/innerkits/accesstoken/include",
+    "//commonlibrary/c_utils/base/include",
+  ]
+
+  sources = [
+    "src/hap_info_parcel.cpp",
+    "src/hap_policy_parcel.cpp",
+    "src/hap_token_info_for_sync_parcel.cpp",
+    "src/hap_token_info_parcel.cpp",
+    "src/native_token_info_for_sync_parcel.cpp",
+    "src/native_token_info_parcel.cpp",
+    "src/permission_def_parcel.cpp",
+    "src/permission_list_state_parcel.cpp",
+    "src/permission_state_change_info_parcel.cpp",
+    "src/permission_state_change_scope_parcel.cpp",
+    "src/permission_state_full_parcel.cpp",
+  ]
+
+  external_deps = [ "c_utils:utils" ]
+}

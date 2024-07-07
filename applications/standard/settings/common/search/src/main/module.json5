@@ -1,0 +1,21 @@
+{
+  "module": {
+    "name": "search",
+    "type": "har",
+    "deviceType": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets",
+    "metadata": [
+      {
+        "name": "ArkTSPartialUpdate",
+        "value": "true"
+      },
+      {
+        "name": "partialUpdateStrictCheck",
+        "value": "true"
+      }
+    ],
+  }
+}

@@ -1,0 +1,58 @@
+# Copyright (C) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+config("screenlock_mgr_frameworks_innerkitsimpl_config") {
+  visibility = [ ":*" ]
+  include_dirs = [ "include" ]
+
+  cflags_cc = []
+}
+
+ohos_shared_library("screenlock_client") {
+  if (is_standard_system) {
+    sources = [
+      "src/screenlock_app_manager.cpp",
+      "src/screenlock_manager.cpp",
+      "src/screenlock_manager_proxy.cpp",
+      "src/screenlock_system_ability_stub.cpp",
+      "src/uv_queue.cpp",
+    ]
+
+    public_configs = [
+      "//commonlibrary/c_utils/base:utils_config",
+      ":screenlock_mgr_frameworks_innerkitsimpl_config",
+    ]
+    include_dirs = [
+      "include",
+      "//base/theme/screenlock_mgr/services/include",
+      "//base/theme/screenlock_mgr/interfaces/innerkits/notify/native/include",
+      "//base/theme/screenlock_mgr/frameworks/kitsimpl/include",
+      "//commonlibrary/c_utils/base/include",
+      "//third_party/libuv/include",
+      "//utils/system/safwk/native/include",
+    ]
+    deps = [ "//base/theme/screenlock_mgr/utils:screenlock_utils" ]
+    external_deps = [
+      "c_utils:utils",
+      "hitrace_native:hitrace_meter",
+      "hiviewdfx_hilog_native:libhilog",
+      "ipc:ipc_core",
+      "napi:ace_napi",
+      "samgr:samgr_proxy",
+    ]
+    subsystem_name = "theme"
+    part_name = "screenlock_mgr"
+  }
+}

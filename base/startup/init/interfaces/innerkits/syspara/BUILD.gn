@@ -1,0 +1,45 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+if (defined(ohos_lite)) {
+  import("//build/lite/config/component/lite_component.gni")
+  import("//build/lite/ndk/ndk.gni")
+
+  copy("begetutil_ph_lib") {
+    sources = ["${ohos_root_path}base/startup/init/interfaces/innerkits/syspara/libbegetutil_ph.so" ]
+    outputs = [ "$root_out_dir/libbegetutil_ph.so" ]
+  }
+
+  group("begetutil_ph") {
+    deps = [
+      ":begetutil_ph_lib",
+    ]
+  }
+} else {
+  import("//build/ohos.gni")
+  ohos_prebuilt_shared_library("begetutil_ph_lib") {
+    source = "//base/startup/init/interfaces/innerkits/syspara/libbegetutil_ph.z.so"
+    part_name = "init"
+    subsystem_name = "startup"
+    install_images = [
+      "system",
+      "updater",
+    ]
+  }
+  group("begetutil_ph") {
+    deps = [
+      ":begetutil_ph_lib",
+    ]
+  }
+}

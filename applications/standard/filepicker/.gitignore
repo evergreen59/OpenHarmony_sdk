@@ -1,0 +1,6 @@
+/.hvigor
+/node_modules
+/local.properties
+/.idea
+**/build
+/tsconfig.json

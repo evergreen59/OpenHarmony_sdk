@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "save_file_has_same_file",
+      "value": "已有重名文件"
+    },
+    {
+      "name": "save_file_no_media_permission",
+      "value": "当前不支持保存到媒体库"
+    },
+    {
+      "name": "save_file_unknown_reason",
+      "value": "未知错误"
+    },
+    {
+      "name": "file_unknown",
+      "value": "未知文件"
+    },
+    {
+      "name": "file_zip",
+      "value": "压缩(zipped)文件"
+    },
+    {
+      "name": "file_xml",
+      "value": "XML文档"
+    },
+    {
+      "name": "file_xls",
+      "value": "Microsoft Excel工作表"
+    },
+    {
+      "name": "file_txt",
+      "value": "TXT文档"
+    },
+    {
+      "name": "file_rar",
+      "value": "RAR压缩文件"
+    },
+    {
+      "name": "file_pdf",
+      "value": "Adobe Acrobat Document"
+    },
+    {
+      "name": "file_html",
+      "value": "HTML网页文件"
+    },
+    {
+      "name": "file_pptx",
+      "value": "Microsoft PowerPoint演示文稿"
+    },
+    {
+      "name": "file_docx",
+      "value": "Microsoft Word文档"
+    },
+    {
+      "name": "file_type",
+      "value": "文件类型"
+    },
+    {
+      "name": "file_name",
+      "value": "文件名："
+    }
+  ]
+}

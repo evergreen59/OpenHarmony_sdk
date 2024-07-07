@@ -1,0 +1,158 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+type system_core_hap, domain;
+type system_basic_hap, domain;
+type normal_hap, domain;
+
+hap_set(system_core_hap);
+hap_set(system_basic_hap);
+hap_set(normal_hap);
+
+type system_core_hap_data_file, hap_file_attr, data_file_attr, file_attr;
+type system_basic_hap_data_file, hap_file_attr, data_file_attr, file_attr;
+type normal_hap_data_file, hap_file_attr, data_file_attr, file_attr;
+
+
+allow hap_domain appspawn:fd use;
+allow hap_domain appspawn:fifo_file write;
+allow hap_domain appspawn:unix_dgram_socket { connect write };
+allow hap_domain self:process execmem;
+
+allow hap_domain data_app_el1_file:dir { add_name create  open read search setattr write };
+allow hap_domain data_app_el1_file:file { getattr map open read };
+allow hap_domain data_app_el2_file:dir search;
+allow hap_domain data_app_file:dir search;
+allow hap_domain data_file:dir { getattr open read  search };
+#to remove
+allow hap_domain data_file:file { create getattr ioctl lock map open read write rename setattr unlink write };
+allow hap_domain data_log:file { read write };
+
+binder_call(hap_domain, samgr);
+binder_call(hap_domain, render_service);
+binder_call(hap_domain, param_watcher);
+binder_call(hap_domain, multimodalinput);
+binder_call(hap_domain, inputmethod_service);
+binder_call(hap_domain, foundation);
+binder_call(hap_domain, accessibility);
+binder_call(hap_domain, hiview);
+
+allow hap_domain hdf_devmgr:binder call;
+
+#neverallow
+#never use caps for haps.
+neverallow hap_domain self:{ capability capability2 } *;
+
+#haps can't modify files of other domain.
+neverallow hap_domain { domain -hap_domain }:file never_write_file;
+
+neverallow hap_domain { domain -hap_domain }:file never_rw_file;
+
+neverallow hap_domain vendor_file_attr:dir never_write_dir;
+#limit hap access vendor.
+neverallow hap_domain { vendor_file_attr -vendor_lib_file }:{ file fifo_file lnk_file sock_file } *;
+
+#hap never access blk_file.
+neverallow hap_domain dev_attr:blk_file { read write };
+
+#limit hap access dev file.
+neverallow hap_domain { dev_attr -dev_ashmem_file -dev_at_file -dev_binder_file -dev_dri_file -dev_file -dev_null_file -dev_random_file -dev_zero_file
+                      -dev_unix_socket_file -dev_mali -tty_device }:chr_file { open ioctl read write};
+
+#limit hap use kobject netlink.
+neverallow hap_domain domain:netlink_kobject_uevent_socket { write append };
+
+#no use ptrace
+neverallow hap_domain { domain -hap_domain }:process ptrace;
+neverallow { domain -hap_domain -processdump } hap_domain:process ptrace;
+
+#hap don't bother other domain.
+neverallow hap_domain { domain -hap_domain }:process { sigkill sigstop signal };
+
+#file acess limit.
+neverallow hap_domain rootfs:dir_file_class_set { create write setattr relabelfrom relabelto append unlink link rename };
+neverallow hap_domain system_file:dir_file_class_set { create write setattr relabelfrom relabelto append unlink link rename };
+
+neverallow hap_domain { file_attr -data_file_attr -dev_attr }:dir_file_class_set { create write setattr relabelfrom relabelto append unlink link rename };
+
+neverallow { hap_domain -system_core_hap } system_core_hap_data_file:dir_file_class_set { create write setattr relabelfrom relabelto append unlink link rename };
+
+neverallow { hap_domain -system_basic_hap } system_basic_hap_data_file:dir_file_class_set { create write setattr relabelfrom relabelto append unlink link rename };
+
+neverallow hap_domain { sysfs_attr proc_attr }:dir_file_class_set write;
+
+neverallow hap_domain exec_attr:file { create write setattr relabelfrom relabelto append unlink link rename };
+
+#Access /proc/kmsg
+neverallow hap_domain kernel:system { syslog_read syslog_mod syslog_console };
+
+#SELinux is not an API for haps to use.
+neverallow { hap_domain } *:security { compute_av check_context };
+
+#Ability to perform any filesystem operation other than statfs(2).
+neverallow hap_domain fs_attr:filesystem ~getattr;
+
+#limit access to system_core_hap_data_file
+neverallow { domain -hap_domain -installs debug_only(`-hdcd') -sh -distributeddata -storage_daemon } system_core_hap_data_file:dir_file_class_set { create unlink open };
+
+neverallow { system_basic_hap normal_hap } system_core_hap_data_file:dir_file_class_set { create unlink open };
+
+#limit access to system_basic_hap_data_file
+neverallow { domain -hap_domain -installs -storage_daemon debug_only(`-hdcd') -distributeddata } system_basic_hap_data_file:dir_file_class_set { create unlink open };
+
+neverallow normal_hap system_basic_hap_data_file:dir_file_class_set { create unlink open };
+
+#limit access to normal_hap_data_file
+neverallow { domain -hap_domain -installs debug_only(`-hdcd') -distributeddata -storage_daemon } normal_hap_data_file:dir_file_class_set { create unlink };
+
+neverallow { domain -hap_domain -installs -appspawn -nwebspawn debug_only(`-hdcd') -distributeddata -sh -storage_daemon } normal_hap_data_file:dir *;
+
+neverallow { domain -hap_domain -installs debug_only(`-hdcd') -distributeddata -storage_daemon } normal_hap_data_file:file_class_set open;
+
+neverallow { domain -installs } normal_hap_data_file:dir_file_class_set { relabelfrom relabelto };
+
+neverallow hap_domain { domain -hap_domain -processdump }:process transition;
+neverallow hap_domain { domain -hap_domain }:process dyntransition;
+
+neverallow hap_domain domain:{ netlink_tcpdiag_socket netlink_nflog_socket netlink_xfrm_socket netlink_audit_socket netlink_dnrt_socket } *;
+
+neverallow hap_domain domain:netlink_kobject_uevent_socket { write append };
+
+neverallow hap_domain *:netlink_selinux_socket *;
+
+neverallow hap_domain dev_input_file:chr_file ~getattr;
+
+neverallow hap_domain hdcd_socket:sock_file write;
+
+# can't execute data file unless hap.
+neverallow { domain -hap_domain -nwebspawn } data_file_attr:file { execute execute_no_trans };
+
+neverallow hap_domain rootfs:dir_file_class_set { create write setattr relabelfrom relabelto append unlink link rename };
+
+neverallow hap_domain system_file:dir_file_class_set { create write setattr relabelfrom relabelto append unlink link rename };
+
+# limit access to /data/(*)? first level.todo
+#neverallow hap_domain data_file:dir_file_class_set { create write setattr relabelfrom relabelto append unlink link rename };
+
+neverallow { domain -installs } normal_hap_data_file:dir_file_class_set { relabelfrom relabelto };
+
+neverallow { hap_domain -system_basic_hap } data_app_file:dir_file_class_set { create write setattr relabelfrom relabelto append unlink link rename };
+
+neverallow hap_domain proc_file:dir_file_class_set write;
+
+neverallow * { file_attr -hap_file_attr }:file execmod;
+
+neverallow hap_domain exec_attr:file { create write setattr relabelfrom relabelto append unlink link rename };
+
+#normal_hap or selfdefine should be forbidden to set parameters.
+neverallow { hap_domain -system_core_hap -system_basic_hap } init:unix_stream_socket connectto;

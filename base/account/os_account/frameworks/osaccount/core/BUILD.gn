@@ -1,0 +1,102 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base/account/os_account/os_account.gni")
+import("//build/ohos.gni")
+
+config("os_account_core_config") {
+  visibility = [ ":*" ]
+
+  include_dirs =
+      [ "//foundation/communication/ipc/interfaces/innerkits/ipc_core/include" ]
+
+  cflags = []
+  if (target_cpu == "arm") {
+    cflags += [ "-DBINDER_IPC_32BIT" ]
+  }
+
+  cflags += [ "-pipe" ]
+  cflags_cc = [
+    "-Wdate-time",
+    "-Wformat=2",
+    "-Wfloat-equal",
+    "-Wshadow",
+  ]
+
+  defines = [
+    "ACCOUNT_LOG_TAG = \"OsAccountCoreFwk\"",
+    "LOG_DOMAIN = 0xD001B00",
+  ]
+}
+
+config("os_account_core_public_config") {
+  include_dirs = [
+    "${os_account_core_path}/include",
+    "${os_account_interfaces_native_path}/include",
+    "${innerkits_path}/include",
+    "${ability_runtime_path}/interfaces/inner_api/base/include/",
+    "${ability_runtime_path}/interfaces/inner_api/want/include",
+    "//utils/system/safwk/native/include",
+    "//foundation/communication/ipc/interfaces/innerkits/ipc_core/include",
+    "${innerkits_native_path}/include",
+  ]
+}
+
+config("os_account_core_all_dependent_configs") {
+  include_dirs = [
+    "//foundation/communication/ipc/interfaces/innerkits/ipc_core/include",
+    "//commonlibrary/c_utils/base/include",
+  ]
+}
+
+ohos_shared_library("os_account_core") {
+  sources = [
+    "${os_account_core_path}/src/os_account.cpp",
+    "${os_account_core_path}/src/os_account_death_recipient.cpp",
+    "${os_account_core_path}/src/os_account_event_listener.cpp",
+    "${os_account_core_path}/src/os_account_event_proxy.cpp",
+    "${os_account_core_path}/src/os_account_event_stub.cpp",
+    "${os_account_core_path}/src/os_account_proxy.cpp",
+    "${os_account_core_path}/src/os_account_stub.cpp",
+    "${os_account_innerkits_native_path}/src/os_account_info.cpp",
+    "${os_account_innerkits_native_path}/src/os_account_subscribe_info.cpp",
+    "${os_account_innerkits_native_path}/src/os_account_subscriber.cpp",
+  ]
+
+  configs = [
+    ":os_account_core_config",
+    "${account_coverage_config_path}:coverage_flags",
+  ]
+
+  public_configs = [ ":os_account_core_public_config" ]
+
+  all_dependent_configs = [ ":os_account_core_all_dependent_configs" ]
+
+  use_exceptions = true
+
+  version_script = "libos_account_core.map"
+
+  deps = [ "${innerkits_native_path}:libaccountkits" ]
+
+  external_deps = [
+    "ability_base:want",
+    "ability_runtime:wantagent_innerkits",
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+    "samgr:samgr_proxy",
+  ]
+
+  subsystem_name = "account"
+  part_name = "os_account"
+}

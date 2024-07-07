@@ -1,0 +1,240 @@
+# Copyright (c) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//base/hiviewdfx/hidumper/hidumper.gni")
+import("//build/test.gni")
+
+module_output_path = "hiviewdfx/hidumper"
+
+source_path = "//base/hiviewdfx/hidumper/frameworks/native"
+
+###############################################################################
+config("module_private_config") {
+  visibility = [ ":*" ]
+
+  include_dirs = [
+    ".",
+    "../../",
+    "//third_party/json/single_include",
+    "//third_party/json/include",
+    "${hidumper_interface}/innerkits/include/",
+    "${hidumper_interface}/native/innerkits/include/",
+    "//base/hiviewdfx/hidumper/utils/native/include/",
+    "//base/hiviewdfx/hidumper/services/zidl/include",
+    "//base/hiviewdfx/hidumper/services/native/include",
+    "//base/hiviewdfx/hidumper/frameworks/native/include",
+    "${source_path}/",
+    "${source_path}/manager",
+    "${source_path}/dumpers",
+    "//commonlibrary/c_utils/base/include",
+    "include",
+    "${hidumper_frameworks_path}",
+    "${hidumper_frameworks_path}/include",
+    "${hidumper_frameworks_path}/include/common",
+    "${hidumper_frameworks_path}/include/executor",
+    "${hidumper_frameworks_path}/include/factory",
+    "${hidumper_service_path}:interface_include",
+    "${hidumper_service_path}/zidl/include",
+    "${hidumper_service_path}/native/include",
+    "//utils/system/safwk/native/include",
+  ]
+
+  cflags_cc = [ "-DDUMP_TEST_MODE" ]
+}
+
+##############################unittest##########################################
+ohos_unittest("HidumperServiceTest") {
+  module_out_path = module_output_path
+
+  sources = [ "hidumper_service_test.cpp" ]
+
+  configs = [
+    "${hidumper_utils_path}:utils_config",
+    ":module_private_config",
+  ]
+
+  deps = [ "//third_party/googletest:gtest_main" ]
+
+  external_deps = [
+    "c_utils:utils",
+    "eventhandler:libeventhandler",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+}
+
+ohos_unittest("HidumperDumpersTest") {
+  module_out_path = module_output_path
+
+  sources = [ "hidumper_dumpers_test.cpp" ]
+
+  configs = [
+    "${hidumper_utils_path}:utils_config",
+    ":module_private_config",
+  ]
+
+  deps = [
+    "${hidumper_service_path}:hidumper_client",
+    "${hidumper_service_path}:hidumperservice_source",
+    "//third_party/googletest:gtest_main",
+    "//third_party/zlib:libz",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+  ]
+}
+
+ohos_unittest("HidumperOutputTest") {
+  module_out_path = module_output_path
+
+  sources = [ "hidumper_output_test.cpp" ]
+
+  configs = [
+    "${hidumper_utils_path}:utils_config",
+    ":module_private_config",
+  ]
+
+  deps = [
+    "${hidumper_service_path}:hidumper_client",
+    "${hidumper_service_path}:hidumperservice_source",
+    "//third_party/googletest:gtest_main",
+    "//third_party/zlib:libz",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+  ]
+}
+
+ohos_unittest("HidumperConfigUtilsTest") {
+  module_out_path = module_output_path
+
+  sources = [
+    "${hidumper_service_path}/native/src/dump_common_utils.cpp",
+    "${source_path}/dump_utils.cpp",
+    "${source_path}/src/common/dump_cfg.cpp",
+    "${source_path}/src/common/dumper_parameter.cpp",
+    "${source_path}/src/common/option_args.cpp",
+    "${source_path}/src/util/config_data.cpp",
+    "${source_path}/src/util/config_utils.cpp",
+    "${source_path}/src/util/file_utils.cpp",
+    "${source_path}/src/util/zip/zip_writer.cpp",
+    "hidumper_configutils_test.cpp",
+  ]
+
+  configs = [
+    "${hidumper_utils_path}:utils_config",
+    ":module_private_config",
+  ]
+
+  deps = [
+    "//third_party/googletest:gtest_main",
+    "//third_party/zlib:libz",
+  ]
+
+  external_deps = [
+    "hiviewdfx_hilog_native:libhilog",
+    "init:libbegetutil",
+    "safwk:system_ability_fwk",
+  ]
+}
+
+ohos_unittest("MemoryDumperTest") {
+  module_out_path = module_output_path
+
+  sources = [ "memory_dumper_test.cpp" ]
+
+  configs = [ ":module_private_config" ]
+
+  deps = [
+    "${hidumper_service_path}:hidumper_client",
+    "${hidumper_service_path}:hidumperservice_source",
+    "//third_party/googletest:gtest_main",
+  ]
+
+  external_deps = [
+    "c_utils:utils",
+    "drivers_interface_memorytracker:libmemorytracker_proxy_1.0",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+  ]
+}
+
+ohos_unittest("HidumperPrivacyTest") {
+  module_out_path = module_output_path
+
+  sources = [ "hidumper_privacy_test.cpp" ]
+
+  configs = [ ":module_private_config" ]
+
+  deps = [ "//third_party/googletest:gtest_main" ]
+}
+
+ohos_unittest("HidumperInnerkitsTest") {
+  module_out_path = module_output_path
+
+  sources = [ "hidumper_innerkits_test.cpp" ]
+
+  configs = [ ":module_private_config" ]
+
+  deps = [
+    "//base/hiviewdfx/hidumper/interfaces/innerkits:lib_dump_usage",
+    "//third_party/googletest:gtest_main",
+  ]
+}
+
+ohos_unittest("HidumperManagerTest") {
+  module_out_path = module_output_path
+
+  sources = [ "hidumper_manager_test.cpp" ]
+
+  configs = [ ":module_private_config" ]
+
+  deps = [
+    "${hidumper_service_path}:hidumper_client",
+    "${hidumper_service_path}:hidumperservice_source",
+    "//third_party/googletest:gtest_main",
+  ]
+
+  external_deps = [
+    "hiviewdfx_hilog_native:libhilog",
+    "init:libbegetutil",
+    "safwk:system_ability_fwk",
+  ]
+}
+
+###############################################################################
+group("unittest") {
+  testonly = true
+  deps = []
+
+  deps += [
+    # deps file
+    ":HidumperConfigUtilsTest",
+    ":HidumperDumpersTest",
+    ":HidumperInnerkitsTest",
+    ":HidumperManagerTest",
+    ":HidumperOutputTest",
+    ":HidumperPrivacyTest",
+    ":HidumperServiceTest",
+    ":MemoryDumperTest",
+  ]
+}
+###############################################################################

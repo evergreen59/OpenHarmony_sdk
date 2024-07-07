@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "launcher_numbadge",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "uiSyntax": "ets"
+  }
+}

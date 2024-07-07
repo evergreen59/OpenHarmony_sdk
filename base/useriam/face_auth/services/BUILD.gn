@@ -1,0 +1,56 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//foundation/ability/ability_runtime/ability_runtime.gni")
+
+ohos_shared_library("faceauthservice") {
+  sources = [
+    "src/face_auth_driver_hdi.cpp",
+    "src/face_auth_executor_callback_hdi.cpp",
+    "src/face_auth_executor_hdi.cpp",
+    "src/face_auth_interface_adapter.cpp",
+    "src/face_auth_service.cpp",
+  ]
+  include_dirs = [
+    "inc",
+    "//base/useriam/face_auth/common/inc",
+    "//base/useriam/user_auth_framework/common/logs",
+    "//base/useriam/user_auth_framework/common/utils",
+    "//foundation/systemabilitymgr/samgr/interfaces/innerkits/samgr_proxy/include",
+  ]
+
+  deps = [
+    "//base/useriam/face_auth/frameworks/ipc:faceauth_framework_stub",
+    "//base/useriam/user_auth_framework/common/executors:userauth_executors",
+  ]
+  external_deps = [
+    "ability_base:want",
+    "access_token:libaccesstoken_sdk",
+    "bundle_framework:appexecfwk_core",
+    "c_utils:utils",
+    "drivers_interface_face_auth:libface_auth_proxy_1.0",
+    "hiviewdfx_hilog_native:libhilog",
+    "ipc:ipc_core",
+    "safwk:system_ability_fwk",
+    "samgr:samgr_proxy",
+  ]
+
+  remove_configs = [ "//build/config/compiler:no_exceptions" ]
+
+  if (ability_runtime_graphics) {
+    external_deps += [ "graphic_standard:surface" ]
+  }
+  subsystem_name = "useriam"
+  part_name = "face_auth"
+}

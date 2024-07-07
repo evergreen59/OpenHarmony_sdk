@@ -1,0 +1,10 @@
+{
+  global:
+  extern "C++" {
+    "re2::RE2::~RE2()";
+    "re2::RE2::RE2(re2::StringPiece const&, re2::RE2::Options const&)";
+    "re2::RE2::FullMatchN(re2::StringPiece const&, re2::RE2 const&, re2::RE2::Arg const* const*, int)";
+  };
+  local:
+    *;
+};

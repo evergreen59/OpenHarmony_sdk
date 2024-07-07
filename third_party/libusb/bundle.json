@@ -1,0 +1,31 @@
+{
+    "name": "@ohos/libusb",
+    "description": "libusb is a C library that provides generic access to USB devices.",
+    "version": "3.1",
+    "license": "UNLICENSED",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "third_party/libusb"
+    },
+    "dirs": {},
+    "scripts": {},
+    "licensePath": "COPYING",
+    "component": {
+        "name": "thirdparty_libusb",
+        "subsystem": "",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

@@ -1,0 +1,152 @@
+# Copyright (c) 2020 Google LLC
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and/or associated documentation files (the "Materials"),
+# to deal in the Materials without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Materials, and to permit persons to whom the
+# Materials are furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Materials.
+#
+# MODIFICATIONS TO THIS FILE MAY MEAN IT NO LONGER ACCURATELY REFLECTS KHRONOS
+# STANDARDS. THE UNMODIFIED, NORMATIVE VERSIONS OF KHRONOS SPECIFICATIONS AND
+# HEADER INFORMATION ARE LOCATED AT https://www.khronos.org/registry/
+#
+# THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM,OUT OF OR IN CONNECTION WITH THE MATERIALS OR THE USE OR OTHER DEALINGS
+# IN THE MATERIALS.
+
+config("spv_headers_public_config") {
+  include_dirs = [ "include" ]
+}
+
+source_set("spv_headers") {
+  sources = [
+    "include/spirv/1.2/GLSL.std.450.h",
+    "include/spirv/1.2/OpenCL.std.h",
+    "include/spirv/1.2/spirv.h",
+    "include/spirv/1.2/spirv.hpp",
+    "include/spirv/unified1/GLSL.std.450.h",
+    "include/spirv/unified1/NonSemanticClspvReflection.h",
+    "include/spirv/unified1/NonSemanticDebugPrintf.h",
+    "include/spirv/unified1/OpenCL.std.h",
+    "include/spirv/unified1/spirv.h",
+    "include/spirv/unified1/spirv.hpp",
+  ]
+
+  public_configs = [ ":spv_headers_public_config" ]
+}
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("deqp_spirvtool_config") {
+  cflags_cc = deqp_common_cflags_cc
+  cflags_cc += [
+    "-ftemplate-depth=1024",
+    "-Wno-switch",
+  ]
+  defines = deqp_common_defines
+  defines += [
+    "SPIRV_CHECK_CONTEXT",
+    "SPIRV_COLOR_TERMINAL",
+    "SPIRV_LINUX",
+    "SPIRV_TIMER_ENABLED",
+    "SPIRV_TOOLS_SHAREDLIB",
+    "SPIRV_Tools_shared_EXPORTS",
+  ]
+}
+
+ohos_source_set("deqp_spirvtool_source") {
+  sources = [
+    "//third_party/spirv-tools/source/assembly_grammar.cpp",
+    "//third_party/spirv-tools/source/binary.cpp",
+    "//third_party/spirv-tools/source/diagnostic.cpp",
+    "//third_party/spirv-tools/source/disassemble.cpp",
+    "//third_party/spirv-tools/source/enum_string_mapping.cpp",
+    "//third_party/spirv-tools/source/ext_inst.cpp",
+    "//third_party/spirv-tools/source/extensions.cpp",
+    "//third_party/spirv-tools/source/libspirv.cpp",
+    "//third_party/spirv-tools/source/name_mapper.cpp",
+    "//third_party/spirv-tools/source/opcode.cpp",
+    "//third_party/spirv-tools/source/operand.cpp",
+    "//third_party/spirv-tools/source/parsed_operand.cpp",
+    "//third_party/spirv-tools/source/print.cpp",
+    "//third_party/spirv-tools/source/software_version.cpp",
+    "//third_party/spirv-tools/source/spirv_endian.cpp",
+    "//third_party/spirv-tools/source/spirv_fuzzer_options.cpp",
+    "//third_party/spirv-tools/source/spirv_optimizer_options.cpp",
+    "//third_party/spirv-tools/source/spirv_reducer_options.cpp",
+    "//third_party/spirv-tools/source/spirv_target_env.cpp",
+    "//third_party/spirv-tools/source/spirv_validator_options.cpp",
+    "//third_party/spirv-tools/source/table.cpp",
+    "//third_party/spirv-tools/source/text.cpp",
+    "//third_party/spirv-tools/source/text_handler.cpp",
+    "//third_party/spirv-tools/source/util/bit_vector.cpp",
+    "//third_party/spirv-tools/source/util/parse_number.cpp",
+    "//third_party/spirv-tools/source/util/string_utils.cpp",
+    "//third_party/spirv-tools/source/util/timer.cpp",
+    "//third_party/spirv-tools/source/val/basic_block.cpp",
+    "//third_party/spirv-tools/source/val/construct.cpp",
+    "//third_party/spirv-tools/source/val/function.cpp",
+    "//third_party/spirv-tools/source/val/instruction.cpp",
+    "//third_party/spirv-tools/source/val/validate.cpp",
+    "//third_party/spirv-tools/source/val/validate_adjacency.cpp",
+    "//third_party/spirv-tools/source/val/validate_annotation.cpp",
+    "//third_party/spirv-tools/source/val/validate_arithmetics.cpp",
+    "//third_party/spirv-tools/source/val/validate_atomics.cpp",
+    "//third_party/spirv-tools/source/val/validate_barriers.cpp",
+    "//third_party/spirv-tools/source/val/validate_bitwise.cpp",
+    "//third_party/spirv-tools/source/val/validate_builtins.cpp",
+    "//third_party/spirv-tools/source/val/validate_capability.cpp",
+    "//third_party/spirv-tools/source/val/validate_cfg.cpp",
+    "//third_party/spirv-tools/source/val/validate_composites.cpp",
+    "//third_party/spirv-tools/source/val/validate_constants.cpp",
+    "//third_party/spirv-tools/source/val/validate_conversion.cpp",
+    "//third_party/spirv-tools/source/val/validate_debug.cpp",
+    "//third_party/spirv-tools/source/val/validate_decorations.cpp",
+    "//third_party/spirv-tools/source/val/validate_derivatives.cpp",
+    "//third_party/spirv-tools/source/val/validate_execution_limitations.cpp",
+    "//third_party/spirv-tools/source/val/validate_extensions.cpp",
+    "//third_party/spirv-tools/source/val/validate_function.cpp",
+    "//third_party/spirv-tools/source/val/validate_id.cpp",
+    "//third_party/spirv-tools/source/val/validate_image.cpp",
+    "//third_party/spirv-tools/source/val/validate_instruction.cpp",
+    "//third_party/spirv-tools/source/val/validate_interfaces.cpp",
+    "//third_party/spirv-tools/source/val/validate_layout.cpp",
+    "//third_party/spirv-tools/source/val/validate_literals.cpp",
+    "//third_party/spirv-tools/source/val/validate_logicals.cpp",
+    "//third_party/spirv-tools/source/val/validate_memory.cpp",
+    "//third_party/spirv-tools/source/val/validate_memory_semantics.cpp",
+    "//third_party/spirv-tools/source/val/validate_misc.cpp",
+    "//third_party/spirv-tools/source/val/validate_mode_setting.cpp",
+    "//third_party/spirv-tools/source/val/validate_non_uniform.cpp",
+    "//third_party/spirv-tools/source/val/validate_primitives.cpp",
+    "//third_party/spirv-tools/source/val/validate_scopes.cpp",
+    "//third_party/spirv-tools/source/val/validate_small_type_uses.cpp",
+    "//third_party/spirv-tools/source/val/validate_type.cpp",
+    "//third_party/spirv-tools/source/val/validation_state.cpp",
+  ]
+
+  include_dirs = deqp_common_include_dirs
+  include_dirs += [
+    "//third_party/spirv-tools",
+    "//third_party/vk-gl-cts/build/external/spirv-tools/spirv-tools",
+    "//third_party/spirv-headers/include",
+    "//third_party/spirv-tools/include",
+  ]
+
+  configs = [ ":deqp_spirvtool_config" ]
+}
+
+ohos_static_library("libdeqp_spirvtools") {
+  deps = [ ":deqp_spirvtool_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "wayland-protocols",
+        "License": "MIT license",
+        "License File": "COPYING",
+        "Version Number": "1.20",
+        "Owner": "lizheng2@huawei.com",
+        "Upstream URL": "https://wayland.freedesktop.org/releases/wayland-protocols-1.20.tar.xz",
+        "Description": "Wayland is a protocol for a compositor to talk to its clients as well as a C library implementation of that protocol"
+    }
+]

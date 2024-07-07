@@ -1,0 +1,11 @@
+[
+  {
+   "Name":"eudev",
+   "License":"GPL V2.0/LGPL V2.0",
+   "License File":"COPYING",
+   "Version Number":"3.2.10",
+   "Owner":"pengfei.hou@huawei.com",
+   "Upstream URL":"https://github.com/gentoo/eudev",
+   "Description": "This git repo is a fork of git://anongit.freedesktop.org/systemd/systemd with the aim of isolating udev from any particular flavor of system initialization. In this case, the isolation is from systemd"
+  }
+]

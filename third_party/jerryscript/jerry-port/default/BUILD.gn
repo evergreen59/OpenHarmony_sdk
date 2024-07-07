@@ -1,0 +1,114 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/lite/config/component/lite_component.gni")
+import("//third_party/jerryscript/engine.gni")
+
+lite_component("jerry-port-default") {
+  if (ohos_kernel_type == "liteos_m") {
+    features = [ ":jerry-port-default_static" ]
+  } else {
+    features = [ ":jerry-port-default_shared" ]
+  }
+}
+
+jerry_port_default_sources = [
+  "default-date.c",
+  "default-debugger.c",
+  "default-external-context.c",
+  "default-fatal.c",
+  "default-io.c",
+  "default-module.c",
+]
+
+jerry_port_default_include_dirs = [
+  "include",
+  "${core_path}/include",
+]
+
+if (board_toolchain_type == "iccarm") {
+  config("jerry_port_default_config") {
+    cflags = [
+      "--diag_suppress",
+      "Pe111",
+    ]
+    defines = [
+      "JERRY_FOR_IAR_CONFIG",
+      "JERRY_GC_LIMIT=(0)",
+      "JERRY_CPOINTER_32_BIT=0",
+      "JERRY_ERROR_MESSAGES=1",
+      "JERRY_PARSER=1",
+      "JERRY_LINE_INFO=1",
+      "JERRY_LOGGING=0",
+      "JERRY_DEBUGGER=0",
+      "JERRY_MEM_GC_BEFORE_EACH_ALLOC=0",
+      "JERRY_PARSER_DUMP_BYTE_CODE=0",
+      "JERRY_ES2015=0",
+      "JERRY_REGEXP_STRICT_MODE=0",
+      "JERRY_REGEXP_DUMP_BYTE_CODE=0",
+      "JERRY_SNAPSHOT_EXEC=1",
+      "JERRY_SNAPSHOT_SAVE=1",
+      "JERRY_SYSTEM_ALLOCATOR=0",
+      "JERRY_VALGRIND=0",
+      "JERRY_VM_EXEC_STOP=0",
+      "JERRY_STACK_LIMIT=(8)",
+      "JERRY_IAR_JUPITER",
+      "INPUTJS_BUFFER_SIZE=64*1024",
+      "SNAPSHOT_BUFFER_SIZE=48*1024",
+    ]
+    if (thirdparty_jerryscript_enable_external_context == true) {
+      defines += [ "JERRY_EXTERNAL_CONTEXT=1" ]
+    }
+    include_dirs = jerry_port_default_include_dirs
+    include_dirs += [
+      "${core_path}",
+      "${core_path}/include",
+      "${core_path}/api",
+      "${core_path}/debugger",
+      "${core_path}/ecma/base",
+      "${core_path}/ecma/builtin-objects",
+      "${core_path}/ecma/builtin-objects/typedarray",
+      "${core_path}/ecma/operations",
+      "${core_path}/ext",
+      "${core_path}/jcontext",
+      "${core_path}/jmem",
+      "${core_path}/jrt",
+      "${core_path}/lit",
+      "${core_path}/parser",
+      "${core_path}/parser/js",
+      "${core_path}/parser/regexp",
+      "${core_path}/vm",
+      "${port_path}",
+      "//commonlibrary/utils_lite/memory/include",
+    ]
+  }
+}
+
+if (ohos_kernel_type == "liteos_m") {
+  lite_library("jerry-port-default_static") {
+    target_type = "static_library"
+    sources = jerry_port_default_sources
+    if (board_toolchain_type == "iccarm") {
+      public_configs = [ ":jerry_port_default_config" ]
+    } else {
+      include_dirs = jerry_port_default_include_dirs
+    }
+  }
+} else {
+  lite_library("jerry-port-default_shared") {
+    target_type = "shared_library"
+
+    sources = jerry_port_default_sources
+    include_dirs = jerry_port_default_include_dirs
+  }
+}

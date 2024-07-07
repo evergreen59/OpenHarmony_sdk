@@ -1,0 +1,259 @@
+#This library is free software; you can redistribute it and/or
+#modify it under the terms of the GNU Lesser General Public
+#License as published by the Free Software Foundation version 2.1
+#of the License.
+#
+#Copyright(c) 2021-2022 Huawei Device Co., Ltd.
+
+if (!defined(ohos_lite)) {
+  import("//build/ohos.gni")
+}
+
+action("build_grammar") {
+  script = "/usr/bin/env"
+  outputs = [ "$target_out_dir/gen/lib/route/pktloc_grammar.c" ]
+  grammer_hh = rebase_path("$target_out_dir/gen/lib/route/pktloc_grammar.h")
+  args = [
+    "flex",
+    "--header-file=$grammer_hh",
+    "-o",
+    rebase_path("$target_out_dir/gen/lib/route/pktloc_grammar.c"),
+    rebase_path("lib/route/pktloc_grammar.l"),
+  ]
+}
+
+action("pktloc_syntax") {
+  script = "/usr/bin/env"
+  outputs = [ "$target_out_dir/gen/lib/route/pktloc_syntax.c" ]
+  args = [
+    "bison",
+    "-y",
+    "-d",
+    "-o",
+    rebase_path("$target_out_dir/gen/lib/route/pktloc_syntax.c"),
+    rebase_path("lib/route/pktloc_syntax.y"),
+  ]
+}
+
+action("ematch_grammar") {
+  script = "/usr/bin/env"
+  outputs = [ "$target_out_dir/gen/lib/route/cls/ematch_grammar.c" ]
+  grammer_hh = rebase_path("$target_out_dir/gen/lib/route/cls/ematch_grammar.h")
+  args = [
+    "flex",
+    "--header-file=$grammer_hh",
+    "-o",
+    rebase_path("$target_out_dir/gen/lib/route/cls/ematch_grammar.c"),
+    rebase_path("lib/route/cls/ematch_grammar.l"),
+  ]
+}
+
+action("ematch_syntax") {
+  script = "/usr/bin/env"
+  outputs = [ "$target_out_dir/gen/lib/route/cls/ematch_syntax.c" ]
+  args = [
+    "bison",
+    "-y",
+    "-d",
+    "-o",
+    rebase_path("$target_out_dir/gen/lib/route/cls/ematch_syntax.c"),
+    rebase_path("lib/route/cls/ematch_syntax.y"),
+  ]
+}
+if (!defined(ohos_lite)) {
+  ohos_shared_library("libnl_share") {
+    grammer_outputs = get_target_outputs(":build_grammar")
+    grammer_path = get_path_info(grammer_outputs[0], "dir")
+    pktloc_outputs = get_target_outputs(":pktloc_syntax")
+    pktloc_path = get_path_info(pktloc_outputs[0], "dir")
+    ematch_outputs = get_target_outputs(":ematch_grammar")
+    ematch_path = get_path_info(ematch_outputs[0], "dir")
+    syntax_outputs = get_target_outputs(":ematch_syntax")
+    syntax_path = get_path_info(syntax_outputs[0], "dir")
+
+    include_dirs = [
+      "include",
+      "lib",
+      "lib/route/cls",
+      "lib/route",
+    ]
+
+    include_dirs += [
+      rebase_path("$grammer_path"),
+      rebase_path("$pktloc_path"),
+      rebase_path("$ematch_path"),
+      rebase_path("$syntax_path"),
+    ]
+
+    sources = [
+      "lib/addr.c",
+      "lib/attr.c",
+      "lib/cache.c",
+      "lib/cache_mngr.c",
+      "lib/cache_mngt.c",
+      "lib/data.c",
+      "lib/error.c",
+      "lib/handlers.c",
+      "lib/hash.c",
+      "lib/hashtable.c",
+      "lib/mpls.c",
+      "lib/msg.c",
+      "lib/nl.c",
+      "lib/object.c",
+      "lib/socket.c",
+      "lib/utils.c",
+      "lib/version.c",
+      "lib/fib_lookup/lookup.c",
+      "lib/fib_lookup/request.c",
+      "lib/genl/ctrl.c",
+      "lib/genl/family.c",
+      "lib/genl/genl.c",
+      "lib/genl/mngt.c",
+      "lib/idiag/idiag.c",
+      "lib/idiag/idiag_meminfo_obj.c",
+      "lib/idiag/idiag_msg_obj.c",
+      "lib/idiag/idiag_req_obj.c",
+      "lib/idiag/idiag_vegasinfo_obj.c",
+      "lib/netfilter/ct.c",
+      "lib/netfilter/ct_obj.c",
+      "lib/netfilter/exp.c",
+      "lib/netfilter/exp_obj.c",
+      "lib/netfilter/log.c",
+      "lib/netfilter/log_msg.c",
+      "lib/netfilter/log_msg_obj.c",
+      "lib/netfilter/log_obj.c",
+      "lib/netfilter/netfilter.c",
+      "lib/netfilter/nfnl.c",
+      "lib/netfilter/queue.c",
+      "lib/netfilter/queue_msg.c",
+      "lib/netfilter/queue_msg_obj.c",
+      "lib/netfilter/queue_obj.c",
+      "lib/route/act.c",
+      "lib/route/addr.c",
+      "lib/route/class.c",
+      "lib/route/classid.c",
+      "lib/route/cls.c",
+      "lib/route/link.c",
+      "lib/route/neigh.c",
+      "lib/route/neightbl.c",
+      "lib/route/netconf.c",
+      "lib/route/nexthop.c",
+      "lib/route/nexthop_encap.c",
+      "lib/route/nh_encap_mpls.c",
+      "lib/route/pktloc.c",
+      rebase_path("$grammer_path/pktloc_grammar.c"),
+      rebase_path("$pktloc_path/pktloc_syntax.c"),
+      "lib/route/qdisc.c",
+      "lib/route/route.c",
+      "lib/route/route_obj.c",
+      "lib/route/route_utils.c",
+      "lib/route/rtnl.c",
+      "lib/route/rule.c",
+      "lib/route/tc.c",
+      "lib/route/act/gact.c",
+      "lib/route/act/mirred.c",
+      "lib/route/act/skbedit.c",
+      "lib/route/act/vlan.c",
+      "lib/route/cls/basic.c",
+      "lib/route/cls/cgroup.c",
+      "lib/route/cls/ematch.c",
+      rebase_path("$ematch_path/ematch_grammar.c"),
+      rebase_path("$syntax_path/ematch_syntax.c"),
+      "lib/route/cls/fw.c",
+      "lib/route/cls/mall.c",
+      "lib/route/cls/police.c",
+      "lib/route/cls/u32.c",
+      "lib/route/cls/ematch/cmp.c",
+      "lib/route/cls/ematch/container.c",
+      "lib/route/cls/ematch/meta.c",
+      "lib/route/cls/ematch/nbyte.c",
+      "lib/route/cls/ematch/text.c",
+      "lib/route/link/api.c",
+      "lib/route/link/bonding.c",
+      "lib/route/link/bridge.c",
+      "lib/route/link/can.c",
+      "lib/route/link/dummy.c",
+      "lib/route/link/geneve.c",
+      "lib/route/link/ifb.c",
+      "lib/route/link/inet6.c",
+      "lib/route/link/inet.c",
+      "lib/route/link/ip6tnl.c",
+      "lib/route/link/ipgre.c",
+      "lib/route/link/ipip.c",
+      "lib/route/link/ipvlan.c",
+      "lib/route/link/ipvti.c",
+      "lib/route/link/macsec.c",
+      "lib/route/link/macvlan.c",
+      "lib/route/link/ppp.c",
+      "lib/route/link/sit.c",
+      "lib/route/link/sriov.c",
+      "lib/route/link/veth.c",
+      "lib/route/link/vlan.c",
+      "lib/route/link/vrf.c",
+      "lib/route/link/vxlan.c",
+      "lib/route/link/xfrmi.c",
+      "lib/route/qdisc/blackhole.c",
+      "lib/route/qdisc/cbq.c",
+      "lib/route/qdisc/dsmark.c",
+      "lib/route/qdisc/fifo.c",
+      "lib/route/qdisc/fq_codel.c",
+      "lib/route/qdisc/hfsc.c",
+      "lib/route/qdisc/htb.c",
+      "lib/route/qdisc/ingress.c",
+      "lib/route/qdisc/mqprio.c",
+      "lib/route/qdisc/netem.c",
+      "lib/route/qdisc/plug.c",
+      "lib/route/qdisc/prio.c",
+      "lib/route/qdisc/red.c",
+      "lib/route/qdisc/sfq.c",
+      "lib/route/qdisc/tbf.c",
+      "lib/xfrm/ae.c",
+      "lib/xfrm/lifetime.c",
+      "lib/xfrm/sa.c",
+      "lib/xfrm/selector.c",
+      "lib/xfrm/sp.c",
+      "lib/xfrm/template.c",
+      "lib/cli/cls/basic.c",
+      "lib/cli/cls/cgroup.c",
+      "lib/cli/qdisc/bfifo.c",
+      "lib/cli/qdisc/blackhole.c",
+      "lib/cli/qdisc/fq_codel.c",
+      "lib/cli/qdisc/hfsc.c",
+      "lib/cli/qdisc/htb.c",
+      "lib/cli/qdisc/ingress.c",
+      "lib/cli/qdisc/pfifo.c",
+      "lib/cli/qdisc/plug.c",
+      "src/lib/addr.c",
+      "src/lib/class.c",
+      "src/lib/cls.c",
+      "src/lib/ct.c",
+      "src/lib/exp.c",
+      "src/lib/link.c",
+      "src/lib/neigh.c",
+      "src/lib/qdisc.c",
+      "src/lib/route.c",
+      "src/lib/rule.c",
+      "src/lib/tc.c",
+      "src/lib/utils.c",
+    ]
+
+    deps = [
+      ":build_grammar",
+      ":ematch_grammar",
+      ":ematch_syntax",
+      ":pktloc_syntax",
+    ]
+    defines = [ "NL_DEBUG" ]
+    cflags = [
+      "-Wno-error",
+      "-D_BSD_SOURCE",
+      "-D_GNU_SOURCE",
+      "-DNL_DEBUG",
+
+      #"-UNDEBUG",
+      "-DSYSCONFDIR=\"\\\"/etc/libnl\\\"\"",
+    ]
+    subsystem_name = "wpa_supplicant-2.9"
+    install_images = [ "system" ]
+  }
+}

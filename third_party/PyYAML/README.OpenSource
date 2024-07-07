@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "PyYAML",
+    "License": "MIT License",
+    "License File": "LICENSE",
+    "Version Number": "6.0",
+    "Owner": "xuyong59@huawei.com",
+    "Upstream URL": "https://pypi.org/project/PyYAML",
+    "Description": "A YAML parser and emitter for Python"
+  }
+]

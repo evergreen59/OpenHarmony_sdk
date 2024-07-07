@@ -1,0 +1,38 @@
+[
+    {
+    "Name": "checkpolicy",
+    "License": "GPL V2.0",
+    "License File": "checkpolicy/COPYING",
+    "Version Number": "3.3",
+    "Owner": "jiangxiaofeng8@huawei.com",
+    "Upstream URL": "https://github.com/SELinuxProject/selinux",
+    "Description": "This module is the policy compiler which uses libsepol to generate the binary policy."
+    },
+    {
+    "Name": "libselinux",
+    "License": "Public Domain",
+    "License File": "libselinux/LICENSE",
+    "Version Number": "3.3",
+    "Owner": "jiangxiaofeng8@huawei.com",
+    "Upstream URL": "https://github.com/SELinuxProject/selinux",
+    "Description": "This module is the runtime SELinux library that provides interfaces to SELinux-aware applications."
+    },
+    {
+    "Name": "libsepol",
+    "License": "LGPL V2.1",
+    "License File": "libsepol/COPYING",
+    "Version Number": "3.3",
+    "Owner": "jiangxiaofeng8@huawei.com",
+    "Upstream URL": "https://github.com/SELinuxProject/selinux",
+    "Description": "This module is the binary policy manipulation library."
+    },
+    {
+    "Name": "secilc",
+    "License": "BSD 2-Clause License",
+    "License File": "secilc/COPYING",
+    "Version Number": "3.3",
+    "Owner": "jiangxiaofeng8@huawei.com",
+    "Upstream URL": "https://github.com/SELinuxProject/selinux",
+    "Description": "This module is a compiler which builds a kernel binary policy with cil files."
+    }
+]

@@ -1,0 +1,227 @@
+import("//build/ohos.gni")
+
+## Build libudev.so {{{
+config("libudev_config") {
+  visibility = [ ":*" ]
+
+  include_dirs = [
+    "src/shared",
+    "src/libudev",
+    "hm_src",
+  ]
+
+  cflags = [
+    "-DSIZEOF_PID_T=4",
+    "-DSIZEOF_UID_T=4",
+    "-DSIZEOF_GID_T=4",
+    "-DSIZEOF_TIME_T=8",
+    "-DSIZEOF_RLIM_T=8",
+    "-DSIZEOF_DEV_T=8",
+    "-Wno-macro-redefined",
+    "-Wno-unused-parameter",
+    "-Wno-unused-variable",
+    "-Wno-extern-initializer",
+    "-Wno-unused-function",
+    "-Wno-implicit-function-declaration",
+    "-Wno-int-conversion",
+    "-Wno-int-to-pointer-cast",
+  ]
+}
+
+config("libudev_public_config") {
+  include_dirs = [ "export_include" ]
+
+  cflags = []
+}
+
+ohos_shared_library("libudev") {
+  sources = [
+    "hm_src/log.c",
+    "src/libudev/libudev-device-private.c",
+    "src/libudev/libudev-device.c",
+    "src/libudev/libudev-enumerate.c",
+    "src/libudev/libudev-hwdb.c",
+    "src/libudev/libudev-list.c",
+    "src/libudev/libudev-monitor.c",
+    "src/libudev/libudev-queue.c",
+    "src/libudev/libudev-util.c",
+    "src/libudev/libudev.c",
+    "src/shared/MurmurHash2.c",
+    "src/shared/conf-files.c",
+    "src/shared/dev-setup.c",
+    "src/shared/device-nodes.c",
+    "src/shared/fileio.c",
+    "src/shared/hashmap.c",
+    "src/shared/label.c",
+    "src/shared/mempool.c",
+    "src/shared/mkdir-label.c",
+    "src/shared/mkdir.c",
+    "src/shared/path-util.c",
+    "src/shared/process-util.c",
+    "src/shared/random-util.c",
+    "src/shared/selinux-util.c",
+    "src/shared/siphash24.c",
+    "src/shared/smack-util.c",
+    "src/shared/strbuf.c",
+    "src/shared/strv.c",
+    "src/shared/strxcpyx.c",
+    "src/shared/sysctl-util.c",
+    "src/shared/terminal-util.c",
+    "src/shared/time-util.c",
+    "src/shared/utf8.c",
+    "src/shared/util.c",
+    "src/shared/virt.c",
+
+    # "src/shared/log.c",
+  ]
+
+  configs = [ ":libudev_config" ]
+
+  public_configs = [ ":libudev_public_config" ]
+
+  deps = []
+
+  public_deps = []
+
+  subsystem_name = "thirdparty"
+  part_name = "eudev"
+}
+
+## Build libudev.so }}}
+
+## Build udevd {{{
+config("udevd_config") {
+  visibility = [ ":*" ]
+
+  include_dirs = [
+    "./src/shared",
+    "./src/libudev",
+    "./src/udev",
+    "./hm_src",
+  ]
+
+  cflags = [
+    "-DSIZEOF_PID_T=4",
+    "-DSIZEOF_UID_T=4",
+    "-DSIZEOF_GID_T=4",
+    "-DSIZEOF_TIME_T=8",
+    "-DSIZEOF_RLIM_T=8",
+    "-DSIZEOF_DEV_T=8",
+    "-Wno-unused-parameter",
+    "-Wno-missing-field-initializers",
+    "-Wno-implicit-function-declaration",
+    "-Wno-macro-redefined",
+  ]
+}
+
+config("udevd_public_config") {
+  include_dirs = []
+
+  cflags = []
+}
+
+ohos_executable("udevd") {
+  install_enable = true
+
+  sources = [
+    "src/udev/udev-builtin-btrfs.c",
+    "src/udev/udev-builtin-hwdb.c",
+    "src/udev/udev-builtin-input_id.c",
+    "src/udev/udev-builtin-keyboard.c",
+    "src/udev/udev-builtin-net_id.c",
+    "src/udev/udev-builtin-path_id.c",
+    "src/udev/udev-builtin-usb_id.c",
+    "src/udev/udev-builtin.c",
+    "src/udev/udev-ctrl.c",
+    "src/udev/udev-event.c",
+    "src/udev/udev-node.c",
+    "src/udev/udev-rules.c",
+    "src/udev/udev-watch.c",
+    "src/udev/udevd.c",
+  ]
+
+  configs = [ ":udevd_config" ]
+
+  public_configs = [ ":udevd_public_config" ]
+
+  deps = [ ":libudev" ]
+
+  public_deps = []
+  subsystem_name = "thirdparty"
+  part_name = "eudev"
+}
+
+## Build udevd }}}
+
+ohos_executable("udevadm") {
+  install_enable = true
+
+  sources = [
+    "src/udev/udev-builtin-btrfs.c",
+    "src/udev/udev-builtin-hwdb.c",
+    "src/udev/udev-builtin-input_id.c",
+    "src/udev/udev-builtin-keyboard.c",
+    "src/udev/udev-builtin-net_id.c",
+    "src/udev/udev-builtin-path_id.c",
+    "src/udev/udev-builtin-usb_id.c",
+    "src/udev/udev-builtin.c",
+    "src/udev/udev-ctrl.c",
+    "src/udev/udev-event.c",
+    "src/udev/udev-node.c",
+    "src/udev/udev-rules.c",
+    "src/udev/udev-watch.c",
+    "src/udev/udevadm-control.c",
+    "src/udev/udevadm-hwdb.c",
+    "src/udev/udevadm-info.c",
+    "src/udev/udevadm-monitor.c",
+    "src/udev/udevadm-settle.c",
+    "src/udev/udevadm-test-builtin.c",
+    "src/udev/udevadm-test.c",
+    "src/udev/udevadm-trigger.c",
+    "src/udev/udevadm-util.c",
+    "src/udev/udevadm-util.h",
+    "src/udev/udevadm.c",
+  ]
+
+  configs = [ ":udevd_config" ]
+
+  public_configs = [ ":udevd_public_config" ]
+
+  deps = [ ":libudev" ]
+
+  public_deps = []
+  subsystem_name = "thirdparty"
+  part_name = "eudev"
+}
+
+## Build udevd }}}
+
+ohos_prebuilt_etc("udev_conf") {
+  source = "src/udev/udev.conf"
+  relative_install_dir = "udev"
+  subsystem_name = "thirdparty"
+  part_name = "eudev"
+}
+
+ohos_prebuilt_etc("udev_touchscreen_rule") {
+  source = "rules.d/touchscreen.rules"
+  relative_install_dir = "udev/rules.d"
+  subsystem_name = "thirdparty"
+  part_name = "eudev"
+}
+
+ohos_prebuilt_etc("udev_vk_rule") {
+  source = "rules.d/vk.rules"
+  relative_install_dir = "udev/rules.d"
+  subsystem_name = "thirdparty"
+  part_name = "eudev"
+}
+
+## Install udevd.rc to /system/etc/init/udevd.rc {{{
+ohos_prebuilt_etc("udevd.rc") {
+  source = "udevd.rc"
+  relative_install_dir = "init"
+  subsystem_name = "thirdparty"
+  part_name = "eudev"
+}
+## Install udevd.rc to /system/etc/init/udevd.rc }}}

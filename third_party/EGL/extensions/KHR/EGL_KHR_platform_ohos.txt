@@ -1,0 +1,86 @@
+Name
+
+    KHR_platform_ohos
+
+Name Strings
+
+    EGL_KHR_platform_ohos
+
+Contributors
+
+    Xindong Shi
+    Zheng Li
+
+Contact
+
+    Xindong Shi, Huawei Inc. (shixindong 'at' huawei.com)
+    Zheng Li, Huawei Inc. (lizheng2 'at' huawei.com)
+
+Status
+
+    Draft
+
+Version
+
+    Version 1, Dec. 14, 2021
+
+Number
+
+    EGL Extension #149
+
+Extension Type
+
+    EGL client extension
+
+Dependencies
+
+    EGL 1.5 is required.
+
+Overview
+
+    This extension defines how to create EGL resources from native Android
+    resources using the EGL 1.5 platform functionality.
+
+New Types
+
+    None
+
+New Procedures and Functions
+
+    None
+
+New Tokens
+
+    Accepted as the <platform> argument of eglGetPlatformDisplay:
+
+        EGL_PLATFORM_OHOS_KHR                0x34E0
+
+Additions to the EGL Specification
+
+    None.
+
+New Behavior
+
+    To determine if the EGL implementation supports this extension, clients
+    should query the EGL_EXTENSIONS string of EGL_NO_DISPLAY.
+
+    To obtain an EGLDisplay for the Openharmony device, call eglGetPlatformDisplay
+    with <platform> set to EGL_PLATFORM_OHOS_KHR and with <native_display>
+    set to EGL_DEFAULT_DISPLAY.
+
+    For each EGLConfig that belongs to the Openharmony platform, the
+    EGL_NATIVE_VISUAL_ID attribute is an Openharmony window format, such as
+    PIXEL_FMT_RGBA_8888.
+
+    To obtain a rendering surface from an Openharmony surface window, call
+    eglCreatePlatformWindowSurface with a <dpy> that belongs to the Openharmony
+    platform and a <native_window> that points to a HNativeWindow.
+
+    It is not valid to call eglCreatePlatformPixmapSurface with a <dpy> that
+    belongs to the Openharmony platform. Any such call fails and generates
+    an EGL_BAD_PARAMETER error.
+
+Revision History
+
+#1 (Xindong Shi, Zheng Li, Dec. 14, 2021)
+    - Initial draft.

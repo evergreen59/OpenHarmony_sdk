@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "@typescript-eslint/typescript-eslint",
+    "License": "BSD-2-Clause",
+    "License File": "NOTICE",
+    "Version Number": "4.8.0",
+    "Owner": "xiaoyiwen1@huawei.com",
+    "Upstream URL": "https://github.com/typescript-eslint/typescript-eslint",
+    "Description": "Monorepo for all the tooling which enables ESLint to support TypeScript."
+  }
+]

@@ -1,0 +1,324 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+group("gstplugins_good_packages") {
+  deps = [
+    ":gstaudiofx",
+    ":gstaudioparsers",
+    ":gstisomp4",
+    ":gstmatroska",
+    ":gstmultifile",
+    ":gstsoup",
+    ":gstwavparse",
+  ]
+}
+
+config("gst_plugins_config") {
+  visibility = [ ":*" ]
+
+  include_dirs = [
+    ".",
+    "./gst-libs",
+    "./gst/isomp4",
+    "./gst/audiofx",
+    "//third_party/gstreamer/gstreamer",
+    "//third_party/gstreamer/gstreamer/libs",
+    "//third_party/gstreamer/gstplugins_base",
+    "//third_party/gstreamer/gstplugins_base/gst-libs",
+    "//third_party/glib/glib",
+    "//third_party/glib",
+    "//third_party/glib/gmodule",
+    "//third_party/zlib",
+    "//third_party/libsoup",
+    "//third_party/gettext/gettext-runtime/intl",
+    "//third_party/bzip2",
+  ]
+
+  cflags = [
+    "-Wall",
+    "-Werror",
+
+    #"-DBUILDING_GST",
+    "-DGST_DISABLE_DEPRECATED",
+    "-DHAVE_CONFIG_H",
+    "-DCOLORSPACE=\"videoconvert\"",
+    "-fno-strict-aliasing",
+    "-Wno-sign-compare",
+    "-Wno-builtin-requires-header",
+    "-Wno-deprecated-declarations",
+    "-DOHOS_SUPPORT",
+    "-DOHOS_OPT_COMPAT",
+    "-DOHOS_OPT_CVE",
+    "-DOHOS_EXT_FUNC",
+    "-DOHOS_OPT_PERFORMANCE",
+    "-DG_LOG_DOMAIN=\"GStreamer\"",
+  ]
+}
+
+ohos_source_set("audioparsers_source") {
+  sources = [
+    "gst/audioparsers/gstaacparse.c",
+    "gst/audioparsers/gstflacparse.c",
+    "gst/audioparsers/gstmpegaudioparse.c",
+    "gst/audioparsers/plugin.c",
+  ]
+
+  configs = [ ":gst_plugins_config" ]
+}
+
+ohos_shared_library("gstaudioparsers") {
+  deps = [
+    ":audioparsers_source",
+    "//third_party/glib:glib",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstplugins_base:gstpbutils",
+    "//third_party/gstreamer/gstplugins_base:gsttag",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  relative_install_dir = "media/plugins"
+  part_name = "multimedia_player_framework"
+  subsystem_name = "multimedia"
+}
+
+ohos_source_set("autodetect_source") {
+  sources = [
+    "gst/autodetect/gstautoaudiosink.c",
+    "gst/autodetect/gstautoaudiosrc.c",
+    "gst/autodetect/gstautodetect.c",
+    "gst/autodetect/gstautodetectelement.c",
+    "gst/autodetect/gstautodetectplugin.c",
+    "gst/autodetect/gstautovideosink.c",
+    "gst/autodetect/gstautovideosrc.c",
+  ]
+
+  configs = [ ":gst_plugins_config" ]
+}
+
+ohos_shared_library("gstautodetect") {
+  deps = [
+    ":autodetect_source",
+    "//third_party/glib:glib",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstplugins_base:gstpbutils",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  relative_install_dir = "media/plugins"
+  part_name = "multimedia_player_framework"
+  subsystem_name = "multimedia"
+}
+
+ohos_source_set("id3demux_source") {
+  sources = [ "gst/id3demux/gstid3demux.c" ]
+
+  configs = [ ":gst_plugins_config" ]
+}
+
+ohos_shared_library("gstid3demux") {
+  deps = [
+    ":id3demux_source",
+    "//third_party/glib:glib",
+    "//third_party/glib:gmodule",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstplugins_base:gstaudio",
+    "//third_party/gstreamer/gstplugins_base:gstpbutils",
+    "//third_party/gstreamer/gstplugins_base:gsttag",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  relative_install_dir = "media/plugins"
+  part_name = "multimedia_player_framework"
+  subsystem_name = "multimedia"
+}
+
+ohos_source_set("isomp4_source") {
+  sources = [
+    "gst/isomp4/atoms.c",
+    "gst/isomp4/atomsrecovery.c",
+    "gst/isomp4/descriptors.c",
+    "gst/isomp4/gstisoff.c",
+    "gst/isomp4/gstisomp4element.c",
+    "gst/isomp4/gstqtmux.c",
+    "gst/isomp4/gstqtmuxmap.c",
+    "gst/isomp4/isomp4-plugin.c",
+    "gst/isomp4/properties.c",
+    "gst/isomp4/qtdemux-webvtt.c",
+    "gst/isomp4/qtdemux.c",
+    "gst/isomp4/qtdemux_dump.c",
+    "gst/isomp4/qtdemux_lang.c",
+    "gst/isomp4/qtdemux_tags.c",
+    "gst/isomp4/qtdemux_tree.c",
+    "gst/isomp4/qtdemux_types.c",
+  ]
+
+  configs = [ ":gst_plugins_config" ]
+}
+
+ohos_shared_library("gstisomp4") {
+  deps = [
+    ":isomp4_source",
+    "//third_party/glib:glib",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstplugins_base:gstaudio",
+    "//third_party/gstreamer/gstplugins_base:gstpbutils",
+    "//third_party/gstreamer/gstplugins_base:gstriff",
+    "//third_party/gstreamer/gstplugins_base:gsttag",
+    "//third_party/gstreamer/gstplugins_base:gstvideo",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+    "//third_party/zlib:libz",
+  ]
+
+  relative_install_dir = "media/plugins"
+  part_name = "multimedia_player_framework"
+  subsystem_name = "multimedia"
+}
+
+ohos_source_set("wavparse_source") {
+  sources = [ "gst/wavparse/gstwavparse.c" ]
+
+  configs = [ ":gst_plugins_config" ]
+}
+
+ohos_shared_library("gstwavparse") {
+  deps = [
+    ":wavparse_source",
+    "//third_party/glib:glib",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstplugins_base:gstpbutils",
+    "//third_party/gstreamer/gstplugins_base:gstriff",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  relative_install_dir = "media/plugins"
+  part_name = "multimedia_player_framework"
+  subsystem_name = "multimedia"
+}
+
+ohos_source_set("multifile_source") {
+  sources = [
+    "gst/multifile/gstmultifile.c",
+    "gst/multifile/gstsplitmuxsink.c",
+  ]
+
+  configs = [ ":gst_plugins_config" ]
+}
+
+ohos_shared_library("gstmultifile") {
+  deps = [
+    ":multifile_source",
+    "//third_party/glib:glib",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstplugins_base:gstvideo",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  relative_install_dir = "media/plugins"
+  part_name = "multimedia_player_framework"
+  subsystem_name = "multimedia"
+}
+
+ohos_source_set("audiofx_source") {
+  sources = [
+    "gst/audiofx/audiofx.c",
+    "gst/audiofx/gstscaletempo.c",
+  ]
+
+  configs = [ ":gst_plugins_config" ]
+}
+
+ohos_shared_library("gstaudiofx") {
+  deps = [
+    ":audiofx_source",
+    "//third_party/glib:glib",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstplugins_base:gstaudio",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  relative_install_dir = "media/plugins"
+  part_name = "multimedia_player_framework"
+  subsystem_name = "multimedia"
+}
+
+ohos_source_set("gstsoup_source") {
+  sources = [
+    "ext/soup/gstsoup.c",
+    "ext/soup/gstsoupelement.c",
+    "ext/soup/gstsouphttpsrc.c",
+    "ext/soup/gstsouploader.c",
+    "ext/soup/gstsouputils.c",
+  ]
+
+  configs = [ ":gst_plugins_config" ]
+}
+
+ohos_shared_library("gstsoup") {
+  deps = [
+    ":gstsoup_source",
+    "//third_party/glib:gio",
+    "//third_party/glib:glib",
+    "//third_party/glib:gmodule",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstplugins_base:gsttag",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+  relative_install_dir = "media/plugins"
+  part_name = "multimedia_player_framework"
+  subsystem_name = "multimedia"
+}
+
+ohos_source_set("matroska_source") {
+  sources = [
+    "gst/matroska/ebml-read.c",
+    "gst/matroska/gstmatroskaelement.c",
+    "gst/matroska/lzo.c",
+    "gst/matroska/matroska-demux.c",
+    "gst/matroska/matroska-ids.c",
+    "gst/matroska/matroska-parse.c",
+    "gst/matroska/matroska-read-common.c",
+    "gst/matroska/matroska.c",
+  ]
+
+  configs = [ ":gst_plugins_config" ]
+}
+
+ohos_shared_library("gstmatroska") {
+  deps = [
+    ":matroska_source",
+    "//third_party/bzip2:libbz2",
+    "//third_party/glib:glib",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstplugins_base:gstaudio",
+    "//third_party/gstreamer/gstplugins_base:gstpbutils",
+    "//third_party/gstreamer/gstplugins_base:gstriff",
+    "//third_party/gstreamer/gstplugins_base:gsttag",
+    "//third_party/gstreamer/gstplugins_base:gstvideo",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  relative_install_dir = "media/plugins"
+  part_name = "multimedia_player_framework"
+  subsystem_name = "multimedia"
+}

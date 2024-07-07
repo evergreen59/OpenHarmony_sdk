@@ -1,0 +1,171 @@
+# Copyright (c) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+config("upb_config") {
+  include_dirs = [
+    ".",
+    "./cmake",
+  ]
+}
+
+source_set("port") {
+  include_dirs = [
+    "upb/port_def.inc",
+    "upb/port_undef.inc",
+  ]
+}
+
+source_set("upb") {
+  sources = [
+    "upb/decode.c",
+    "upb/encode.c",
+    "upb/msg.c",
+    "upb/msg.h",
+    "upb/table.c",
+    "upb/table.int.h",
+    "upb/upb.c",
+  ]
+  public_configs = [ ":upb_config" ]
+  deps = [
+    ":fastdecode",
+    ":port",
+  ]
+  include_dirs = [ "third_party/wyhash" ]
+  cflags_cc = [
+    "-Wall",
+    "-Wno-sign-compare",
+  ]
+  cflags = [
+    "-Wall",
+    "-Wno-sign-compare",
+    "-D HAVE_PTHREAD",
+  ]
+}
+
+source_set("fastdecode") {
+  sources = [ "upb/msg.h" ]
+  public_configs = [ ":upb_config" ]
+  deps = [
+    ":port",
+    ":table",
+  ]
+}
+
+ohos_shared_library(
+    "generated_code_support__only_for_generated_code_do_not_use__i_give_permission_to_break_me") {
+  include_dirs = [
+    "upb/msg.h",
+    "upb/port_def.inc",
+    "upb/port_undef.inc",
+  ]
+  deps = [
+    ":table",
+    ":upb",
+  ]
+}
+
+source_set("reflection") {
+  sources = [
+    #"generated_for_cmake/google/protobuf/descriptor.upb.c",
+    "upb/def.c",
+    "upb/msg.h",
+    "upb/reflection.c",
+  ]
+  public_configs = [ ":upb_config" ]
+  deps = [
+    ":port",
+    ":table",
+    ":upb",
+    "//third_party/protobuf:protobuf",
+  ]
+}
+
+source_set("textformat") {
+  sources = [ "upb/text_encode.c" ]
+  public_configs = [ ":upb_config" ]
+  deps = [
+    ":port",
+    ":reflection",
+    ":upb",
+  ]
+}
+
+source_set("json") {
+  sources = [
+    "upb/json_decode.c",
+    "upb/json_encode.c",
+  ]
+  public_configs = [ ":upb_config" ]
+  deps = [
+    ":port",
+    ":reflection",
+    ":upb",
+  ]
+}
+
+source_set("table") {
+  include_dirs = [
+    "upb/table.int.h",
+    "upb/upb.h",
+  ]
+  deps = [ ":port" ]
+}
+
+source_set("handlers") {
+  sources = [
+    "upb/handlers.c",
+    "upb/sink.c",
+  ]
+  public_configs = [ ":upb_config" ]
+  deps = [
+    ":port",
+    ":reflection",
+    ":table",
+    ":upb",
+  ]
+}
+
+source_set("upb_pb") {
+  sources = [
+    "upb/pb/compile_decoder.c",
+    "upb/pb/decoder.c",
+    "upb/pb/decoder.int.h",
+    "upb/pb/encoder.c",
+    "upb/pb/textprinter.c",
+    "upb/pb/varint.c",
+    "upb/pb/varint.int.h",
+  ]
+  public_configs = [ ":upb_config" ]
+  deps = [
+    ":handlers",
+    ":port",
+    ":reflection",
+    ":table",
+    ":upb",
+    "//third_party/protobuf:protobuf",
+  ]
+}
+
+source_set("upb_json") {
+  sources = [ "upb/json/printer.c" ]
+  public_configs = [ ":upb_config" ]
+  deps = [
+    ":handlers",
+    ":reflection",
+    ":textformat",
+    ":upb",
+    ":upb_pb",
+  ]
+}

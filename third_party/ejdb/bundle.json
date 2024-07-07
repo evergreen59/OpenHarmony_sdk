@@ -1,0 +1,32 @@
+{
+    "name": "@ohos/ejdb",
+    "description": "Third-party open-source software ejdb | EJDB2 is an embeddable JSON database engine published under MIT license.",
+    "version": "3.1",
+    "license": "MIT",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "third_party/ejdb"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+        "name": "ejdb",
+        "subsystem": "thirdparty",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [
+                "//third_party/ejdb:ejdb"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

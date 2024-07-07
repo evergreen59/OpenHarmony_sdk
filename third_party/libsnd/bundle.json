@@ -1,0 +1,31 @@
+{
+    "name": "@ohos/libsnd",
+    "description": "libsndfile is a C library for reading and writing files containing sampled audio data.",
+    "version": "3.1",
+    "license": "LGPL V2.1,Apache,Sun Microsystems License",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "third_party/libsnd"
+    },
+    "dirs": {},
+    "scripts": {},
+    "licensePath": "COPYING",
+    "component": {
+        "name": "thirdparty_libsnd",
+        "subsystem": "",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

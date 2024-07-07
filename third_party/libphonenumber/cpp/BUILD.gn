@@ -1,0 +1,120 @@
+# Copyright (c) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+group("build_module") {
+  deps = [
+    ":geocoding",
+    ":phonenumber_standard",
+  ]
+}
+config("phonenumber_config") {
+  include_dirs = [
+    "//third_party/abseil-cpp",
+    "//third_party/icu/icu4c/source/common",
+    "//third_party/icu/icu4c/source/i18n",
+    "//third_party/icu/icu4c/source",
+    "//third_party/libphonenumber/cpp/src",
+    "//third_party/protobuf/src",
+    "//third_party/protobuf/src/google",
+    "//third_party/protobuf/src/google/protobuf",
+  ]
+  cflags = [ "-Wno-implicit-fallthrough" ]
+  cflags_cc = [
+    "-DI18N_PHONENUMBERS_USE_ALTERNATE_FORMATS",
+    "-DI18N_PHONENUMBERS_USE_ICU_REGEXP",
+    "-Dphonenumber_shared_EXPORTS",
+    "-Wall",
+    "-fPIC",
+    "-U__ANDROID__",
+    "-Wno-sign-compare",
+    "-Wno-error=unused-parameter",
+    "-Wno-error=unused-const-variable",
+    "-Wno-error=unneeded-internal-declaration",
+    "-Wno-implicit-fallthrough",
+  ]
+}
+
+phonenumber_source = [
+  "src/phonenumbers/phonenumber.cc",
+  "src/phonenumbers/default_logger.cc",
+  "src/phonenumbers/phonenumbermatch.cc",
+  "src/phonenumbers/phonenumbermatcher.cc",
+  "src/phonenumbers/regexp_cache.cc",
+  "src/phonenumbers/phonemetadata.pb.cc",
+  "src/phonenumbers/string_byte_sink.cc",
+  "src/phonenumbers/asyoutypeformatter.cc",
+  "src/phonenumbers/phonenumberutil.cc",
+  "src/phonenumbers/regexp_adapter_icu.cc",
+  "src/phonenumbers/phonenumber.pb.cc",
+  "src/phonenumbers/base/strings/string_piece.cc",
+  "src/phonenumbers/alternate_format.cc",
+  "src/phonenumbers/shortnumberinfo.cc",
+  "src/phonenumbers/utf/unilib.cc",
+  "src/phonenumbers/utf/unicodetext.cc",
+  "src/phonenumbers/metadata.cc",
+  "src/phonenumbers/short_metadata.cc",
+  "src/phonenumbers/regex_based_matcher.cc",
+  "src/phonenumbers/logger.cc",
+  "src/phonenumbers/stringutil.cc",
+  "src/phonenumbers/unicodestring.cc",
+  "src/phonenumbers/utf/rune.c",
+]
+
+ohos_shared_library("phonenumber_standard") {
+  configs = [ ":phonenumber_config" ]
+  sources = phonenumber_source
+  deps = [
+    "//third_party/abseil-cpp/absl/base:absl_base",
+    "//third_party/abseil-cpp/absl/strings:absl_strings",
+    "//third_party/icu/icu4c:shared_icui18n",
+    "//third_party/icu/icu4c:shared_icuuc",
+    "//third_party/protobuf:protobuf_lite",
+  ]
+  defines = [
+    "I18N_PHONENUMBERS_USE_ALTERNATE_FORMATS",
+    "I18N_PHONENUMBERS_USE_ICU_REGEXP",
+    "HAVE_PTHREAD",
+  ]
+  part_name = "libphonenumber"
+  subsystem_name = "thirdparty"
+  ldflags = [ "-shared" ]
+  install_enable = true
+}
+
+ohos_shared_library("geocoding") {
+  configs = [ ":phonenumber_config" ]
+  sources = [
+    "src/phonenumbers/geocoding/area_code_map.cc",
+    "src/phonenumbers/geocoding/default_map_storage.cc",
+    "src/phonenumbers/geocoding/geocoding_data.cc",
+    "src/phonenumbers/geocoding/geocoding_warpper.cc",
+    "src/phonenumbers/geocoding/mapping_file_provider.cc",
+    "src/phonenumbers/geocoding/phonenumber_offline_geocoder.cc",
+    "src/phonenumbers/phonenumber.pb.h",
+  ]
+  deps = [
+    "//third_party/icu/icu4c:shared_icuuc",
+    "//third_party/libphonenumber/cpp:phonenumber_standard",
+  ]
+  defines = [
+    "I18N_PHONENUMBERS_USE_ALTERNATE_FORMATS",
+    "I18N_PHONENUMBERS_USE_ICU_REGEXP",
+    "HAVE_PTHREAD",
+  ]
+  part_name = "libphonenumber"
+  subsystem_name = "thirdparty"
+  ldflags = [ "-shared" ]
+  install_enable = true
+}

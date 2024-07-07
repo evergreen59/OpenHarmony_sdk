@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "libsoup",
+        "License": "LGPL V2.0",
+        "License File": "COPYING",
+        "Owner": "lixin113@huawei.com",
+        "Version Number": "2.71.0",
+        "Upstream URL": "https://gitlab.gnome.org/GNOME/libsoup.git",
+        "Description": "libsoup is an HTTP client/server library for GNOME. It uses GObjects and the glib main loop, to integrate well with GNOME applications."
+    }
+]

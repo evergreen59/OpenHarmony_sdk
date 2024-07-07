@@ -1,0 +1,147 @@
+# Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+config("libsoup_config") {
+  cflags = [
+    "-DHAVE_CONFIG_H",
+    "-DUSE_SQLITE_SYMBOLS",
+    "-DG_LOG_DOMAIN=\"libsoup\"",
+    "-DLIBSOUP_COMPILATION",
+    "-Wno-sign-compare",
+    "-Wno-#pragma-messages",
+    "-DOHOS_GLIB_COMPATIBLE",
+    "-fno-signed-char",
+  ]
+}
+
+ohos_source_set("soup_dynamic") {
+  sources = [
+    "//third_party/libsoup/libsoup/soup-address.c",
+    "//third_party/libsoup/libsoup/soup-auth-basic.c",
+    "//third_party/libsoup/libsoup/soup-auth-digest.c",
+    "//third_party/libsoup/libsoup/soup-auth-domain-basic.c",
+    "//third_party/libsoup/libsoup/soup-auth-domain-digest.c",
+    "//third_party/libsoup/libsoup/soup-auth-domain.c",
+    "//third_party/libsoup/libsoup/soup-auth-manager.c",
+    "//third_party/libsoup/libsoup/soup-auth-negotiate.c",
+    "//third_party/libsoup/libsoup/soup-auth-ntlm.c",
+    "//third_party/libsoup/libsoup/soup-auth.c",
+    "//third_party/libsoup/libsoup/soup-body-input-stream.c",
+    "//third_party/libsoup/libsoup/soup-body-output-stream.c",
+    "//third_party/libsoup/libsoup/soup-cache-client-input-stream.c",
+    "//third_party/libsoup/libsoup/soup-cache-input-stream.c",
+    "//third_party/libsoup/libsoup/soup-cache.c",
+    "//third_party/libsoup/libsoup/soup-client-input-stream.c",
+    "//third_party/libsoup/libsoup/soup-connection-auth.c",
+    "//third_party/libsoup/libsoup/soup-connection.c",
+    "//third_party/libsoup/libsoup/soup-content-decoder.c",
+    "//third_party/libsoup/libsoup/soup-content-processor.c",
+    "//third_party/libsoup/libsoup/soup-content-sniffer-stream.c",
+    "//third_party/libsoup/libsoup/soup-content-sniffer.c",
+    "//third_party/libsoup/libsoup/soup-converter-wrapper.c",
+    "//third_party/libsoup/libsoup/soup-cookie-jar-db.c",
+    "//third_party/libsoup/libsoup/soup-cookie-jar-sqlite.c",
+    "//third_party/libsoup/libsoup/soup-cookie-jar-text.c",
+    "//third_party/libsoup/libsoup/soup-cookie-jar.c",
+    "//third_party/libsoup/libsoup/soup-cookie.c",
+    "//third_party/libsoup/libsoup/soup-date.c",
+    "//third_party/libsoup/libsoup/soup-directory-input-stream.c",
+    "//third_party/libsoup/libsoup/soup-enum-types.c",
+    "//third_party/libsoup/libsoup/soup-filter-input-stream.c",
+    "//third_party/libsoup/libsoup/soup-form.c",
+    "//third_party/libsoup/libsoup/soup-gnome-features.c",
+    "//third_party/libsoup/libsoup/soup-headers.c",
+    "//third_party/libsoup/libsoup/soup-hsts-enforcer-db.c",
+    "//third_party/libsoup/libsoup/soup-hsts-enforcer.c",
+    "//third_party/libsoup/libsoup/soup-hsts-policy.c",
+    "//third_party/libsoup/libsoup/soup-init.c",
+    "//third_party/libsoup/libsoup/soup-io-stream.c",
+    "//third_party/libsoup/libsoup/soup-logger.c",
+    "//third_party/libsoup/libsoup/soup-message-body.c",
+    "//third_party/libsoup/libsoup/soup-message-client-io.c",
+    "//third_party/libsoup/libsoup/soup-message-headers.c",
+    "//third_party/libsoup/libsoup/soup-message-io.c",
+    "//third_party/libsoup/libsoup/soup-message-queue.c",
+    "//third_party/libsoup/libsoup/soup-message-server-io.c",
+    "//third_party/libsoup/libsoup/soup-message.c",
+    "//third_party/libsoup/libsoup/soup-method.c",
+    "//third_party/libsoup/libsoup/soup-misc.c",
+    "//third_party/libsoup/libsoup/soup-multipart-input-stream.c",
+    "//third_party/libsoup/libsoup/soup-multipart.c",
+    "//third_party/libsoup/libsoup/soup-password-manager-gnome.c",
+    "//third_party/libsoup/libsoup/soup-password-manager.c",
+    "//third_party/libsoup/libsoup/soup-path-map.c",
+    "//third_party/libsoup/libsoup/soup-proxy-resolver-default.c",
+    "//third_party/libsoup/libsoup/soup-proxy-resolver-gnome.c",
+    "//third_party/libsoup/libsoup/soup-proxy-resolver-wrapper.c",
+    "//third_party/libsoup/libsoup/soup-proxy-resolver.c",
+    "//third_party/libsoup/libsoup/soup-proxy-uri-resolver.c",
+    "//third_party/libsoup/libsoup/soup-request-data.c",
+    "//third_party/libsoup/libsoup/soup-request-file.c",
+    "//third_party/libsoup/libsoup/soup-request-http.c",
+    "//third_party/libsoup/libsoup/soup-request.c",
+    "//third_party/libsoup/libsoup/soup-requester.c",
+    "//third_party/libsoup/libsoup/soup-server.c",
+    "//third_party/libsoup/libsoup/soup-session-async.c",
+    "//third_party/libsoup/libsoup/soup-session-feature.c",
+    "//third_party/libsoup/libsoup/soup-session-sync.c",
+    "//third_party/libsoup/libsoup/soup-session.c",
+    "//third_party/libsoup/libsoup/soup-socket-properties.c",
+    "//third_party/libsoup/libsoup/soup-socket.c",
+    "//third_party/libsoup/libsoup/soup-status.c",
+    "//third_party/libsoup/libsoup/soup-tld.c",
+    "//third_party/libsoup/libsoup/soup-uri.c",
+    "//third_party/libsoup/libsoup/soup-value-utils.c",
+    "//third_party/libsoup/libsoup/soup-version.c",
+    "//third_party/libsoup/libsoup/soup-websocket-connection.c",
+    "//third_party/libsoup/libsoup/soup-websocket-extension-deflate.c",
+    "//third_party/libsoup/libsoup/soup-websocket-extension-manager.c",
+    "//third_party/libsoup/libsoup/soup-websocket-extension.c",
+    "//third_party/libsoup/libsoup/soup-websocket.c",
+    "//third_party/libsoup/libsoup/soup-xmlrpc-old.c",
+    "//third_party/libsoup/libsoup/soup-xmlrpc.c",
+  ]
+
+  configs = [ ":libsoup_config" ]
+  include_dirs = [
+    "//third_party/libsoup",
+    "//third_party/libsoup/libsoup",
+    "//third_party/glib",
+    "//third_party/glib/glib",
+    "//third_party/glib/gmodule",
+    "//third_party/glib/gio",
+    "//third_party/sqlite/include",
+    "//third_party/gettext/gettext-runtime/intl",
+    "//third_party/zlib",
+    "//third_party/libxml2/include",
+    "//third_party/libpsl/include",
+  ]
+}
+
+ohos_shared_library("libohossoup") {
+  deps = [
+    ":soup_dynamic",
+    "//third_party/gettext:libgettext",
+    "//third_party/glib:gio",
+    "//third_party/glib:glib",
+    "//third_party/glib:gobject",
+    "//third_party/libpsl:libpsl",
+    "//third_party/libxml2:xml2",
+    "//third_party/sqlite:sqlite",
+    "//third_party/zlib:libz",
+  ]
+  part_name = "libsoup"
+  subsystem_name = "thirdparty"
+}

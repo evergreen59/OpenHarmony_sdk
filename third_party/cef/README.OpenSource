@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "cef",
+    "License": "BSD 3-Clause License",
+    "License File": "LICENSE",
+    "Version Number": "99.2.15+g71e9523+chromium-99.0.4844.84",
+    "Upstream URL": "https://github.com/chromiumembedded/cef/tree/71e95237436e8fed71819f8c2f7881842f754f63",
+    "Description": "CEF is a BSD-licensed open source project founded by Marshall Greenblatt in 2008 and based on the Google Chromium project."
+  }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "Name": "pixman",
+        "License": "MIT license",
+        "License File": "COPYING",
+        "Version Number": "0.40.0",
+        "Upstream URL": "https://www.cairographics.org/releases/pixman-0.40.0.tar.gz",
+        "Description": "Pixman is a low-level software library for pixel manipulation."
+    }
+]

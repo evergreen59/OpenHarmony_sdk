@@ -1,0 +1,34 @@
+{
+    "name": "@ohos/eudev",
+    "description": "This git repo is a fork of git://anongit.freedesktop.org/systemd/systemd with the aim of isolating udev from any particular flavor of system initialization. In this case, the isolation is from systemd",
+    "version": "3.1",
+    "license": "GPL V2.0/LGPL V2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "third_party/eudev"
+    },
+    "dirs": {},
+    "scripts": {},
+    "licensePath": "COPYING",
+    "readmePath": {
+        "en": ""
+    },
+    "component": {
+        "name": "thirdparty_eudev",
+        "subsystem": "",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

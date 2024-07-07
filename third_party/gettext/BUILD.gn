@@ -1,0 +1,82 @@
+# Copyright (c) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+config("libintl_config") {
+  cflags = [
+    "-DHAVE_CONFIG_H",
+    "-Wno-sign-compare",
+    "-Wno-error",
+    "-Wno-unused-const-variable",
+    "-DLOCALE_ALIAS_PATH=\"\"",
+    "-DLOCALEDIR=\"\"",
+    "-DLIBDIR=\"\"",
+    "-DIN_LIBINTL",
+    "-Wshadow",
+  ]
+}
+
+ohos_source_set("gettext_dynamic") {
+  sources = [
+    "//third_party/gettext/gettext-runtime/intl/bindtextdom.c",
+    "//third_party/gettext/gettext-runtime/intl/dcgettext.c",
+    "//third_party/gettext/gettext-runtime/intl/dcigettext.c",
+    "//third_party/gettext/gettext-runtime/intl/dcngettext.c",
+    "//third_party/gettext/gettext-runtime/intl/dgettext.c",
+    "//third_party/gettext/gettext-runtime/intl/dngettext.c",
+    "//third_party/gettext/gettext-runtime/intl/explodename.c",
+    "//third_party/gettext/gettext-runtime/intl/finddomain.c",
+    "//third_party/gettext/gettext-runtime/intl/gettext.c",
+    "//third_party/gettext/gettext-runtime/intl/hash-string.c",
+    "//third_party/gettext/gettext-runtime/intl/intl-compat.c",
+    "//third_party/gettext/gettext-runtime/intl/l10nflist.c",
+    "//third_party/gettext/gettext-runtime/intl/langprefs.c",
+    "//third_party/gettext/gettext-runtime/intl/loadmsgcat.c",
+    "//third_party/gettext/gettext-runtime/intl/localcharset.c",
+    "//third_party/gettext/gettext-runtime/intl/localealias.c",
+    "//third_party/gettext/gettext-runtime/intl/localename-table.c",
+    "//third_party/gettext/gettext-runtime/intl/localename.c",
+    "//third_party/gettext/gettext-runtime/intl/lock.c",
+    "//third_party/gettext/gettext-runtime/intl/log.c",
+    "//third_party/gettext/gettext-runtime/intl/ngettext.c",
+    "//third_party/gettext/gettext-runtime/intl/osdep.c",
+    "//third_party/gettext/gettext-runtime/intl/plural-exp.c",
+    "//third_party/gettext/gettext-runtime/intl/plural.c",
+    "//third_party/gettext/gettext-runtime/intl/printf-args.c",
+    "//third_party/gettext/gettext-runtime/intl/printf-parse.c",
+    "//third_party/gettext/gettext-runtime/intl/printf.c",
+    "//third_party/gettext/gettext-runtime/intl/relocatable.c",
+    "//third_party/gettext/gettext-runtime/intl/setlocale-lock.c",
+    "//third_party/gettext/gettext-runtime/intl/setlocale.c",
+    "//third_party/gettext/gettext-runtime/intl/setlocale_null.c",
+    "//third_party/gettext/gettext-runtime/intl/textdomain.c",
+    "//third_party/gettext/gettext-runtime/intl/threadlib.c",
+    "//third_party/gettext/gettext-runtime/intl/tsearch.c",
+    "//third_party/gettext/gettext-runtime/intl/vasnprintf.c",
+    "//third_party/gettext/gettext-runtime/intl/version.c",
+    "//third_party/gettext/gettext-runtime/intl/xsize.c",
+  ]
+
+  configs = [ ":libintl_config" ]
+  include_dirs = [
+    "//third_party/gettext/gettext-runtime",
+    "//third_party/gettext/gettext-runtime/intl",
+  ]
+}
+
+ohos_shared_library("libgettext") {
+  deps = [ ":gettext_dynamic" ]
+  part_name = "gettext"
+  subsystem_name = "thirdparty"
+}

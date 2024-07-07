@@ -1,0 +1,7 @@
+{
+  "include": [
+    ".eslintrc.js",
+    "jest-snapshot-resolver.js",
+    "generate-package-json.js"
+  ]
+}

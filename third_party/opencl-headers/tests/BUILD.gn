@@ -1,0 +1,147 @@
+# Copyright (c) 2022 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+config("cl_test_config") {
+  visibility = [ "*" ]
+  include_dirs = [
+    "../",
+    "include",
+  ]
+}
+
+ohos_executable("test_cl_egl") {
+  sources = [
+    "test_cl_egl.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_cl_ext_intel") {
+  sources = [
+    "test_cl_ext_intel.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_cl_ext") {
+  sources = [
+    "test_cl_ext.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_cl_gl_ext") {
+  sources = [
+    "test_cl_gl_ext.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_cl_gl") {
+  sources = [
+    "test_cl_gl.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_cl_half") {
+  sources = [
+    "test_cl_half.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_cl_icd") {
+  sources = [
+    "test_cl_icd.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_cl_platform") {
+  sources = [
+    "test_cl_platform.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_cl_version") {
+  sources = [
+    "test_cl_version.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_cl") {
+  sources = [
+    "test_cl.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_headers") {
+  sources = [
+    "test_headers.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("test_opencl") {
+  sources = [
+    "test_opencl.h.c",
+  ]
+  configs = [ ":cl_test_config" ]
+  part_name = "opencl"
+  subsystem_name = "thirdparty"
+}
+
+group("tests") {
+    deps = [ 
+        ":test_cl_egl",
+        ":test_cl_ext_intel",
+        ":test_cl_ext",
+        ":test_cl_gl_ext",
+        ":test_cl_gl",
+        ":test_cl_half",
+        ":test_cl_icd",
+        ":test_cl_platform",
+        ":test_cl_version",
+        ":test_cl",
+        ":test_headers",
+        ":test_opencl",
+    ]
+}

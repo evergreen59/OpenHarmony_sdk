@@ -1,0 +1,34 @@
+{
+    "name": "@ohos/gettext",
+    "description": "GNU gettext is an important step for the GNU Translation Project, as it is an asset on which we may build many other steps.",
+    "version": "3.1",
+    "license": "LGPL V2.0/GPL V3.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "third_party/gettext"
+    },
+    "dirs": {},
+    "scripts": {},
+    "licensePath": "gettext-runtime/COPYING",
+    "readmePath": {
+        "en": "README"
+    },
+    "component": {
+        "name": "thirdparty_gettext",
+        "subsystem": "",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

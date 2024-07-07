@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "gettext",
+        "License": "LGPL V2.0/GPL V3.0",
+        "License File": "COPYING/gettext-runtime/COPYING",
+        "Owner": "lixin113@huawei.com",
+        "Version Number": "0.21",
+        "Upstream URL": "https://www.gnu.org/software/gettext/",
+        "Description": "GNU gettext is an important step for the GNU Translation Project, as it is an asset on which we may build many other steps."
+    }
+]

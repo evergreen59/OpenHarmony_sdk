@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol name="screen_info_module">
+    <interface name="screen_info_module" version="1">
+        <request name="get"/>
+        <event name="info">
+            <arg name="number" type="uint"/>
+        </event>
+    </interface>
+</protocol>

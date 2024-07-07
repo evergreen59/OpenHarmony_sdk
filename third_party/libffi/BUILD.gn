@@ -1,0 +1,111 @@
+# Copyright (c) Huawei Technologies Co., Ltd. 2021. All rights reserved.
+
+import("//build/ohos.gni")
+
+if (target_cpu == "arm") {
+  config("ffi_config") {
+    visibility = [ ":*" ]
+
+    include_dirs = [
+      ".",
+      "./include",
+      "./src/arm",
+    ]
+
+    cflags = [
+      "-DTARGET=ARM",
+      "-Wno-sign-compare",
+      "-Wno-implicit-function-declaration",
+      "-Wno-extern-initializer",
+    ]
+  }
+
+  ohos_source_set("ffi_source") {
+    sources = [
+      "src/arm/ffi.c",
+      "src/arm/sysv.S",
+      "src/closures.c",
+      "src/java_raw_api.c",
+      "src/prep_cif.c",
+      "src/raw_api.c",
+      "src/types.c",
+    ]
+
+    configs = [ ":ffi_config" ]
+  }
+} else if (target_cpu == "x86_64") {
+  config("ffi_config") {
+    visibility = [ ":*" ]
+
+    include_dirs = [
+      ".",
+      "./include",
+      "./src/x86",
+    ]
+
+    cflags = [
+      "-DTARGET=X86_64",
+      "-Wno-sign-compare",
+      "-Wno-implicit-function-declaration",
+      "-Wno-extern-initializer",
+    ]
+  }
+
+  ohos_source_set("ffi_source") {
+    sources = [
+      "src/closures.c",
+      "src/java_raw_api.c",
+      "src/prep_cif.c",
+      "src/raw_api.c",
+      "src/types.c",
+      "src/x86/ffi64.c",
+      "src/x86/unix64.S",
+    ]
+
+    configs = [ ":ffi_config" ]
+  }
+} else {
+  config("ffi_config") {
+    visibility = [ ":*" ]
+
+    include_dirs = [
+      ".",
+      "./include",
+      "./src/aarch64",
+    ]
+
+    cflags = [
+      "-DTARGET=AARCH64",
+      "-Wno-sign-compare",
+      "-Wno-implicit-function-declaration",
+      "-Wno-extern-initializer",
+    ]
+  }
+
+  ohos_source_set("ffi_source") {
+    sources = [
+      "src/aarch64/ffi.c",
+      "src/aarch64/sysv.S",
+      "src/closures.c",
+      "src/java_raw_api.c",
+      "src/prep_cif.c",
+      "src/raw_api.c",
+      "src/types.c",
+    ]
+
+    configs = [ ":ffi_config" ]
+  }
+}
+
+config("ffi_public_config") {
+  include_dirs = [ "include" ]
+}
+
+ohos_shared_library("ffi") {
+  deps = [ ":ffi_source" ]
+
+  public_configs = [ ":ffi_public_config" ]
+
+  part_name = "libffi"
+  subsystem_name = "thirdparty"
+}

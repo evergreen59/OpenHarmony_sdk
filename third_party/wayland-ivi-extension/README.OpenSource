@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "wayland-ivi-extension",
+        "License": "Apache License V2.0",
+        "License File": "LICENSE",
+        "Version Number": "2.2.0",
+        "Owner": "lizheng2@huawei.com",
+        "Upstream URL": "https://github.com/GENIVI/wayland-ivi-extension/archive/refs/tags/2.2.0_weston_5_compartible.zip",
+        "Description": "This Project provides a possibility to control IVI applications with well known ILM interface with was first implemented in IVI Layer Manager."
+    }
+]

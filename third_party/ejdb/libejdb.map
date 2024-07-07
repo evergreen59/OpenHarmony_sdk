@@ -1,0 +1,25 @@
+{
+  global:
+    "ejdb_init";
+    "ejdb_open";
+    "ejdb_ensure_index";
+    "ejdb_close";
+    "jbl_from_json";
+    "ejdb_put_new";
+    "jbl_destroy";
+    "ejdb_patch";
+    "jql_create";
+    "ejdb_exec";
+    "jql_destroy";
+    "ejdb_get_meta";
+    "jbl_at";
+    "jbl_get_i64";
+    "ejdb_list2";
+    "jbl_xstr_json_printer";
+    "jbl_as_json";
+    "ejdb_list_destroy";
+    "ejdb_online_backup";
+
+  local:
+    *;
+};

@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "gRPC",
+    "License": "Apache License V2.0",
+    "License File": "LICENSE",
+    "Version Number": "1.36.1",
+    "Upstream URL": "https://grpc.io",
+    "Description": "gRPC is a modern open source high performance Remote Procedure Call (RPC) framework that can run in any environment."
+  }
+]

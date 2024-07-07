@@ -1,0 +1,34 @@
+{
+    "name": "@ohos/toybox",
+    "description": "all-in-one Linux command line",
+    "version": "3.1",
+    "license": "Public Domain",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "third_party/toybox"
+    },
+    "dirs": {},
+    "scripts": {},
+    "licensePath": "",
+    "readmePath": {
+        "en": ""
+    },
+    "component": {
+        "name": "thirdparty_toybox",
+        "subsystem": "",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "deps": {
+            "components": [],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

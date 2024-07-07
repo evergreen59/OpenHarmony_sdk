@@ -1,0 +1,305 @@
+# Copyright (c) Huawei Technologies Co., Ltd. 2021. All rights reserved.
+
+import("//build/ohos.gni")
+
+wels_src_dir = "//third_party/openh264/codec/api/svc"
+action("copy_wel_head") {
+  visibility = [ ":*" ]
+  script = "copy_to_wels_head.py"
+  inputs = []
+  outputs = [ "${target_gen_dir}/test.txt" ]
+  args = [
+    "--src-dir",
+    rebase_path(wels_src_dir),
+    "--dst-dir",
+    rebase_path("//third_party/openh264/include/wels"),
+  ]
+}
+
+config("gst_openh264_config") {
+  cflags = [ "-w" ]
+}
+
+ohos_shared_library("openh264") {
+  deps = [
+    ":common",
+    ":console_common",
+    ":copy_wel_head",
+    ":decoder",
+    ":encoder",
+    ":processing",
+    "//third_party/glib:glib",
+    "//third_party/glib:gmodule",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
+}
+
+ohos_static_library("encoder") {
+  sources = [
+    "//third_party/openh264/codec/encoder/core/src/au_set.cpp",
+    "//third_party/openh264/codec/encoder/core/src/deblocking.cpp",
+    "//third_party/openh264/codec/encoder/core/src/decode_mb_aux.cpp",
+    "//third_party/openh264/codec/encoder/core/src/encode_mb_aux.cpp",
+    "//third_party/openh264/codec/encoder/core/src/encoder.cpp",
+    "//third_party/openh264/codec/encoder/core/src/encoder_data_tables.cpp",
+    "//third_party/openh264/codec/encoder/core/src/encoder_ext.cpp",
+    "//third_party/openh264/codec/encoder/core/src/get_intra_predictor.cpp",
+    "//third_party/openh264/codec/encoder/core/src/md.cpp",
+    "//third_party/openh264/codec/encoder/core/src/mv_pred.cpp",
+    "//third_party/openh264/codec/encoder/core/src/nal_encap.cpp",
+    "//third_party/openh264/codec/encoder/core/src/paraset_strategy.cpp",
+    "//third_party/openh264/codec/encoder/core/src/picture_handle.cpp",
+    "//third_party/openh264/codec/encoder/core/src/ratectl.cpp",
+    "//third_party/openh264/codec/encoder/core/src/ref_list_mgr_svc.cpp",
+    "//third_party/openh264/codec/encoder/core/src/sample.cpp",
+    "//third_party/openh264/codec/encoder/core/src/set_mb_syn_cabac.cpp",
+    "//third_party/openh264/codec/encoder/core/src/set_mb_syn_cavlc.cpp",
+    "//third_party/openh264/codec/encoder/core/src/slice_multi_threading.cpp",
+    "//third_party/openh264/codec/encoder/core/src/svc_base_layer_md.cpp",
+    "//third_party/openh264/codec/encoder/core/src/svc_enc_slice_segment.cpp",
+    "//third_party/openh264/codec/encoder/core/src/svc_encode_mb.cpp",
+    "//third_party/openh264/codec/encoder/core/src/svc_encode_slice.cpp",
+    "//third_party/openh264/codec/encoder/core/src/svc_mode_decision.cpp",
+    "//third_party/openh264/codec/encoder/core/src/svc_motion_estimate.cpp",
+    "//third_party/openh264/codec/encoder/core/src/svc_set_mb_syn_cabac.cpp",
+    "//third_party/openh264/codec/encoder/core/src/svc_set_mb_syn_cavlc.cpp",
+    "//third_party/openh264/codec/encoder/core/src/wels_preprocess.cpp",
+    "//third_party/openh264/codec/encoder/core/src/wels_task_base.cpp",
+    "//third_party/openh264/codec/encoder/core/src/wels_task_encoder.cpp",
+    "//third_party/openh264/codec/encoder/core/src/wels_task_management.cpp",
+    "//third_party/openh264/codec/encoder/plus/src/welsEncoderExt.cpp",
+  ]
+
+  configs = [ ":gst_openh264_config" ]
+
+  include_dirs = [
+    "//third_party/openh264/codec/common/inc",
+    "//third_party/openh264/codec/encoder/core/inc",
+    "//third_party/openh264/codec/api/svc",
+    "//third_party/openh264/codec/processing/interface",
+    "//third_party/openh264/codec/encoder/plus/inc",
+    "//third_party/openh264/include",
+    "//third_party/openh264/codec/processing/src/common",
+    "//third_party/openh264/codec/processing/src/adaptivequantization",
+    "//third_party/openh264/codec/processing/src/downsample",
+    "//third_party/openh264/codec/processing/src/scrolldetection",
+    "//third_party/openh264/codec/processing/src/vaacalc",
+    "//third_party/openh264/codec/console/common/inc",
+    "//third_party/openh264/codec/console/dec/inc",
+    "//third_party/openh264/codec/console/enc/inc",
+    "//third_party/gstreamer/gstreamer",
+    "//third_party/gstreamer/gstreamer/libs",
+    "//third_party/gstreamer/gstplugins_base",
+    "//third_party/gstreamer/gstplugins_base/gst-libs",
+    "//third_party/glib/glib",
+    "//third_party/glib",
+    "//third_party/glib/gmodule",
+  ]
+
+  deps = [
+    "//third_party/glib:glib",
+    "//third_party/glib:gmodule",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
+}
+
+ohos_static_library("decoder") {
+  sources = [
+    "//third_party/openh264/codec/decoder/core/src/au_parser.cpp",
+    "//third_party/openh264/codec/decoder/core/src/bit_stream.cpp",
+    "//third_party/openh264/codec/decoder/core/src/cabac_decoder.cpp",
+    "//third_party/openh264/codec/decoder/core/src/deblocking.cpp",
+    "//third_party/openh264/codec/decoder/core/src/decode_mb_aux.cpp",
+    "//third_party/openh264/codec/decoder/core/src/decode_slice.cpp",
+    "//third_party/openh264/codec/decoder/core/src/decoder.cpp",
+    "//third_party/openh264/codec/decoder/core/src/decoder_core.cpp",
+    "//third_party/openh264/codec/decoder/core/src/decoder_data_tables.cpp",
+    "//third_party/openh264/codec/decoder/core/src/error_concealment.cpp",
+    "//third_party/openh264/codec/decoder/core/src/fmo.cpp",
+    "//third_party/openh264/codec/decoder/core/src/get_intra_predictor.cpp",
+    "//third_party/openh264/codec/decoder/core/src/manage_dec_ref.cpp",
+    "//third_party/openh264/codec/decoder/core/src/memmgr_nal_unit.cpp",
+    "//third_party/openh264/codec/decoder/core/src/mv_pred.cpp",
+    "//third_party/openh264/codec/decoder/core/src/parse_mb_syn_cabac.cpp",
+    "//third_party/openh264/codec/decoder/core/src/parse_mb_syn_cavlc.cpp",
+    "//third_party/openh264/codec/decoder/core/src/pic_queue.cpp",
+    "//third_party/openh264/codec/decoder/core/src/rec_mb.cpp",
+    "//third_party/openh264/codec/decoder/plus/src/welsDecoderExt.cpp",
+  ]
+
+  configs = [ ":gst_openh264_config" ]
+
+  include_dirs = [
+    "//third_party/openh264/codec/common/inc",
+    "//third_party/openh264/codec/decoder/core/inc",
+    "//third_party/openh264/codec/api/svc",
+    "//third_party/openh264/codec/processing/interface",
+    "//third_party/openh264/codec/decoder/plus/inc",
+    "//third_party/openh264/include",
+    "//third_party/openh264/codec/processing/src/common",
+    "//third_party/openh264/codec/processing/src/adaptivequantization",
+    "//third_party/openh264/codec/processing/src/downsample",
+    "//third_party/openh264/codec/processing/src/scrolldetection",
+    "//third_party/openh264/codec/processing/src/vaacalc",
+    "//third_party/openh264/codec/console/common/inc",
+    "//third_party/openh264/codec/console/dec/inc",
+    "//third_party/openh264/codec/console/enc/inc",
+    "//third_party/gstreamer/gstreamer",
+    "//third_party/gstreamer/gstreamer/libs",
+    "//third_party/gstreamer/gstplugins_base",
+    "//third_party/gstreamer/gstplugins_base/gst-libs",
+    "//third_party/glib/glib",
+    "//third_party/glib",
+    "//third_party/glib/gmodule",
+  ]
+
+  deps = [
+    "//third_party/glib:glib",
+    "//third_party/glib:gmodule",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
+}
+
+ohos_static_library("console_common") {
+  sources =
+      [ "//third_party/openh264/codec/console/common/src/read_config.cpp" ]
+
+  configs = [ ":gst_openh264_config" ]
+
+  include_dirs = [
+    "//third_party/openh264/codec/api/svc",
+    "//third_party/openh264/codec/common/inc",
+    "//third_party/openh264/codec/console/common/inc",
+    "//third_party/gstreamer/gstreamer",
+    "//third_party/gstreamer/gstreamer/libs",
+    "//third_party/gstreamer/gstplugins_base",
+    "//third_party/gstreamer/gstplugins_base/gst-libs",
+    "//third_party/glib/glib",
+    "//third_party/glib",
+    "//third_party/glib/gmodule",
+  ]
+
+  deps = [
+    "//third_party/glib:glib",
+    "//third_party/glib:gmodule",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
+}
+
+ohos_static_library("processing") {
+  sources = [
+    "//third_party/openh264/codec/processing/src/adaptivequantization/AdaptiveQuantization.cpp",
+    "//third_party/openh264/codec/processing/src/backgrounddetection/BackgroundDetection.cpp",
+    "//third_party/openh264/codec/processing/src/common/WelsFrameWork.cpp",
+    "//third_party/openh264/codec/processing/src/common/WelsFrameWorkEx.cpp",
+    "//third_party/openh264/codec/processing/src/common/memory.cpp",
+    "//third_party/openh264/codec/processing/src/complexityanalysis/ComplexityAnalysis.cpp",
+    "//third_party/openh264/codec/processing/src/denoise/denoise.cpp",
+    "//third_party/openh264/codec/processing/src/denoise/denoise_filter.cpp",
+    "//third_party/openh264/codec/processing/src/downsample/downsample.cpp",
+    "//third_party/openh264/codec/processing/src/downsample/downsamplefuncs.cpp",
+    "//third_party/openh264/codec/processing/src/imagerotate/imagerotate.cpp",
+    "//third_party/openh264/codec/processing/src/imagerotate/imagerotatefuncs.cpp",
+    "//third_party/openh264/codec/processing/src/scenechangedetection/SceneChangeDetection.cpp",
+    "//third_party/openh264/codec/processing/src/scrolldetection/ScrollDetection.cpp",
+    "//third_party/openh264/codec/processing/src/scrolldetection/ScrollDetectionFuncs.cpp",
+    "//third_party/openh264/codec/processing/src/vaacalc/vaacalcfuncs.cpp",
+    "//third_party/openh264/codec/processing/src/vaacalc/vaacalculation.cpp",
+  ]
+
+  configs = [ ":gst_openh264_config" ]
+
+  include_dirs = [
+    "//third_party/openh264/codec/api/svc",
+    "//third_party/openh264/codec/common/inc",
+    "//third_party/openh264/codec/processing/interface",
+    "//third_party/openh264/codec/processing/src/common",
+    "//third_party/openh264/codec/processing/src/adaptivequantization",
+    "//third_party/openh264/codec/processing/src/downsample",
+    "//third_party/openh264/codec/processing/src/scrolldetection",
+    "//third_party/openh264/codec/processing/src/vaacalc",
+    "//third_party/gstreamer/gstreamer",
+    "//third_party/gstreamer/gstreamer/libs",
+    "//third_party/gstreamer/gstplugins_base",
+    "//third_party/gstreamer/gstplugins_base/gst-libs",
+    "//third_party/glib/glib",
+    "//third_party/glib",
+    "//third_party/glib/gmodule",
+  ]
+
+  deps = [
+    "//third_party/glib:glib",
+    "//third_party/glib:gmodule",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
+}
+
+ohos_static_library("common") {
+  sources = [
+    "//third_party/openh264/codec/common/src/WelsTaskThread.cpp",
+    "//third_party/openh264/codec/common/src/WelsThread.cpp",
+    "//third_party/openh264/codec/common/src/WelsThreadLib.cpp",
+    "//third_party/openh264/codec/common/src/WelsThreadPool.cpp",
+    "//third_party/openh264/codec/common/src/common_tables.cpp",
+    "//third_party/openh264/codec/common/src/copy_mb.cpp",
+    "//third_party/openh264/codec/common/src/cpu.cpp",
+    "//third_party/openh264/codec/common/src/crt_util_safe_x.cpp",
+    "//third_party/openh264/codec/common/src/deblocking_common.cpp",
+    "//third_party/openh264/codec/common/src/expand_pic.cpp",
+    "//third_party/openh264/codec/common/src/intra_pred_common.cpp",
+    "//third_party/openh264/codec/common/src/mc.cpp",
+    "//third_party/openh264/codec/common/src/memory_align.cpp",
+    "//third_party/openh264/codec/common/src/sad_common.cpp",
+    "//third_party/openh264/codec/common/src/utils.cpp",
+    "//third_party/openh264/codec/common/src/welsCodecTrace.cpp",
+  ]
+
+  configs = [ ":gst_openh264_config" ]
+
+  include_dirs = [
+    "//third_party/openh264/codec/api/svc",
+    "//third_party/openh264/codec/common/inc",
+    "//third_party/gstreamer/gstreamer",
+    "//third_party/gstreamer/gstreamer/libs",
+    "//third_party/gstreamer/gstplugins_base",
+    "//third_party/gstreamer/gstplugins_base/gst-libs",
+    "//third_party/glib/glib",
+    "//third_party/glib",
+    "//third_party/glib/gmodule",
+  ]
+
+  deps = [
+    "//third_party/glib:glib",
+    "//third_party/glib:gmodule",
+    "//third_party/glib:gobject",
+    "//third_party/gstreamer/gstreamer:gstbase",
+    "//third_party/gstreamer/gstreamer:gstreamer",
+  ]
+
+  part_name = "openh264"
+  subsystem_name = "thirdparty"
+}

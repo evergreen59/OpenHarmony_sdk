@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "spirv-headers",
+    "License": "Apache-2.0",
+    "License File": "LICENSE",
+    "Version Number": "1.5.4.raytracing.fixed",
+    "Owner": "zhangleiyu1@huawei.com",
+    "Upstream URL": "https://github.com/KhronosGroup/SPIRV-Headers.git",
+    "Description": "This repository contains machine-readable files for the SPIR-V Registry."
+  }
+]

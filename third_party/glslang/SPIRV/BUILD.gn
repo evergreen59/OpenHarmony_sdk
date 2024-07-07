@@ -1,0 +1,104 @@
+# Copyright (c) 2022 Shenzhen Kaihong Digital Industry Development Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# external glslang src SPIRV build
+
+import("//build/ohos.gni")
+import("//third_party/vk-gl-cts/vk_gl_cts.gni")
+
+config("SPIRV_config") {
+  cflags_cc = deqp_common_cflags_cc
+
+  cflags_cc -= [
+    "-frtti",
+    "-fexceptions",
+  ]
+  cflags_cc += [
+    "-fPIC",
+    "-Wno-reorder",
+    "-fno-rtti",
+    "-fno-exceptions",
+    "-Wno-sign-compare",
+  ]
+
+  defines = deqp_common_defines
+  defines -= [
+    "DEQP_SUPPORT_DRM=0",
+    "DEQP_TARGET_NAME=\"Default\"",
+  ]
+  defines += [
+    "ENABLE_HLSL",
+    "ENABLE_OPT=0",
+    "GLSLANG_OSINCLUDE_UNIX",
+  ]
+}
+
+#lib SPIRV
+ohos_source_set("SPIRV_source") {
+  sources = [
+    "//third_party/glslang/SPIRV/CInterface/spirv_c_interface.cpp",
+    "//third_party/glslang/SPIRV/GlslangToSpv.cpp",
+    "//third_party/glslang/SPIRV/InReadableOrder.cpp",
+    "//third_party/glslang/SPIRV/Logger.cpp",
+    "//third_party/glslang/SPIRV/SpvBuilder.cpp",
+    "//third_party/glslang/SPIRV/SpvPostProcess.cpp",
+    "//third_party/glslang/SPIRV/SpvTools.cpp",
+    "//third_party/glslang/SPIRV/disassemble.cpp",
+    "//third_party/glslang/SPIRV/doc.cpp",
+  ]
+  include_dirs = [
+    "//third_party/zlib/src",
+    "//third_party/glslang",
+    "//third_party/glslang/glslang/SPIRV",
+    "//third_party/vk-gl-cts/build/include",
+  ]
+  include_dirs += deqp_common_include_dirs
+
+  deps = [
+    "//third_party/glslang/OGLCompilersDLL:libdeqp_OGLCompiler",
+    "//third_party/glslang/glslang:libdeqp_GenericCodeGen",
+    "//third_party/glslang/glslang:libdeqp_MachineIndependent",
+    "//third_party/glslang/glslang:libdeqp_OSDependent",
+  ]
+  configs = [ ":SPIRV_config" ]
+}
+
+ohos_shared_library("libdeqp_spirv") {
+  deps = [ ":SPIRV_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}
+
+#lib SPVRemapper
+ohos_source_set("SPVRemapper_source") {
+  sources = [
+    "//third_party/glslang/SPIRV/SPVRemapper.cpp",
+    "//third_party/glslang/SPIRV/doc.cpp",
+  ]
+  include_dirs = [
+    "//third_party/zlib/src",
+    "//third_party/glslang",
+    "//third_party/glslang/glslang/SPIRV",
+    "//third_party/vk-gl-cts/build/include",
+  ]
+  include_dirs += deqp_common_include_dirs
+
+  deps = []
+  configs = [ ":SPIRV_config" ]
+}
+
+ohos_shared_library("libdeqp_spvremapper") {
+  deps = [ ":SPVRemapper_source" ]
+  part_name = "graphic_standard"
+  subsystem_name = "graphic"
+}

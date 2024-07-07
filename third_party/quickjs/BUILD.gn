@@ -1,0 +1,94 @@
+# Copyright (c) 2021 Huawei Device Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+
+config("qjs_inner_config") {
+  cflags = [
+    "-Wno-pointer-to-int-cast",
+    "-Wno-sign-compare",
+    "-Wno-unused-variable",
+    "-Wno-unused-function",
+    "-Wno-missing-braces",
+    "-fvisibility=hidden",
+    "-fdata-sections",
+    "-ffunction-sections",
+    "-Os",
+    "-fsigned-char",
+  ]
+  include_dirs = [ "." ]
+}
+
+config("qjs_debug_config") {
+  include_dirs = [ "." ]
+  cflags = [ "-DENABLE_JS_DEBUG" ]
+  include_dirs += [ "//commonlibrary/c_utils/base/include" ]
+}
+
+qjs_sources = [
+  "cutils.c",
+  "libbf.c",
+  "libregexp.c",
+  "libunicode.c",
+  "quickjs-libc.c",
+  "quickjs.c",
+]
+
+ohos_static_library("qjs_debugger") {
+  sources = qjs_sources
+  sources += [
+    "debugger.c",
+    "message_server.cpp",
+  ]
+  external_deps = []
+  if (!is_wearable_product) {
+    external_deps += [ "c_utils:utils" ]
+  }
+  if (is_standard_system) {
+    external_deps += [ "hiviewdfx_hilog_native:libhilog" ]
+  } else {
+    external_deps += [ "hilog:libhilog" ]
+  }
+  configs = [ ":qjs_inner_config" ]
+  public_configs = [ ":qjs_debug_config" ]
+}
+
+ohos_static_library("qjs") {
+  sources = qjs_sources
+  configs = [ ":qjs_inner_config" ]
+}
+
+ohos_executable("qjsc") {
+  sources = [
+    "cutils.c",
+    "libbf.c",
+    "libregexp.c",
+    "libunicode.c",
+    "qjsc.c",
+    "quickjs-libc.c",
+    "quickjs.c",
+  ]
+
+  configs = [ ":qjs_inner_config" ]
+
+  defines = [ "CONFIG_VERSION=" ]
+
+  if (current_toolchain == "//build/toolchain/mingw:mingw_x86_64") {
+    ldflags = [ "-static" ]
+
+    libs = [ "pthread" ]
+  }
+
+  subsystem_name = "arkui"
+  part_name = "ace_engine_full"
+}

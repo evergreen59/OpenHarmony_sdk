@@ -1,0 +1,12 @@
+angle_root = "${skia_third_party_dir}/externals/angle2"
+angle_zlib_compression_utils_dir = "${skia_third_party_dir}/zlib"
+angle_spirv_headers_dir = "${skia_third_party_dir}/externals/spirv-headers"
+angle_spirv_tools_dir = "${skia_third_party_dir}/externals/spirv-tools"
+
+# We don't have Chromium's build/ or testing/ directories.
+angle_has_build = false
+
+# Bunch of features ANGLE's build files test for that we never set.
+is_cfi = false
+is_chromecast = false
+is_chromeos = false

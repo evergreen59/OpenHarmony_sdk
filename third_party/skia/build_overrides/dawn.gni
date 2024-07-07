@@ -1,0 +1,15 @@
+# Copyright 2019 Google Inc.
+#
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# These are variables that are overridable by projects that include Dawn.
+
+# Skia doesn't have Chromium's //build directory. Tell Dawn to do without.
+dawn_has_build = false
+
+dawn_abseil_dir = "${skia_third_party_dir}/externals/abseil-cpp"
+dawn_jinja2_dir = "${skia_third_party_dir}/externals/jinja2"
+dawn_spirv_tools_dir = "${skia_third_party_dir}/externals/spirv-tools"
+dawn_spirv_cross_dir = "${skia_third_party_dir}/externals/spirv-cross"
+dawn_tint_dir = "${skia_third_party_dir}/externals/tint"

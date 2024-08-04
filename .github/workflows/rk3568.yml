@@ -61,7 +61,7 @@ jobs:
     - name: Build for RK3568
       working-directory: ${{ github.workspace }}
       run: |
-        bash ./build.sh --product-name rk3568 --ccache --build-type ${{ github.event.inputs.build_type || 'release' }}
+        bash ./build.sh --product-name rk3568 --ccache
     
     - name: Upload artifact
       uses: actions/upload-artifact@v2

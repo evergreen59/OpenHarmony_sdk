@@ -52,10 +52,11 @@ jobs:
         pip install setuptools
         pip install kconfiglib
     
-    - name: Clone OpenHarmony repo
+    - name: Install OpenHarmony dependencies
       working-directory: ${{ github.workspace }}
       run: |
         bash build/build_scripts/env_setup.sh
+        bash build/prebuilts_download.sh
     
     - name: Build for RK3568
       working-directory: ${{ github.workspace }}

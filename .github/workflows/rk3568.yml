@@ -18,7 +18,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     
     steps:
     - uses: actions/checkout@v3
@@ -61,7 +61,7 @@ jobs:
     - name: Build for RK3568
       working-directory: ${{ github.workspace }}
       run: |
-        bash ./build.sh --product-name rk3568 --ccache
+        ./build.sh --product-name rk3568 --ccache
     
     - name: Upload artifact
       uses: actions/upload-artifact@v2

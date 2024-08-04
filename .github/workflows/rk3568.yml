@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-22.04
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -37,13 +37,13 @@ jobs:
         pip install kconfiglib
     
     - name: Clone OpenHarmony repo
+      working-directory: ${{ github.workspace }}
       run: |
-        git clone https://github.com/evergreen59/OpenHarmony_sdk.git
-        bash build.sh
+        bash build/build_scripts/env_setup.sh
     
     - name: Build for RK3568
       run: |
-        ./build.sh --product-name rk3568 --ccache --build-type ${{ github.event.inputs.build_type || 'release' }}
+        bash ./build.sh --product-name rk3568 --ccache --build-type ${{ github.event.inputs.build_type || 'release' }}
     
     - name: Upload artifact
       uses: actions/upload-artifact@v2

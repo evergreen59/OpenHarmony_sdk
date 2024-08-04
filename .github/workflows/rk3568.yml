@@ -1,0 +1,52 @@
+name: Build OpenHarmony for RK3568
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build type'
+        required: true
+        default: 'release'
+        type: choice
+        options:
+        - debug
+        - release
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential gcc g++ make zlib1g-dev libffi-dev libssl-dev
+        python -m pip install --upgrade pip
+        pip install setuptools
+        pip install kconfiglib
+    
+    - name: Clone OpenHarmony repo
+      run: |
+        git clone https://github.com/evergreen59/OpenHarmony_sdk.git
+        bash build.sh
+    
+    - name: Build for RK3568
+      run: |
+        ./build.sh --product-name rk3568 --ccache --build-type ${{ github.event.inputs.build_type || 'release' }}
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: rk3568-image-${{ github.event.inputs.build_type || 'release' }}
+        path: out/rk3568/
